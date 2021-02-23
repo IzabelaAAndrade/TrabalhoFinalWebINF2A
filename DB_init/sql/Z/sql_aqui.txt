@@ -1,0 +1,1 @@
+colocar os sqls dentro de uma pasta com o nome do grupo pra ficar organizadinho
