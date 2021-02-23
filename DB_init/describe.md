@@ -1,9 +1,9 @@
-# Descição dos dbs
+# Descição dos DBs
 
-* se quiserem, colem aqui a descrição das tabelas e dos dbs, que podem ser obtidas com os comandos `describe` e `list tables`
+* se quiserem, colem aqui a descrição das tabelas e dos dbs 
+* elas podem ser obtidas com os comandos `describe` e `list tables`
 * talvez seja legal também adicionar alguns comentários sobre decisões polêmicas
 * o objetivo disso é facilitar a integração e correção de erros
-* obs.: se as tabelas estiverem muito grandes, tentem diminuir o zoom
 
 ## DB biblioteca
 
