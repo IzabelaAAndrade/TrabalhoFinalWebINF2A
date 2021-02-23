@@ -1,6 +1,6 @@
 # Inicialização dos BDs
 
-* aproveitei que estava criando a tabela pra já tentar fazer esse script de uma vez
+* um esboço do sistema pra inicializar os DBs
 * como foi sugerido, o sql está sendo colocado em arquivos separados, que são acessados por meio do php
 * a função de incluir o sql facilitaria bastante, mas eu realmente não sei fazer isso, então eu tentei fazer com o que eu sabia
 * com certeza tem muita coisa pra melhorar
