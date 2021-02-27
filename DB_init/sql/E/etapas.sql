@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS etapas (
-  `id-ORDEM` int(15) NOT NULL,
+  `id_ORDEM` int(15) NOT NULL,
   `valor` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
