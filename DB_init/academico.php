@@ -5,7 +5,7 @@ include_once 'lib/libInitDB.php';
 
 // lista com o caminho dos arquivos sql a serem interpretados
 $sql_list = array(
-  'sql/B/campi', 'sql/B/cursos', 'sql/B/turmas', 'sql/I/etapas'
+  'sql/B/campi', 'sql/B/cursos', 'sql/B/turmas', 'sql/E/atividades', 'sql/e/conteudos', 'sql/E/etapas', 'sql/I/etapas'
 );
 initDB($conn, $sql_list, 'academico', true);
 
