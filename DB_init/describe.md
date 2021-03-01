@@ -1,6 +1,6 @@
 # Descição dos DBs
 
-* se quiserem, colem aqui a descrição das tabelas e dos dbs 
+* se quiserem, colem aqui a descrição das tabelas e dos dbs
 * elas podem ser obtidas com os comandos `describe` e `list tables`
 * talvez seja legal também adicionar alguns comentários sobre decisões polêmicas
 * o objetivo disso é facilitar a integração e correção de erros
@@ -13,6 +13,8 @@
     | academicos           |
     | midias               |
     | periodicos           |
+    | acervo               |
+    | livros               |
     +----------------------+
 
 ## academicos
@@ -53,6 +55,49 @@ não sei o que é programa, mas deve ser uma string
 
 apesar de ser um número, issn está sendo representado como varchar para evitar problemas com zeros à esquerda (se tiver uma solução melhor, falem, por favor)
 
+## acervo
+
+    +-----------+-----------------------------------------------------+------+-----+---------+----------------+
+    | Field    | Type                                                 | Null | Key | Default | Extra          |
+    +-----------+-----------------------------------------------------+------+-----+---------+----------------+
+    | id       | int                                                  | NO   | PRI | NULL    | auto_increment |
+    | id_campi | int                                                  | NO   |     | NULL    |                |
+    | nome     | varchar(255)                                         | NO   |     | NULL    |                |
+    | tipo     | enum('livros', 'periodicos', 'academicos', 'midias') | NO   |     | NULL    |                |
+    | local    | varchar(255)                                         | NO   |     | NULL    |                |
+    | ano      | int                                                  | NO   |     | NULL    |                |
+    | editora  | varchar(255)                                         | NO   |     | NULL    |                |
+    | paginas  | int                                                  | NO   |     | NULL    |                |
+    +-----------+-----------------------------------------------------+------+-----+---------+----------------+
+
+## livros
+
+    +-----------+--------------+------+-----+---------+-------+
+    | Field     | Type         | Null | Key | Default | Extra |
+    +-----------+--------------+------+-----+---------+-------+
+    | id_obra   | int          | NO   |     | NULL    |       |
+    | id_acervo | int          | NO   |     | NULL    |       |
+    | edicao    | varchar(200) | NO   |     | NULL    |       |
+    | isbn      | varchar(200) | NO   |     | NULL    |       |
+    +-----------+--------------+------+-----+---------+-------+
 
 
+## DB diario
 
+    +----------------------+
+    | Tables_in_diario     |
+    +----------------------+
+    | diario               |
+    +----------------------+
+
+## diario
+
+    +--------- -----+---------+------+-----+---------+-------+
+    | Field         | Type    | Null | Key | Default | Extra |
+    +---------- ----+---------+------+-----+---------+-------+
+    | id_conteudos  | int(11) | NO   |     | NULL    |       |
+    | id_matriculas | int(11) | NO   |     | NULL    |       |
+    | id_atividades | int(11) | NO   |     | NULL    |       |
+    | faltas        | int(11) | NO   |     | NULL    |       |
+    | nota          | int(11) | NO   |     | NULL    |       |
+    +---------- ----+---------+------+-----+---------+-------+  
