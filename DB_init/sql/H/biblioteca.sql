@@ -28,5 +28,5 @@ CREATE TABLE IF NOT EXISTS partes(
     Pag_inicio int(4) NOT NULL,
     Pag_final  int(4) NOT NULL,
     Palavras_chave varchar(20),
-    PRIMARY KEY(id)
+    PRIMARY KEY(Id)
 );
