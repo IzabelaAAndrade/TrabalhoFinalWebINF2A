@@ -17,7 +17,8 @@ CREATE TABLE IF NOT EXISTS autores(
     Nomes varchar(40) NOT NULL,
     Sobrenomes varchar(40) NOT NULL,
     Ordem varchar(20) NOT NULL ,
-    Qualificacao varchar(20) NOT NULL
+    Qualificacao varchar(20) NOT NULL,
+    PRIMARY KEY(Id_autor)
 );
 DROP TABLE IF EXISTS partes;
 CREATE TABLE IF NOT EXISTS partes(
