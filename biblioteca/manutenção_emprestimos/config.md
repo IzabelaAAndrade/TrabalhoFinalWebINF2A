@@ -1,1 +1,0 @@
-Apenas para configuração da pasta.
