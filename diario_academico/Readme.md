@@ -1,0 +1,1 @@
+Pasta destinada à postagem de arquivos respectivos ao projeto "Diário Acadêmico", do trabalho final da disciplina de Aplicações Web. 
