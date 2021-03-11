@@ -3,11 +3,11 @@ html, body{
 }
 header, footer{
     height: 5%;
-    background-color: #264553;
+    background-color: #275A6E;
     padding: 3%;
 }
 
-h1, h3, p, input{
+h1, h3{
     font-family: 'Nunito', sans-serif;
     color: white;
     margin: 0%;
@@ -18,6 +18,7 @@ h1{
 }
 
 h3{
+    margin-top: 2%;
     text-align: center;
     font-size: 0.7em;
 }
@@ -35,49 +36,51 @@ h3{
 }
 
 .descricao{
+    font-family: 'Nunito', sans-serif;
     color: #264553;
     font-size: 1em;
     margin: 0% 0% 1% 0%;
 }
 
-.descricao, .principal, .subRosa{
+.descricao, .principal, .sub{
     text-align: center;
 }
 
-#ajuste{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1% 0% 5% 0%;
+#fieldset{
+margin-left: auto;
+margin-right: auto;
+width:30vw;
+height:20vh;
+border: 3px #2A9D8F solid;
+border-radius: .7em;
+margin-bottom: 8%;
+margin-top: 2%;
 }
-form{
-    display: block;
+legend
+{
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  color: #2A9D8F;
+  text-align: center;
 }
-
-input{
-    color:#449d8f;
-    display: block;
-}
-
-.texto{
-    width: 30vw;
-    border: 0;
-    outline: none;
-    border-bottom: 1.5px solid #449d8f ;
-    display: block;
-    margin: 0% 0% 5% 0%;
-}
-
-textarea{
-    width: 100%;
-    height: 10vh;
-    padding: 3%;
-    background-color: #449d8f;
-    color: white;
-    border: 0;
-    box-sizing: border-box;
+.caixa-seleção{
+    
+    width: 80%;
+    border-radius: .7em;
+    height: 25%;
+    border: 1x solid #d1d1d1;
+    cursor: pointer;
+    padding: 1px 1px 1px 5px;
+    font-size: 1em;
     font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #2A9D8F;
 }
-textarea::placeholder{
+.botao{
+    width: 18%;
+    height: 25%;
+    border-radius: .7em;
+    background-color: #2A9D8F;
     color: white;
 }
