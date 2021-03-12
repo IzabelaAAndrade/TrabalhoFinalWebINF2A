@@ -1,3 +1,9 @@
+<!--
+  Formulário para transferir alunos - TRANSFERENCIA DE ALUNOS
+  Altera a situacao do aluno de ATIVO “S” para “N”
+  Grupo F - desenvolvido por Tássyla Lima
+-->
+
 <?php
 
 $link = mysqli_connect("localhost", "root", "", "academico") or die("Falha ao conectar: " . mysqli_connect_error());
