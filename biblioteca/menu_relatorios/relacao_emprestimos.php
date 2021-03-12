@@ -6,19 +6,6 @@ $table = mysqli_fetch_all($result, MYSQLI_ASSOC);
 mysqli_close($cnx);
 print_r($table);
 ?>
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <title>Relatório de empréstimos</title>
-    <style>
-    td{
-        text-align:center;
-    }
-    </style>
-</head>
-<body>
-<h1>Relatório de do Acervo</h1>
 <table border="5">
     <tr>
         <th>ID</th>
@@ -43,5 +30,3 @@ print_r($table);
         </tr>";
     }?>
 </table>
-</body>
-</html>
