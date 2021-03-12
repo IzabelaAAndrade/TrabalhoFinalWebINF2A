@@ -69,12 +69,12 @@ CREATE TABLE `alunos` (
 --
 
 CREATE TABLE `autores` (
-  `Id_obra` int(4) UNSIGNED NOT NULL,
-  `Id_autor` int(4) UNSIGNED NOT NULL,
-  `Nomes` varchar(40) NOT NULL,
-  `Sobrenomes` varchar(40) NOT NULL,
-  `Ordem` varchar(20) NOT NULL,
-  `Qualificacao` varchar(20) NOT NULL
+  `id_obra` int(4) UNSIGNED NOT NULL,
+  `id_autor` int(4) UNSIGNED NOT NULL,
+  `nomes` varchar(40) NOT NULL,
+  `sobrenomes` varchar(40) NOT NULL,
+  `ordem` varchar(20) NOT NULL,
+  `qualificacao` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

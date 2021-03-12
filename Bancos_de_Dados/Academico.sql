@@ -156,7 +156,7 @@ CREATE TABLE `etapas` (
 --
 
 CREATE TABLE `matriculas` (
-  `id` int(8) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `id` varchar(15) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `id_alunos` varchar(15) NOT NULL,
   `id_disciplinas` int(8) NOT NULL,
   `ano` char(4) NOT NULL,
@@ -183,8 +183,8 @@ CREATE TABLE `professores` (
 --
 
 CREATE TABLE `prof_disciplinas` (
-  `Id-Professores` int(8) NOT NULL,
-  `Id-Disciplinas` int(8) NOT NULL
+  `id-Professores` int(8) NOT NULL,
+  `id-Disciplinas` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

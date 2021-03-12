@@ -1,4 +1,4 @@
---Cria tabela diario, do banco de dados Diario
+--Tabela diario, bd Diario
 
 CREATE TABLE IF NOT EXISTS `diario` (
   `id_conteudos` int(11) NOT NULL,
