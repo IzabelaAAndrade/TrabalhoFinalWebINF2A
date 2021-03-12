@@ -97,13 +97,13 @@ CREATE TABLE `descartes` (
 --
 
 CREATE TABLE `emprestimos` (
-  `Id` int(4) UNSIGNED NOT NULL,
-  `Id_alunos` int(4) UNSIGNED NOT NULL,
-  `Id_acervo` int(4) UNSIGNED NOT NULL,
-  `Data_emprestimo` date NOT NULL,
-  `Data_prev_devol` date NOT NULL,
-  `Data_devolucao` date DEFAULT NULL,
-  `Multa` double DEFAULT NULL
+  `id` int(4) UNSIGNED NOT NULL,
+  `id_alunos` int(4) UNSIGNED NOT NULL,
+  `id_acervo` int(4) UNSIGNED NOT NULL,
+  `data_emprestimo` date NOT NULL,
+  `data_prev_devol` date NOT NULL,
+  `data_devolucao` date DEFAULT NULL,
+  `multa` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -139,12 +139,12 @@ CREATE TABLE `midias` (
 --
 
 CREATE TABLE `partes` (
-  `Id` int(4) UNSIGNED NOT NULL,
-  `Id_periodicos` int(4) UNSIGNED NOT NULL,
-  `Titulo` varchar(40) NOT NULL,
-  `Pag_inicio` int(4) NOT NULL,
-  `Pag_final` int(4) NOT NULL,
-  `Palavras_chave` varchar(20) DEFAULT NULL
+  `id` int(4) UNSIGNED NOT NULL,
+  `id_periodicos` int(4) UNSIGNED NOT NULL,
+  `titulo` varchar(40) NOT NULL,
+  `pag_inicio` int(4) NOT NULL,
+  `pag_final` int(4) NOT NULL,
+  `palavras_chave` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

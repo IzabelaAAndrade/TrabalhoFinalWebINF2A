@@ -1,3 +1,5 @@
+--Cria tabela livros, do banco de dados Biblioteca
+
 CREATE TABLE IF NOT EXISTS `livros` (
   `id_obra` int(11) NOT NULL,
   `id_acervo` int(11) NOT NULL,
