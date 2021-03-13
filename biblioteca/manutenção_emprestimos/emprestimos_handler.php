@@ -1,7 +1,5 @@
 <?php
     if (isset($_GET["id_aluno"])) {
-        $id_aluno = $_GET["id_aluno"];
-
         /*CONEXÃO COM BANCO DE DADOS*/
         $user = "root";
         $password = "";
@@ -10,6 +8,8 @@
         $conexao = mysqli_connect( $hostname, $user, $password) or die ("Erro na conexão."); 
         $query = "USE $database";
         $query_database = mysqli_query($conexao, $query);
+
+        $id_aluno = $_GET["id_aluno"];
 
         if(!empty($id_aluno)){
             $query = "SELECT `id`,`nome` FROM `alunos` WHERE `id` = $id_aluno";
