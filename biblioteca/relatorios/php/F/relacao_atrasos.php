@@ -2,25 +2,26 @@
 
 Error_reporting(0);
 
-$conexao  = mysqli_connect("localhost", "userlegal", "senhalegal", "biblioteca") or die("Falha ao conectar: " . mysqli_connect_error());
-
-// mysqli_query($conexao, "DELETE FROM `emprestimos`");
+include_once('../lib/libConnection.php');
 
 //Testes enquanto nao ta totalmente funcional
-mysqli_query($conexao, "INSERT INTO `emprestimos` (`Id_alunos`, `Id_acervo`, `Data_emprestimo`, `Data_prev_devol`, `Data_devolucao`) VALUES
-('89', 3001, '2004-05-11', '2019-07-11', '2020-08-11'),
-('57', 3003, '2003-11-26', '2021-08-12', '2021-07-11')");
+/*
+// mysqli_query($conn, 'DELETE FROM `emprestimos`');
+mysqli_query($conn, 'INSERT INTO `emprestimos` (`Id_alunos`, `Id_acervo`, `Data_emprestimo`, `Data_prev_devol`, `Data_devolucao`) VALUES
+					('89', 3001, '2004-05-11', '2019-07-11', '2020-08-11'),
+					('57', 3003, '2003-11-26', '2021-08-12', '2021-07-11')');
+//*/
 
-$atrasos = mysqli_query($conexao, "SELECT * FROM emprestimos");
+$atrasos = mysqli_query($conn, 'SELECT * FROM emprestimos');
 
 // Estilo pra tabela ficar um pouco menos confusa
 /*
 echo 
-"<style>
+'<style>
 	table, td, th{
 	border: solid 1px;   
 	border-collapse: collapse
-</style>";
+</style>';
 // */
 
 echo 
@@ -55,13 +56,13 @@ while ($atraso = mysqli_fetch_assoc($atrasos)) {
 		echo "<td> Sem atraso </td> </tr>";
 }
 
-/* 
+?>
+
+<!-- 
 
 Alterações:
 identação,
 tirar o estilo de dentro do while
 variavel $dataDevolucao sendo trocada no while
 
-*/
-
-?>
+ -->

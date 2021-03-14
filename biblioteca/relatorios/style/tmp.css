@@ -102,11 +102,15 @@ body {
     width: 100px;
 }
 
+.range input[type='date'] {
+    width: 46%;
+}
+
 #aplicar {
     background-color: var(--main-color);
 }
 
-input {
+input, select {
     background-color: var(--fill-color);
     color: white;
     border: none;

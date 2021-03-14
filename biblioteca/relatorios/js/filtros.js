@@ -4,7 +4,7 @@ classes para "filtrar" os relatórios
 
 */
 
-let FiltroGenerico = function(nome, apelido, padrao=0) {
+let FiltroGenerico = function(nome, apelido, padrao=0, tipo='text') {
    
     this.nome = nome;
 
@@ -24,6 +24,7 @@ let FiltroGenerico = function(nome, apelido, padrao=0) {
         label.appendChild(document.createElement('br'));
         
         input = document.createElement('input');
+        input.type = tipo;
         input.value = padrao;
         label.appendChild(input);
 
@@ -40,8 +41,61 @@ let FiltroGenerico = function(nome, apelido, padrao=0) {
     }
 }
 
+let FiltroSelect = function(nome, apelido, ops='A:a|B:b|C:c') {
+   
+    this.nome = nome;
+
+    let html = null;
+    let input = null;
+    let opsObj = [];
+    for(op of ops.split('|')) {
+        let obj = {};
+        let sop = op.split(':');
+        obj.nome = sop[0];
+        if(sop.length == 1)
+            obj.valor = obj.nome;
+        else
+            obj.valor = sop[1];
+        opsObj.push(obj); 
+    }
+    
+    this.getDiv = function() {
+        
+        if(html) return html;
+
+        let div = document.createElement('div');
+        div.classList.add('filtro');
+
+        let label = document.createElement('label');
+        label.innerHTML = this.nome + ': ';
+        div.appendChild(label);
+        label.appendChild(document.createElement('br'));
+        
+        input = document.createElement('select');
+        label.appendChild(input);
+
+        for(obj of opsObj) {
+            let opEl = document.createElement('option');
+            opEl.innerHTML = obj.nome;
+            opEl.value = obj.valor;
+            input.appendChild(opEl);
+        }
+
+        html = div;
+        return html;
+    }
+
+    this.getUrl = function() {
+        return apelido + '=' + input.value;
+    }
+
+    this.reset = function() {
+        input.value = padrao;
+    }
+}
+
 // filtro com um mínimo e um máximo
-let FiltroRange = function(nome, apelido1, apelido2, padrao1=0, padrao2=0) {
+let FiltroRange = function(nome, apelido1, apelido2, padrao1=0, padrao2=0, tipo='number') {
    
     this.nome = nome;
 
@@ -55,7 +109,7 @@ let FiltroRange = function(nome, apelido1, apelido2, padrao1=0, padrao2=0) {
         
         // input 1
         input1 = document.createElement('input');
-        input1.type='number';
+        input1.type=tipo;
         input1.value = padrao1;
         
         // label 1
@@ -66,7 +120,7 @@ let FiltroRange = function(nome, apelido1, apelido2, padrao1=0, padrao2=0) {
         
         // input 2
         input2 = document.createElement('input');
-        input2.type='number';
+        input2.type = tipo;
         input2.value = padrao2;
         
         // label 2
@@ -80,15 +134,8 @@ let FiltroRange = function(nome, apelido1, apelido2, padrao1=0, padrao2=0) {
         div.appendChild(label);
         div.appendChild(label2);
         
-        // restringe os valores de input 1 e 2
-        input1.addEventListener('change', () => {
-            let v1 = parseInt(input1.value), v2 = parseInt(input2.value);
-            if(v1>v2) input1.value = input2.value 
-        });
-        input2.addEventListener('change', () => {
-            let v1 = parseInt(input1.value), v2 = parseInt(input2.value);
-            if(v2<v1) input2.value = input1.value 
-        });
+        input1.addEventListener('change', () => input2.min = input1.value);
+        input2.addEventListener('change', () => input1.max = input2.value);
 
         html = div;
         return html;

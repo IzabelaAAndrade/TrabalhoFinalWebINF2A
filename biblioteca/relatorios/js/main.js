@@ -25,6 +25,9 @@ let request = function() {
 
 // seleciona um relator
 let selectRelatorHandler = function(relator, el) {
+    
+    resultadoContainerEl.innerHTML = 'Carregando...'; // feio?
+
     if(selectedRelatorEl)
         selectedRelatorEl.classList.remove('selected');
     el.classList.add('selected');
@@ -72,17 +75,17 @@ aplicarBtn.addEventListener('click', () => request());
 //  inicia os relatores e filtros
 let iniTest = function() {
     
-    // teste range
-    let retRange = new Relator('range', 'php/test.php');
-    retRange.addFiltro(new FiltroGenerico('nome', 'nome', 'roger'))
-    retRange.addFiltro(new FiltroRange('números', 'min', 'quant', 39, 45))
-    addRelator(retRange);
+    // // teste range
+    // let retRange = new Relator('range', 'php/test.php');
+    // retRange.addFiltro(new FiltroGenerico('nome', 'nome', 'roger'))
+    // retRange.addFiltro(new FiltroRange('números', 'min', 'quant', 39, 45))
+    // addRelator(retRange);
 
-    // teste com sql
-    let retA = new Relator('alunos', 'php/alunos.php');
-    retA.addFiltro(new FiltroGenerico('nome', 'nome', ''))
-    retA.addFiltro(new FiltroRange('nota', 'notamin', 'notamax', 0, 100))
-    addRelator(retA);
+    // // teste com sql
+    // let retA = new Relator('alunos', 'php/alunos.php');
+    // retA.addFiltro(new FiltroGenerico('nome', 'nome', ''))
+    // retA.addFiltro(new FiltroRange('nota', 'notamin', 'notamax', 0, 100))
+    // addRelator(retA);
 
     let rAtrasos = new Relator('atrasos', 'php/F/relacao_atrasos.php');
     addRelator(rAtrasos);
@@ -91,9 +94,20 @@ let iniTest = function() {
     addRelator(rDescartes);
 
     let rMultas = new Relator('multas', 'php/F/relacao_multas.php');
+    rMultas.addFiltro(new FiltroRange('data', 'data_inicio', 'data_fim', '', '', 'date'));
     addRelator(rMultas);
 
+    let rAcervo = new Relator('acervo', 'php/H/relacao_acervo.php');
+    rAcervo.addFiltro(new FiltroSelect('tipo', 'acervo', 'livros|periódicos:periodicos|acadêmicos:academicos|mídias:midias'));
+    addRelator(rAcervo);
 
+    let rEmprestimos = new Relator('empréstimos', 'php/H/relacao_emprestimos.php');
+    addRelator(rEmprestimos);
+
+    let rReservas = new Relator('reservas', 'php/H/relacao_reservas.php');
+    rReservas.addFiltro(new FiltroSelect('tipo do relatório', 'reservas', 'geral|por data:data'));
+    rReservas.addFiltro(new FiltroGenerico('data', 'dta_espe', '', 'date'));
+    addRelator(rReservas);
 }
 
 iniTest();
