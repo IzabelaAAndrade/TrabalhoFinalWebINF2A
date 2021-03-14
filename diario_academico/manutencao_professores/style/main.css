@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    background-color: #1e2222;
+    color: white;
+    font-family: sans-serif;
+}
+
+#header {
+    width: 100%;
+    height: 8%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+}
+
+#main {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 92%;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 23%;
+}
+
+#centro {
+    width: 70%;
+}
+
+.solid {
+    box-sizing: border-box;
+    margin: 15px;
+    padding: 20px;
+    background-color: #fff1;
+    border: 1px solid #fff3;
+    border-radius: 2px;
+}
+
+.btn {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.professor {
+    display: inline-grid;
+    grid-template-columns: 5fr 5fr 1fr 1fr;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 5%;
+    padding-right: 20px;
+}
+
+.professor .btn {
+    flex-grow: 0;
+    justify-self: flex-end;
+    align-self: flex-end;
+    /* border-radius: 40px; */
+    margin: 0;
+    margin-left: 20px;
+    /* background-color: transparent;
+    border: none; */
+}
+
+#novo {
+    height: 63px;
+}
+
+/* Filtro ****************************************************************/
+
+#filtros {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* min-height: 50%; */
+}
+
+.filtro {
+    margin-bottom: 20px;
+}
+
+#filtros.hidden {
+    display: none;
+}
+
+#actions {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.range input {
+    width: 100px;
+}
+
+#aplicar {
+    background-color: #347a75;
+}
+
+input, select {
+    width: 100%;
+    background-color: #fff1;
+    color: white;
+    border: none;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td, th {
+    border-bottom: 1px solid #fff3;
+    padding: 10px;
+}
