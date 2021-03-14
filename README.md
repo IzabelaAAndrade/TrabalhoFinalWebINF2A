@@ -4,9 +4,8 @@ Upload de arquivos do trabalho final da turma de Informática 2A, do ano de 2020
 ## Guia
  Guia dos arquivos postados dentro do GitHub (em constante atualização)
  
-> ###  Seções
->  - #### [Arquivos do diário academico](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/diario_academico)
->  - #### [Arquivos da biblioteca](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/biblioteca) 
->  - #### [Padrão de estilização](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/padrao_estilizacao) 
->  - #### [Banco de dados](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/Bancos_de_Dados)
->  - #### [Conexão com o banco de dados](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/DB_init)
+>  - ### [Arquivos do diário academico](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/diario_academico)
+>  - ### [Arquivos da biblioteca](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/biblioteca) 
+>  - ### [Padrão de estilização](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/padrao_estilizacao) 
+>  - ### [Banco de dados](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/Bancos_de_Dados)
+>  - ### [Conexão com o banco de dados](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/DB_init)
