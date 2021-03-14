@@ -85,6 +85,14 @@ legend
     color: white;
 }
 
+/* Imagens ****************************************************************/
+#logo{
+    margin-top: 10px;
+    height: 7em;/*94.5px;*/
+    width: 17em;/*250px;*/
+    float: left;
+}
+/* Menu ****************************************************************/
 nav{
     background-color: #457B9D;
     margin: 0%;
