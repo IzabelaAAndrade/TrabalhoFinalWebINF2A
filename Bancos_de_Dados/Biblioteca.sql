@@ -98,7 +98,7 @@ CREATE TABLE `descartes` (
 
 CREATE TABLE `emprestimos` (
   `id` int(4) UNSIGNED NOT NULL,
-  `id_alunos` int(4) UNSIGNED NOT NULL,
+  `id_alunos` varchar(11) UNSIGNED NOT NULL,
   `id_acervo` int(4) UNSIGNED NOT NULL,
   `data_emprestimo` date NOT NULL,
   `data_prev_devol` date NOT NULL,
