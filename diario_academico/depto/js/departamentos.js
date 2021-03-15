@@ -81,7 +81,6 @@ function alteracaoListener(botao, indice, e) {
         if (this.readyState == 4 && this.status == 200) {
           tbodyEl.innerHTML = "";
           atualizaTabela(criaEventos);
-          formEl.classList.remove("alterando");
         } else if (
           this.readyState == 4 &&
           (this.status == 500 || this.status == 409)
@@ -90,6 +89,7 @@ function alteracaoListener(botao, indice, e) {
           atualizaTabela(criaEventos);
           mostraMsgErro(`ERRO AO FAZER ALTERAÇÃO: "${this.responseText}"`);
         }
+        formEl.classList.remove("alterando");
       };
 
       xhr.open("POST", "alterar.php");
@@ -127,16 +127,31 @@ function exclusaoListener(botao, indice, e) {
     formEl.classList.add("alterando");
 
     let trEl = botao.closest("tr");
+    let valoresOg = {
+      id: trEl.cells[0].innerHTML,
+      id_campi: trEl.cells[1].innerHTML,
+      nome: trEl.cells[2].innerHTML,
+    };
 
     trEl.innerHTML = `
     <td colspan="3">Tem certeza que deseja apagar esse departamento?</td>
 
-    <td><button type="submit" class="submitDeletar">Deletar</button></td>
-    `;
+    <td>
+      <button type="submit" class="submitDeletar">Deletar</button>
+      <button type="button" class="cancelaDeletar">X</button>
+      </td>`;
 
-    /* let submitAlterarEl = trEl.querySelector(".submitAlterar");
-    submitAlterarEl.addEventListener("click", (e) => {
+    let submitDeletarEl = trEl.querySelector(".submitDeletar");
+    submitDeletarEl.addEventListener("click", (e) => {
       e.preventDefault();
+
+      trEl.innerHTML = formataDepto(
+        valoresOg.id,
+        valoresOg.id_campi,
+        valoresOg.nome,
+        "Deletar",
+        "form"
+      );
 
       let xhr = new XMLHttpRequest();
 
@@ -144,16 +159,48 @@ function exclusaoListener(botao, indice, e) {
         if (this.readyState == 4 && this.status == 200) {
           tbodyEl.innerHTML = "";
           atualizaTabela(criaEventos);
+        } else if (
+          this.readyState == 4 &&
+          (this.status == 500 || this.status == 400 || this.status == 404)
+        ) {
+          tbodyEl.innerHTML = "";
+          atualizaTabela(criaEventos);
+          mostraMsgErro(`ERRO AO FAZER ALTERAÇÃO: "${this.responseText}"`);
         }
+
+        formEl.classList.remove("alterando");
       };
 
-      xhr.open("POST", "alterar.php");
+      xhr.open("POST", "deletar.php");
 
       let inpId = trEl.querySelector("input[name='id']");
+      let inpIdCampi = trEl.querySelector("input[name='id_campi']");
+      let inpNome = trEl.querySelector("input[name='nome']");
+
       inpId.disabled = false;
+      inpIdCampi.disabled = false;
+      inpNome.disabled = false;
+
       xhr.send(new FormData(formEl));
-      inpId.disabled = true; 
-    }); */
+
+      inpId.disabled = true;
+      inpIdCampi.disabled = true;
+      inpNome.disabled = true;
+    });
+
+    let cancelaDeletarEl = trEl.querySelector(".cancelaDeletar");
+    cancelaDeletarEl.addEventListener("click", (e) => {
+      trEl.innerHTML = formataDepto(
+        valoresOg.id,
+        valoresOg.id_campi,
+        valoresOg.nome,
+        "",
+        "row"
+      );
+
+      formEl.classList.remove("alterando");
+      criaEventos();
+    });
   }
 }
 
