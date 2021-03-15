@@ -1,5 +1,3 @@
-SET time_zone = 'America/Sao_Paulo';
-
 CREATE TABLE IF NOT EXISTS conteudos (
   `id` bigint(20) NOT NULL,
   `id_etapas` int(11) NOT NULL,
