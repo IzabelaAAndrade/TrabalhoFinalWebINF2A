@@ -54,10 +54,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="style_emprestimos.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
+   
+    
     <title>Empréstimos</title>
 </head>
 <body>
@@ -66,18 +66,18 @@
             <h1>Empréstimos</h1>
             <div id="busca">
                 <form method="GET" action="">
-                    <input type="text" name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit"  id="botaoBuscaId"><img src="lupa.png" width="20" height="20"></button>
+                    <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit"  id="botaoBuscaId"><img src="lupa.png" width="20" height="20"></button>
                 </form>
             </div>
         </div>
         <div id="dadosAluno"></div>
         <div id="emprestimos"></div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="novo_emprestimo">+</button>
+        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" id="novo_emprestimo">+</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header" id="cabecalho_modal">
                 <h5 class="modal-title" id="exampleModalLabel">Cadastro de Empréstimos</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
               </div>
@@ -88,7 +88,7 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" id="id_aluno" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do aluno">
+                            <input type="text" class="inputs" id="id_aluno" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do aluno">
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -104,7 +104,7 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" id="id_acervo" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do acervo">
+                            <input type="text" class="inputs"id="id_acervo" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do acervo">
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -117,13 +117,15 @@
                 <div id="status"></div>
 
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outline-success" id="confirmar" disabled>Confirmar</button>
-                <button type="button" class="btn btn-outline-danger" id="cancelar" disabled>Cancelar</button>
+              <div class="modal-footer" id="footer_modal">
+                <button type="button" class="btn " id="confirmar" >Confirmar</button>
+                <button type="button" class="btn" id="cancelar" >Cancelar</button>
               </div>
             </div>
           </div>
         </div>
+        <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="ajax.js"></script>
     <script src="dom.js"></script>
     </main>
