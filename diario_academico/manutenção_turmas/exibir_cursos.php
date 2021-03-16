@@ -17,25 +17,28 @@
 <?php
 
 
-include 'conect_bd.php';
+include "conect_bd.php";
+global $connection;
 
 echo "<h2>Cursos</h2>";
 $sql = "SELECT id, nome FROM cursos";
+   
+
 $resultado = mysqli_query($connection, $sql);
 $num_colunas = mysqli_num_rows($resultado);
 
-
-if ($num_colunas > 0) {
-  while($coluna = mysqli_fetch_array($resultado)) {
-    echo  "<a href=exibir_turmas.php?id=".$coluna["id"].">".$coluna["nome"]."</a><br>" ;
-  }
-} echo {
-	echo "Não há nenhum curso!"
+if($num_colunas > 0){
+	while($coluna = mysqli_fetch_array($resultado)){
+		echo  "<a href=exibir_turmas.php?id=".$coluna["id"].">".$coluna["nome"]."</a><br>" ;
+	}
+}else{
+	echo " Não há nenhum curso!";
 }
-mysqli_close($connection);
 
+mysqli_close($connection);
 ?>
 
 
 </body>
 </html>
+
