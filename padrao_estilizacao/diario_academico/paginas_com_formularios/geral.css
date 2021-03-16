@@ -3,8 +3,6 @@ html, body{
     margin: 0%;
 }
 header, footer{
-    height: 5%;
-    background-color: #1d3556;
     padding: 3%;
 }
 
@@ -14,13 +12,8 @@ h1, h3, p, input{
     margin: 0%;
 }
 
-h1{
-    font-size: 1em;
-}
-
 h3{
     text-align: center;
-    font-size: 0.7em;
 }
 
 .sub{
@@ -101,4 +94,105 @@ textarea{
 }
 textarea::placeholder{
     color: white;
+}
+/* Header/Footer ****************************************************************/
+
+header{
+    background-color:#1D3556;
+    width: 100%;
+    height: 15%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0%;    
+}
+
+footer{
+    height: 5%;
+    background-color: #1D3556;
+    padding: 3%;
+    display: block;
+}
+
+#titulo{
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+.rodape{
+    text-align: center;
+}
+
+/* Imagens ****************************************************************/
+#logo{
+    margin-top: 10px;
+    height: 7em;/*94.5px;*/
+    width: 17em;/*250px;*/
+    float: left;
+}
+/* Menu ****************************************************************/
+nav{
+    background-color: #457B9D;
+    margin: 0%;
+}
+
+.menu, .sub_menu{
+    list-style: none;
+}
+
+.menu{
+    float: left;
+    margin: 0%;
+    font-size: 20px;
+    padding: 0%;
+}
+
+li a{
+    display: block;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding:5px 10px;
+    display:block;
+    text-shadow:0px 0px 5px rgb(56, 56, 56);
+}
+
+.menu li{
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border: thin inset #1d355631;
+    position: relative;
+    float: left;
+    background-color: #457B9D;
+    box-shadow: #0003 5px 5px 10px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease
+}
+
+.sub_menu li{
+    background-color: #457b9dde;
+}
+
+.menu li:hover{
+    background-color: #2e5064;
+}
+
+.menu li ul{
+    position: absolute;
+    top:57px;
+    right:0px;
+    display: none;
+}
+
+.menu li:hover ul, .menu li.over ul{
+    display:block;
+    -webkit-transition: all 1s ease
+}
+
+.menu li ul li{
+    display:block;
+    width:200px;
 }
