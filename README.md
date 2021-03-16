@@ -14,6 +14,10 @@ Upload de arquivos do trabalho final da turma de Informática 2A, do ano de 2020
 > ![Image](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/blob/main/padrao_estilizacao/Imagens_exemplo/Interface_relatorio_biblioteca.png)
 > 
 > ![Image](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/blob/main/padrao_estilizacao/Imagens_exemplo/Interface_relatorio_diario.png)
+> 
+> ![Image](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/blob/main/padrao_estilizacao/Imagens_exemplo/dropdown_diario.png)
 >  
+>![Image](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/blob/main/padrao_estilizacao/Imagens_exemplo/dropdown_biblioteca.png)
+> 
 >  * ### [Banco de dados](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/Bancos_de_Dados)
 >  * ### [Conexão com o banco de dados](https://github.com/IzabelaAAndrade/TrabalhoFinalWebINF2A/tree/main/DB_init)
