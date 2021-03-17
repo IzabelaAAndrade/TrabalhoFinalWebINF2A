@@ -1,13 +1,35 @@
 .button {
-	padding-top: 4px;
+    padding-top: 4px;
 }
 .row {
-	padding-top: 2%;
+    padding-top: 2%;
 }
 #status {
-	padding-top: 2%;
+    padding-top: 2%;
 }
-
+h1{
+    color:white ;
+}
+#confirmar{
+    background-color: #2A9D8F;
+    color: white;
+}
+#cancelar{
+    background-color: #E76F51;
+    color: white;
+}
+#cabecalho_modal{
+    background-color: #264653;
+    color: white;
+}
+.inputs{
+    width: 120%;
+    border: 0;
+    outline: none;
+    border-bottom: 1.5px solid #449d8f;
+    display: block;
+    margin: 0% 0% 5% 0%;
+}
 #emprestimos {
     display: flex;
     justify-content: center;
@@ -33,7 +55,7 @@
 #cabecalho {
     display: flex;
     flex-direction: column;
-    background-color: #e9ecef;
+    background-color: #264653;
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
@@ -43,12 +65,15 @@
     width:300px;
 }
 #botaoBuscaId{
-    /*background-image: url("lupa.png");*/
+
+
 }
 #novo_emprestimo{
     position: absolute;
-    top: 2%;
+    top: 5%;
     right: 2%;
+    background-color: #E76F51;
+    color: white;
 }
 #dadosAluno{
     display: flex;
@@ -61,7 +86,8 @@
     margin: 10px;
     padding: 30px;
     font-size: 12pt;
-    background-color: #e9ecef;
+    background-color:#E9C46A;
     border-radius: 20px;
     box-shadow: 3px 2px 2px gray;
+    color: white;
 }
