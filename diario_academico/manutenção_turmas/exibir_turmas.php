@@ -28,8 +28,9 @@
       echo "<div id='turma".$coluna['id']."'>";
       echo "<div><b>Nome da turma:</b> " . $coluna["nome"]."</div>";
       echo "<div><p> <b>Id</b>: " . $coluna["id"]."</p></div>";
-      echo "<button id='btnEditar".$coluna['id']."' onclick='getIdTurma(".$coluna['id'].");' class='btnEditar btn btn-info btn-lg' data-toggle='modal' data-target='#alterarTurmaModal'>Editar</button></div>";
-    }
+      echo "<button id='btnEditar".$coluna['id']."' onclick='getIdTurma(".$coluna['id'].");' class='btnEditar btn btn-info btn-lg' data-toggle='modal' data-target='#alterarTurmaModal'>Editar</button></div><br>";
+	  
+	}
   } else {
     echo "Existem 0 turmas para esse curso";
   }
@@ -58,7 +59,37 @@
       </div>
     </div>
   </div>
-  <button>Criar turma</button>
+  
+  
+<br>
+ <?php
+ 
+ echo "<br><br><button id='btnAdicionar' class='btnAdicionar btn btn-info btn-lg' data-toggle='modal' data-target='#adicionarTurmaModal'>Criar Nova Turma</button></div>";
+?>
+<div class="modal fade" id="adicionarTurmaModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" onclick="location.reload(true);">&times;</button>
+            <h2>Criar nova turma</h2>
+            <p>Preencha todos os dados </p>
+            <p id="result1"></p>
+        </div>
+        <div class="modal-body">
+        <form name="form" id="formCriar"  method="POST" enctype="application/x-www-form-urlencoded">
+          <p>ID da turma:<input type="text" name="idTurma"></p>
+          <p>Nome da Turma:<input type="text" name="nomeTurma"></p>
+		  <p>Id do curso:<input type="text" name="idCurso"></p>
+          <input type="submit" value="Confirmar">
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="ajax_alterar_turma.js"></script>
 </body>
 </html>
