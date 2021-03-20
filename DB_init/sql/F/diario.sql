@@ -1,4 +1,4 @@
---Tabela diario, bd Diario
+-- Tabela diario, bd Diario
 
 CREATE TABLE IF NOT EXISTS `diario` (
   `id_conteudos` int(11) NOT NULL,
