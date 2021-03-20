@@ -25,8 +25,9 @@
       echo "<th></th>";
       echo "</tr>";
         while ($result) {
+          $data=date('d-m-Y', strtotime(str_replace('-','/', $result['data'])));
           echo "<tr>";
-          echo '<td>ID: '.$result['id'].'</td><td>'.$result['id_disciplinas'].'</td><td>'.$result['nome'].'</td><td>'.$result['data'].'</td><td>'.$result['valor'].'</td>';
+          echo '<td>ID: '.$result['id'].'</td><td>'.$result['id_disciplinas'].'</td><td>'.$result['nome'].'</td><td>'.$data.'</td><td>'.$result['valor'].'</td>';
           echo "</tr>";
           $result = mysqli_fetch_array($sql);
         }
