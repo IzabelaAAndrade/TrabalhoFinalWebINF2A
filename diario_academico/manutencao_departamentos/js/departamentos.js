@@ -24,7 +24,7 @@ function atualizaTabela(callback) {
     }
   };
 
-  xhr.open("GET", "busca_deptos.php");
+  xhr.open("GET", "php/busca_deptos.php");
   xhr.send();
 }
 
@@ -92,7 +92,7 @@ function alteracaoListener(botao, indice, e) {
         formEl.classList.remove("alterando");
       };
 
-      xhr.open("POST", "alterar.php");
+      xhr.open("POST", "php/alterar.php");
 
       let inpId = trEl.querySelector("input[name='id']");
       inpId.disabled = false;
@@ -171,7 +171,7 @@ function exclusaoListener(botao, indice, e) {
         formEl.classList.remove("alterando");
       };
 
-      xhr.open("POST", "deletar.php");
+      xhr.open("POST", "php/deletar.php");
 
       let inpId = trEl.querySelector("input[name='id']");
       let inpIdCampi = trEl.querySelector("input[name='id_campi']");
