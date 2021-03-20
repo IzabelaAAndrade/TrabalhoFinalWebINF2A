@@ -55,25 +55,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" type="text/css" href="style_emprestimos.css">
-   
-    
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" href="geral_biblioteca.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: unset !important;
+        }
+        h1, h2, h3, h4 {
+            font-weight: bold !important;
+            line-height: 1.5 !important;
+        }
+    </style>
     <title>Empréstimos</title>
 </head>
 <body>
+    <header>
+        <img src="img/LogoExemploCortada.png" alt="logo" id="logo">
+        <h1>Sistema Biblioteca</h1>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Manutenção</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Acervo</a></li>
+                    <li><a href="#">Empréstimos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#">Descarte</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </nav>
+
     <main>
         <div id="cabecalho">
-            <h1>Empréstimos</h1>
-            <div id="busca">
-                <form method="GET" action="">
-                    <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit"  id="botaoBuscaId"><img src="lupa.png" width="20" height="20"></button>
-                </form>
+            <div id="cab">
+                <h3 class="sub">Bem-Vindo(a) à</h3>
+                <h1 class="principal">Manutenção de Empréstimos</h1>
+                <div id="busca">
+                    <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit"  id="botaoBuscaId"><img src="lupa.png" width="24" height="24"></button>
+                </div>
             </div>
         </div>
-        <div id="dadosAluno"></div>
-        <div id="emprestimos"></div>
-        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" id="novo_emprestimo">+</button>
 
+        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" id="novo_emprestimo">Novo Empréstimo</button>
+
+        <div id="emprestimos"></div>
+    
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -124,16 +156,36 @@
             </div>
           </div>
         </div>
-        <script src="js/bootstrap.min.js"></script>
+    </main>
+    <footer>
+        <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+    </footer>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="ajax.js"></script>
     <script src="dom.js"></script>
-    </main>
     <script>
-        localStorage.setItem("dadosAluno", "<?php echo $return; ?>");
-        localStorage.setItem("dadosEmprestimos", "<?php echo $returnEmprestimos; ?>");
-        localStorage.setItem("numEmprestimos", "<?php echo $returnRows; ?>");
+        function makeRequest_MostraEmprestimos(){
+            $.ajax({
+            url : "mostra_emprestimos.php",
+            type : 'post',
+            data : {
+                id_aluno : $("#busca_id").val(),
+            },
+            beforeSend : function(){
+                $("#emprestimos").html("Carregando...");
+            }})
+            .done(function(msg){
+                $("#emprestimos").html(msg);
+            })
+            .fail(function(jqXHR, textStatus, msg){
+                alert(msg);
+            });
+        }
+
+        document.getElementById("botaoBuscaId").onclick = function(e){
+            makeRequest_MostraEmprestimos();
+        }
     </script>
-    <script src="mostra_emprestimos.js"></script>
 </body>
 </html>
