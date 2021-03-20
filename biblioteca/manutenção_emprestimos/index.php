@@ -118,8 +118,8 @@
 
               </div>
               <div class="modal-footer" id="footer_modal">
-                <button type="button" class="btn " id="confirmar" >Confirmar</button>
-                <button type="button" class="btn" id="cancelar" >Cancelar</button>
+                <button type="button" class="btn " id="confirmar" disabled>Confirmar</button>
+                <button type="button" class="btn" id="cancelar" disabled>Cancelar</button>
               </div>
             </div>
           </div>

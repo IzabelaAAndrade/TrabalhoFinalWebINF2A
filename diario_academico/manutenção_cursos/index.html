@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-        
+
     	<link href="css/bootstrap.min.css" rel="stylesheet" />
 
     	<link rel="stylesheet" href="geral_academico.css">
@@ -17,13 +17,13 @@
     	<style>
     		#close {
     			position: absolute;
-    			right: 5px;
-    			top: 5px;
+    			right: 8px;
+    			top: 8px;
     		}
     		#close2 {
     			position: absolute;
-    			right: 4%;
-    			top: 4%;
+    			right: 5%;
+    			top: 5%;
     		}
     		td, th {
     			text-align: center;
@@ -34,6 +34,35 @@
     		.col-auto input {
     			width: 120%;
     		}
+    		.inputs-edicao {
+    			width: 100%;
+			    border: 0;
+			    outline: none;
+			    display: block;
+			    margin: 0% 0% 5% 0%;
+    		}
+    		.inputs-edicao:hover {
+			    border-bottom: 2px solid #457B9D;
+    		}
+            .inputs-cadastro{
+                border-radius: 0;
+    			width: 120%;
+			    border: 0;
+			    outline: none;
+			    display: block;
+			    margin: 0% 0% 5% 0%;
+                border-bottom: 2px solid #457B9D;
+            }
+            .tr-edicao {
+                --bs-table-hover-bg: rgba(0, 0, 0, 0) !important;
+            }
+            .modal-header {
+                background-color: #457b9d;
+                font-family: 'Nunito', sans-serif;
+                color: white;
+                font-weight: bold;
+            }
+    		
     	</style>
     </head>
     <body>
@@ -104,7 +133,7 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" id="id_departamento" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do departamento">
+                            <input type="text" id="id_departamento" class="inputs-cadastro" aria-describedby="passwordHelpInline" placeholder="ID do departamento">
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -120,7 +149,7 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" id="nome" class="form-control" aria-describedby="passwordHelpInline" placeholder="Nome">
+                            <input type="text" id="nome" class="inputs-cadastro" aria-describedby="passwordHelpInline" placeholder="Nome">
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -136,7 +165,7 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" id="total_horas" class="form-control" aria-describedby="passwordHelpInline" placeholder="Total de horas">
+                            <input type="text" id="total_horas" class="inputs-cadastro" aria-describedby="passwordHelpInline" placeholder="Total de horas">
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -152,7 +181,7 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" id="modalidade" class="form-control" aria-describedby="passwordHelpInline" placeholder="Modalidade">
+                            <input type="text" id="modalidade" class="inputs-cadastro" aria-describedby="passwordHelpInline" placeholder="Modalidade">
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -176,7 +205,9 @@
         <footer>
             <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
         </footer>
-        <script src="ajax.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="ajax.js"></script>
+        <script src="inserir_curso_ajax.js"></script>
+        <script src="dom.js"></script>
     </body>
 </html>
