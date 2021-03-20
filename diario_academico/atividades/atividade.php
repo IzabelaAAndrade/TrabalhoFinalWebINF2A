@@ -35,7 +35,7 @@
         echo "</table>";
     }
     else {
-      echo "Nenhuma atividade cadastrado.";
+      echo "Nenhuma atividade cadastrada.";
     }
     ?>
   </body>
