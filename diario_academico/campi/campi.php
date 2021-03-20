@@ -20,7 +20,6 @@
             <p class="descricao">
               O que deseja fazer?
             </p>
-            <h1 class="principal">Formulário</h1>
             <div id="ajuste">
               <form action="inseriCampi.html">
                   <div id="divBotoes">
