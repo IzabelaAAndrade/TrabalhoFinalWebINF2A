@@ -1,4 +1,4 @@
---Tabela livros, bd Biblioteca
+-- Tabela livros, bd Biblioteca
 
 CREATE TABLE IF NOT EXISTS `livros` (
   `id_obra` int(11) NOT NULL,
