@@ -1,13 +1,7 @@
 <?php
     if (isset($_GET["id_aluno"])) {
         /*CONEXÃO COM BANCO DE DADOS*/
-        $user = "root";
-        $password = "";
-        $database = "biblioteca";
-        $hostname = "localhost";
-        $conexao = mysqli_connect( $hostname, $user, $password) or die ("Erro na conexão."); 
-        $query = "USE $database";
-        $query_database = mysqli_query($conexao, $query);
+        include 'conexao.php';
 
         $id_aluno = $_GET["id_aluno"];
 
@@ -22,15 +16,14 @@
 
                 mysqli_free_result($result);
 
-                $query = "SELECT * FROM `emprestimos` WHERE `Id_alunos` = $id_aluno";
+                $query = "SELECT * FROM `emprestimos` WHERE `Id_alunos` = $id_aluno AND `Data_devolucao`='0000-00-00'";
                 $result = mysqli_query($conexao, $query);
                 $cont = mysqli_num_rows($result);
                 
                 if($result != false){
                     $returnEmprestimos = "";
                     while($row = mysqli_fetch_assoc($result)){
-                        /*echo "<div class='emprestimo'>ID: ".$row['Id']."<br>ID do Acervo: ".$row['id_acervo']."<br>Data de Empréstimo: ".$row['data_emprestimo']."<br>Data prevista para Devolução: ".$row['data_devolucao']."</div>";*/
-                        $returnEmprestimos .= $row['Id'].",".$row['id_alunos'].",".$row['id_acervo'].",".$row['data_emprestimo'].",".$row['data_prev_devol'].",".$row['data_devolucao'].",".$row['multa'].",";
+                        $returnEmprestimos .= $row['Id'].",".$row['Id_alunos'].",".$row['Id_acervo'].",".$row['Data_emprestimo'].",".$row['Data_prev_devol'].",".$row['Data_devolucao'].",".$row['Multa'].",";
                     }
                 }else{
                     $returnEmprestimos = "Nenhum empréstimo.";
@@ -55,8 +48,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="stylesheet" href="geral_biblioteca.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="css/geral_biblioteca.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <style>
@@ -97,13 +90,16 @@
                 <h3 class="sub">Bem-Vindo(a) à</h3>
                 <h1 class="principal">Manutenção de Empréstimos</h1>
                 <div id="busca">
-                    <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit"  id="botaoBuscaId"><img src="lupa.png" width="24" height="24"></button>
+                    <form method="GET" action="">
+                        <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit"  id="botaoBuscaId">Buscar</button>
+                    </form>
                 </div>
             </div>
         </div>
 
         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" id="novo_emprestimo">Novo Empréstimo</button>
-
+          
+        <div id="dadosAluno"></div>
         <div id="emprestimos"></div>
     
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -156,36 +152,45 @@
             </div>
           </div>
         </div>
+
+        <div class="modal fade" id="devolucaoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="cabecalho_modal">
+                <h5 class="modal-title" id="exampleModalLabel">Devolução</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="location.reload(true);"></button>
+              </div>
+              <div class="modal-body">
+                
+                <p>ID do empréstimo: <span id="pIdEmprestimo"></span></p>
+                <p>Data prevista para devolução: <span  id="pDataPrevDevolucao"></span></p>
+                <p>Multa: <span id="pMulta"></span></p>
+
+                <p id="result"></p>
+
+              </div>
+              <div class="modal-footer" id="footer_modal">
+                <button type="button" class="btn " id="confirmaDevolucao">Confirmar</button>
+                <button type="button" class="btn" id="cancelarDevolucao" onclick="location.reload(true);">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </main>
     <footer>
         <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
     </footer>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="ajax.js"></script>
-    <script src="dom.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/dom.js"></script>
     <script>
-        function makeRequest_MostraEmprestimos(){
-            $.ajax({
-            url : "mostra_emprestimos.php",
-            type : 'post',
-            data : {
-                id_aluno : $("#busca_id").val(),
-            },
-            beforeSend : function(){
-                $("#emprestimos").html("Carregando...");
-            }})
-            .done(function(msg){
-                $("#emprestimos").html(msg);
-            })
-            .fail(function(jqXHR, textStatus, msg){
-                alert(msg);
-            });
-        }
-
-        document.getElementById("botaoBuscaId").onclick = function(e){
-            makeRequest_MostraEmprestimos();
-        }
+        localStorage.setItem("dadosAluno", "<?php echo $return; ?>");
+        localStorage.setItem("dadosEmprestimos", "<?php echo $returnEmprestimos; ?>");
+        localStorage.setItem("numEmprestimos", "<?php echo $returnRows; ?>");
     </script>
+    <script src="js/mostra_emprestimos.js"></script>
+    <script src="js/ajax_devolucao.js"></script>
 </body>
 </html>
