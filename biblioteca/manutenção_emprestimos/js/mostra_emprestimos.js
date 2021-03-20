@@ -1,18 +1,24 @@
-let dadosAluno = localStorage.getItem("dadosAluno");
-let dadosEmprestimos = localStorage.getItem("dadosEmprestimos");
-let numEmprestimos = localStorage.getItem("numEmprestimos");
+let dadosAluno;
+let dadosEmprestimos;
+let numEmprestimos;
 let emprestimos = [];
 
-localStorage.clear();
+if(localStorage.getItem("dadosAluno")!=null){
+    dadosAluno = localStorage.getItem("dadosAluno");
+    dadosEmprestimos = localStorage.getItem("dadosEmprestimos");
+    numEmprestimos = localStorage.getItem("numEmprestimos");
+    emprestimos = [];
 
-if(mostraDadosAluno()){
-    constroiArrayEmprestimos();
-    mostraEmprestimos();
-}else{
-    let alunoNaoEncontradoParagrafo = document.createElement("p");
-    alunoNaoEncontradoParagrafo.id = "alunoNaoEncontrado";
-    alunoNaoEncontradoParagrafo.innerHTML = "Nenhum aluno com este ID encontrado.";
-    document.getElementById("dadosAluno").appendChild(alunoNaoEncontradoParagrafo);
+    localStorage.clear();
+        if(mostraDadosAluno()){
+        constroiArrayEmprestimos();
+        mostraEmprestimos();
+    }else{
+        let alunoNaoEncontradoParagrafo = document.createElement("p");
+        alunoNaoEncontradoParagrafo.id = "alunoNaoEncontrado";
+        alunoNaoEncontradoParagrafo.innerHTML = "Nenhum aluno com este ID encontrado.";
+        document.getElementById("dadosAluno").appendChild(alunoNaoEncontradoParagrafo);
+    }
 }
 
 let botoes = document.querySelectorAll('button.btnDevolver');

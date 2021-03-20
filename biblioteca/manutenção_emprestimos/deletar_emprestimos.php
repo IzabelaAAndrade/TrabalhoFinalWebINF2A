@@ -14,4 +14,5 @@
         $returnStatus = false;
     }  
     echo $returnStatus;
+    mysqli_close($conexao);
 ?>

@@ -16,7 +16,7 @@
 
                 mysqli_free_result($result);
 
-                $query = "SELECT * FROM `emprestimos` WHERE `Id_alunos` = $id_aluno AND `Data_devolucao`='0000-00-00'";
+                $query = "SELECT * FROM `emprestimos` WHERE `Id_alunos` = $id_aluno AND `Data_devolucao` IS NULL";
                 $result = mysqli_query($conexao, $query);
                 $cont = mysqli_num_rows($result);
                 
@@ -91,7 +91,7 @@
                 <h1 class="principal">Manutenção de Empréstimos</h1>
                 <div id="busca">
                     <form method="GET" action="">
-                        <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit"  id="botaoBuscaId">Buscar</button>
+                        <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit" id="botaoBuscaId">Buscar</button>
                     </form>
                 </div>
             </div>
