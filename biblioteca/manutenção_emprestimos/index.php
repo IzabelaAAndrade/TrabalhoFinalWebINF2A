@@ -23,7 +23,7 @@
                 if($result != false){
                     $returnEmprestimos = "";
                     while($row = mysqli_fetch_assoc($result)){
-                        $returnEmprestimos .= $row['Id'].",".$row['Id_alunos'].",".$row['Id_acervo'].",".$row['Data_emprestimo'].",".$row['Data_prev_devol'].",".$row['Data_devolucao'].",".$row['Multa'].",";
+                        $returnEmprestimos .= $row['Id'].",".$row['id_alunos'].",".$row['id_acervo'].",".$row['data_emprestimo'].",".$row['data_prev_devol'].",".$row['data_devolucao'].",".$row['multa'].",";
                     }
                 }else{
                     $returnEmprestimos = "Nenhum empréstimo.";
@@ -60,6 +60,9 @@
             font-weight: bold !important;
             line-height: 1.5 !important;
         }
+        #barraPesquisa {
+        	height: 100%;
+        }
     </style>
     <title>Empréstimos</title>
 </head>
@@ -90,7 +93,7 @@
                 <h3 class="sub">Bem-Vindo(a) à</h3>
                 <h1 class="principal">Manutenção de Empréstimos</h1>
                 <div id="busca">
-                    <form method="GET" action="">
+                    <form method="GET" action="" id="barraPesquisa">
                         <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit" id="botaoBuscaId">Buscar</button>
                     </form>
                 </div>

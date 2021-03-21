@@ -119,3 +119,7 @@ th, td {
 footer {
     margin-top: 8%;
 }
+
+form {
+    height: 100%;
+}
