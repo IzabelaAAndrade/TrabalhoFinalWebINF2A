@@ -1,0 +1,11 @@
+header, footer {
+    height: 2vh;
+    background-color: var(--dark-blue);
+    padding: 3%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

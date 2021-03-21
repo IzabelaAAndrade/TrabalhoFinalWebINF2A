@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --dark-blue: #1d3557;
+    --blue: #457b9d;
+    --blue-rgb: 69, 123, 157;
+    --red: #e74946;
+    --red-rgb: 231, 73, 70;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3 {
+    margin: 0;
+    color: #fff;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+h2 {
+    margin: 0;
+    color: var(--red);
+}
+
+h3 {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.sub {
+    color: var(--blue);
+    font-size: 1em;
+}
+
+.principal {
+    color: var(--red);
+    font-size: 1.5em;
+}
+
+body {
+    height: 100vh;
+}
+
+body, input, button {
+    font-family: Nunito, Arial, sans-serif;
+}
+
+.error-msg {
+    font-size: 0.9em;
+    width: calc(100% - 10px);
+    text-align: center;
+    color: #fff;
+    background-color: rgba(230, 57, 70, 0.7);
+    border: 1px solid rgba(230, 57, 70, 1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.min-height {
+    min-height: 100vh;
+}
+
+.list-container, .form-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-container {
+    margin: 10vh 0;
+    box-shadow: 0 0 1em lightgray;
+    border-radius: .7em;
+}
+
+.form-container {
+    width: 400px;
+}
+
+.form-container h1, .form-container h2 {
+    margin: 0 0 30px;
+}
+
+p {
+    margin: 0;
+}
+
+.description {
+    width: 300px;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+.fieldset-container {
+    width: 400px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px #457B9D solid;
+    border-radius: .7em;
+}
+
+legend {
+    margin: 0 auto;
+    font-weight: bold;
+    color: #457B9D;
+}
+
+.select-container {
+    width: 100%;
+    margin: 10px 0 20px;
+}
+
+.caixa-selecao {
+    width: 100%;
+    height: 40px;
+    border-radius: .7em;
+    border: 1x solid #d1d1d1;
+    cursor: pointer;
+    padding: 1px 1px 1px 5px;
+    font-family: Nunito, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    background-color: #457B9D;
+}
+
+.table-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(var(--blue-rgb), 0.075);
+}
+
+th, td {
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid rgba(var(--blue-rgb), 0.3);
+    text-align: center;
+}
+
+.icon-container {
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+    padding: 0;
+}
+
+.icon-container:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.btns {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1em;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    color: #fff;
+    background-color: var(--blue);
+    border-radius: .7em;
+    border: 1px solid var(--blue);
+    text-decoration: none;
+    transition: all ease-in-out 200ms;
+}
+
+.btn:hover, .btn:active {
+    color: var(--blue);
+    background-color: #fff;
+    border: 1px solid var(--blue);
+}
+
+/* FORMULÁRIOS */
+
+form, .pseudo-form {
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    font-size: 1em;
+    display: block;
+    width: calc(100% - 4px);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(69, 123, 157, 0.8);
+    z-index: 2;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    color: rgba(69, 123, 157, 0.8);
+    font-size: 1rem;
+    transition: 200ms;
+    z-index: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus + label, input:valid + label {
+    top: -20px;
+    font-size: 0.9rem;
+    color: rgba(69, 123, 157, 0.9);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+}
+
+/* HIDDEN */
+
+.hidden {
+    display: none;
+}
+
+.action-div {
+    width: 100%;
+}
+
+#edit-container {
+    margin-top: 20px;
+}
