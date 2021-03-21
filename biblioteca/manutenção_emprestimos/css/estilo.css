@@ -59,11 +59,11 @@ h1{
     border-right: 0;
     
 }
-#novo_emprestimo{
+#novo_emprestimo{  /* Mudança: Centralização do botão */
     background-color: #E76F51;
     color: white;
-    margin-top: 1%;
-    margin-left: 57%;
+    display:block;
+    margin: 0% auto 0% auto;
 }
 #novo_emprestimo:hover{
     background-color: #449d8f;
