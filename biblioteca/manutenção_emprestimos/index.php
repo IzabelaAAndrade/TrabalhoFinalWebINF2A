@@ -69,7 +69,7 @@
 <body>
     <header>
         <img src="img/LogoExemploCortada.png" alt="logo" id="logo">
-        <h1>Sistema Biblioteca</h1>
+        <h1 id="titulo">Sistema Biblioteca</h1>
     </header>
     <nav>
         <ul class="menu">
@@ -182,7 +182,8 @@
 
     </main>
     <footer>
-        <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+        <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+        <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
     </footer>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
