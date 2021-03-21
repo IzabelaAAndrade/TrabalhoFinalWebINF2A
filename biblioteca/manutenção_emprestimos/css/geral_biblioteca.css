@@ -122,6 +122,7 @@ footer{
 nav{
     background-color: #457B9D;
     margin: 0%;
+    z-index: 1; /*Mudança Ajuste no Z-Index para adequá-lo aos demais conteúdos da página*/
 }
 
 .menu, .sub_menu{
@@ -185,3 +186,8 @@ li a{
     width:200px;
 }
 
+/* Ajustes na posição do conteúdo principal da página */
+.ajuste_z_index{
+    z-index: -1; /*Mudança Ajuste no Z-Index para adequá-lo aos demais conteúdos da página*/
+    
+}
