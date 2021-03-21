@@ -5,4 +5,4 @@ CREATE TABLE `matriculas` (
   `ano` char(4) NOT NULL,
   `ativo` varchar(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-COMMIT;
+-- COMMIT;
