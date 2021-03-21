@@ -1,0 +1,15 @@
+#divBuscaTurma{
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#btnBusca{
+    width: 100px;
+    font-size: 12px;
+}
+
+#tableTurmas,td,th{
+    border: 1px solid black;
+}
