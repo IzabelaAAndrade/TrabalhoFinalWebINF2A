@@ -6,8 +6,8 @@ error_reporting(E_ALL);
 // */
 
 define('SERVER', 'localhost');
-define('USER', 'userlegal');
-define('PWORD', 'senhalegal');
+define('USER', 'root');
+define('PWORD', '');
 
 // Cria conexão
 $conn = new \mysqli(SERVER, USER, PWORD);
