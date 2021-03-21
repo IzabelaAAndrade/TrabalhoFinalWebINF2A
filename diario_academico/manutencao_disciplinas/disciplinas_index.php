@@ -59,7 +59,7 @@ include_once "povoa_base.php";
 <main id="main">
     <h3 class="sub"><strong>Bem-Vindo(a) à</strong></h3>
     <h1 class="principal"><strong>Manutenção Disciplinas</strong></h1>
-    <p class="descricao">Para a realização das tarefas, alterar e excluir basta clicar nos botoes -
+    <p class="descricao">Para a realização das tarefas, criar, alterar e excluir disciplinas basta clicar nos botoes -
         <br> Deseja realizar alguma manuntenção nas disciplinas do  Diário Acadêmico? Você está no lugar certo!
     </p>
     <div class="modal fade" id="adddisc" role="dialog">
