@@ -1,0 +1,160 @@
+html, body{
+    margin: 0%;
+}
+header, footer{
+    height: 5%;
+    background-color: #1D3557;
+    padding: 3%;
+}
+
+h1, h3{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    margin: 0%;
+}
+
+h1{
+    font-size: 1em;
+}
+
+h3{
+    margin-top: 2%;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.sub{
+    color: #457B9D;
+    margin: 5% 0% .5% 0%;
+    font-size: 1em;
+}
+
+.principal{
+    color: #e74946;
+    font-size: 1.5em;
+    margin: 0% 0% .5% 0%;
+}
+
+.descricao{
+    font-family: 'Nunito', sans-serif;
+    color: #1D3557;
+    font-size: 1em;
+    margin: 0% 0% 1% 0%;
+}
+
+.descricao, .principal, .sub{
+    text-align: center;
+}
+
+#fieldset{
+margin-left: auto;
+margin-right: auto;
+width:30vw;
+height:20vh;
+border: 3px #457B9D solid;
+border-radius: .7em;
+margin-bottom: 8%;
+margin-top: 2%;
+}
+legend
+{
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  color: #457B9D;
+  text-align: center;
+}
+.caixa-seleção{
+    
+    width: 80%;
+    border-radius: .7em;
+    height: 25%;
+    border: 1x solid #d1d1d1;
+    cursor: pointer;
+    padding: 1px 1px 1px 5px;
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #457B9D;
+}
+.botao{
+    width: 18%;
+    height: 25%;
+    border-radius: .7em;
+    background-color: #457B9D;
+    color: white;
+}
+
+/* Imagens ****************************************************************/
+#logo{
+    margin-top: 10px;
+    height: 7em;/*94.5px;*/
+    width: 17em;/*250px;*/
+    float: left;
+}
+/* Menu ****************************************************************/
+nav{
+    background-color: #457B9D;
+    margin: 0%;
+}
+
+.menu, .sub_menu{
+    list-style: none;
+}
+
+.menu{
+    float: left;
+    margin: 0%;
+    font-size: 20px;
+    padding: 0%;
+}
+
+li a{
+    display: block;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding:5px 10px;
+    display:block;
+    text-shadow:0px 0px 5px rgb(56, 56, 56);
+}
+
+.menu li{
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border: thin inset #1d355631;
+    position: relative;
+    float: left;
+    background-color: #457B9D;
+    box-shadow: #0003 5px 5px 10px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease
+}
+
+.sub_menu li{
+    background-color: #457b9dde;
+}
+
+.menu li:hover{
+    background-color: #2e5064;
+}
+
+.menu li ul{
+    position: absolute;
+    top:57px;
+    right:0px;
+    display: none;
+}
+
+.menu li:hover ul, .menu li.over ul{
+    display:block;
+    -webkit-transition: all 1s ease
+}
+
+.menu li ul li{
+    display:block;
+    width:200px;
+}

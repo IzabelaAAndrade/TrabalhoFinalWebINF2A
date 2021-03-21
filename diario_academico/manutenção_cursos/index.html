@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manutenção de Cursos</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    	<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    	<link rel="stylesheet" href="geral_academico.css">
+    	
+    	<script src="js/jquery-3.6.0.min.js"></script>
+    	<style>
+    		#close {
+    			position: absolute;
+    			right: 8px;
+    			top: 8px;
+    		}
+    		#close2 {
+    			position: absolute;
+    			right: 5%;
+    			top: 5%;
+    		}
+    		td, th {
+    			text-align: center;
+    		}
+    		.campos {
+    			margin-bottom: 2%;
+    		}
+    		.col-auto input {
+    			width: 120%;
+    		}
+    		.inputs-edicao {
+    			width: 100%;
+			    border: 0;
+			    outline: none;
+			    display: block;
+			    margin: 0% 0% 5% 0%;
+    		}
+    		.inputs-edicao:hover {
+			    border-bottom: 2px solid #457B9D;
+    		}
+            .inputs-cadastro{
+                border-radius: 0;
+    			width: 120%;
+			    border: 0;
+			    outline: none;
+			    display: block;
+			    margin: 0% 0% 5% 0%;
+                border-bottom: 2px solid #1d3556;
+            }
+            .tr-edicao {
+                --bs-table-hover-bg: rgba(0, 0, 0, 0) !important;
+            }
+            .modal-header {
+                background-color: #e74946;
+                font-family: 'Nunito', sans-serif;
+                color: white;
+                font-weight: bold;
+            }
+    		
+    	</style>
+    </head>
+    <body>
+        <header>
+            <img src="img/LogoExemploCortado.png" alt="logo" id="logo">
+            <h1>Sistema Academico</h1>
+        </header>
+        
+        <nav>
+	        <ul class="menu">
+	            <li><a href="#">Home</a></li>
+	            <li><a href="#">Sobre</a></li>
+	            <li><a href="#">Manutenção</a>
+	                <ul class="sub_menu">
+	                    <li><a href="../../../diario_academico/campi/campi.php">Campi</a></li>
+	                    <li><a href="#">Departamentos</a></li>
+	                    <li><a href="#">Cursos</a></li>
+	                    <li><a href="#">Turmas</a></li>
+	                    <li><a href="#">Alunos</a></li>
+	                    <li><a href="#">Professores</a></li>
+	                    <li><a href="#">Disciplinas</a></li>
+	                    <li><a href="#">Etapas</a></li>
+	                    <li><a href="#">Diários</a></li>
+	                </ul>
+	            </li>
+	            <li><a href="#">Relatórios</a></li>
+	            <li><a href="#">Transferências</a></li>
+	            <li><a href="#">Ajuda</a></li>
+	        </ul>
+    	</nav>
+        
+        <main>
+            <h3 class="sub">Bem-Vindo(a) à</h3>
+            <h1 class="principal">Manutenção de Cursos</h1>
+            <p class="descricao">Deseja inserir, alterar ou excluir algum curso? Para isso basta selecionar uma das opções abaixo!</p>
+
+                <fieldset id="fieldset">
+                    <legend>Selecione ação deseja realizar</legend>
+                    <select class="caixa-seleção" id="op">
+                        <option value="Inserção">Inserir</option>
+                        <option value="alteração">Alterar</option>
+                        <option value="exclusão">Excluir</option>
+                    </select> 
+                    <input class="botao" type="submit" value="enviar" id="btn">
+                </fieldset>
+        </main>
+
+		<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="modal">
+		  <div class="modal-dialog modal-xl">
+		    <div class="modal-content">
+		    	<div id="listagem">
+        		</div>
+		    </div>
+		  </div>
+		</div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cadastro de Cursos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close2"></button>
+              </div>
+              <div class="modal-body">
+                <div class="campos">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label"></label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="id_departamento" class="inputs-cadastro" aria-describedby="passwordHelpInline" placeholder="ID do departamento">
+                        </div>
+                        <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campos">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label"></label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="nome" class="inputs-cadastro" aria-describedby="passwordHelpInline" placeholder="Nome">
+                        </div>
+                        <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campos">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label"></label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="total_horas" class="inputs-cadastro" aria-describedby="passwordHelpInline" placeholder="Total de horas">
+                        </div>
+                        <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campos">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="col-form-label"></label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" id="modalidade" class="inputs-cadastro" aria-describedby="passwordHelpInline" placeholder="Modalidade">
+                        </div>
+                        <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="status"></div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success" id="confirmar" disabled>Confirmar</button>
+                <button type="button" class="btn btn-outline-danger" id="cancelar" disabled>Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <footer>
+            <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+        </footer>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="ajax.js"></script>
+        <script src="inserir_curso_ajax.js"></script>
+        <script src="dom.js"></script>
+    </body>
+</html>

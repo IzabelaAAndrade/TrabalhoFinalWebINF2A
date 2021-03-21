@@ -92,8 +92,8 @@ CREATE TABLE `conteudos` (
 --
 
 CREATE TABLE `cursos` (
-  `id` int(11) NOT NULL,
-  `id_depto` varchar(255) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_depto` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `horas_total` int(11) NOT NULL,
   `modalidade` varchar(255) NOT NULL

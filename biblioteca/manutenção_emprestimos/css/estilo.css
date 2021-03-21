@@ -1,0 +1,125 @@
+.button {
+    padding-top: 4px;
+}
+.row {
+    padding-top: 2%;
+}
+#status {
+    padding-top: 2%;
+}
+h1{
+    color:white ;
+}
+#confirmar{
+    background-color: #2A9D8F;
+    color: white;
+}
+#cancelar{
+    background-color: #E76F51;
+    color: white;
+}
+#cabecalho_modal{
+    background-color: #264653;
+    color: white;
+}
+.inputs{
+    width: 120%;
+    border: 0;
+    outline: none;
+    border-bottom: 1.5px solid #449d8f;
+    display: block;
+    margin: 0% 0% 5% 0%;
+}
+#emprestimos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+#cabecalho {
+    display: flex;
+    flex-direction: column;
+    /*background-color: #264653;*/
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative;
+}
+#busca {
+    height: 40px;
+    position: relative;
+    margin-top: 3%;
+}
+#busca_id {
+    width:500px;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #dfe1e5;
+    border-right: 0;
+    
+}
+#novo_emprestimo{
+    background-color: #E76F51;
+    color: white;
+    margin-top: 1%;
+    margin-left: 57%;
+}
+#novo_emprestimo:hover{
+    background-color: #449d8f;
+}
+#dadosAluno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2.5%;
+}
+#dadosAluno p{
+    margin: 10px;
+    padding: 30px;
+    font-size: 12pt;
+    background-color:#E9C46A;
+    border-radius: 20px;
+    box-shadow: 3px 2px 2px gray;
+    color: white;
+}
+
+#listagem {
+    max-width: 40% !important;
+    font-size: 12pt;
+    border: 1px solid #dfe1e5;
+    box-shadow: #0003 4px 4px 10px
+}
+
+#botaoBuscaId {
+    border-radius: 0px 10px 10px 0px;
+    height: 100%;
+    background-color: white;
+    border: 0;
+    position: absolute;
+    border: 1px solid #dfe1e5;
+    border-left: 0;
+    
+}
+.titulo-pagina {
+    text-align: center;
+    margin-left: 10%;
+    color: #e76f51;
+}
+
+main {
+    margin-top: 5%;
+}
+
+th, td {
+    text-align: center;
+}
+
+footer {
+    margin-top: 8%;
+}
+
+form {
+    height: 100%;
+}

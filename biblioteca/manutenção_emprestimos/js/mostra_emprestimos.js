@@ -1,19 +1,27 @@
-let dadosAluno = localStorage.getItem("dadosAluno");
-let dadosEmprestimos = localStorage.getItem("dadosEmprestimos");
-let numEmprestimos = localStorage.getItem("numEmprestimos");
+let dadosAluno;
+let dadosEmprestimos;
+let numEmprestimos;
 let emprestimos = [];
 
-localStorage.clear();
+if(localStorage.getItem("dadosAluno")!=null){
+    dadosAluno = localStorage.getItem("dadosAluno");
+    dadosEmprestimos = localStorage.getItem("dadosEmprestimos");
+    numEmprestimos = localStorage.getItem("numEmprestimos");
+    emprestimos = [];
 
-if(mostraDadosAluno()){
-    constroiArrayEmprestimos();
-    mostraEmprestimos();
-}else{
-    let alunoNaoEncontradoParagrafo = document.createElement("p");
-    alunoNaoEncontradoParagrafo.id = "alunoNaoEncontrado";
-    alunoNaoEncontradoParagrafo.innerHTML = "Nenhum aluno com este ID encontrado.";
-    document.getElementById("dadosAluno").appendChild(alunoNaoEncontradoParagrafo);
+    localStorage.clear();
+        if(mostraDadosAluno()){
+        constroiArrayEmprestimos();
+        mostraEmprestimos();
+    }else{
+        let alunoNaoEncontradoParagrafo = document.createElement("p");
+        alunoNaoEncontradoParagrafo.id = "alunoNaoEncontrado";
+        alunoNaoEncontradoParagrafo.innerHTML = "Nenhum aluno com este ID encontrado.";
+        document.getElementById("dadosAluno").appendChild(alunoNaoEncontradoParagrafo);
+    }
 }
+
+let botoes = document.querySelectorAll('button.btnDevolver');
 
 function mostraDadosAluno() {
     if(dadosAluno!=""){
@@ -90,8 +98,12 @@ function mostraEmprestimos() {
         
         let btnDevolver = document.createElement("button");
         btnDevolver.innerHTML = "Devolver";
-        btnDevolver.classList.add("btnDevolver");
+        btnDevolver.id = "btnDevolver"+i;
+        btnDevolver.classList.add("btnDevolver","btn");
+        btnDevolver.setAttribute("data-bs-toggle","modal");
+        btnDevolver.setAttribute("data-bs-target","#devolucaoModal");
         document.getElementById("emprestimo"+i).appendChild(btnDevolver);
+
     }
     if(emprestimos.length==0){
         let nenhumEmprestimoParagrafo = document.createElement("p");
@@ -118,4 +130,36 @@ function formataData(data){
     data = data.split("-");
 
     return data[2]+"/"+data[1]+"/"+data[0];
+}
+
+function toStringEmprestimo(indice){
+    let retorno = emprestimos[indice].idEmprestimo+","+emprestimos[indice].idAcervo+","+emprestimos[indice].dataPrevDevolucao;
+    return retorno;
+}
+
+function calculaMulta(data){
+    data = data.split("/");
+    data[1] = parseInt(data[1],10)-1;  
+    let dataPrevEntrega = new Date(data[2],data[1],data[0]);
+    let dataAtual = new Date();
+
+    let Difference_In_Time = dataAtual.getTime()-dataPrevEntrega.getTime();
+    let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    Difference_In_Days = Math.round(Difference_In_Days);
+
+    if(Difference_In_Days>0){
+        let multa = (Difference_In_Days-1)*0.25;
+        
+        return multa.toFixed(2);
+    }else{
+        return 0;
+    }
+}
+
+for(let j=0;j<botoes.length;j++){
+    document.getElementById("btnDevolver"+j).addEventListener("click", () => {
+        document.getElementById('pIdEmprestimo').innerHTML = emprestimos[j].idEmprestimo;
+        document.getElementById('pDataPrevDevolucao').innerHTML = formataData(emprestimos[j].dataPrevDevolucao);
+        document.getElementById('pMulta').innerHTML = "R$"+calculaMulta(formataData(emprestimos[j].dataPrevDevolucao));
+    });
 }

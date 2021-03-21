@@ -1,13 +1,7 @@
 <?php
     if (isset($_GET["id_aluno"])) {
         /*CONEXÃO COM BANCO DE DADOS*/
-        $user = "root";
-        $password = "";
-        $database = "biblioteca";
-        $hostname = "localhost";
-        $conexao = mysqli_connect( $hostname, $user, $password) or die ("Erro na conexão."); 
-        $query = "USE $database";
-        $query_database = mysqli_query($conexao, $query);
+        include 'conexao.php';
 
         $id_aluno = $_GET["id_aluno"];
 
@@ -22,14 +16,13 @@
 
                 mysqli_free_result($result);
 
-                $query = "SELECT * FROM `emprestimos` WHERE `Id_alunos` = $id_aluno";
+                $query = "SELECT * FROM `emprestimos` WHERE `Id_alunos` = $id_aluno AND `Data_devolucao` IS NULL";
                 $result = mysqli_query($conexao, $query);
                 $cont = mysqli_num_rows($result);
                 
                 if($result != false){
                     $returnEmprestimos = "";
                     while($row = mysqli_fetch_assoc($result)){
-                        /*echo "<div class='emprestimo'>ID: ".$row['Id']."<br>ID do Acervo: ".$row['id_acervo']."<br>Data de Empréstimo: ".$row['data_emprestimo']."<br>Data prevista para Devolução: ".$row['data_devolucao']."</div>";*/
                         $returnEmprestimos .= $row['Id'].",".$row['id_alunos'].",".$row['id_acervo'].",".$row['data_emprestimo'].",".$row['data_prev_devol'].",".$row['data_devolucao'].",".$row['multa'].",";
                     }
                 }else{
@@ -54,30 +47,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style_emprestimos.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="css/geral_biblioteca.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: unset !important;
+        }
+        h1, h2, h3, h4 {
+            font-weight: bold !important;
+            line-height: 1.5 !important;
+        }
+        #barraPesquisa {
+        	height: 100%;
+        }
+    </style>
     <title>Empréstimos</title>
 </head>
 <body>
+    <header>
+        <img src="img/LogoExemploCortada.png" alt="logo" id="logo">
+        <h1>Sistema Biblioteca</h1>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Manutenção</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Acervo</a></li>
+                    <li><a href="#">Empréstimos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#">Descarte</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </nav>
+
     <main>
         <div id="cabecalho">
-            <h1>Empréstimos</h1>
-            <div id="busca">
-                <form method="GET" action="">
-                    <input type="text" name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit"  id="botaoBuscaId"><img src="lupa.png" width="20" height="20"></button>
-                </form>
+            <div id="cab">
+                <h3 class="sub">Bem-Vindo(a) à</h3>
+                <h1 class="principal">Manutenção de Empréstimos</h1>
+                <div id="busca">
+                    <form method="GET" action="" id="barraPesquisa">
+                        <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit" id="botaoBuscaId">Buscar</button>
+                    </form>
+                </div>
             </div>
         </div>
+
+        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" id="novo_emprestimo">Novo Empréstimo</button>
+          
         <div id="dadosAluno"></div>
         <div id="emprestimos"></div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="novo_emprestimo">+</button>
-
+    
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header" id="cabecalho_modal">
                 <h5 class="modal-title" id="exampleModalLabel">Cadastro de Empréstimos</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
               </div>
@@ -88,7 +119,7 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" id="id_aluno" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do aluno">
+                            <input type="text" class="inputs" id="id_aluno" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do aluno">
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -104,7 +135,7 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" id="id_acervo" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do acervo">
+                            <input type="text" class="inputs"id="id_acervo" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do acervo">
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -117,21 +148,52 @@
                 <div id="status"></div>
 
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outline-success" id="confirmar" disabled>Confirmar</button>
-                <button type="button" class="btn btn-outline-danger" id="cancelar" disabled>Cancelar</button>
+              <div class="modal-footer" id="footer_modal">
+                <button type="button" class="btn " id="confirmar" disabled>Confirmar</button>
+                <button type="button" class="btn" id="cancelar" disabled>Cancelar</button>
               </div>
             </div>
           </div>
         </div>
-    <script src="ajax.js"></script>
-    <script src="dom.js"></script>
+
+        <div class="modal fade" id="devolucaoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="cabecalho_modal">
+                <h5 class="modal-title" id="exampleModalLabel">Devolução</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="location.reload(true);"></button>
+              </div>
+              <div class="modal-body">
+                
+                <p>ID do empréstimo: <span id="pIdEmprestimo"></span></p>
+                <p>Data prevista para devolução: <span  id="pDataPrevDevolucao"></span></p>
+                <p>Multa: <span id="pMulta"></span></p>
+
+                <p id="result"></p>
+
+              </div>
+              <div class="modal-footer" id="footer_modal">
+                <button type="button" class="btn " id="confirmaDevolucao">Confirmar</button>
+                <button type="button" class="btn" id="cancelarDevolucao" onclick="location.reload(true);">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </main>
+    <footer>
+        <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+    </footer>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/dom.js"></script>
     <script>
         localStorage.setItem("dadosAluno", "<?php echo $return; ?>");
         localStorage.setItem("dadosEmprestimos", "<?php echo $returnEmprestimos; ?>");
         localStorage.setItem("numEmprestimos", "<?php echo $returnRows; ?>");
     </script>
-    <script src="mostra_emprestimos.js"></script>
+    <script src="js/mostra_emprestimos.js"></script>
+    <script src="js/ajax_devolucao.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
---Tabela acervo, bd Biblioteca
+-- Tabela acervo, bd Biblioteca
 
 CREATE TABLE IF NOT EXISTS `acervo` (
   `id` int(11) NOT NULL,
