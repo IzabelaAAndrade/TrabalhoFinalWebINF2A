@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS autores;
+
 CREATE TABLE IF NOT EXISTS autores(
     Id_obra int(4) UNSIGNED NOT NULL ,
     Id_autor int(4) UNSIGNED NOT NULL AUTO_INCREMENT,
