@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS emprestimos;
+
 CREATE TABLE IF NOT EXISTS emprestimos(
     Id int(4) UNSIGNED NOT NULL AUTO_INCREMENT,
     Id_alunos int(4) UNSIGNED NOT NULL,
