@@ -10,22 +10,21 @@ include_once "povoa_base.php";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="css/disciplinas_index_css.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/tabela.css">
     <link rel="stylesheet" href="css/modal.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="https://kit.fontawesome.com/b484666594.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
+    <link rel="stylesheet" href="css/tabela.css">
 </head>
 <body>
 <header>
-    <h1 id="titulo"><strong>Manutenção Disciplinas</strong></h1>
+    <div id="logo-titulo">
+        <img src="imagens/LogoExemploCortado.png" alt="logo" id="logo">
+        <h1 id="titulo"><strong>Sistema Diário Acadêmico</strong></h1>
+    </div>
+
     <form id="form_buscar" action="" method="get" enctype="application/x-www-form-urlencoded">
         <div class="box">
             <input name="palavra" type="text" id="txtBusca" placeholder="Buscar..."/>
@@ -58,6 +57,11 @@ include_once "povoa_base.php";
 </nav>
 
 <main id="main">
+    <h3 class="sub"><strong>Bem-Vindo(a) à</strong></h3>
+    <h1 class="principal"><strong>Manutenção Disciplinas</strong></h1>
+    <p class="descricao">Para a realização das tarefas, alterar e excluir basta clicar nos botoes -
+        <br> Deseja realizar alguma manuntenção nas disciplinas do  Diário Acadêmico? Você está no lugar certo!
+    </p>
     <div class="modal fade" id="adddisc" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -141,146 +145,146 @@ include_once "povoa_base.php";
         Disciplina
     </button>
     <div id="main_tab">
-    <?php
-    include "conexao_bd.php";
-    global $conexao;
-    if (isset($_GET['palavra'])) {
+        <?php
+        include "conexao_bd.php";
+        global $conexao;
+        if (isset($_GET['palavra'])) {
 
-        if (empty($_GET['palavra'])) {
-            $query = "SELECT * FROM disciplinas";
-            $result = mysqli_query($conexao, $query);
-            $row = mysqli_num_rows($result);
-            if ($row > 0) {
-                echo "<table class='table'>";
+            if (empty($_GET['palavra'])) {
+                $query = "SELECT * FROM disciplinas";
+                $result = mysqli_query($conexao, $query);
+                $row = mysqli_num_rows($result);
+                if ($row > 0) {
+                    echo "<table id='tabela'>";
 
-                echo "<thead>";
+                    echo "<thead>";
 
-                echo "<tr>";
-
-                echo "<th>Id</th>";
-                echo "<th>Id_turmas</th>";
-                echo "<th>Nome</th>";
-                echo "<th>Carga_horaria_min</th>";
-                echo "<th></th>";
-                echo "<th></th>";
-
-                echo "</tr>";
-
-                echo "</thead>";
-
-                echo "<tbody>";
-
-
-                while ($linha = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
-                    echo "<td>" . $linha['id'] . "</td>";
-                    echo "<td>" . $linha['id_turmas'] . "</td>";
-                    echo "<td>" . $linha['nome'] . "</td>";
-                    echo "<td>" . $linha['carga_horaria_min'] . "</td>";
-                    echo "<td><button name='btn'  class='btnAlterar'  value='" . $linha['id'] . "'>Editar</button>" . "</td>";
-                    echo "<td><button name='btn' class='btnDeletar'  value = '" . $linha['id'] . "' >Deletar</button>" . "</td>";
+
+                    echo "<th>Id</th>";
+                    echo "<th>Id_turmas</th>";
+                    echo "<th>Nome</th>";
+                    echo "<th>Carga_horaria_min</th>";
+                    echo "<th></th>";
+                    echo "<th></th>";
 
                     echo "</tr>";
+
+                    echo "</thead>";
+
+                    echo "<tbody>";
+
+
+                    while ($linha = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>" . $linha['id'] . "</td>";
+                        echo "<td>" . $linha['id_turmas'] . "</td>";
+                        echo "<td>" . $linha['nome'] . "</td>";
+                        echo "<td>" . $linha['carga_horaria_min'] . "</td>";
+                        echo "<td><button name='btn'  class='btnAlterar'  value='" . $linha['id'] . "'>Editar</button>" . "</td>";
+                        echo "<td><button name='btn' class='btnDeletar'  value = '" . $linha['id'] . "' >Deletar</button>" . "</td>";
+
+                        echo "</tr>";
+                    }
+
+                    echo "</tbody>";
+
+                    echo "</table>";
                 }
-
-                echo "</tbody>";
-
-                echo "</table>";
-            }
-        } else {
-            $palavra = mysqli_real_escape_string($conexao, trim($_GET['palavra']));
-            $query = "SELECT * FROM disciplinas WHERE id LIKE '%$palavra%' OR nome LIKE '%$palavra%'";
-            $result = mysqli_query($conexao, $query);
-            $row = mysqli_num_rows($result);
-            if ($row > 0) {
-                echo "<table class='table'>";
-
-                echo "<thead>";
-
-                echo "<tr>";
-
-                echo "<th>Id</th>";
-                echo "<th>Id_turmas</th>";
-                echo "<th>Nome</th>";
-                echo "<th>Carga_horaria_min</th>";
-                echo "<th></th>";
-                echo "<th></th>";
-
-                echo "</tr>";
-
-                echo "</thead>";
-
-                echo "<tbody>";
-
-
-                while ($linha = mysqli_fetch_assoc($result)) {
-                    echo "<tr>";
-                    echo "<td>" . $linha['id'] . "</td>";
-                    echo "<td>" . $linha['id_turmas'] . "</td>";
-                    echo "<td>" . $linha['nome'] . "</td>";
-                    echo "<td>" . $linha['carga_horaria_min'] . "</td>";
-                    echo "<td><button type='button' class='btnAlterar' name='btn'  value='" . $linha['id'] . "'>Editar</button>" . "</td>";
-                    echo "<td><button  type='button' class='btnDeletar' name='btn' value = '" . $linha['id'] . "'>Deletar</button>" . "</td>";
-
-                    echo "</tr>";
-                }
-
-                echo "</tbody>";
-
-                echo "</table>";
-
             } else {
-                echo "<div id='container_msg'><div class='msg-erro'><p>Erro: Não foram encontrados nenhuma turma com essa palavra</p>" . "</div></div>";
-            }
-        }
-        mysqli_close($conexao);
-    } else {
+                $palavra = mysqli_real_escape_string($conexao, trim($_GET['palavra']));
+                $query = "SELECT * FROM disciplinas WHERE id LIKE '%$palavra%' OR nome LIKE '%$palavra%'";
+                $result = mysqli_query($conexao, $query);
+                $row = mysqli_num_rows($result);
+                if ($row > 0) {
+                    echo "<table id='tabela'>";
 
-        if (empty($_GET['palavra'])) {
-            $query = "SELECT * FROM disciplinas";
-            $result = mysqli_query($conexao, $query);
-            $row = mysqli_num_rows($result);
-            if ($row > 0) {
-                echo "<table class='table'>";
+                    echo "<thead>";
 
-                echo "<thead>";
-
-                echo "<tr>";
-
-                echo "<th>Id</th>";
-                echo "<th>Id_turmas</th>";
-                echo "<th>Nome</th>";
-                echo "<th>Carga_horaria_min</th>";
-                echo "<th></th>";
-                echo "<th></th>";
-
-                echo "</tr>";
-
-                echo "</thead>";
-
-                echo "<tbody>";
-
-
-                while ($linha = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
-                    echo "<td>" . $linha['id'] . "</td>";
-                    echo "<td>" . $linha['id_turmas'] . "</td>";
-                    echo "<td>" . $linha['nome'] . "</td>";
-                    echo "<td>" . $linha['carga_horaria_min'] . "</td>";
-                    echo "<td><button name='btn'  class='btnAlterar'  value='" . $linha['id'] . "'>Editar</button>" . "</td>";
-                    echo "<td><button name='btn' class='btnDeletar'  value = '" . $linha['id'] . "' >Deletar</button>" . "</td>";
+
+                    echo "<th>Id</th>";
+                    echo "<th>Id_turmas</th>";
+                    echo "<th>Nome</th>";
+                    echo "<th>Carga_horaria_min</th>";
+                    echo "<th></th>";
+                    echo "<th></th>";
 
                     echo "</tr>";
+
+                    echo "</thead>";
+
+                    echo "<tbody>";
+
+
+                    while ($linha = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>" . $linha['id'] . "</td>";
+                        echo "<td>" . $linha['id_turmas'] . "</td>";
+                        echo "<td>" . $linha['nome'] . "</td>";
+                        echo "<td>" . $linha['carga_horaria_min'] . "</td>";
+                        echo "<td><button type='button' class='btnAlterar' name='btn'  value='" . $linha['id'] . "'>Editar</button>" . "</td>";
+                        echo "<td><button  type='button' class='btnDeletar' name='btn' value = '" . $linha['id'] . "'>Deletar</button>" . "</td>";
+
+                        echo "</tr>";
+                    }
+
+                    echo "</tbody>";
+
+                    echo "</table>";
+
+                } else {
+                    echo "<div id='container_msg'><div class='msg-erro'><p>Erro: Não foram encontrados nenhuma turma com essa palavra</p>" . "</div></div>";
                 }
-
-                echo "</tbody>";
-
-                echo "</table>";
             }
+            mysqli_close($conexao);
+        } else {
+
+            if (empty($_GET['palavra'])) {
+                $query = "SELECT * FROM disciplinas";
+                $result = mysqli_query($conexao, $query);
+                $row = mysqli_num_rows($result);
+                if ($row > 0) {
+                    echo "<table id='tabela'>";
+
+                    echo "<thead>";
+
+                    echo "<tr>";
+
+                    echo "<th>Id</th>";
+                    echo "<th>Id_turmas</th>";
+                    echo "<th>Nome</th>";
+                    echo "<th>Carga_horaria_min</th>";
+                    echo "<th></th>";
+                    echo "<th></th>";
+
+                    echo "</tr>";
+
+                    echo "</thead>";
+
+                    echo "<tbody>";
+
+
+                    while ($linha = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>" . $linha['id'] . "</td>";
+                        echo "<td>" . $linha['id_turmas'] . "</td>";
+                        echo "<td>" . $linha['nome'] . "</td>";
+                        echo "<td>" . $linha['carga_horaria_min'] . "</td>";
+                        echo "<td><button name='btn'  class='btnAlterar'  value='" . $linha['id'] . "'>Editar</button>" . "</td>";
+                        echo "<td><button name='btn' class='btnDeletar'  value = '" . $linha['id'] . "' >Deletar</button>" . "</td>";
+
+                        echo "</tr>";
+                    }
+
+                    echo "</tbody>";
+
+                    echo "</table>";
+                }
+            }
+            mysqli_close($conexao);
         }
-        mysqli_close($conexao);
-    }
-    ?>
+        ?>
     </div>
 </main>
 
@@ -290,6 +294,9 @@ include_once "povoa_base.php";
     </h3>
     <h3><strong>Trabalho orientado pelo professor William Geraldo Sallum</strong></h3>
 </footer>
+<script src="https://kit.fontawesome.com/b484666594.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/editar_excluir_disciplina.js"></script>
 </body>
 </html>
