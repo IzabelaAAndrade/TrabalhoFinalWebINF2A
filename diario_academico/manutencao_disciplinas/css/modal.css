@@ -1,0 +1,47 @@
+.modal_input{
+  display: block;
+  height: 6vh;
+  width: 30vw;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16pt;
+  border: 0;
+  outline: none;
+  border-bottom: 1.5px solid #457a9d ;
+  display: block;
+  margin: 0% 0% 5% 0%;
+}
+.caixa-seleção{
+  width: 30vw;
+  border-radius: .7em;
+  height: 6vh;
+  border: 1px solid #d1d1d1;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: white;
+  background-color: #457B9D;
+  margin: 0% 0% 5% 0%;
+}
+.botoes{
+  height: 6vh;
+  width: 30vw;
+  border-radius: 30px;
+  border: 0;
+  background-color: #457a9d;
+  color: white;
+  transition: .3s ease;
+}
+.botoes:hover{
+  background-color: #e74946 ;
+  cursor:pointer
+}
+.modal-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

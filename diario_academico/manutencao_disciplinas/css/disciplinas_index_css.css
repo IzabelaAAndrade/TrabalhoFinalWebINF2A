@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#container_msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg-erro {
+    border-radius: 0.5em;
+    height: 8vh;
+    width: 30vw;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(250, 128, 114, .3);
+    border: 1px solid rgb(165, 42, 42);
+    border-radius: 0.5em;
+}
+
+.msg-erro > p {
+    text-align: center;
+    color: red;
+    margin: 0%;
+}
+
+.msg_succes {
+    border-radius: 0.5em;
+    height: 8vh;
+    width: 30vw;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(50, 205, 50, .3);
+    border: 1px solid rgb(34, 139, 34);
+}
+
+.msg_succes > p {
+    text-align: center;
+    color: green;
+    margin: 0%;
+}
+
+
+#titulo {
+    font-size: 2em;
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff;
+}
+h1{
+    font-size: 1em;
+}
+
+footer > h3{
+    text-align: center;
+    font-size: 1.4em;
+}
+.sub{
+    color: #457a9d;
+    margin: 0 0 0.5em 0;
+    font-size: 1.2em;
+}
+
+.principal{
+    color: #e74946;
+    font-size: 1.7em;
+    margin: 0 0 0.5em 0;
+}
+
+.descricao{
+    color: #023047;
+    font-size: 1.1em;
+    margin: 0 0 25px 0;
+}
+.descricao, .principal, .sub{
+    text-align: center;
+}
+
+
+#main {
+    box-sizing: border-box;
+    display: flex;
+    width: 100vw;
+    min-height: calc(100vh - 300px);
+    flex-direction: column;
+    padding: 5% 23%;
+}
+
+/* Css do  */
+.box {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+header form {
+    width: 25%;
+    height: 6vh;
+    border: 1px solid whitesmoke;
+    border-radius: 1em;
+    min-width: 50px;
+    min-height: auto;
+}
+
+
+header form #txtBusca {
+    border: none;
+    width: 85%;
+    background-color: transparent;
+    outline: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+form #txtBusca, #btnBusca {
+    height: 100%;
+    font-size: 1.2em;
+}
+
+form #btnBusca {
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    background-color: transparent;
+    color: white;
+    border-radius: 0.2em;
+    padding-right: 0.3em;
+    cursor: pointer;
+}
+
+form #btnBusca:hover {
+    background-color: white;
+    color: #1D3556;
+}
