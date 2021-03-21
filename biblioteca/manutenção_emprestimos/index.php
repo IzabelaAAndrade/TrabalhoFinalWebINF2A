@@ -88,7 +88,7 @@
     </nav>
 
     <main>
-        <div id="cabecalho">
+        <div id="cabecalho" class="ajuste_z_index">
             <div id="cab">
                 <h3 class="sub">Bem-Vindo(a) à</h3>
                 <h1 class="principal">Manutenção de Empréstimos</h1>
