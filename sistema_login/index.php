@@ -13,7 +13,7 @@ include 'verifica_login.php';
 </head>
 <body>
 <h2> Olá, <?php echo $_SESSION['usuario']; ?> </h2>
-<h2><a href="logout.php"></a>Sair</h2>
+<h2><a href="logout.php">Sair</a></h2>
 </body>
 </html>
 
