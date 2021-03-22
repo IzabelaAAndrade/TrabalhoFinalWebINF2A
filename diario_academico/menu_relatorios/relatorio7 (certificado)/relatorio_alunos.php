@@ -10,6 +10,7 @@ foreach($matriculas as $matricula){
 foreach($conteudos as $conteudo){
     $id_conteudo[] = $conteudo["id"];
 }
+$id_conteudo[] = 2;
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -26,16 +27,16 @@ foreach($conteudos as $conteudo){
         <th>Disciplina</th>
         <th>Nota</th>
     </tr>
-    <tr>
         <?php
         foreach($matriculas as $matricula){
+            echo "<tr>";
             $disciplina = getDados("SELECT nome FROM disciplinas WHERE id=".$matricula["id_disciplinas"])[0];
             echo "<td>$disciplina[0]</td>";
             $diario = getDados("SELECT * FROM diario WHERE id_matriculas=".$matricula["id"]." AND id_conteudos IN (".implode(",",$id_conteudo).")")[0];
             echo "<td>$diario[4]</td>";
+            echo "</tr>";
         }
         ?>
-    </tr>
 </table>
 </body>
 </html>
