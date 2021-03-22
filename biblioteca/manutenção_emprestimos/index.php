@@ -72,21 +72,20 @@
         <h1 id="titulo">Sistema Biblioteca</h1>
     </header>
     <nav>
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Manutenção</a>
-                <ul class="sub_menu">
-                    <li><a href="#">Acervo</a></li>
-                    <li><a href="#">Empréstimos</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Relatórios</a></li>
-            <li><a href="#">Descarte</a></li>
-            <li><a href="#">Ajuda</a></li>
-        </ul>
-    </nav>
-
+            <ul class="menu">
+                <li><a href="../../biblioteca/index.html">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Manutenção</a>
+                    <ul class="sub_menu">
+                        <li><a href="../manutencao_acervo/index_acervo.html">Acervo</a></li>
+                        <li><a href="index.php">Empréstimos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="../menu_relatorios/relacao_descartes.php">Descarte</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </nav>
     <main>
         <div id="cabecalho" class="ajuste_z_index">
             <div id="cab">
