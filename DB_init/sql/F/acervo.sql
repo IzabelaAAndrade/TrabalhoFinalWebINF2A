@@ -1,7 +1,7 @@
 -- Tabela acervo, bd Biblioteca
 
 CREATE TABLE IF NOT EXISTS `acervo` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_campi` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `local` varchar(255) NOT NULL,

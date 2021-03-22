@@ -37,7 +37,6 @@ CREATE TABLE `acervo` (
   `ano` int(11) NOT NULL,
   `editora` varchar(255) NOT NULL,
   `paginas` int(11) NOT NULL,
-  CONSTRAINT fk_id_acervo FOREIGN KEY (id_acervo) REFERENCES livros (id_livros)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
