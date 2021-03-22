@@ -1,4 +1,4 @@
--- Povoa Tabela -- 
+-- Povoa Tabela Alunos -- 
 INSERT INTO `alunos` (`id`, `nome`) VALUES
 (1, 'Delilah Rose'),
 (2, 'Carter Kane'),
@@ -12,7 +12,7 @@ INSERT INTO `alunos` (`id`, `nome`) VALUES
 (10, 'Jace Wayland');
 
 
--- Povoar Tabela -- 
+-- Povoar Tabela Acervo -- 
 INSERT INTO `acervo` (`id`, `id_campi`, `nome`, `local`, `tipo`, `ano`, `editora`, `paginas`) VALUES
 (1, 1, 'Homem de Giz', 'Rio de Janeiro', 'livros', 2018, 'Intrínseca', 272),
 (2, 1, 'O Que Aconteceu com Annie', 'Rio de Janeiro', 'livros', 2019, 'Intrínseca', 288),
@@ -26,4 +26,10 @@ INSERT INTO `acervo` (`id`, `id_campi`, `nome`, `local`, `tipo`, `ano`, `editora
 (10, 4, 'Cidade das Cinzas', 'Rio de Janeiro', 'livros', 2013, 'Galera Record', 444);
 
 
--- Tabela Alunos --
+-- Povoar Tabela Empréstimos --
+INSERT INTO `emprestimos` (`Id`, `Id_alunos`, `Id_acervo`, `Data_emprestimo`, `Data_prev_devol`, `Data_devolucao`, `Multa`) VALUES
+(1, 1, 1, '2021-04-04', '2021-04-11', '2021-03-22', 0),
+(2, 2, 2, '2021-04-04', '2021-04-11', '2021-03-11', 0),
+(3, 3, 9, '2021-03-21', '2021-03-21', '2021-03-21', 0),
+(4, 6, 3, '2021-03-28', '2021-04-04', '2021-04-04', 0),
+(5, 5, 8, '2021-03-28', '2021-04-04', '2021-04-04', 0);
