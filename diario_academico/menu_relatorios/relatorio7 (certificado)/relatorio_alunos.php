@@ -1,9 +1,9 @@
-<?php//Relação por seleção de aluno, listando as notas, nas respectivas disciplinas, por etapa.
+<?php
 $cpf = $_GET["cpf"];
 $etapa = $_GET["etapa"];
 $mysqli = new mysqli("localhost", "root","123456", "trabalho_diario_academico");
 $aluno = getDados("SELECT * FROM alunos WHERE id=$cpf")[0];
-$matriculas = getDados("SELECT * FROM matriculas WHERE id_alunos=".$aluno['id']);echo "<br>";
+$matriculas = getDados("SELECT * FROM matriculas WHERE id_alunos=".$aluno['id']);
 foreach($matriculas as $matricula){
     $conteudos[] = getDados("SELECT * FROM conteudos WHERE id_etapas=$etapa AND id_disciplinas=".$matricula["id_disciplinas"])[0];
 }
