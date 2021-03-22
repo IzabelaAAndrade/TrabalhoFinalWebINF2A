@@ -1,6 +1,6 @@
 <?php
 //Relação de professores por seleção de cursos, listando suas respectivas disciplinas e horas de trabalho
-$nome_curso = "inf";
+$nome_curso = $_GET["curso"];
 $mysqli = new mysqli("localhost", "root", "123456", "trabalho_diario_academico");
 $id_curso = getDados("SELECT id FROM cursos WHERE nome='$nome_curso'")[0][0];
 $turmas = getDados("SELECT id FROM turmas WHERE id_cursos='$id_curso'");
