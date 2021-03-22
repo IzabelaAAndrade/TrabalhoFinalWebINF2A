@@ -25,7 +25,7 @@
     $query = mysqli_query($conexao, $sqlPesquisa);
     $resultado = mysqli_fetch_assoc($query);
 
-    $query = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+    $query = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', md5('$senha'))";
 
     if(empty($resultado)){ //Caso seja um novo cadatro
         mysqli_query($conexao, $query) or die ("Erro ao cadastrar".mysqli_error($conexao) . "<br>");
