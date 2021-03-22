@@ -53,8 +53,8 @@ function verifica_disponibilidade_acervo(){
 	$linhas=mysqli_num_rows($resultado);
 	if($linhas>0){
 		$registro = mysqli_fetch_array($resultado);
-		$usuario_em_posse = $registro["Id_alunos"];
-		$data_prev_devol = $registro["Data_prev_devol"];
+		$usuario_em_posse = $registro["id_alunos"];
+		$data_prev_devol = $registro["data_prev_devol"];
 		$data_prev_devol = formata_data($data_prev_devol);
 		exit("<div class='alert alert-danger' role='alert'>Erro! O item $id_acervo já se encontra emprestado para o usuário $usuario_em_posse, com data prevista de devolução para $data_prev_devol. <a href=''>Fazer Reserva</a>.</div>");
 	}
