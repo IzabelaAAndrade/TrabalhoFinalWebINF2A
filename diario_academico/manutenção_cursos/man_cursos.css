@@ -1,0 +1,47 @@
+#close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+#close2 {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+td, th {
+    text-align: center;
+}
+.campos {
+    margin-bottom: 2%;
+}
+.col-auto input {
+    width: 120%;
+}
+.inputs-edicao {
+    width: 100%;
+    border: 0;
+    outline: none;
+    display: block;
+    margin: 0% 0% 5% 0%;
+}
+.inputs-edicao:hover {
+    border-bottom: 2px solid #457B9D;
+}
+.inputs-cadastro{
+    border-radius: 0;
+    width: 120%;
+    border: 0;
+    outline: none;
+    display: block;
+    margin: 0% 0% 5% 0%;
+    border-bottom: 2px solid #1d3556;
+}
+.tr-edicao {
+    --bs-table-hover-bg: rgba(0, 0, 0, 0) !important;
+}
+.modal-header {
+    background-color: #e74946;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-weight: bold;
+}

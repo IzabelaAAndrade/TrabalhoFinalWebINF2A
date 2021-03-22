@@ -9,8 +9,8 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th width='30%'>ID do Departamento</th>
-                        <th>Nome</th>
+                        <th>ID do Departamento</th>
+                        <th width='30%'>Nome</th>
                         <th>Total de Horas</th>
                         <th>Modalidade</th>
                         <th><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close' id='close'></button></td>

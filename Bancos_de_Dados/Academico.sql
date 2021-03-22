@@ -119,7 +119,7 @@ CREATE TABLE `depto` (
 
 CREATE TABLE `diario` (
   `id_conteudos` int(11) NOT NULL,
-  `id_matriculas` int(11) NOT NULL,
+  `id_matriculas` int(11) NOT NULL UNIQUE,
   `id_atividades` int(11) NOT NULL,
   `faltas` int(11) NOT NULL,
   `nota` int(11) NOT NULL

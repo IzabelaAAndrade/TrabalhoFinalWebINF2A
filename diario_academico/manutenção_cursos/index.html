@@ -8,62 +8,30 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-
     	<link href="css/bootstrap.min.css" rel="stylesheet" />
-
-    	<link rel="stylesheet" href="geral_academico.css">
-    	
+    	<link rel="stylesheet" href="../../padrao_estilizacao/diario_academico/paginas_acao_bd/geral_academico.css">
+        <link rel="stylesheet" href="man_cursos.css">
     	<script src="js/jquery-3.6.0.min.js"></script>
-    	<style>
-    		#close {
-    			position: absolute;
-    			right: 8px;
-    			top: 8px;
-    		}
-    		#close2 {
-    			position: absolute;
-    			right: 5%;
-    			top: 5%;
-    		}
-    		td, th {
-    			text-align: center;
-    		}
-    		.campos {
-    			margin-bottom: 2%;
-    		}
-    		.col-auto input {
-    			width: 120%;
-    		}
-    		.inputs-edicao {
-    			width: 100%;
-			    border: 0;
-			    outline: none;
-			    display: block;
-			    margin: 0% 0% 5% 0%;
-    		}
-    		.inputs-edicao:hover {
-			    border-bottom: 2px solid #457B9D;
-    		}
-            .inputs-cadastro{
-                border-radius: 0;
-    			width: 120%;
-			    border: 0;
-			    outline: none;
-			    display: block;
-			    margin: 0% 0% 5% 0%;
-                border-bottom: 2px solid #1d3556;
+        <style>
+            legend {
+                float: none;
+                width: auto;
+                padding: inherit;
+                margin-bottom: auto;
+                font-size: auto;
+                line-height: auto;
             }
-            .tr-edicao {
-                --bs-table-hover-bg: rgba(0, 0, 0, 0) !important;
+            fieldset {
+                min-width: inherit;
+                padding: revert;
             }
-            .modal-header {
-                background-color: #e74946;
-                font-family: 'Nunito', sans-serif;
-                color: white;
-                font-weight: bold;
+            h1, h2, h3, h4, h5, h6 {
+                margin-top: 0;
+                margin-bottom: .5rem;
+                font-weight: bold !important;
+                line-height: 1.2;
             }
-    		
-    	</style>
+        </style>
     </head>
     <body>
         <header>
@@ -94,7 +62,7 @@
 	        </ul>
     	</nav>
         
-        <main>
+        <main id="principal">
             <h3 class="sub">Bem-Vindo(a) à</h3>
             <h1 class="principal">Manutenção de Cursos</h1>
             <p class="descricao">Deseja inserir, alterar ou excluir algum curso? Para isso basta selecionar uma das opções abaixo!</p>
@@ -206,7 +174,7 @@
             <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
         </footer>
         <script src="js/bootstrap.min.js"></script>
-        <script src="ajax.js"></script>
+        <script src="controle.js"></script>
         <script src="inserir_curso_ajax.js"></script>
         <script src="dom.js"></script>
     </body>

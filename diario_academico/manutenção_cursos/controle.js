@@ -11,7 +11,6 @@ function makeRequest(op){
 	.done(function(msg){
 	    $("#listagem").html(msg);
 	    $('#modal').modal('show');
-	    aciona_eventos_remove_row();
 	    edit_row();
 	})
 	.fail(function(jqXHR, textStatus, msg){
@@ -32,18 +31,24 @@ function makeRequestExcluir(id){
     }})
 	.done(function(msg){
 	    alert(msg);
+		atualiza();
 	})
 	.fail(function(jqXHR, textStatus, msg){
 	    alert(msg);
 	});
 }
 
-function makeRequestEditar(id_departamento, nome, total_horas, modalidade){
+function atualiza(){
+	makeRequest("exclusão");
+}
+
+function makeRequestEditar(id, id_departamento, nome, total_horas, modalidade){
 
 	$.ajax({
      url : "editar.php",
      type : 'post',
      data : {
+     	id : id,
      	id_departamento : id_departamento,
      	nome : nome,
      	total_horas : total_horas,
@@ -58,14 +63,6 @@ function makeRequestEditar(id_departamento, nome, total_horas, modalidade){
 	.fail(function(jqXHR, textStatus, msg){
 	    alert(msg);
 	});
-}
-
-
-function aciona_eventos_remove_row(){
-	a = document.querySelectorAll("a.excluir");
-	for(let i=0; i<a.length; i++){
-		a[i].addEventListener("click",apaga_linha);
-	}
 }
 
 function edit_row(){
