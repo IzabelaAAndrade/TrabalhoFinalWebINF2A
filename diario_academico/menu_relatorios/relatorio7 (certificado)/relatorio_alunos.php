@@ -10,7 +10,6 @@ foreach($matriculas as $matricula){
 foreach($conteudos as $conteudo){
     $id_conteudo[] = $conteudo["id"];
 }
-$id_conteudo[] = 2;
 ?>
 <!DOCTYPE html>
 <html lang="pt">
