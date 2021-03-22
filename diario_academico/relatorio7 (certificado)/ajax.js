@@ -1,6 +1,6 @@
 function makeRequest(){
     $.ajax({
-    url : "php/relatorio_certificados.php",
+    url : "relatorio_certificados.php",
     type : 'post',
     data : {
     },
@@ -32,7 +32,7 @@ function adicionaEventos(){
 
 function exibirCertificado(id_aluno){
     $.ajax({
-    url : "php/gera_certificados.php",
+    url : "gera_certificados.php",
     type : 'post',
     data : {
         id_aluno : id_aluno
