@@ -6,13 +6,13 @@ $query = "SELECT * FROM alunos";
 $resultado_alunos = mysqli_query($conexao,$query) or die("<div class='alert alert-danger' role='alert'>Erro de conexão!</div>");
 
 echo "<div id='conteiner-tabela'><table>
-        <tr>
-            <th>cpf</th>
-            <th>nome</th>
-            <th>quantidade de matrículas</th>
-            <th>quantidade de reprovações</th>
-            <th>situação</th>
-        </tr>";
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Quantidade de matrículas</th>
+            <th>Quantidade de reprovações</th>
+            <th>Situação</th>
+        </thead>";
 
 while ($row_alunos = mysqli_fetch_array($resultado_alunos)){
     $id_aluno = $row_alunos["id"];
@@ -49,7 +49,7 @@ while ($row_alunos = mysqli_fetch_array($resultado_alunos)){
             <td>--</td>";
     } else {
         echo "<td>Aprovado</td>
-            <td><a class='ver'>Ver certificado</a></td>";
+            <td><a class='ver'><div>Ver certificado</div></a></td>";
     }
     echo "</tr>";
 

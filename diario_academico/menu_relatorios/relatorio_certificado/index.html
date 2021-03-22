@@ -1,6 +1,6 @@
 <!--Codigo feito pelos grupos F e G e com o CSS editado pelo grupo A para servir 
 como um padrao de formatacao para as interfaces de relatorio do diario academico-->
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@ como um padrao de formatacao para as interfaces de relatorio do diario academico
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="tmp.css">
+    <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="certificados.css">
     <title>Relatórios</title>
 </head>
@@ -33,41 +34,51 @@ como um padrao de formatacao para as interfaces de relatorio do diario academico
                     <li><a href="#">Diários</a></li>
                 </ul>
             </li>
-            <li><a href="#">Relatórios</a></li>
+            <li><a href="../index.html">Relatórios</a>
+                <ul class="sub_menu">
+                    <li><a href="index.html">Certificados</a></li>
+                    <li><a href="#">Histórico por aluno e turma</a></li>
+                </ul>
+            </li>
             <li><a href="#">Transferências</a></li>
             <li><a href="#">Ajuda</a></li>
         </ul>
     </nav>
     
-    <div id="main">
-
-        <div id="opcoes">
+    <main>
+        <div id="cabecalho">
+            <p><a href="../">Menu de Relatórios</a> > Certificados</p>
+            <h1 class="principal">Certificados</h1>
         </div>
-        
-        <div id="middle">
-            <div id="filtro" class="solid hidden">
-                <div id="filtro_container">
-                </div>
-                <div id="actions">
-                    <div id="reset" class="solid btn">
-                        Reset
-                    </div>
-                    <div id="aplicar" class="solid btn">
-                        Aplicar
-                    </div>
-                </div>
-            </div>
-        
-            <div id="resultado" class="solid">
-                <div id="resultado_container">
-                </div>
-                <div id="resultado_actions">
-                </div>
-            </div>
 
+        <div id="main">
+            <div id="opcoes">
+            </div>
+            
+            <div id="middle">
+                <div id="filtro" class="solid hidden">
+                    <div id="filtro_container">
+                    </div>
+                    <div id="actions">
+                        <div id="reset" class="solid btn">
+                            Reset
+                        </div>
+                        <div id="aplicar" class="solid btn">
+                            Aplicar
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="resultado" class="solid">
+                    <div id="resultado_container">
+                    </div>
+                    <div id="resultado_actions">
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-
+    </main>
     <footer>
         <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
         <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>

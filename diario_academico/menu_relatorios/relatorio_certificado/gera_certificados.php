@@ -9,16 +9,16 @@
 
     echo "<div id='voltar'><a href=''><img src='img/seta-esquerda.png' width='20px' height='20px'></a></div>";
     echo "<div id='caixa'>
-            <h2 class='texto-certificado texto-colorido'>certificado</h2>
-            <p class='texto-certificado'>Certificamos para os devidos fins que $nome_aluno, CPF $id_aluno, cursou com êxito as seguintes disciplinas nesta instituição de ensino: </p>";
+            <h2 class='texto-certificado texto-colorido'>CERTIFICADO</h2>
+            <p class='texto-certificado'>Certificamos para os devidos fins que $nome_aluno, ID $id_aluno, cursou com êxito as seguintes disciplinas nesta instituição de ensino: </p>";
     echo "<table id='tabela_disciplinas_cursadas'>
-            <tr>
-                <th>matrícula</th>
-                <th>disciplina</th>
-                <th>carga horária</th>
-                <th>nota obtida</th>
-                <th>faltas</th>
-            </tr>";
+            <thead>
+                <th>Matrícula</th>
+                <th>Disciplina</th>
+                <th>Carga Horária</th>
+                <th>Nota Obtida</th>
+                <th>Faltas</th>
+            </thead>";
     
     $query = "SELECT * FROM matriculas WHERE id_alunos=$id_aluno";
     $resultado_matriculas = mysqli_query($conexao,$query) or die("<div class='alert alert-danger' role='alert'>Erro de conexão!</div>");
