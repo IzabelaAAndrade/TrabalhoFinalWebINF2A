@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Inserir Campi</title>
+      <link rel="stylesheet" href="style/padrao.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   </head>
   <body>
-    <form class="" action="inserirCampi.php" method="post">
-      <p id="nome">Digite o nome: <input type="text" name="nome"></p>
-      <p id="cidade">Digite a cidade: <input type="text" name="cidade"></p>
-      <p id="uf">Digite a UF: <input type="text" name="uf"></p>
-      <input type="submit" id="botao" name="" value="Inserir">
-    </form>
+    <header>
+      <h1>Diário Acadêmico</h1>
+    </header>
+    <h3 class="sub">Bem-Vindo(a) à</h3>
+    <h1 class="principal">Inserir Campi</h1>
+    <p class="descricao"> Para inserir um Campi no Diário, basta preencher o formulário abaixo: 
+
+    <div id="ajuste">
+      <form action="inserirCampi.php" method="post">
+        <label for="nome">Nome:</label>
+        <input class="texto" type="text" name="nome" placeholder="Nome">
+        <label for="cidade">Cidade:</label>
+        <input class="texto" type="text" name="cidade" placeholder="Cidade">
+        <label for="uf">UF:</label>
+        <input class="texto" type="text" name="uf" placeholder="UF">
+        
+        <div>
+          <input type="submit" class="botoes" name="" value="Inserir">
+          <button type="reset" class="botoes" id="limpar">Limpar</button>
+        </div>
+
+      </form>
+    </div>
   </body>
+  <footer>
+    <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+  </footer>
 </html>
