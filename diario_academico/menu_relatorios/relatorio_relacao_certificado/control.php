@@ -17,19 +17,23 @@ if($id_disciplina == ""){
 $resultado_conteudos = mysqli_query($conexao,$query);
 $num_conteudos = mysqli_num_rows($resultado_conteudos);
 
-echo "<div id='voltar'><a href=''><img src='img/seta-esquerda.png' width='20px' height='20px'></a></div>";
+$resultado_disciplina = mysqli_query($conexao, "SELECT nome FROM disciplinas WHERE id='$id_disciplina'");
+$row = mysqli_fetch_array($resultado_disciplina);
+
 if($num_conteudos==0){
     echo "<span id='resultado-pesquisa'>Nenhum conteúdo cadastrado para os parâmetros selecionados.</span>";
     die();
 }
 
-echo "<table>
-        <tr>
-            <th>etapa</th>
-            <th>disciplina</th>
-            <th>conteúdo</th>
-            <th>data</th>
-        </tr>";
+echo "<div id='conteiner-tabela'>
+        <div id='voltar'><a href=''><img src='img/seta-esquerda.png' width='20px' height='20px'></a></div>
+        <h2>RELATÓRIO DE CONTEÚDOS: DISCIPLINA ".$row['nome']."</h2><table>
+        <thead>
+            <th>Etapa</th>
+            <th>Disciplina</th>
+            <th>Conteúdo</th>
+            <th>Data</th>
+        </thead>";
 while($row_conteudos = mysqli_fetch_array($resultado_conteudos)){
     $etapa = $row_conteudos["id_etapas"];
     $disciplina = $row_conteudos["id_disciplinas"];
@@ -42,7 +46,7 @@ while($row_conteudos = mysqli_fetch_array($resultado_conteudos)){
             <td>$data</td>
         </tr>";
 }
-echo "</table>";
+echo "</table></div>";
 
 
 ?>

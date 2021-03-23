@@ -58,8 +58,8 @@ body {
     width: 100%;
     min-height: calc(100vh - 300px);
     flex-direction: column;
-    padding: 5% 23%;
-
+    padding: 3% 23%;
+    padding-top: 1%;
 }
 
 #middle {
