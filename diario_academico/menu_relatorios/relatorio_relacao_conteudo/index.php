@@ -4,11 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manutenção Acervo</title>
-        <link rel="stylesheet" href="index.css">
+        <title>Relatório Relação de Conteúdos</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="relacao_conteudos.css">
+        <link rel="stylesheet" href="conteudo.css">
         <link rel="stylesheet" href="../index.css">
+        <style>
+        	#imprimir {
+        		background-color: white;
+        	}
+        </style>
 
     <title>Relação de Conteúdos</title>
 </head>
@@ -52,7 +56,7 @@
             <h1 class="principal">Relação de Conteúdos</h1>
         </div>
         <div id="main">
-            <p id="descricao">Selecione a disciplina e a etapa para gerar  o relatório.</p>
+            <p id="descricao">Selecione a disciplina e/ou a etapa para gerar  o relatório.</p>
             <div id="filtros">
                 <div id="content">
                     <select id="selecionar_disciplina">
@@ -83,6 +87,6 @@
     </footer>
 
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="control.js"></script>
+    <script src="controles.js"></script>
 </body>
 </html>
