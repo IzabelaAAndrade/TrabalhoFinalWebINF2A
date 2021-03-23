@@ -26,16 +26,17 @@ if (empty($faltando)) {
     $result_ins = mysqli_query($cnx, $insert);
 
     if ($result_ins) {
-      $select = "SELECT * from depto";
+      $select = "SELECT * from depto WHERE (`id_campi`, `nome`) = ($id_campi, '$nome')";
       $result_sel = mysqli_query($cnx, $select);
-      $result = mysqli_fetch_all($result_sel, MYSQLI_ASSOC);
+      $result = mysqli_fetch_assoc($result_sel);
+
       echo json_encode($result);
 
       mysqli_free_result($result_sel);
     } else {
       enviar_erro_500();
     }
-  } else if ($existe === true) {
+  } elseif ($existe === true) {
     http_response_code(409);
     echo "Um departamento de mesmo nome e campus já existe.";
   } else {
