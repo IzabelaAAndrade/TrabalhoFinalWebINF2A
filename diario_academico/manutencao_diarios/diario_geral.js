@@ -2,8 +2,8 @@ const inpPaginaEl = document.querySelector("#caixa-seleção");
 const submitBotao = document.querySelector("input.botao");
 
 const paginas = {
-  conteudos: "conteudos/inseriConteudo.html",
-  atividades: "atividades/inseriAtividade.html",
+  conteudos: "conteudos/conteudo.php",
+  atividades: "atividades/atividade.php",
   presencas: "presencas/index.html",
 };
 
