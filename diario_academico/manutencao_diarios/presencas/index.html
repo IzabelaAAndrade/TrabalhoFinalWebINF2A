@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Controle de Presenças</title>
+        <link rel="stylesheet" href="style/geral_presenças.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="img/LogoExemploCortado.png" alt="logo" id="logo">
+            <h1 id="titulo">Sistema Diário Acadêmico</h1>
+        </header>
+        
+        <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Manutenção</a>
+                <ul class="sub_menu">
+                    <li><a href="../../../diario_academico/campi/campi.php">Campi</a></li>
+                    <li><a href="#">Departamentos</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Turmas</a></li>
+                    <li><a href="#">Alunos</a></li>
+                    <li><a href="#">Professores</a></li>
+                    <li><a href="#">Disciplinas</a></li>
+                    <li><a href="#">Etapas</a></li>
+                    <li><a href="#">Diários</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#">Transferências</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </nav>
+        
+        <main>
+            <h3 class="sub">Bem-Vindo(a) à</h3>
+            <h1 class="principal">Controle de Presenças</h1>
+            <p class="descricao">Deseja inserir, alterar ou excluir algo no Controle de Presenças? Para isso basta selecionar uma das opções abaixo!</p>
+
+                <fieldset id="fieldset" class="tamanho">
+                    <legend>Selecione ação deseja realizar</legend>
+                    <select id="caixa-seleção">
+                        <option value=" ">-- selecione uma opção --</option>
+                        <option value="inserir">Inserir</option>
+                        <option value="alterar">Alterar</option>
+                        <option value="deletar">Excluir</option>
+                    </select> 
+
+                    <div class="escondido mudar" id="inserir">
+                        <form>
+                            <label for="campi">Id do Conteudo: </label>
+                            <input class="texto" type="text" name="campi" id="id_campi">
+                            <label for="id_campi">ID da Atividade: </label>
+                            <input class="texto" type="number" name="id_campi" id="id_id_campi"> 
+                            <div id="botoes" class="centro">
+                                <button class="botoes" type="submit">Buscar</button>
+                            </div> 
+                            <div id="tabela">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">
+                                                Alunos 
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Matricula
+                                            </th>
+                                            <th>
+                                                Nome
+                                            </th>
+                                            <th>
+                                                Faltas
+                                            </th>
+                                            <th>
+                                                Nota
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input class="input_text" type="text" name="matricula" id="id_matricula" disabled>
+                                            </td>
+                                            <td>
+                                                <input class="input_text" type="text" name="nome" id="id_nome" disabled>
+                                            </td>
+                                            <td >
+                                                <input class="input_num" type="number" name="faltas" id="id_faltas"> 
+                                            </td>
+                                            <td>
+                                                <input class="input_num" type="number" name="nota" id="id_nota">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div id="botoes" class="centro">
+                                    <button class="botoes" type="submit">Enviar</button>
+                                </div>
+                            </div>    
+                        </form>
+                    </div>
+
+                    <div class="escondido mudar" id="alterar">
+                        <form>
+                            <label for="campi">Id do Conteudo: </label>
+                            <input class="texto" type="text" name="conteudo" id="id_conteudo">
+                            <label for="id_campi">ID da Atividade: </label>
+                            <input class="texto" type="number" name="atividade" id="id_atividade"> 
+                            <div id="botoes" class="centro">
+                                <button class="botoes" type="submit">Buscar</button>
+                            </div> 
+                            <div id="tabela">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">
+                                                Atividades 
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Matricula
+                                            </th>
+                                            <th>
+                                                Nome
+                                            </th>
+                                            <th>
+                                                Faltas
+                                            </th>
+                                            <th>
+                                                Nota
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td >
+                                                <input class="input_text" type="text" name="matricula" id="id_matricula" disabled>
+                                            </td>
+                                            <td>
+                                                <input class="input_text" type="text" name="nome" id="id_nome" disabled>
+                                            </td>
+                                            <td>
+                                                <input class="input_num" type="number" name="faltas" id="id_faltas"> 
+                                            </td>
+                                            <td>
+                                                <input class="input_num" type="number" name="nota" id="id_nota">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div id="botoes" class="centro">
+                                    <button class="botoes" type="submit">Alterar</button>
+                                </div>
+                            </div> 
+
+                        </form>
+                    </div>
+
+                    <div class="escondido mudar" id="deletar">
+                        <label for="campi">Id do Conteudo: </label>
+                        <input class="texto" type="text" name="campi" id="id_campi">
+                        <label for="id_campi">ID da Atividade: </label>
+                        <input class="texto" type="number" name="id_campi" id="id_id_campi"> 
+                        <div id="botoes" class="centro">
+                            <button class="botoes" type="submit">Buscar</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="5">
+                                       Alunos
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        
+                                    </th>
+                                    <th>
+                                        Matricula
+                                    </th>
+                                    <th>
+                                        Nome
+                                    </th>
+                                    <th>
+                                        Faltas
+                                    </th>
+                                    <th>
+                                        Nota
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="dpto" id="exclui_dpto">
+                                    </td>
+                                    <td >
+                                        <input class="input_text" type="text" name="matricula" id="id_matricula" disabled>
+                                    </td>
+                                    <td>
+                                        <input class="input_text" type="text" name="nome" id="id_nome" disabled>
+                                    </td>
+                                    <td>
+                                        <input class="input_num" type="number" name="faltas" id="id_faltas" disabled> 
+                                    </td>
+                                    <td>
+                                        <input class="input_num" type="number" name="nota" id="id_nota" disabled >
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="botoes" class="centro">
+                            <button class="botoes" type="submit">Excluir</button>
+                        </div> 
+                    </div>
+                </fieldset>
+                
+           
+        </main>
+        <script src="js/presenças.js"></script>
+        <footer>
+            <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+            <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
+        </footer>
+    </body>
+</html>

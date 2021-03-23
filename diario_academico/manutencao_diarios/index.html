@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manutenção de Diarios</title>
+    <link rel="stylesheet" href="geral_diario.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="LogoExemploCortado.png" alt="logo" id="logo" />
+      <h1 id="titulo">Manutenção de Diarios</h1>
+    </header>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li>
+          <a href="#">Manutenção</a>
+          <ul class="sub_menu">
+            <li>
+              <a href="../../../diario_academico/campi/campi.php">Campi</a>
+            </li>
+            <li><a href="#">Departamentos</a></li>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Turmas</a></li>
+            <li><a href="#">Alunos</a></li>
+            <li><a href="#">Professores</a></li>
+            <li><a href="#">Disciplinas</a></li>
+            <li><a href="#">Etapas</a></li>
+            <li><a href="#">Diários</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Relatórios</a></li>
+        <li><a href="#">Transferências</a></li>
+        <li><a href="#">Ajuda</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h3 class="sub">Bem-Vindo(a) à</h3>
+      <h1 class="principal">Manutenção de Diarios</h1>
+      <p class="descricao">
+        Deseja acessar conteudos, atividades ou presenças itens do diario? Para
+        isso basta selecionar uma das opções abaixo!
+      </p>
+
+      <fieldset id="fieldset" class="tamanho">
+        <legend>Selecione a pagina que deseja acessar</legend>
+        <select id="caixa-seleção">
+          <option value=" ">-- selecione uma opção --</option>
+          <option value="conteudos">Conteúdos</option>
+          <option value="atividades">Atividades</option>
+          <option value="presencas">Presenças</option>
+        </select>
+        <input class="botao" type="submit" value="enviar" />
+      </fieldset>
+    </main>
+    <script src="diario_geral.js"></script>
+    <footer>
+      <h3 class="rodape">
+        © NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso
+        em 2019 do CEFET-MG
+      </h3>
+      <h3 class="rodape">
+        Trabalho orientado pelo professor William Geraldo Sallum
+      </h3>
+    </footer>
+  </body>
+</html>
