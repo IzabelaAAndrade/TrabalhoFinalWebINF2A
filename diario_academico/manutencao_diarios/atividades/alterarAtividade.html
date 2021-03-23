@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterar Atividade</title>
+  <link rel="stylesheet" href="style/padrao.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<header>
+    <h1>Diário Acadêmico</h1>
+</header>
   <body>
-    <form class="" action="alterarAtividade.php" method="post">
-      <p id="id">Digite o id: <input type="text" name="id"></p>
-      <p id="disciplinas">Digite o id da disciplina: <input type="number" name="disciplinas"></p>
-      <p id="nome">Digite o nome: <input type="text" name="nome"></p>
-      <p id="cidade">Digite a data: <input type="date" name="data"></p>
-      <p id="uf">Digite o valor: <input type="number" name="valor"></p>
-      <input type="submit" id="botao" name="" value="Alterar">
-    </form>
+    <h3 class="sub">Bem-Vindo(a) à</h3>
+    <h1 class="principal">Alterar Atividade</h1>
+    <p class="descricao"> Para alterar uma Atividade do Diário, basta preencher o formulário abaixo:</p>
+    <div id="ajuste">
+      <form action="alterarAtividade.php" method="post">
+        <label for="id">ID:</label>
+        <input class="texto" type="number" name="id" placeholder="ID">
+        <label for="nome">Nome:</label>
+        <input class="texto" type="text" name="nome" placeholder="Nome">
+        <label for="data">Data:</label>
+        <input class="texto" type="date" name="data" placeholder="Data">
+        <label for="valor">Valor:</label>
+        <input class="texto" type="number" name="valor" placeholder="Valor">
+        <div>
+          <input type="submit" class="botoes" name="" value="Alterar">
+          <button type="reset" class="botoes" id="limpar">Limpar</button>
+        </div>
+      </form>
+    </div>
   </body>
+  <footer style="margin-top: 15%;">
+    <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+  </footer>
 </html>

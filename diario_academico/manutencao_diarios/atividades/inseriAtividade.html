@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inserir Atividade</title>
+  <link rel="stylesheet" href="style/padrao.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
   <body>
-    <form class="" action="inserirAtividade.php" method="post">
-      <p id="disciplinas">Digite o id da disciplina: <input type="number" name="disciplinas"></p>
-      <p id="nome">Digite o nome: <input type="text" name="nome"></p>
-      <p id="cidade">Digite a data: <input type="date" name="data"></p>
-      <p id="uf">Digite o valor: <input type="number" name="valor"></p>
-      <input type="submit" id="botao" name="" value="Inserir">
-    </form>
+    <header>
+      <h1>Diário Acadêmico</h1>
+    </header>
+    <h3 class="sub">Bem-Vindo(a) à</h3>
+    <h1 class="principal">Inserir Atividade</h1>
+    <p class="descricao"> Para inserir uma Atividade no Diário, basta preencher o formulário abaixo:
+
+    <div id="ajuste">
+      <form action="inserirAtividade.php" method="post">
+        <label for="disciplinas">ID da disciplina:</label>
+        <input class="texto" type="text" name="disciplinas" placeholder="ID da disciplina">
+        <label for="nome">Nome:</label>
+        <input class="texto" type="text" name="nome" placeholder="Nome">
+        <label for="data">Data:</label>
+        <input class="texto" type="date" name="data" placeholder="Data">
+        <label for="valor">Valor:</label>
+        <input class="texto" type="number" name="valor" placeholder="Valor">
+        <div>
+          <input type="submit" class="botoes" name="" value="Inserir">
+          <button type="reset" class="botoes" id="limpar">Limpar</button>
+        </div>
+
+      </form>
+    </div>
   </body>
+  <footer>
+    <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+  </footer>
 </html>
