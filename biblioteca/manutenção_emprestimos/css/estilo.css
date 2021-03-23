@@ -11,25 +11,26 @@ h1{
     color:white ;
 }
 #confirmar{
-    background-color: #2A9D8F;
-    color: white;
+    background-color: white;
+    color: #2A9D8F;
 }
 #cancelar{
-    background-color: #E76F51;
-    color: white;
+    background-color: white;
+    color: #2A9D8F;
 }
 #cabecalho_modal{
     background-color: #264653;
-    color: white;
+    color: #2A9D8F;
 }
 .inputs{
     width: 120%;
     border: 0;
     outline: none;
-    border-bottom: 1.5px solid #449d8f;
+    border-bottom: 1.5px solid #2A9D8F;
     display: block;
     margin: 0% 0% 5% 0%;
 }
+
 #emprestimos {
     display: flex;
     justify-content: center;
@@ -50,23 +51,28 @@ h1{
     height: 40px;
     position: relative;
     margin-top: 3%;
+    color:#449d8f;
 }
 #busca_id {
     width:500px;
     height: 100%;
     border-radius: 10px 0px 0px 10px;
-    border: 1px solid #dfe1e5;
+    border: 1px solid #449d8f;
     border-right: 0;
+    color:#449d8f;
+    display: inline-block;
     
 }
 #novo_emprestimo{  /* Mudança: Centralização do botão */
-    background-color: #E76F51;
+    background-color:#449d8f;
     color: white;
     display:block;
-    margin: 0% auto 0% auto;
+    margin: 3% auto 0% auto;
+    padding: 1em;
 }
 #novo_emprestimo:hover{
-    background-color: #449d8f;
+    background-color: #E9C46A;
+    color: #2A9D8F;
 }
 #dadosAluno{
     display: flex;
@@ -74,15 +80,17 @@ h1{
     align-items: center;
     flex-wrap: wrap;
     margin-top: 2.5%;
+    background-color: #264653;
 }
 #dadosAluno p{
-    margin: 10px;
-    padding: 30px;
+    margin: 2px;
+    padding: 20px;
     font-size: 12pt;
-    background-color:#E9C46A;
+    
     border-radius: 20px;
-    box-shadow: 3px 2px 2px gray;
-    color: white;
+    /*box-shadow: 3px 2px 2px gray;*/
+    color: #449d8f;
+    
 }
 
 #listagem {
@@ -95,17 +103,50 @@ h1{
 #botaoBuscaId {
     border-radius: 0px 10px 10px 0px;
     height: 100%;
-    background-color: white;
+    background-color:white;
     border: 0;
     position: absolute;
-    border: 1px solid #dfe1e5;
+    border: 1px solid #2A9D8F;
     border-left: 0;
     
+}
+
+
+.btn{
+    background-color: #2A9D8F;
+    color: white;
+    margin: 0% auto 0% auto;   
+}
+.btn:hover{
+    background-color: #264653;
+    color: #2A9D8F;
+}
+.btnDevolver{  /* Mudança: Centralização do botão */
+    background-color: #449d8f;
+    color: white;
+    display: inline-block;
+}
+.btnDevolver:hover{
+    background-color: white;
+    color: #449d8f;
+}
+
+.emprestimo{
+    min-height: 150px; height:300px; max-height:250px; 
+    margin: 10px;
+    padding: 30px;
+    position: relative;
+    font-size: 12pt;
+    background-color:#E9C46A;
+    border-radius: 20px;
+    box-shadow: 3px 2px 2px gray;
+    color: white;
+    text-align: left;
 }
 .titulo-pagina {
     text-align: center;
     margin-left: 10%;
-    color: #e76f51;
+    color: #E9C46A;
 }
 
 main {
