@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     	<link href="css/bootstrap.min.css" rel="stylesheet" />
     	<link rel="stylesheet" href="../../padrao_estilizacao/diario_academico/paginas_acao_bd/geral_academico.css">
-        <link rel="stylesheet" href="man_cursos.css">
+        <link rel="stylesheet" href="manutencao_cursos.css">
     	<script src="js/jquery-3.6.0.min.js"></script>
         <style>
             legend {
@@ -101,7 +101,22 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" id="id_departamento" class="inputs-cadastro" aria-describedby="passwordHelpInline" placeholder="ID do departamento">
+                            <select id="id_departamento">
+                                <option value="" selected>Selecione o departamento</option>
+                                <?php
+                                    require("conexao.php");
+                                    $query = "SELECT * FROM depto";
+                                    $resultado_departamentos = mysqli_query($conexao,$query) or die();
+                                    
+                                    while($row_departamentos = mysqli_fetch_array($resultado_departamentos)){
+                                        $id_departamento = $row_departamentos["id"];
+                                        echo $id_departamento;
+                                        $nome_departamento = $row_departamentos["nome"];
+                                        echo "<option value='$id_departamento'>$id_departamento - $nome_departamento</option>";
+                                    }
+        
+                                ?>
+                            </select>
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">

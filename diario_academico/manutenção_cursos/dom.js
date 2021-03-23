@@ -16,7 +16,7 @@ document.getElementById("close2").onclick = function(e) {
 	desabilita_botoes();
 }
 
-document.getElementById("id_departamento").addEventListener('keyup', function(e){
+document.getElementById("id_departamento").addEventListener('change', function(e){
 	desabilita_botoes();
 	document.getElementById("status").innerHTML = "";
 });

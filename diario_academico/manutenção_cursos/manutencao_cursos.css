@@ -15,7 +15,8 @@ td, th {
     margin-bottom: 2%;
 }
 .col-auto input {
-    width: 120%;
+    width: 150%;
+    padding: 8px;
 }
 .inputs-edicao {
     width: 100%;
@@ -29,7 +30,7 @@ td, th {
 }
 .inputs-cadastro{
     border-radius: 0;
-    width: 120%;
+    width: 200px;
     border: 0;
     outline: none;
     display: block;
