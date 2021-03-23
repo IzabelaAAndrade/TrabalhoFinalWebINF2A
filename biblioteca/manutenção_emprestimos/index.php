@@ -23,7 +23,7 @@
                 if($result != false){
                     $returnEmprestimos = "";
                     while($row = mysqli_fetch_assoc($result)){
-                        $returnEmprestimos .= $row['Id'].",".$row['id_alunos'].",".$row['id_acervo'].",".$row['data_emprestimo'].",".$row['data_prev_devol'].",".$row['data_devolucao'].",".$row['multa'].",";
+                        $returnEmprestimos .= $row['Id'].",".$row['Id_alunos'].",".$row['Id_acervo'].",".$row['Data_emprestimo'].",".$row['Data_prev_devol'].",".$row['Data_devolucao'].",".$row['Multa'].",";
                     }
                 }else{
                     $returnEmprestimos = "Nenhum empréstimo.";
@@ -60,39 +60,38 @@
             font-weight: bold !important;
             line-height: 1.5 !important;
         }
-        #barraPesquisa {
-        	height: 100%;
-        }
     </style>
     <title>Empréstimos</title>
 </head>
 <body>
     <header>
         <img src="img/LogoExemploCortada.png" alt="logo" id="logo">
-        <h1 id="titulo">Sistema Biblioteca</h1>
+        <h1>Sistema Biblioteca</h1>
     </header>
     <nav>
-            <ul class="menu">
-                <li><a href="../../biblioteca/index.html">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Manutenção</a>
-                    <ul class="sub_menu">
-                        <li><a href="../manutencao_acervo/index_acervo.html">Acervo</a></li>
-                        <li><a href="index.php">Empréstimos</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Relatórios</a></li>
-                <li><a href="../menu_relatorios/relacao_descartes.php">Descarte</a></li>
-                <li><a href="#">Ajuda</a></li>
-            </ul>
-        </nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Manutenção</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Acervo</a></li>
+                    <li><a href="#">Empréstimos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#">Descarte</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <div id="cabecalho" class="ajuste_z_index">
+        
+        <div id="cabecalho">
             <div id="cab">
                 <h3 class="sub">Bem-Vindo(a) à</h3>
                 <h1 class="principal">Manutenção de Empréstimos</h1>
                 <div id="busca">
-                    <form method="GET" action="" id="barraPesquisa">
+                    <form method="GET" action="">
                         <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit" id="botaoBuscaId">Buscar</button>
                     </form>
                 </div>
@@ -109,7 +108,7 @@
             <div class="modal-content">
               <div class="modal-header" id="cabecalho_modal">
                 <h5 class="modal-title" id="exampleModalLabel">Cadastro de Empréstimos</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close" onclick="location.reload(true);"></button>
               </div>
               <div class="modal-body">
                 <div class="campos">
@@ -181,8 +180,7 @@
 
     </main>
     <footer>
-        <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
-        <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
+        <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
     </footer>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>

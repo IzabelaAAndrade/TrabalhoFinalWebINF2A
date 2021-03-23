@@ -1,4 +1,5 @@
 <?php
+
    include "conexao.php";
    global $connection;
 
@@ -10,7 +11,7 @@
    if($num_rows > 0){
       $cursos = [];
       while($row = mysqli_fetch_array($resultado)){
-         $cursos += array($row["nome"] => "<p id='curso'><a href=exibir_turmas.php?id=".$row["id"].">Turmas de ".$row["nome"]."</a><p>");
+         $cursos += array($row["nome"] => "<p class='curso'><a href=exibir_turmas.php?id=".$row["id"].">Turmas de ".$row["nome"]."</a><p>");
       }
    }else{
       $cursoContent = "Não há nenhum curso cadastrado.";
@@ -26,43 +27,75 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/style_turmas.css">
+   <link rel = "stylesheet" href = "../index.css">
    <title>Manutenção de Turmas</title>
 </head>
 <body>
-   <div id="divBuscaTurma">
+   <header>
+      <img src="../img/LogoExemploCortado.png" alt="logo" id="logo">
+      <h1 id="titulo">Sistema Academico</h1>
+      <div id="divBuscaTurma">
       <form name="form" id="formBusca"  method="POST" enctype="application/x-www-form-urlencoded" action="search_turmas.php">
-         <input type="text" name="busca" placeholder="Insira o nome/id da turma">
+         <input type="text" name="busca" placeholder="Insira o nome/id da turma"> 
          <input type="submit" name="btnBusca" id="btnBusca" class='btn btn-info btn-lg' data-toggle='modal' data-target='#buscaTurmaModal' value="Buscar">
       </form>
    </div>
+   </header>
+        
+        <nav>
+        <ul class="menu" >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Manutenção</a>
+                <ul class="sub_menu">
+                    <li><a href="#">Campi</a></li>
+                    <li><a href="#">Departamentos</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Turmas</a></li>
+                    <li><a href="#">Alunos</a></li>
+                    <li><a href="#">Professores</a></li>
+                    <li><a href="#">Disciplinas</a></li>
+                    <li><a href="#">Etapas</a></li>
+                    <li><a href="#">Diários</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Relatórios</a></li>
+            <li><a href="#">Transferências</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </nav>
+<main>
+
 
    <div>
       <h3 class="sub">Bem-vindo(a) à</h3>
       <h1 class="principal">Manutenção de Turmas</h1>
-      <p>Selecione o curso para vizualizar suas respectivas turmas</p>
+      <p id="pExibicao">Selecione o curso para vizualizar suas respectivas turmas</p>
    </div>
-
-   <div>
+<br>
+   <div >
       <?php
          if(sizeof($cursos)>0){
             foreach ($cursos as $key => $val) {
-               echo $val;
+             echo  $val; 
             }
          }else{
             $cursoContent;
          }
       ?>
    </div>
+   <br>
 
    <div class="modal fade" id="buscaTurmaModal" role="dialog">
       <div class="modal-dialog modal-lg">
          <div class="modal-content">
             <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal">&times;</button>
-               <h1>Resultado da pesquisa</h1>      
+               <h1 class="h2Simples" >Resultado da pesquisa</h1>      
             </div>
             <div id="resultadoBusca" class="modal-body">
             </div>
@@ -75,12 +108,12 @@
          <div class="modal-content">
             <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" onclick="reloadBusca();">&times;</button>
-                  <h2>Deletar turma</h2>
+                  <h2 class="h2Simples">Deletar turma</h2>
             </div>
             <div class="modal-body">
-               <p>Deseja deletar esta turma?</p>
-               <p>ID da turma: <span id="idTurmaD"></span></p>
-               <p>Nome da Turma: <span id="nomeTurmaD"></span></p>
+               <p class="pSimples">Deseja deletar esta turma?</p>
+               <p class="pSimples">ID da turma: <span id="idTurmaD"></span></p>
+               <p class="pSimples">Nome da Turma: <span id="nomeTurmaD"></span></p>
                <p id="resultD"></p>
             </div>
             <div class="modal-footer">
@@ -95,13 +128,13 @@
          <div class="modal-content">
             <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal" onclick="reloadBusca();">&times;</button>
-               <h2>Alterar turma</h2>
-               <p>Preencha apenas os dados que deseja alterar</p>
+               <h2 class="h2Simples">Alterar turma</h2>
+               <p class="pSimples">Preencha apenas os dados que deseja alterar</p>
             </div>
             <div class="modal-body">
                <form name="form" id="formAlterar"  method="POST" enctype="application/x-www-form-urlencoded" action="alterar_turma.php">
-                  <p>Nome da Turma:<input type="text" name="nomeTurma"></p>
-                  <p>ID do Curso:<input type="text" name="idCurso"></p>
+                  <p class="pSimples">Nome da Turma:<input type="text" name="nomeTurma"></p>
+                  <p class="pSimples">ID do Curso:<input type="text" name="idCurso"></p>
                   <p id="resultA"></p>
                   <div class="modal-footer">
                   <input type="submit" value="Confirmar">
@@ -111,6 +144,11 @@
          </div>
       </div>
    </div>
+</main>
+<footer>
+            <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+            <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
+        </footer>  
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>              
@@ -134,6 +172,7 @@
          }
          ajax.send(params);
       }
-   </script>            
+   </script>
+                     
 </body>
 </html>
