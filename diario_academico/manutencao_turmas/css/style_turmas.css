@@ -1,15 +1,95 @@
-#divBuscaTurma{
-    width: 250px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+/*--imperial-red: #e63946ff;
+--honeydew: #f1faeeff;
+--powder-blue: #a8dadcff;
+--celadon-blue: #457b9dff;
+--prussian-blue: #1d3557ff;
+*/
+
+#pExibicao{
+    color:#1d3557ff;
+    font-family: 'Nunito', sans-serif;
+    font-size:1.5em;
+    padding: 10px;
+    text-align: center;
 }
+
+
+.pSimples{
+    color:#1d3557ff;
+    font-family: 'Nunito', sans-serif;
+    font-size:1.25em;
+}
+.h2Simples{
+    color:#1d3557ff;
+    font-family: 'Nunito', sans-serif;
+    font-size:2em;
+    padding: 10px;
+}
+
+#divBuscaTurma{
+    width: 150px;
+    position:absolute;
+    left:85%;
+    top:150px;
+    border-radius: 50%;
+    transition: width .5s, border-radius .5s;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 
 #btnBusca{
     width: 100px;
     font-size: 12px;
 }
 
-#tableTurmas,td,th{
+.tableTurmas,td,th{
     border: 1px solid black;
+}
+
+.curso{
+    font-size: 2em;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+}
+
+/* --- Página de pesquisa --- */
+#erroPesquisa{
+    color: #e63946ff;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'Nunito', sans-serif;
+}
+/* --- Página exibir turmas ---*/
+.tableTurmas{
+    padding-left:15px;
+    width:100%;
+    border-collapse: collapse;
+}
+.tableTurmas th{
+    height: 40px;
+    background-color: #1d3557ff;
+    color:#f1faeeff;
+    font-weight: bold;
+}
+.tableTurmas th,td{
+    padding: 10px;
+    height: 30px;
+    text-align:center
+}
+.tableTurmas tr{
+    background-color: #f1faeeff;
+    
+
+}
+.tableTurmas tr:nth-child(even) {
+    background-color: #a8dadcff;
+}
+.centro{
+    text-align:center;
+    font-size:2.1em;
+    color: #1d3557ff;
+}
+#divBtnCriar{
+    text-align:center;
 }
