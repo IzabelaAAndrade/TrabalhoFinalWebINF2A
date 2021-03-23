@@ -45,7 +45,7 @@
                     </select> 
                     
                     <div class="escondido mudar" id="inserir">
-                        <form>
+                        <form method="POST" action="php/Inserir_Acervo_Biblioteca.php">
                             <label for="id_tipo">Tipo</label>
                             <select name="tipo" id="tipo">
                                 <option value=" ">-- selecione uma opção --</option>
@@ -77,13 +77,13 @@
                                     <div class="autor">
                                         <h4>Autor 1:</h4>
                                         <label for="id_autor1">Nome Autor: </label>
-                                        <input class="texto" type="text" name="autor" id="id_autor1" maxlength="40">
+                                        <input class="texto" type="text" name="autor[]" id="id_autor1" maxlength="40">
                                         <label for="id_sobrenome1">Sobrenome: </label>
-                                        <input class="texto" type="text" name="sobrenome" id="id_sobrenome1" maxlength="40">
+                                        <input class="texto" type="text" name="sobrenome[]" id="id_sobrenome1" maxlength="40">
                                         <label for="id_ordem1">Ordem: </label>
-                                        <input class="texto" type="text" name="ordem" id="id_ordem1"  maxlength="20">
+                                        <input class="texto" type="text" name="ordem[]" id="id_ordem1"  maxlength="20">
                                         <label for="id_qualificacao1">Qualificação: </label>
-                                        <input class="texto" type="text" name="qualificacao" id="id_qualificacao1" maxlength="20">
+                                        <input class="texto" type="text" name="qualificacao[]" id="id_qualificacao1" maxlength="20">
                                     </div>
                                 </div>
                                 
@@ -94,13 +94,13 @@
                                     <div class="parte">
                                         <h4>Partes 1:</h4>
                                         <label for="id_titulo1">Titulo: </label>
-                                        <input class="texto" type="text" name="titulo" id="id_titulo1" maxlength="40">
+                                        <input class="texto" type="text" name="titulo[]" id="id_titulo1" maxlength="40">
                                         <label for="id_inicio1">Pagina de Inicio: </label>
-                                        <input class="texto" type="text" name="inicio" id="id_inicio1">
+                                        <input class="texto" type="text" name="inicio[]" id="id_inicio1">
                                         <label for="id_fim1">Pagina Final: </label>
-                                        <input class="texto" type="text" name="fim" id="id_fim1">
+                                        <input class="texto" type="text" name="fim[]" id="id_fim1">
                                         <label for="id_chave1">Palavras-Chave: </label>
-                                        <input class="texto" type="text" name="chave" id="id_chave1" maxlength="20">
+                                        <input class="texto" type="text" name="chave[]" id="id_chave1" maxlength="20">
                                     </div>
                                 </div>
                             </div>
