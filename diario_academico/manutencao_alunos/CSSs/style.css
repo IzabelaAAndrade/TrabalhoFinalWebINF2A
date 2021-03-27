@@ -1,0 +1,340 @@
+:root {
+    --main-color: #E63946;
+    --fill-color: #FFFFFF;
+    --border-color: none;
+}
+
+html, body{
+    height: 100%;
+    margin-bottom: 0%;
+}
+
+body {
+    margin: 0;
+    background-color: #FFFFFF;
+    color: #264553;
+    font-family: 'Nunito', sans-serif;
+}
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 300px);
+    flex-direction: column;
+    padding: 5% 23%;
+}
+
+#middle {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-items: stretch;
+    align-items: flex-start;
+}
+
+#opcoes {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+}
+
+#opcoes .relator {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-grow: 1;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.relator.selected {
+    background-color: var(--main-color);
+    color: white;
+}
+
+#resultado {
+    flex-grow: 9;
+    background-color: #a8dadcb0;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+#ajuste {
+  margin: 0 auto;
+}
+
+.solid {
+    box-sizing: border-box;
+    /*margin: 15px;*/
+    padding: 20px;
+    background-color: var(--fill-color);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    box-shadow: #0003 4px 4px 10px;
+    /*colocar valores relativos*/
+    margin-top: 150px;
+    margin-right: 40%;
+    margin-left: 10%;
+}
+
+/* Filtro ****************************************************************/
+
+.btn {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input, #UF {
+    background-color: #457b9d49;
+    border: none;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+    border-bottom: 1.5px solid #457a9d;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td, th {
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+
+}
+
+h1, h3{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    margin: 0%;
+}
+
+/* Header/Footer ****************************************************************/
+
+header{
+    background-color:#1D3556;
+    width: 100%;
+    height: 15%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0%;
+}
+
+footer{
+    height: 5%;
+    background-color: #1D3556;
+    padding: 3%;
+    display: block;
+}
+
+#titulo{
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+.rodape{
+    text-align: center;
+}
+
+/* Imagens ****************************************************************/
+#logo{
+    margin-top: 10px;
+    height: 7em;/*94.5px;*/
+    width: 17em;/*250px;*/
+    float: left;
+}
+/* Menu ****************************************************************/
+nav{
+    background-color: #457B9D;
+    margin: 0%;
+}
+
+.menu, .sub_menu{
+    list-style: none;
+}
+
+.menu{
+    float: left;
+    margin: 0%;
+    font-size: 20px;
+    padding: 0%;
+}
+
+li a{
+    display: block;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding:5px 10px;
+    display:block;
+    text-shadow:0px 0px 5px rgb(56, 56, 56);
+}
+
+.menu li{
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border: thin inset #1d355631;
+    position: relative;
+    float: left;
+    background-color: #457B9D;
+    box-shadow: #0003 5px 5px 10px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease
+}
+
+.sub_menu li{
+    background-color: #457b9dde;
+}
+
+.menu li:hover{
+    background-color: #2e5064;
+}
+
+.menu li ul{
+    position: absolute;
+    top:57px;
+    right:0px;
+    display: none;
+}
+
+.menu li:hover ul, .menu li.over ul{
+    display:block;
+    -webkit-transition: all 1s ease
+}
+
+.menu li ul li{
+    display:block;
+    width:200px;
+}
+
+
+h1, h3, p, input{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    margin: 0%;
+}
+
+h1{
+    font-size: 1em;
+}
+
+h3{
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.sub{
+    color: #457a9d;
+    margin: 5% 0% .5% 0%;
+    font-size: 1em;
+}
+
+.principal{
+    color: #e74946;
+    font-size: 1.5em;
+    margin: 0% 0% .5% 0%;
+}
+
+.descricao{
+    color: #023047;
+    font-size: 1em;
+    margin: 0% 0% 1% 0%;
+}
+
+.descricao, .principal, .subRosa{
+    text-align: center;
+}
+
+form{
+    display: block;
+}
+
+#botoes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botoes{
+    width: 49.5%;
+    height: 4vh;
+    border-radius: .3em;
+    border: 0;
+    background-color: #e74946;
+    color: white;
+    transition: .3s ease;
+
+}
+.botoes:hover{
+    background-color: #457a9d;
+    cursor:pointer
+}
+
+input{
+    color:#457a9d;
+    display: inline-block;
+}
+
+.texto{
+    width: 30vw;
+    border: 0;
+    outline: none;
+    border-bottom: 1.5px solid #457a9d ;
+    display: block;
+    margin: 0% 0% 5% 0%;
+}
+
+textarea{
+    width: 31vw;
+    height: 10vh;
+    padding: 3%;
+    background-color: #457a9d;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+textarea::placeholder{
+    color: white;
+}
+
+#pag-inicial{
+    display: block;
+    margin: auto;
+}
+
+#aviso, #erro, #sucesso{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#aviso, #erro{
+    color: #e74946;
+}
+
+#sucesso{
+    color: #457a9d;
+}
+
+#radio input{
+    height: 10px;
+}
+
+#UF, #radio{
+    margin-bottom: 5%;
+}
