@@ -420,8 +420,3 @@ session_start();
 <script type="text/javascript" src="js/editar_excluir_disciplina.js"></script>
 </body>
 </html>
-
-
-<?php
-
-?>
