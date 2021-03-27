@@ -1,8 +1,9 @@
 <?php
 $cpf = $_GET["cpf"];
 $etapa = $_GET["etapa"];
-$mysqli = new mysqli("localhost", "root","", "academico");
+$mysqli = new mysqli("localhost", "root","123456", "trabalho_diario_academico");
 $aluno = getDados("SELECT * FROM alunos WHERE id=$cpf")[0];
+if($aluno == null){dadosincorretos();}
 $matriculas = getDados("SELECT * FROM matriculas WHERE id_alunos=".$aluno['id']);
 foreach($matriculas as $matricula){
     $conteudos[] = getDados("SELECT * FROM conteudos WHERE id_etapas=$etapa AND id_disciplinas=".$matricula["id_disciplinas"])[0];
@@ -10,7 +11,6 @@ foreach($matriculas as $matricula){
 foreach($conteudos as $conteudo){
     $id_conteudo[] = $conteudo["id"];
 }
-$id_conteudo[] = 2;
 ?>
 <!DOCTYPE html>
 <!-- HTML geral para páginas que sejam do tipo formulários -->
@@ -94,9 +94,25 @@ $id_conteudo[] = 2;
 <script src="../impressao_relatorios.js"></script>
 </html>
 <?php
-function getDados(String $sql): array
+function getDados(String $sql): ?array
 {
     global $mysqli;
     $result = $mysqli->query($sql);
+    if($result == false){return null;}
     return mysqli_fetch_all($result, MYSQLI_BOTH);
+}
+function dadosincorretos(){
+    echo"
+<!DOCTYPE html>
+<html lang=\"pt\">
+	<head>
+		<meta charset=\"UTF-8\">
+		<title>Relatório de Alunos</title>
+	</head>
+	<body>
+		<h1>Relatório de alunos</h1>
+		<div>Aluno não existe<!--Ou qualquer outra coisa que queira passar de mensagem--></div>
+	</body>
+</html>";
+    exit();
 }
