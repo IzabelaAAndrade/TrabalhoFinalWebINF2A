@@ -8,5 +8,6 @@ error_reporting(E_ALL);
 
 include 'academico.php';
 include 'biblioteca.php';
+@include '../edita_tabelas/biblioteca/configura_tabelas.php'; //MUDANÇA: ADICIONAR ARQUIVO DE POVOAMENTO DE TABELAS
 
 ?>

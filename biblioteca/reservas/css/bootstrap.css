@@ -53,3 +53,10 @@ label{
     background-color: #E76F51;
     color: white;
 }
+
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
