@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../css_relatorios/style_inputs_botoes.css">
         <link rel="stylesheet" href="relacao_conteudos.css">
 
-    <title>Relação de Conteúdos</title>
+    <title>Menu de Relatórios - Relação de Conteúdos</title>
 </head>
 <body>
     <header>
