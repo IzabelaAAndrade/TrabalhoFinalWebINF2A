@@ -90,7 +90,6 @@ session_start();
                             //$dados_acervo = array($id, $id_campi, $nome_livro, $editora, $n_paginas);
 
                             /*id - 0, id_campi - 1, nome - 2, tipo - 4, editora - 6, paginas - 7;
-
                             $id_campi[$i] = $linhas_tabela_livros[$i][2];
                             $nome_livro[$i] = $linhas_tabela_livros[$i][3];
                             $editora[$i] = $linhas_tabela_livros[$i][6];
@@ -145,6 +144,45 @@ session_start();
     <button id='btnadd' class='btnAdicionar btn btn-info btn-lg' data-toggle='modal' data-target='#adddisc'> Criar
         Reserva
     </button>
+
+    <div class="modal fade" id="modal_editar" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" onclick="location.reload(true);">&times;
+                    </button>
+                    <h2>Editar Reservas</h2>
+                </div>
+                <div class="modal-body" id="altera_modal">
+                <p>Testeeeeee</p>
+                <input type="text" name="teste" id="teste">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal_deletar" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" onclick="location.reload(true);">&times;
+                    </button>
+                    <h2>Deletar Reservas</h2>
+                </div>
+                <div class="modal-body" id="deleta_modal">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="main_tab">
         <div id="container_msg">
             <?php
