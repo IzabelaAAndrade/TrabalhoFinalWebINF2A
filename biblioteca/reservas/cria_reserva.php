@@ -12,7 +12,7 @@ session_start();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="css/disciplinas_index_css.css">
+    <link rel="stylesheet" href="css/reservas.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -21,7 +21,7 @@ session_start();
 <body>
 <header>
     <div id="logo-titulo">
-        <img src="imagens/LogoExemploCortado.png" alt="logo" id="logo">
+        <img src="imagens/LogoExemploCortada.png" alt="logo" id="logo">
         <h1 id="titulo"><strong>Sistema de Biblioteca</strong></h1>
     </div>
 
@@ -154,8 +154,8 @@ session_start();
                     <h2>Editar Reservas</h2>
                 </div>
                 <div class="modal-body" id="altera_modal">
-                <p>Testeeeeee</p>
-                <input type="text" name="teste" id="teste">
+                //form alterar aqui
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">
@@ -417,6 +417,6 @@ session_start();
 <script src="https://kit.fontawesome.com/b484666594.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/editar_excluir_disciplina.js"></script>
+<script type="text/javascript" src="js/botao_acionar.js"></script>
 </body>
 </html>
