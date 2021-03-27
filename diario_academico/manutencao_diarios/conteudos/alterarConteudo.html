@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterar Conteúdo</title>
+  <link rel="stylesheet" href="style/padrao.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<header>
+    <h1>Diário Acadêmico</h1>
+</header>
   <body>
-    <form class="" action="alterarConteudo.php" method="post">
-      <p id="id">Digite o id: <input type="text" name="id"></p>
-      <p id="etapa">Digite o id da etapa: <input type="number" name="etapa"></p>
-      <p id="disciplina">Digite o id da disciplina: <input type="number" name="disciplina"></p>
-      <p id="conteudo">Digite os conteudos: <input type="text" name="conteudo"></p>
-      <p id="data-inicio">Digite a data de inicio: <input type="date" name="data_inicio"></p>
-      <p id="data-final">Digite a data do fim: <input type="date" name="data_final"></p>
-      <input type="submit" id="botao" name="" value="Alterar">
-    </form>
+    <h3 class="sub">Bem-Vindo(a) à</h3>
+    <h1 class="principal">Alterar Conteúdo</h1>
+    <p class="descricao"> Para alterar um Conteúdo no Diário, basta preencher o formulário abaixo:</p>
+    <div id="ajuste">
+      <form action="alterarConteudo.php" method="post">
+        <label for="id">ID:</label>
+        <input class="texto" type="number" name="id" placeholder="ID">
+        <label for="etapa">Digite a etapa:</label>
+        <input class="texto" type="number" name="etapa" placeholder="Etapa">
+        <label for="disciplina">Digite o id da disciplina:</label>
+        <input class="texto" type="number" name="disciplina" placeholder="Disciplina">
+        <label for="conteudo">Digite o conteúdo:</label>
+        <input class="texto" type="text" name="conteudo" placeholder="Conteúdo">
+        <label for="data">Data de início:</label>
+        <input class="texto" type="date" name="data_inicio" placeholder="Data Inicial">
+        <label for="data">Data do fim:</label>
+        <input class="texto" type="date" name="data_final" placeholder="Data Final">
+        <div>
+          <input type="submit" class="botoes" name="" value="Alterar">
+          <button type="reset" class="botoes" id="limpar">Limpar</button>
+        </div>
+      </form>
+    </div>
   </body>
+  <footer style="margin-top: 15%;">
+    <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+  </footer>
 </html>

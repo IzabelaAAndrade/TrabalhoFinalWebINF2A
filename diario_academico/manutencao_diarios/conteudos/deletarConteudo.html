@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <form class="" action="deletarConteudo.php" method="post">
-      <p id="id">Digite o id: <input type="text" name="id"></p>
-      <input type="submit" id="botao" name="" value="Deletar">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deletar Conteúdo</title>
+  <link rel="stylesheet" href="style/padrao.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<header>
+    <h1>Diário Acadêmico</h1>
+</header>
+<body>
+  <h3 class="sub">Bem-Vindo(a) à</h3>
+  <h1 class="principal">Deletar Conteúdo</h1>
+  <p class="descricao"> Para deletar um Conteúdo do Diário, basta preencher o formulário abaixo:</p>
+  <div id="ajuste">
+    <form action="deletarConteudo.php" method="post">
+      <label for="id">ID:</label>
+      <input class="texto" type="number" name="id" placeholder="ID">
+      <div>
+        <input type="submit" class="botoes" name="" value="Deletar">
+        <button type="reset" class="botoes" id="limpar">Limpar</button>
+      </div>
     </form>
-  </body>
+  </div>
+</body>
+  <footer style="margin-top: 15%;">
+    <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+    <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
+  </footer>
 </html>
