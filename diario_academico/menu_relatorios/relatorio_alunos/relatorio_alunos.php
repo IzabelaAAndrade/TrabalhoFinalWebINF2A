@@ -87,7 +87,7 @@ foreach($conteudos as $conteudo){
                     ?>
             </table>
             <div id='imprimir' class='solid btn imprimir'>Imprimir</div>
-        <div>
+        </div>
     </main>
     
 </body>
@@ -106,12 +106,74 @@ function dadosincorretos(){
 <!DOCTYPE html>
 <html lang=\"pt\">
 	<head>
-		<meta charset=\"UTF-8\">
-		<title>Relatório de Alunos</title>
+		<meta charset="UTF-8">
+        	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        	<title>Manutenção Acervo</title>
+        	<link rel="stylesheet" href="../css_relatorios/index.css">
+        	<link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
+        	<link rel="stylesheet" href="../css_relatorios/style_tabelas.css">
+        	<link rel="stylesheet" href="css/style_relatorio_alunos.css">
+        	<link rel="preconnect" href="https://fonts.gstatic.com">
+        	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<h1>Relatório de alunos</h1>
-		<div>Aluno não existe<!--Ou qualquer outra coisa que queira passar de mensagem--></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manutenção Acervo</title>
+        <link rel="stylesheet" href="../css_relatorios/index.css">
+        <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
+        <link rel="stylesheet" href="../css_relatorios/style_tabelas.css">
+        <link rel="stylesheet" href="css/style_relatorio_alunos.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="img/LogoExemploCortado.png" alt="logo" id="logo">
+            <h1 id="titulo">Sistema Diário Acadêmico</h1>
+        </header> 
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Manutenção</a>
+                    <ul class="sub_menu">
+                        <li><a href="../diario_academico/campi/inseriCampi.html">Campi</a></li>
+                        <li><a href="../diario_academico/manutencao_departamentos/departamentos.html">Departamentos</a></li>
+                        <li><a href="../diario_academico/manutenção_cursos/index.html">Cursos</a></li>
+                        <li><a href="../manutencao_turmas/manutencao_cursos.php">Turmas</a></li>
+                        <li><a href="../diario_academico/manutencao_alunos/index.php">Alunos</a></li>
+                        <li><a href="../diario_academico/manutencao_professores/index.html">Professores</a></li>
+                        <li><a href="../diario_academico/manutencao_disciplinas/">Disciplinas</a></li>
+                        <li><a href="../diario_academico/manutencao_etapas/index.php">Etapas</a></li>
+                        <li><a href="../diario_academico/manutencao_diarios/php/inserir.php">Diários</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html">Relatórios</a>
+                    <ul class="sub_menu">
+                        <li><a href="../relatorio_certificado/certificados.html">Certificados</a></li>
+                        <li><a href="">Histórico por Aluno e Turma</a></li>
+                        <li><a href="../relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
+                        <li><a href="index_relatorio_aluno.html">Relação de Alunos</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="../diario_academico/transferencia_alunos/desliga_interface.php">Transferências</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </nav>
+    	<main>
+		<div id="cabecalho">
+            		<p id="endereco"><a href="../">Menu de Relatórios</a> > <a href="index_relatorio_aluno.html">Relação de Alunos</a></p>
+            		<h1 class="principal">Relação de Alunos</h1>
+        	</div>
+		<div>
+			<!--Alguma mensagem aqui falando que o dado não está no sistema-->
+		</div>
+	</main>
 	</body>
 </html>";
     exit();
