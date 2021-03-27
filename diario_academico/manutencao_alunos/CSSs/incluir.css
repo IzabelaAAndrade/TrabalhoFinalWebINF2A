@@ -1,0 +1,52 @@
+/*
+  Estilo do form para inserir alunos no bd - MANUNTENÇÃO DE ALUNOS
+  Grupo F - desenvolvido por Mayara Mendes
+  Adaptado de https://webdesign.tutsplus.com/pt/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738
+*/
+
+/* retira o estilo padrão dos elementos */
+*:focus {outline: none;}
+
+/* caber a imagem */
+.contact_form input {
+  padding-right: 22px;
+}
+
+/* faz a *magicaaa* */
+.contact_form input:focus:invalid {
+  background: #457b9d49 url(img/errado.png) no-repeat 98% center;
+  background-size: 13px;
+  box-shadow: 0 4px 2px -2px #d45252;
+}
+
+.contact_form input:required:valid {
+  background: #457b9d49 url(img/certo.png) no-repeat 98% center;
+  background-size: 13px;
+  box-shadow: 0 4px 2px -2px  #5cd053;
+}
+
+/* estiliza as dicas (não funciona) */
+.dica_erro {
+  background: #d45252;
+  border-radius: 3px 3px 3px 3px;
+  color: white;
+  margin-left:8px;
+  padding: 1px 6px;
+  z-index: 999;
+  position: absolute;
+  float: left;
+  display: none;
+  font-size: 11px;
+}
+
+.dica_erro::before {
+  content: "\25C0";
+  color:#d45252;
+  position: absolute;
+  top:1px;
+  left:-6px;
+}
+
+.desab {
+  cursor: not-allowed;
+}
