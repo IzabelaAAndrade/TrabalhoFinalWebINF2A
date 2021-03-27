@@ -40,8 +40,9 @@
                 <ul class="sub_menu">
                     <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
                     <li><a href="">Histórico por Aluno e Turma</a></li>
-                    <li><a href="../relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
                     <li><a href="../relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                    <li><a href="../relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
+                    <li><a href="../relatorio_professores/index.html">Relação de Conteúdos</a></li>
                 </ul>
             </li>
             <li><a href="../../diario_academico/transferencia_alunos/desliga_interface.php">Transferências</a></li>
