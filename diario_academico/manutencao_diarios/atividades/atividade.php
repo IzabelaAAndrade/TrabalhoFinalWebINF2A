@@ -37,7 +37,7 @@
                   <li><a href="#">Ajuda</a></li>
               </ul>
           </nav>
-        <main>
+        <main style="margin-top: 20vh;">
             <h3 class="sub">Bem-Vindo(a) à</h3>
             <h1 class="principal">Manutenção de Atividades</h1>
             <p class="descricao">
