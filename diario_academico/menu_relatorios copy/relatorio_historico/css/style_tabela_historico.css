@@ -1,0 +1,79 @@
+.divTabela{
+    background-color: #a8dadcb0;
+    box-sizing: border-box;
+    padding: 3vw;
+    border-radius: 2px;
+    box-shadow: #0003 4px 4px 10px; 
+    margin: 2em auto;
+    width: 44em;  
+    text-align: center; 
+    font-size: 14px;
+}
+
+table{
+    margin:auto;
+    width: 35em;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0%;
+    color: #1D3556;
+    font-size: 14px;
+}
+
+table thead{
+    border-bottom: #1D3556 solid 1px;
+    text-align: center;
+}
+
+td {
+    padding: 1em; 
+}
+
+th{
+    padding: 0.3em;
+    padding-right: 0.7em;
+}
+
+tbody tr:nth-child(even){
+    background-color: #84acad;
+}
+
+caption{
+    font-size: 18px;
+    /* font-weight: bold; */
+    background-color: #1D3556;
+    width: auto;
+    height: auto;
+    border-radius: 3px 3px 0px 0px;
+    border-bottom: none;
+    color: white;
+    padding: 1%;
+}
+
+.btnTabela{
+    width: 6em;
+    background-color: #e74946;
+    color: white;
+    display: block;
+    height: 2.5em;
+    border-radius: .3em;
+    border: 0;
+    transition: .3s ease;
+    margin-left: 3vw;
+    padding: 0.3em;
+}
+
+.btnTabela:hover{
+    background-color: #a93533;
+    cursor:pointer 
+}
+
+#imprimir{
+    color: #1D3556;
+    background-color: white;
+    padding: .5em;
+    width: 35em;
+    margin: 1em auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
