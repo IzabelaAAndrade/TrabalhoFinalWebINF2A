@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    	<link href="css/bootstrap.min.css" rel="stylesheet" />
+    	<link rel="stylesheet" href="css/bootstrap.min.css" />
     	<link rel="stylesheet" href="../../padrao_estilizacao/diario_academico/paginas_acao_bd/geral_academico.css">
         <link rel="stylesheet" href="manutencao_cursos.css">
     	<script src="js/jquery-3.6.0.min.js"></script>
@@ -36,11 +36,10 @@
     <body>
         <header>
             <img src="img/LogoExemploCortado.png" alt="logo" id="logo">
-            <h1>Sistema Academico</h1>
+            <h1 id="titulo">Sistema Diário Acadêmico</h1>
         </header>
-        
         <nav>
-	        <ul class="menu">
+            <ul class="menu">
 	            <li><a href="../">Home</a></li>
 	            <li><a href="#">Sobre</a></li>
 	            <li><a href="#">Manutenção</a>
@@ -57,10 +56,10 @@
 	                </ul>
 	            </li>
 	            <li><a href="../menu_relatorios/">Relatórios</a></li>
-	            <li><a href="../transferencia_alunos">Transferências</a></li>
+	            <li><a href="../transferencia_alunos/">Transferências</a></li>
 	            <li><a href="#">Ajuda</a></li>
 	        </ul>
-    	</nav>
+        </nav>
         
         <main id="principal">
             <h3 class="sub">Bem-Vindo(a) à</h3>
@@ -186,7 +185,8 @@
         </div>
         
         <footer>
-            <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+            <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+            <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
         </footer>
         <script src="js/bootstrap.min.js"></script>
         <script src="controle.js"></script>
