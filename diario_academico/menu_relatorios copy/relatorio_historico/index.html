@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manutenção Acervo</title>
+        <link rel="stylesheet" href="../css_relatorios/index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="css/style_historico.css">
+        <link rel="stylesheet" href="../css_relatorios/style_tabelas.css">
+        <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
+        <link rel="stylesheet" href="../css_relatorios/style_inputs_botoes.css">
+
+    	<title>Menu de Relatórios - Histórico por Aluno e Turma</title>
+	</head>
+<body>
+    <header>
+        <img src="../LogoExemploCortado.png" alt="logo" id="logo">
+        <h1 id="titulo">Sistema Diário Acadêmico</h1>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Manutenção</a>
+                <ul class="sub_menu">
+                    <li><a href="../../diario_academico/campi/inseriCampi.html">Campi</a></li>
+                    <li><a href="../../diario_academico/manutencao_departamentos/departamentos.html">Departamentos</a></li>
+                    <li><a href="../../diario_academico/manutenção_cursos/index.html">Cursos</a></li>
+                    <li><a href="../../manutencao_turmas/index.php">Turmas</a></li>
+                    <li><a href="../../diario_academico/manutencao_alunos/index.php">Alunos</a></li>
+                    <li><a href="../../diario_academico/manutencao_professores/index.html">Professores</a></li>
+                    <li><a href="../../diario_academico/manutencao_disciplinas/">Disciplinas</a></li>
+                    <li><a href="../../diario_academico/manutencao_etapas/index.php">Etapas</a></li>
+                    <li><a href="../../diario_academico/manutencao_diarios/php/inserir.php">Diários</a></li>
+                </ul>
+            </li>
+            <li><a href="../index.html">Relatórios</a>
+                <ul class="sub_menu">
+                    <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
+                    <li><a href="">Histórico por Aluno e Turma</a></li>
+                    <li><a href="../relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                    <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li> 
+                </ul>
+            </li>
+            <li><a href="../../diario_academico/transferencia_alunos/desliga_interface.php">Transferências</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="cabecalho">
+            <p><a href="../">Menu de Relatórios</a> > <a href="index.html">Histórico por Aluno e Turma</a></p>
+            <h1 class="principal">Histórico por Aluno e Turma</h1>
+		</div>
+		<p id="instrucao">Insira os dados para gerar o relatório</p>
+
+		<form action="historico.php">
+			<input name="nome" type="text" placeholder="Nome do aluno">
+			<input name="turma" type="text" placeholder="Nome da turma">
+			<input name="disciplina" type="text" placeholder="Nome da disciplina">
+			<input id="botao-enviar" type="submit" value="Enviar">
+		</form>
+		
+    </main>
+    <footer>
+        <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+        <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
+    </footer>
+</body>
+</html>
