@@ -7,6 +7,6 @@ define("DB_DATABASE","academico");
 
 $conexao = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 if (!$conexao)
-    die("Conexão falhou: " . mysqli_connect_error());
+    die("<p class='nenhumResultado'p>Conexão falhou: " . mysqli_connect_error()."</p>");
 
 ?>

@@ -1,20 +1,56 @@
-<html>
-<head>
-<style>
-table, td, th {
-  border: 1px solid black;
-}
-
-td, th {
-	padding: 10px;
-}
-
-table {
-  border-collapse: collapse;
-}
-</style>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css_relatorios/index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="css/style_historico.css">
+        <link rel="stylesheet" href="css/style_tabela_historico.css">
+        <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
+        <link rel="stylesheet" href="../css_relatorios/style_inputs_botoes.css">
+    	<title>Menu de Relatórios - Histórico por Aluno e Turma</title>
+	</head>
 <body>
+    <header>
+        <img src="../LogoExemploCortado.png" alt="logo" id="logo">
+        <h1 id="titulo">Sistema Diário Acadêmico</h1>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Manutenção</a>
+                <ul class="sub_menu">
+                    <li><a href="../../diario_academico/campi/inseriCampi.html">Campi</a></li>
+                    <li><a href="../../diario_academico/manutencao_departamentos/departamentos.html">Departamentos</a></li>
+                    <li><a href="../../diario_academico/manutenção_cursos/index.html">Cursos</a></li>
+                    <li><a href="../../manutencao_turmas/index.php">Turmas</a></li>
+                    <li><a href="../../diario_academico/manutencao_alunos/index.php">Alunos</a></li>
+                    <li><a href="../../diario_academico/manutencao_professores/index.html">Professores</a></li>
+                    <li><a href="../../diario_academico/manutencao_disciplinas/">Disciplinas</a></li>
+                    <li><a href="../../diario_academico/manutencao_etapas/index.php">Etapas</a></li>
+                    <li><a href="../../diario_academico/manutencao_diarios/php/inserir.php">Diários</a></li>
+                </ul>
+            </li>
+            <li><a href="../index.html">Relatórios</a>
+                <ul class="sub_menu">
+                    <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
+                    <li><a href="">Histórico por Aluno e Turma</a></li>
+                    <li><a href="../relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                    <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li> 
+                </ul>
+            </li>
+            <li><a href="../../diario_academico/transferencia_alunos/desliga_interface.php">Transferências</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="cabecalho">
+            <p><a href="../">Menu de Relatórios</a> > <a href="index.html">Histórico por Aluno e Turma</a></p>
+            <h1 class="principal">Histórico por Aluno e Turma</h1>
+		</div>
 
 <?php
 
@@ -128,7 +164,7 @@ $filtro GROUP BY a.id, d.id ";
 $data = mysqli_query($conexao, $sql);
 
 if (!$data)
-    die('Erro ao consultar BD: '.mysqli_error($conexao));
+    die('<p class="nenhumResultado">Erro ao consultar BD: '.mysqli_error($conexao).'</p>');
 
 // criação das turmas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -160,8 +196,9 @@ while($registro = mysqli_fetch_assoc($data)) {
 foreach($turmas as $turma) {
 	
 	// cria a linha de títulos ( | alunos | Mat | Fil | etc.. )
-	echo '<table><tr><th colspan="' . (count($turma->disciplinas)*3+1) . '">' . $turma->nome . '</th></tr>';
-	echo '<tr><th rowspan="2">alunos</th>';
+	echo '<div class="divTabela"><h2>Histórico por Aluno e Truma</h2><table><caption>'. $turma->nome . '</caption>';
+	// <th colspan="' . (count($turma->disciplinas)*3+1) . '">' . $turma->nome . '</th>
+    echo '<thead><tr><th rowspan="2">Alunos</th>';
 	
     // cria os títulos das disciplinas
 	foreach($turma->disciplinas as $did => $dnome)
@@ -170,8 +207,8 @@ foreach($turmas as $turma) {
 
     // cria as colunas de nota, valor e faltas
     foreach($turma->disciplinas as $did => $dnome)
-		echo '<th>nota</th><th>valor</th><th>faltas</th>';
-	echo '</tr>';
+		echo '<th>Nota</th><th>Valor</th><th>Faltas</th>';
+	echo '</tr></thead><tbody>';
 
 	// para cada aluno da turma
 	foreach($turma->alunos as $aid => $aluno) {
@@ -188,14 +225,19 @@ foreach($turmas as $turma) {
         }
 		echo '</tr>';
 	}
-	echo '</table>';
+	echo '</tbody></table><div id="imprimir" class="imprimir">Imprimir</div></div>';
 }
 
 // se não tiverem registros
 if(empty($turmas))
-    echo('Nenhum registro encontrado!');
+    echo('<p class="nenhumResultado">Nenhum registro encontrado!</p>');
 
 ?>
-
+    </main>
+    <footer>
+        <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+        <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
+    </footer>
+    <script src="../impressao_relatorios.js"></script>
 </body>
 </html>
