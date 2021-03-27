@@ -25,16 +25,14 @@ if($num_conteudos==0){
     die();
 }
 
-echo "<div id='conteiner-tabela'>
-        <div id='voltar'><a href=''><img src='img/seta-esquerda.png' width='20px' height='20px'></a></div>
-        <div id='caixa'>
-            <h2>RELATÓRIO DE CONTEÚDOS: DISCIPLINA ".$row['nome']."</h2><table>
-            <thead>
-                <th>Etapa</th>
-                <th>Disciplina</th>
-                <th>Conteúdo</th>
-                <th>Data</th>
-            </thead>";
+echo "<div class='divTabela'>
+        <h2>DISCIPLINA: ".$row['nome']."</h2><table>
+        <thead>
+            <th>Etapa</th>
+            <th>Disciplina</th>
+            <th>Conteúdo</th>
+            <th>Data</th>
+        </thead>";
 while($row_conteudos = mysqli_fetch_array($resultado_conteudos)){
     $etapa = $row_conteudos["id_etapas"];
     $disciplina = $row_conteudos["id_disciplinas"];
@@ -47,9 +45,7 @@ while($row_conteudos = mysqli_fetch_array($resultado_conteudos)){
             <td>$data</td>
         </tr>";
 }
-echo "</table></div>
-<div id='imprimir' class='solid btn imprimir'>Imprimir</div>
-</div>";
+echo "</table><div id='imprimir' class='solid btn imprimir'>Imprimir</div></div>";
 
 
 ?>

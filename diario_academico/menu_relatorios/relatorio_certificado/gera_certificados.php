@@ -7,8 +7,7 @@
     $row_aluno = mysqli_fetch_array($resultado_aluno);
     $nome_aluno = $row_aluno["nome"];
 
-    echo "<div id='voltar'><a href=''><img src='img/seta-esquerda.png' width='20px' height='20px'></a></div>";
-    echo "<div id='caixa'>
+    echo "<div class='divTabela' id='caixa'>
             <h2 class='texto-certificado texto-colorido'>CERTIFICADO</h2>
             <p class='texto-certificado'>Certificamos para os devidos fins que $nome_aluno, ID $id_aluno, cursou com êxito as seguintes disciplinas nesta instituição de ensino: </p>";
     echo "<table id='tabela_disciplinas_cursadas'>
@@ -46,8 +45,8 @@
 
     }
 
-    echo "</table></div>
-    <div id='imprimir' class='solid btn imprimir'>Imprimir</div>
+    echo "</table>
+    <div id='imprimir' class='solid btn imprimir'>Imprimir</div></div> 
     </div>";
 
 

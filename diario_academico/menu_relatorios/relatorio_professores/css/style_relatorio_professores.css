@@ -1,0 +1,28 @@
+form{
+    margin: 3em auto;
+    width: 16em;
+}
+
+main{
+    margin-bottom: 8em;
+}
+
+#instrucao{
+    margin-top: 0em;
+    text-align: center;
+    color: #1d3557;
+}
+
+.divTabela h2{
+    color: #e63946;
+}
+
+.divTabela table{
+    width: 27em;
+}
+
+#nenhumResultado{
+    width: 27em;
+    color: white;
+    background-color: #e63946;
+}

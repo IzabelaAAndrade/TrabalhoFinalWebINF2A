@@ -1,38 +1,38 @@
-/* CSS para estilizar páginas do tipo Formulário - Biblioteca */
+/* CSS para estilizar páginas do tipo Formulário - Diário Acadêmico */
+*{
+    font-family: 'Nunito', sans-serif;
+}
 html, body{
     margin: 0%;
-    font-family: 'Nunito', sans-serif;
+}
+header, footer{
+    padding-bottom: 3%;
 }
 
 h1, h3, p, input{
-    
+    font-family: 'Nunito', sans-serif;
     color: white;
     margin: 0%;
 }
 
-h1{
-    font-size: 1em;
-}
-
 h3{
     text-align: center;
-    font-size: 0.7em;
 }
 
 .sub{
-    color: #449d8f;
-    margin: 4vh 0% 3% 0%;
+    color: #457a9d;
+    margin: 25vh 0% .5% 0%;
     font-size: 1.5em;
 }
 
 .principal{
-    color: #e76f51;
+    color: #e74946;
     font-size: 3em;
     margin: 0% 0% .5% 0%;
 }
 
 .descricao{
-    color: #264553;
+    color: #023047;
     font-size: 1.2em;
     margin: 0% 0% 20vh 0%;
 }
@@ -49,7 +49,6 @@ h3{
 }
 form{
     display: block;
-
 }
 
 #botoes{
@@ -63,39 +62,35 @@ form{
     height: 4vh;
     border-radius: .3em;
     border: 0;
-    background-color: #e76f51;
+    background-color: #e74946;
     color: white;
     transition: .3s ease;
     
 }
 .botoes:hover{
-    background-color: #449d8f;
-    cursor:pointer
-    
+    background-color: #457a9d;
+    cursor:pointer   
 }
 
 input{
-    color:#449d8f;
+    color:#457a9d;
     display: inline-block;
 }
-
-
 
 .texto{
     width: 30vw;
     border: 0;
     outline: none;
-    border-bottom: 1.5px solid #449d8f ;
+    border-bottom: 1.5px solid #457a9d ;
     display: block;
     margin: 0% 0% 5% 0%;
 }
 
 textarea{
-    width: 100%;
+    width: 31vw;
     height: 10vh;
     padding: 3%;
-    background-color: #449d8f;
-    color: white;
+    background-color: #457a9d;
     border: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
@@ -103,22 +98,21 @@ textarea{
 textarea::placeholder{
     color: white;
 }
-
 /* Header/Footer ****************************************************************/
 
 header{
-    background-color: #264653;
+    background-color:#1D3556;
     width: 100%;
-    height: 7em;
+    height: 15%;
     border-top: none;
     border-left: none;
     border-right: none;
-    margin: 0;    
+    margin: 0%;    
 }
 
 footer{
     height: 5%;
-    background-color: #264653;
+    background-color: #1D3556;
     padding: 3%;
     display: block;
 }
@@ -134,8 +128,7 @@ footer{
 
 /* Imagens ****************************************************************/
 #logo{
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-top: 10px;
     height: 7em;/*94.5px;*/
     width: 17em;/*250px;*/
     float: left;
@@ -183,7 +176,7 @@ li a{
 }
 
 .sub_menu li{
-    background-color: #457B9D;
+    background-color: #457b9dde;
 }
 
 .menu li:hover{
@@ -206,4 +199,3 @@ li a{
     display:block;
     width:200px;
 }
-

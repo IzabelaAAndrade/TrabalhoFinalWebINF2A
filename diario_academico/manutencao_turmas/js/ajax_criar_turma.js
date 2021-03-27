@@ -8,7 +8,7 @@ function sendForm(event){
     let idCurso = document.getElementsByName('idCursoC')[0].value;
     let params = 'nomeTurma='+nomeTurma+"&idCurso="+idCurso;
 
-    ajax.open('POST', 'criar_turma.php');
+    ajax.open('POST', 'criar_turmas.php');
     ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     ajax.onreadystatechange = function(){
         if(ajax.status===200 && ajax.readyState===4){

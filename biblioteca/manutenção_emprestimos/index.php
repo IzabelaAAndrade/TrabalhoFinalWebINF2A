@@ -23,7 +23,7 @@
                 if($result != false){
                     $returnEmprestimos = "";
                     while($row = mysqli_fetch_assoc($result)){
-                        $returnEmprestimos .= $row['Id'].",".$row['id_alunos'].",".$row['id_acervo'].",".$row['data_emprestimo'].",".$row['data_prev_devol'].",".$row['data_devolucao'].",".$row['multa'].",";
+                        $returnEmprestimos .= $row['Id'].",".$row['Id_alunos'].",".$row['Id_acervo'].",".$row['Data_emprestimo'].",".$row['Data_prev_devol'].",".$row['Data_devolucao'].",".$row['Multa'].",";
                     }
                 }else{
                     $returnEmprestimos = "Nenhum empréstimo.";
@@ -42,48 +42,41 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <link rel="stylesheet" href="css/geral_biblioteca.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: unset !important;
-        }
-        h1, h2, h3, h4 {
-            font-weight: bold !important;
-            line-height: 1.5 !important;
-        }
-    </style>
-    <title>Empréstimos</title>
-</head>
-<body>
-    <header>
-        <img src="img/LogoExemploCortada.png" alt="logo" id="logo">
-        <h1>Sistema Biblioteca</h1>
-    </header>
-    <nav>
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Manutenção</a>
-                <ul class="sub_menu">
-                    <li><a href="#">Acervo</a></li>
-                    <li><a href="#">Empréstimos</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Relatórios</a></li>
-            <li><a href="#">Descarte</a></li>
-            <li><a href="#">Ajuda</a></li>
-        </ul>
-    </nav>
+<!-- HTML geral para páginas que sejam do tipo formulários -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/geral_biblioteca.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <title>Empréstimos</title>
+    </head>
+    <body>
+        <header>
+            <img src="img/LogoExemploCortada.png" alt="logo" id="logo">
+            <h1 id="titulo">Sistema Biblioteca</h1>
+        </header>
 
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Manutenção</a>
+                    <ul class="sub_menu">
+                        <li><a href="manutencao_acervo/index_acervo.html">Acervo</a></li>
+                        <li><a href="manutenção_emprestimos/index.php">Empréstimos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="menu_relatorios/relacao_descartes.php">Descarte</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </nav>
+<body>
     <main>
         
         <div id="cabecalho">
@@ -92,7 +85,7 @@
                 <h1 class="principal">Manutenção de Empréstimos</h1>
                 <div id="busca">
                     <form method="GET" action="">
-                        <input type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit" id="botaoBuscaId">Buscar</button>
+                        <p><input id="inputId" type="text"  name="id_aluno" placeholder="ID do aluno" id="busca_id"><button type="submit" id="botaoBuscaId">Buscar</button></p>
                     </form>
                 </div>
             </div>
@@ -180,7 +173,8 @@
 
     </main>
     <footer>
-        <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+            <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+            <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
     </footer>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>

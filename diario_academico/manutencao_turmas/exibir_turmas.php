@@ -7,71 +7,70 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/style_turmas.css">
-   <link rel = "stylesheet" href = "../index.css">
+   <link rel = "stylesheet" href = "css/style_tabelas.css">
+   <link rel = "stylesheet" href = "css/index.css">
     <title>Turmas</title>
 </head>
 <body>
-<header>
-      <img src="../img/LogoExemploCortado.png" alt="logo" id="logo">
-      <h1 id="titulo">Sistema Academico</h1>
-   </header>
-        
-        <nav>
-        <ul class="menu" >
-            <li><a href="#">Home</a></li>
+  <header>
+    <img src="../img/LogoExemploCortado.png" alt="logo" id="logo">
+    <h1 id="titulo">Sistema Academico</h1>
+  </header>
+  <nav>
+         <ul class="menu" >
+            <li><a href="../index.html">Home</a></li>
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Manutenção</a>
                 <ul class="sub_menu">
-                    <li><a href="#">Campi</a></li>
-                    <li><a href="#">Departamentos</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Turmas</a></li>
-                    <li><a href="#">Alunos</a></li>
-                    <li><a href="#">Professores</a></li>
-                    <li><a href="#">Disciplinas</a></li>
-                    <li><a href="#">Etapas</a></li>
-                    <li><a href="#">Diários</a></li>
+                    <li><a href="../campi/campi.php">Campi</a></li>
+                    <li><a href="../manutencao_departamentos/departamentos.html">Departamentos</a></li>
+                    <li><a href="../manutenção_cursos/index.html">Cursos</a></li>
+                    <li><a href="index.php">Turmas</a></li>
+                    <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
+                    <li><a href="../manutencao_professores/index.html">Professores</a></li>
+                    <li><a href="../manutencao_disciplinas/index.html">Disciplinas</a></li>
+                    <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
+                    <li><a href="../manutencao_diarios/">Diários</a></li>
                 </ul>
             </li>
-            <li><a href="#">Relatórios</a></li>
-            <li><a href="#">Transferências</a></li>
+            <li><a href="../menu_relatorios/index.html">Relatórios</a>
+                <ul class="sub_menu">
+                    <li><a href="../menu_relatorios/relatorio_certificado/certificados.html">Certificados</a></li>
+                    <li><a href="">Histórico por Aluno e Turma</a></li>
+                    <li><a href="../menu_relatorios/relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
+                    <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                </ul>
+            </li>
+            </li>
+            <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
             <li><a href="#">Ajuda</a></li>
         </ul>
-    </nav>
+  </nav>
 <main>
   <div>
-
-  <br><br><br><br>
     <?php
       include 'conexao.php';
+      global $connection;
 
       $sql = "SELECT id, nome FROM cursos WHERE id = '".$_GET['id']."'";
       $resultado = mysqli_query($connection, $sql);
       $row = mysqli_fetch_array($resultado);
-      echo "<p class='pSimples'><a href='manutencao_turmas.php'>Manutenção de Turmas</a> > Turmas de ".$row['nome']."</p>";
+      echo "<p class='pSimples'><a href='index.php'>Manutenção de Turmas</a> > Turmas de ".$row['nome']."</p>";
       echo "<h1 class='principal'>Manutenção de Turmas</h1>";
       echo  "<h2 class='centro'> Turmas de ".$row["nome"]."</h2><br>" ;
     ?>
   </div>
-  <div>
+  <div class="divTabela">
     <?php
-      include 'conexao.php';
-
       $get = $_GET['id'];
 
       $sql1 = "SELECT id, id_cursos, nome FROM turmas WHERE id_cursos = '".$_GET['id']."'";
       $resultado1 = mysqli_query($connection, $sql1);
       
       if (mysqli_num_rows($resultado1) > 0) {
-        $return = "<div style='overflow-x:auto;'><table class='tableTurmas' id='tableTurmas'><thead><tr><th>ID Turma</th><th>Nome Turma</th><th>ID Curso</th><th></th><th></th></tr></thead><tbody>";
+        $return = "<table><thead><th>ID Turma</th><th>Nome Turma</th><th>ID Curso</th><th></th><th></th></thead><tbody>";
         while($row = mysqli_fetch_array($resultado1)) {
-          $return .= "<tr>
-          <td id='campoId".$row['id']."'>".$row['id']."</td>
-          <td id='campoNome".$row['id']."'>".$row['nome']."</td>
-          <td class='campoIdCurso'>".$row['id_cursos']."</td>
-          <td><button class='botoes' id='btnEditar".$row['id']."' onclick='getIdTurma(".$row['id'].");' class='btnEditar btn btn-info btn-lg' data-toggle='modal' data-target='#alterarTurmaModal'>Editar</button></td>
-          <td><button class='botoes' id='btnDeletar".$row['id']."' class='btnDeletar btn btn-info btn-lg' data-toggle='modal' data-target='#deletarTurmaModal'>Deletar</button></td>
-          </tr>";        }
+          $return .= "<tr><td id='campoId".$row['id']."'>".$row['id']."</td><td id='campoNome".$row['id']."'>".$row['nome']."</td><td>".$row['id_cursos']."</td><td><button id='btnEditar".$row['id']."' onclick='getIdTurma(".$row['id'].");' class='btnEditar btn btn-info btn-lg' data-toggle='modal' data-target='#alterarTurmaModal'>Editar</button></td><td><button id='btnDeletar".$row['id']."' class='btnDeletar btn btn-info btn-lg' data-toggle='modal' data-target='#deletarTurmaModal'>Deletar</button></td></tr>";        }
         $return .= "</tbody></table></div>";
       } else {
         $return = "Existem 0 turmas para esse curso";
@@ -88,18 +87,18 @@
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" onclick="location.reload(true);">&times;</button>
             <h2 class="h2Simples">Alterar turma</h2>
-            <p class="pSimples">Preencha apenas os dados que deseja alterar</p>
         </div>
-        <div class="modal-body">
-          <form name="form" id="formAlterar"  method="POST" enctype="application/x-www-form-urlencoded" action="alterar_turma.php">
-            <p class="pSimples">Nome da Turma:<input class="inputEditar"  type="text" name="nomeTurma"></p>
-            <p class="pSimples">ID do Curso:<input class="inputEditar" type="text" name="idCurso"></p>
-            <p id="resultA"></p>
-            <div class="modal-footer">
-              <input class="botoes" type="submit" value="Confirmar">
-            </div>
-          </form>
-        </div>
+        <form name="form" id="formAlterar"  method="POST" enctype="application/x-www-form-urlencoded" action="alterar_turma.php">
+          <div class="modal-body">
+            <p id="msgAlterar">Preencha apenas os dados que deseja alterar</p>
+            <p><input class="inputEditar"  type="text" name="nomeTurma" placeholder="Novo Nome"></p>
+            <p><input class="inputEditar" type="text" name="idCurso" placeholder="Novo ID do Curso"></p>
+            <p class="result" id="resultA"></p>
+          </div>
+          <div class="modal-footer">
+            <input class="botoes" type="submit" value="Confirmar">
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -111,16 +110,16 @@
             <button type="button" class="close" data-dismiss="modal" onclick="location.reload(true);">&times;</button>
             <h2 class="h2Simples">Criar nova turma</h2>
         </div>
-        <div class="modal-body">
-          <form name="form" id="formCriar"  method="POST" enctype="application/x-www-form-urlencoded" action="criar_turmas.php">
-          <p class="pSimples">Nome da Turma:<input type="text" name="nomeTurmaC"></p>
-            <p class="pSimples">Id do Curso:<input type="text" name="idCursoC"></p>
-            <div class="modal-footer">
-              <input class="botoes type="submit" id="btnConfirmaCriar" value="Confirmar">
-            </div>
-          </form>
-          <p id="resultC"></p>
-        </div>
+        <form name="form" id="formCriar"  method="POST" enctype="application/x-www-form-urlencoded" action="criar_turmas.php">
+          <div class="modal-body">
+            <p><input type="text" name="nomeTurmaC" placeholder="Nome da Turma"></p>
+            <p><input type="text" name="idCursoC" placeholder="ID do Curso"></p>
+            <p class="result" id="resultC"></p>
+          </div>
+          <div class="modal-footer">
+            <input class="botoes" type="submit" id="btnConfirmaCriar" value="Confirmar">
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -133,10 +132,8 @@
             <h2 class="h2Simples">Deletar turma</h2>
         </div>
         <div class="modal-body">
-          <p class="pSimples">Deseja deletar esta turma?</p>
-          <p class="pSimples">ID da turma: <span id="idTurmaD"></span></p>
-          <p class="pSimples">Nome da Turma: <span id="nomeTurmaD"></span></p>
-          <p id="resultD"></p>
+          <p id="msgDeletar">Deseja deletar a turma <span id="nomeTurmaD"></span> [ID <span id="idTurmaD"></span>]?</p>
+          <p class="result" id="resultD"></p>
         </div>
         <div class="modal-footer">
         <input  class="botoes" type="button" id="confirmaDeletar" value="Confirmar">

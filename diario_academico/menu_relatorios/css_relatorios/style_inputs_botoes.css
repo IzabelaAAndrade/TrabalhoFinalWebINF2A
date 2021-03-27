@@ -1,0 +1,39 @@
+input[type="text"], input[type="number"], select{
+    border: none;
+    height: 1.5em;
+    padding: 5px;
+    width: 17em; 
+    color: #1d3557;
+    border-bottom: #1d3557 solid 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 14px;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 0.7em;
+}
+
+#botao-enviar{
+    width: 13em;
+    background-color: #e74946;
+    color: white;
+    display: block;
+    height: 1.8em;
+    border-radius: .3em;
+    border: 0;
+    background-color: #e74946;
+    color: white;
+    transition: .3s ease;
+    margin: auto;
+    
+}
+#botao-enviar:hover{
+    background-color: #457a9d;
+    cursor:pointer   
+}
+
+select{
+    height: 2em;
+    width: 17.9em;
+}

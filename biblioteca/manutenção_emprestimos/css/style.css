@@ -1,6 +1,55 @@
+/*BOTÕES*/
+#botaoBuscaId {
+    border-radius: 0px 3px 3px 0px;
+    height: 4vh;
+    border: 0;
+    background-color: #e76f51;
+    color: white;
+    transition: .3s ease;
+    width: 10em;
+    border: 1px solid #e76f51;
+}
+
+#botaoBuscaId:hover{
+    background-color: #449d8f;
+    cursor:pointer;
+    border: 1px solid #449d8f;
+
+}
+
+.btn{
+    background-color: #2A9D8F;
+    color: white;
+    margin-right: 1em;  
+    width: 6em; 
+}
+.btn:hover{
+    background-color: #264653;
+    color: #2A9D8F;
+}
+.btnDevolver{  /* Mudança: Centralização do botão */
+    height: 1.5em;
+    border: 0;
+    background-color: #e76f51;
+    color: white;
+    transition: .3s ease;
+    width: 7em;
+    border: 0px solid #e76f51;
+    display: block;
+    margin: auto;
+    position: absolute;
+    bottom: 1em;
+}
+.btnDevolver:hover{
+    background-color: #449d8f;
+    cursor:pointer;
+    color: white;
+}
+
 .button {
     padding-top: 4px;
 }
+
 .row {
     padding-top: 2%;
 }
@@ -41,11 +90,11 @@ h1{
 #cabecalho {
     display: flex;
     flex-direction: column;
-    /*background-color: #264653;*/
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
     position: relative;
+    width: 100%;
 }
 #busca {
     height: 40px;
@@ -64,15 +113,20 @@ h1{
     
 }
 #novo_emprestimo{  /* Mudança: Centralização do botão */
-    background-color:#449d8f;
+    background-color:#e76f51#2A9D8F;
     color: white;
     display:block;
     margin: 3% auto 0% auto;
     padding: 1em;
+    position: fixed;
+    bottom: 5vh;
+    right: 3vw;
+    z-index: 1;
+    width: 10em;
 }
 #novo_emprestimo:hover{
-    background-color: #E9C46A;
-    color: #2A9D8F;
+    background-color: #e76f51;
+    color: white;
 }
 #dadosAluno{
     display: flex;
@@ -89,7 +143,7 @@ h1{
     
     border-radius: 20px;
     /*box-shadow: 3px 2px 2px gray;*/
-    color: #449d8f;
+    color: white;
     
 }
 
@@ -100,48 +154,17 @@ h1{
     box-shadow: #0003 4px 4px 10px
 }
 
-#botaoBuscaId {
-    border-radius: 0px 10px 10px 0px;
-    height: 100%;
-    background-color:white;
-    border: 0;
-    position: absolute;
-    border: 1px solid #2A9D8F;
-    border-left: 0;
-    
-}
-
-
-.btn{
-    background-color: #2A9D8F;
-    color: white;
-    margin: 0% auto 0% auto;   
-}
-.btn:hover{
-    background-color: #264653;
-    color: #2A9D8F;
-}
-.btnDevolver{  /* Mudança: Centralização do botão */
-    background-color: #449d8f;
-    color: white;
-    display: inline-block;
-}
-.btnDevolver:hover{
-    background-color: white;
-    color: #449d8f;
-}
-
 .emprestimo{
-    min-height: 150px; height:300px; max-height:250px; 
+    height:10em; 
     margin: 10px;
     padding: 30px;
     position: relative;
     font-size: 12pt;
     background-color:#E9C46A;
-    border-radius: 20px;
-    box-shadow: 3px 2px 2px gray;
+    border-radius: 3px;
     color: white;
     text-align: left;
+    box-shadow: #0003 4px 4px 10px; 
 }
 .titulo-pagina {
     text-align: center;
@@ -163,4 +186,50 @@ footer {
 
 form {
     height: 100%;
+}
+
+form p{
+    margin: auto;
+    display: block;
+    width: 32.5em;
+}
+
+#inputId{
+    width: 25vw;
+    border: 0;
+    outline: none;
+    border-bottom: 1.5px solid #2A9D8F;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0% 0% 5% 0%;
+}
+
+* {
+    box-sizing: unset !important;
+}
+h1, h2, h3, h4 {
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+}
+
+#devolucaoModal div.modal-body p{
+    color: #264653;
+}
+
+.modal-title{
+    color: white;
+}
+
+#confirmar, #cancelar{
+    background-color: #2A9D8F;
+    color: white;
+    margin-right: 1em;  
+    width: 6em; 
+}
+
+#confirmar:hover, #cancelar:hover{
+    background-color: #449d8f;
+    cursor:pointer;
+    color: white;
 }

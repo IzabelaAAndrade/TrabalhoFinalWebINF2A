@@ -6,7 +6,7 @@
     $id_curso = intval($id_curso,10);
     $nome_turma = filter_input(INPUT_POST, 'nomeTurma', FILTER_SANITIZE_SPECIAL_CHARS);
     $id_turma = filter_input(INPUT_POST, 'idTurma', FILTER_SANITIZE_SPECIAL_CHARS);
-    
+    global $returnStatus;
     /*Confere se o nome já está sendo utilizado*/ 
     if(mysqli_num_rows(mysqli_query($connection, "SELECT nome FROM turmas WHERE nome='$nome_turma'"))==0){
         $bool = true;

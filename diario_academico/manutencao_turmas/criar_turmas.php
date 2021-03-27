@@ -2,8 +2,9 @@
     include 'conexao.php';
     
     if(!empty($_POST['nomeTurma']) && !empty($_POST['idCurso'])){
-        $num_turmas = mysqli_query($connection,"SELECT id FROM turmas WHERE 1");
-        $id_turma = mysqli_num_rows($num_turmas);
+        $sqlResult = mysqli_query($connection,"SELECT MAX(id) FROM turmas");
+        $row = mysqli_fetch_row($sqlResult);
+        $id_turma = intval($row[0]);
         $id_turma++;
 
         $nome_turma = filter_input(INPUT_POST, 'nomeTurma', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -18,7 +19,7 @@
         }
 
         /*Confere se o curso existe*/ 
-        if(mysqli_num_rows(mysqli_query($connection, "SELECT id FROM cursos WHERE id=$id_curso"))!=0){
+        if(mysqli_num_rows(mysqli_query($connection, "SELECT id FROM cursos WHERE id=$id_curso"))>0){
             $bool1 = true;
 
         }else{
