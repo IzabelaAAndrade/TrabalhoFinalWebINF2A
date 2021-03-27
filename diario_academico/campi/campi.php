@@ -38,7 +38,7 @@
             </ul>
         </nav>
 
-        <main>
+        <main style="margin-top: 5px;">
             <h3 class="sub">Bem-Vindo(a) à Manutenção de Campi</h3>
             <h1 class="principal">Manutenção de Campi</h1>
             <p class="descricao">
