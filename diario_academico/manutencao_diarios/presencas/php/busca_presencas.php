@@ -9,39 +9,35 @@ $faltando = [];
 $id_conteudos = verificaFaltando('id_conteudos', 'id do conteúdo');
 $id_atividades = verificaFaltando('id_atividades', 'id da atividade');
 
-
-if(empty($faltando)){
+if (empty($faltando)) {
   $existe = presencas_existem($cnx, $id_conteudos, $id_atividades);
 
   if ($existe === true) {
+    $select = "SELECT * FROM `diario` WHERE (`id_conteudos`,`id_atividades`) = ($id_conteudos, $id_atividades)";
+    $result_sel = mysqli_query($cnx, $select);
 
-    //executa a exclusão
-    $delete = "DELETE FROM diario WHERE (`id_conteudos`,`id_atividades`) = ($id_conteudos, $id_atividades)";
-    $result_del = mysqli_query($cnx, $delete);
-
-    if ($result_del) {
-      //se funcionou, avisa que deu certo
+    if ($result_sel !== false) {
       http_response_code(200);
-      echo "Registro removido com sucesso.";
-
+      $registros = mysqli_fetch_all($result_sel, MYSQLI_ASSOC);
+      echo json_encode($registros);
     } else {
-      //se não, manda erro 500 pq deu ruim
-      enviar_erro_500();
+      http_response_code(500);
+      echo "Houve um erro no servidor ao processar o pedido. Por favor, reporte esse erro ao administrador do sistema.";
     }
   } elseif ($existe === false) {
-    //Registro não existe, não tem como deletar
     http_response_code(404);
     echo "Esse registro não existe.";
   } else {
     //deu ruim na verificação (retornou null), manda erro 500
     enviar_erro_500();
   }
-}else{
+} else {
   http_response_code(400);
   echo "Parâmetros obrigatórios faltando: " . implode(', ', $faltando);
 }
 
-function verificaFaltando($var, $str){
+function verificaFaltando($var, $str)
+{
   global $cnx, $faltando;
   $valor = '';
 
