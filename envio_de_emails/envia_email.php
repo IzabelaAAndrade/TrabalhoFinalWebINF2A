@@ -20,10 +20,10 @@ try {
 	$mail->Port = 587;
 
 	$mail->setFrom('gerenciawebinf2a@gmail.com');
-	$mail->addAddress('contatobelaaa@gmail.com.br');
+	$mail->addAddress('contatobelaaa@gmail.com');
 
 	$mail->isHTML(true);
-	$mail->Subject = 'Teste de email via gmail Canal TI';
+	$mail->Subject = '[NÃO RESPONDA] Teste de Envio de Emails, Sistema SORA';
 	$mail->Body = 
     "
     <!DOCTYPE html>
@@ -165,7 +165,7 @@ try {
             </style>
             <body>
                 <header>
-                    <img src=\"imgs/LogoExemplo.png\" alt=\"logo\" id=\"logo\">
+                    <img src=\"img/LogoExemploCortada.png\" alt=\"logo\" id=\"logo\">
                     <h1>Sistema de Biblioteca</h1>
                 </header>
                 <main>
