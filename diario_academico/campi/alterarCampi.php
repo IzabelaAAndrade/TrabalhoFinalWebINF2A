@@ -12,8 +12,21 @@ $sel = mysqli_select_db($con,$dbname);
 
 $id=$_POST['id'];
 $nome=$_POST['nome'];
-$cidade=$_POST['cidade'];
-$uf=$_POST['uf'];
-mysqli_query($con,"UPDATE campi SET nome='$nome',cidade='$cidade',uf='$uf' WHERE id='$id'");
+$nomesCampi = "SELECT nome FROM campi";
+$result = mysqli_query(mysqli_connect($dbhost, $dbuser, $dbpass, $dbname), $nomesCampi);
+$verificacao = true;
+
+while ($row = mysqli_fetch_assoc($result)) {
+    if(strcmp($nome, $row["nome"]) == 0){
+        $verificacao = false;
+    }
+}
+
+if ($verificacao) {
+    mysqli_query($con,"UPDATE campi SET nome='$nome' WHERE id='$id'");
+}
+else {
+    echo "<script>alert('Já existe um campus com este nome!');</script>";
+}
 echo "<script>location.href='campi.php'</script>";
 ?>

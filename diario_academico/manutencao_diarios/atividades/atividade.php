@@ -79,7 +79,7 @@
                 while ($result) {
                   $data=date('d-m-Y', strtotime(str_replace('-','/', $result['data'])));
                   echo "<tr>";
-                  echo '<td>ID: '.$result['id'].'</td><td>'.$result['id_disciplinas'].'</td><td>'.$result['nome'].'</td><td>'.$data.'</td><td>'.$result['valor'].'</td>';
+                  echo '<td>'.$result['id'].'</td><td>'.$result['id_disciplinas'].'</td><td>'.$result['nome'].'</td><td>'.$data.'</td><td>'.$result['valor'].' Pontos</td>';
                   echo "</tr>";
                   $result = mysqli_fetch_array($sql);
                 }
@@ -91,7 +91,7 @@
             }
             ?>
         </main>
-        <footer style="margin-top: 5%;">
+        <footer style="margin-top: 10%;">
           <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
           <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
         </footer>
