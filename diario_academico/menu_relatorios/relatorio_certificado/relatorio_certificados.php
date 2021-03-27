@@ -5,7 +5,7 @@ require("conexao.php");
 $query = "SELECT * FROM alunos";
 $resultado_alunos = mysqli_query($conexao,$query) or die("<div class='alert alert-danger' role='alert'>Erro de conexão!</div>");
 
-echo "<div id='conteiner-tabela'><table>
+echo "<div class='divTabela'><table>
         <thead>
             <th>ID</th>
             <th>Nome</th>
@@ -49,7 +49,7 @@ while ($row_alunos = mysqli_fetch_array($resultado_alunos)){
             <td>--</td>";
     } else {
         echo "<td>Aprovado</td>
-            <td><a class='ver'><div>Ver certificado</div></a></td>";
+            <td><a class='ver'><div class='btnTabela'>Ver certificado</div></a></td>";
     }
     echo "</tr>";
 

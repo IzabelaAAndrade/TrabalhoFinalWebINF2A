@@ -1,13 +1,14 @@
-#cabecalho h1{
+/* #cabecalho h1{
     color: #e63946;
     text-align: center;
 }
 
 #cabecalho p{
-    margin: 2%;
-    margin-top: 6%;
+    margin: 2em;
+    margin-top: 5em;
     font-size: 18px;
     color: #1D3556;
+    height: 1em;
 }
 
 #cabecalho p a{
@@ -16,23 +17,7 @@
 
 #cabecalho p a:hover{
     color: #E63946;
-}
-
-td div:hover{
-    text-decoration: none;
-    background-color: #e63946;
-    color: #FFFFFF;
-    border-radius: 3%;
-    border: #e63946 solid 0px;
-}
-
-td div a:hover{
-    color: #FFFFFF;
-}
-
-td div{
-    padding: 1%;
-}
+} */
 
 :root {
     --main-color: #E63946;
@@ -55,7 +40,7 @@ body {
 #main {
     box-sizing: border-box;
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     min-height: calc(100vh - 300px);
     flex-direction: column;
     padding: 3% 23%;
@@ -91,23 +76,6 @@ body {
 .relator.selected {
     background-color: var(--main-color);
     color: white;
-}
-
-#resultado {
-    flex-grow: 9;
-    background-color: #a8dadcb0;
-    margin-bottom: 20px;
-    /* min-height: 50%; */
-}
-
-.solid {
-    box-sizing: border-box;
-    margin: 15px;
-    padding: 20px;
-    background-color: var(--fill-color);
-    border: 1px solid var(--border-color);
-    border-radius: 2px;
-    box-shadow: #0003 4px 4px 10px; 
 }
 
 /* Filtro ****************************************************************/
@@ -163,31 +131,10 @@ input {
     margin: 5px 0;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    padding: 0%;
-}
-
-table thead{
-    border-bottom: #1D3556 solid 1px;
-}
-
-td, th {
-    border-bottom: 1px solid var(--border-color);
-    padding: 10px;
-    
-}
-
 h1, h3{
     font-family: 'Nunito', sans-serif;
     color: white;
     margin: 0%;
-}
-
-tr:nth-child(even){
-    background-color: #84acad;
 }
 
 /* PrintDiv ****************************************************************/
@@ -205,4 +152,50 @@ nav{
     margin-bottom: 3%;
     margin: 3%;
     height: 1%;
+}
+
+#caixa {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12pt;
+    margin-top: -5%;
+}
+#certificado {
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.texto-certificado{
+    color: black;
+}
+
+.texto-colorido {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.ver {
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+}
+
+table#tabela_disciplinas_cursadas{
+    width: 45em;
+}
+
+#caixa{
+    margin: 1em;
+}
+
+p.texto-certificado{
+    margin: 1em;
+    color: #1D3556;
+}
+
+nav{
+    margin: 0px;
 }

@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inserir Conteúdo</title>
+  <link rel="stylesheet" href="style/padrao.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
   <body>
-    <form class="" action="inserirConteudo.php" method="post">
-      <p id="etapa">Digite o id da etapa: <input type="number" name="etapa"></p>
-      <p id="disciplina">Digite o id da disciplina: <input type="number" name="disciplina"></p>
-      <p id="conteudo">Digite os conteudos: <input type="text" name="conteudo"></p>
-      <p id="data-inicio">Digite a data de inicio: <input type="date" name="data_inicio"></p>
-      <p id="data-final">Digite a data do fim: <input type="date" name="data_final"></p>
-      <input type="submit" id="botao" name="" value="Inserir">
-    </form>
+    <header>
+      <h1>Diário Acadêmico</h1>
+    </header>
+    <h3 class="sub">Bem-Vindo(a) à</h3>
+    <h1 class="principal">Inserir Conteúdo</h1>
+    <p class="descricao"> Para inserir um Conteúdo no Diário, basta preencher o formulário abaixo:</p>
+
+    <div id="ajuste">
+      <form action="inserirConteudo.php" method="post">
+        <label for="etapa">Etapa:</label>
+        <input class="texto" type="number" name="etapa" placeholder="Etapa">
+        <label for="disciplina">ID da disciplina:</label>
+        <input class="texto" type="number" name="disciplina" placeholder="ID da disciplina">
+        <label for="conteudo">Conteúdo:</label>
+        <input class="texto" type="text" name="conteudo" placeholder="Conteúdo">
+        <label for="data_inicio">Data de início:</label>
+        <input class="texto" type="date" name="data_inicio" placeholder="Data Inicial">
+        <label for="data_final">Data do fim:</label>
+        <input class="texto" type="date" name="data_final" placeholder="Data Final">
+        <div>
+          <input type="submit" class="botoes" name="" value="Inserir">
+          <button type="reset" class="botoes" id="limpar">Limpar</button>
+        </div>
+      </form>
+      </div>
+      <footer>
+        <h3>Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019©</h3>
+      </footer>
   </body>
 </html>

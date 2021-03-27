@@ -1,25 +1,16 @@
-<!--Codigo feito pelos grupos F e G e com o CSS editado pelo grupo A para servir 
-como um padrao de formatacao para as interfaces de relatorio do diario academico-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="tmp.css">
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="style_certificados.css">
-    <title>Relatório de Certificados</title>
-    <style>
-		.texto-certificado {
-			color: black;
-			text-align: center;
-		}
-		.texto-colorido {
-			color: #e63946;
-		}
-    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manutenção Acervo</title>
+        <link rel="stylesheet" href="../css_relatorios/index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="css/style_certificados.css">
+        <link rel="stylesheet" href="../css_relatorios/style_tabelas.css">
+        <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
+    <title>Relação de Conteúdos</title>
 </head>
 <body>
     <header>
@@ -32,31 +23,32 @@ como um padrao de formatacao para as interfaces de relatorio do diario academico
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Manutenção</a>
                 <ul class="sub_menu">
-                    <li><a href="#">Campi</a></li>
-                    <li><a href="#">Departamentos</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Turmas</a></li>
-                    <li><a href="#">Alunos</a></li>
-                    <li><a href="#">Professores</a></li>
-                    <li><a href="#">Disciplinas</a></li>
-                    <li><a href="#">Etapas</a></li>
-                    <li><a href="#">Diários</a></li>
+                    <li><a href="../../diario_academico/campi/inseriCampi.html">Campi</a></li>
+                    <li><a href="../../diario_academico/manutencao_departamentos/departamentos.html">Departamentos</a></li>
+                    <li><a href="../../diario_academico/manutenção_cursos/index.html">Cursos</a></li>
+                    <li><a href="../../manutencao_turmas/index.php">Turmas</a></li>
+                    <li><a href="../../diario_academico/manutencao_alunos/index.php">Alunos</a></li>
+                    <li><a href="../../diario_academico/manutencao_professores/index.html">Professores</a></li>
+                    <li><a href="../../diario_academico/manutencao_disciplinas/">Disciplinas</a></li>
+                    <li><a href="../../diario_academico/manutencao_etapas/index.php">Etapas</a></li>
+                    <li><a href="../../diario_academico/manutencao_diarios/php/inserir.php">Diários</a></li>
                 </ul>
             </li>
             <li><a href="../index.html">Relatórios</a>
                 <ul class="sub_menu">
-                    <li><a href="index.html">Certificados</a></li>
-                    <li><a href="#">Histórico por aluno e turma</a></li>
+                    <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
+                    <li><a href="">Histórico por Aluno e Turma</a></li>
+                    <li><a href="../relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                    <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li> 
                 </ul>
             </li>
-            <li><a href="#">Transferências</a></li>
+            <li><a href="../../diario_academico/transferencia_alunos/desliga_interface.php">Transferências</a></li>
             <li><a href="#">Ajuda</a></li>
         </ul>
     </nav>
-    
     <main>
         <div id="cabecalho">
-            <p><a href="../">Menu de Relatórios</a> > Certificados</p>
+            <p><a href="../">Menu de Relatórios</a> > <a href="index.html">Certificados</a></p>
             <h1 class="principal">Certificados</h1>
         </div>
 

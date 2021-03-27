@@ -4,15 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Relatório Relação de Conteúdos</title>
+        <title>Manutenção Acervo</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="conteudo.css">
-        <link rel="stylesheet" href="../index.css">
-        <style>
-        	#imprimir {
-        		background-color: white;
-        	}
-        </style>
+        <link rel="stylesheet" href="../css_relatorios/index.css">
+        <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
+        <link rel="stylesheet" href="../css_relatorios/style_tabelas.css">
+        <link rel="stylesheet" href="../css_relatorios/style_inputs_botoes.css">
+        <link rel="stylesheet" href="relacao_conteudos.css">
 
     <title>Relação de Conteúdos</title>
 </head>
@@ -38,11 +36,12 @@
                     <li><a href="../../diario_academico/manutencao_diarios/php/inserir.php">Diários</a></li>
                 </ul>
             </li>
-            <li><a href="#">Relatórios</a>
+            <li><a href="../index.html">Relatórios</a>
                 <ul class="sub_menu">
-                    <li><a href="../relatorio_certificado/certificados.html">Certificados</a></li>
+                    <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
                     <li><a href="">Histórico por Aluno e Turma</a></li>
-                    <li><a href="index.php">Relação de Conteúdos</a></li> 
+                    <li><a href="../relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
+                    <li><a href="../relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
                 </ul>
             </li>
             <li><a href="../../diario_academico/transferencia_alunos/desliga_interface.php">Transferências</a></li>
@@ -56,7 +55,7 @@
             <h1 class="principal">Relação de Conteúdos</h1>
         </div>
         <div id="main">
-            <p id="descricao">Selecione a disciplina e/ou a etapa para gerar  o relatório.</p>
+            <p id="descricao">Selecione a disciplina e a etapa para gerar  o relatório.</p>
             <div id="filtros">
                 <div id="content">
                     <select id="selecionar_disciplina">
@@ -87,6 +86,7 @@
     </footer>
 
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="controles.js"></script>
+    <script src="control.js"></script>
+    <script src="../impressao_relatorios.js"></script>
 </body>
 </html>

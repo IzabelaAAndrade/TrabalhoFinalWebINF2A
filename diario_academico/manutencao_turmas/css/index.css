@@ -1,0 +1,201 @@
+/* CSS para estilizar páginas do tipo Formulário - Diário Acadêmico */
+*{
+    font-family: 'Nunito', sans-serif;
+}
+html, body{
+    margin: 0%;
+}
+header, footer{
+    padding-bottom: 3%;
+}
+
+h1, h3, p, input{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    margin: 0%;
+}
+
+h3{
+    text-align: center;
+}
+
+.sub{
+    color: #457a9d;
+    margin: 25vh 0% .5% 0%;
+    font-size: 1.5em;
+}
+
+.principal{
+    color: #e74946;
+    font-size: 3em;
+    margin: 0% 0% .5% 0%;
+}
+
+.descricao{
+    color: #023047;
+    font-size: 1.2em;
+    margin: 0% 0% 20vh 0%;
+}
+
+.descricao, .principal, .subRosa{
+    text-align: center;
+}
+
+#ajuste{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 0% 5% 0%;
+}
+form{
+    display: block;
+}
+
+#botoes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botoes{
+    width: 49.5%;
+    height: 4vh;
+    border-radius: .3em;
+    border: 0;
+    background-color: #e74946;
+    color: white;
+    transition: .3s ease;
+    
+}
+.botoes:hover{
+    background-color: #457a9d;
+    cursor:pointer   
+}
+
+input{
+    color:#457a9d;
+    display: inline-block;
+}
+
+.texto{
+    width: 30vw;
+    border: 0;
+    outline: none;
+    border-bottom: 1.5px solid #457a9d ;
+    display: block;
+    margin: 0% 0% 5% 0%;
+}
+
+textarea{
+    width: 31vw;
+    height: 10vh;
+    padding: 3%;
+    background-color: #457a9d;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+textarea::placeholder{
+    color: white;
+}
+/* Header/Footer ****************************************************************/
+
+header{
+    background-color:#1D3556;
+    width: 100%;
+    height: 15%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0%;    
+}
+
+footer{
+    height: 5%;
+    background-color: #1D3556;
+    padding: 3%;
+    display: block;
+}
+
+#titulo{
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+.rodape{
+    text-align: center;
+}
+
+/* Imagens ****************************************************************/
+#logo{
+    margin-top: 10px;
+    height: 7em;/*94.5px;*/
+    width: 17em;/*250px;*/
+    float: left;
+}
+/* Menu ****************************************************************/
+nav{
+    background-color: #457B9D;
+    margin: 0%;
+}
+
+.menu, .sub_menu{
+    list-style: none;
+}
+
+.menu{
+    float: left;
+    margin: 0%;
+    font-size: 20px;
+    padding: 0%;
+}
+
+li a{
+    display: block;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding:5px 10px;
+    display:block;
+    text-shadow:0px 0px 5px rgb(56, 56, 56);
+}
+
+.menu li{
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border: thin inset #1d355631;
+    position: relative;
+    float: left;
+    background-color: #457B9D;
+    box-shadow: #0003 5px 5px 10px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease
+}
+
+.sub_menu li{
+    background-color: #457b9dde;
+}
+
+.menu li:hover{
+    background-color: #2e5064;
+}
+
+.menu li ul{
+    position: absolute;
+    top:57px;
+    right:0px;
+    display: none;
+}
+
+.menu li:hover ul, .menu li.over ul{
+    display:block;
+    -webkit-transition: all 1s ease
+}
+
+.menu li ul li{
+    display:block;
+    width:200px;
+}

@@ -109,6 +109,7 @@ function mostraEmprestimos() {
         let nenhumEmprestimoParagrafo = document.createElement("p");
         nenhumEmprestimoParagrafo.id = "nenhumEmprestimo";
         nenhumEmprestimoParagrafo.innerHTML = "Nenhum empréstimo";
+        nenhumEmprestimoParagrafo.style.fontSize = "24px";
         document.getElementById("emprestimos").appendChild(nenhumEmprestimoParagrafo);
     }
 }

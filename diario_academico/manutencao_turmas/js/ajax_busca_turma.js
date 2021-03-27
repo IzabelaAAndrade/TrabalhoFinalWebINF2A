@@ -9,7 +9,7 @@ function sendForm(event){
     ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     ajax.onreadystatechange = function(){
         if(ajax.status===200 && ajax.readyState===4){
-            let result = document.querySelector("#resultadoBusca");
+            let result = document.querySelector(".divTabela");
             result.innerHTML = ajax.responseText;
 
         }

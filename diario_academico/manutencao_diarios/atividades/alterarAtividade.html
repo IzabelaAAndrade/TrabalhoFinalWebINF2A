@@ -15,11 +15,13 @@
   <body>
     <h3 class="sub">Bem-Vindo(a) à</h3>
     <h1 class="principal">Alterar Atividade</h1>
-    <p class="descricao"> Para alterar uma Atividade do Diário, basta preencher o formulário abaixo:</p>
+    <p class="descricao"> Para alterar uma Atividade no Diário, basta preencher o formulário abaixo:</p>
     <div id="ajuste">
       <form action="alterarAtividade.php" method="post">
-        <label for="id">ID:</label>
+        <label for="id">ID da atividade:</label>
         <input class="texto" type="number" name="id" placeholder="ID">
+        <label for="disciplinas">ID da disciplina que contém a atividade:</label>
+        <input class="texto" type="number" name="disciplinas" placeholder="ID disciplina">
         <label for="nome">Nome:</label>
         <input class="texto" type="text" name="nome" placeholder="Nome">
         <label for="data">Data:</label>
