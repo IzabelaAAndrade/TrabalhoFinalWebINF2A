@@ -50,7 +50,7 @@
                     <li><a href="../manutencao_departamentos/departamentos.html">Departamentos</a></li>
                     <li><a href="../manutenção_cursos/index.html">Cursos</a></li>
                     <li><a href="index.php">Turmas</a></li>
-                    <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
+                    <li><a href="../manutencao_alunos/">Alunos</a></li>
                     <li><a href="../manutencao_professores/index.html">Professores</a></li>
                     <li><a href="../manutencao_disciplinas/index.html">Disciplinas</a></li>
                     <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
