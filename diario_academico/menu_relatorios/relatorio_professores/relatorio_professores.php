@@ -51,27 +51,52 @@
         </nav>
 <?php
 //Relação de professores por seleção de cursos, listando suas respectivas disciplinas e horas de trabalho
-if($_GET['curso']){
 $nome_curso = $_GET["curso"];
-$mysqli = new mysqli("localhost", "root", "", "academico");
+$dados = false;
+$mysqli = new mysqli("localhost", "root", "123456", "trabalho_diario_academico");
 $id_curso = getDados("SELECT id FROM cursos WHERE nome='$nome_curso'")[0][0];
-$turmas = getDados("SELECT id FROM turmas WHERE id_cursos='$id_curso'");
-foreach($turmas as $turma){
-    $ids_turmas[] = $turma[0];
-}
-unset($turmas);
-$disciplinas = getDados("SELECT * FROM disciplinas WHERE id_turmas IN (".implode(",",$ids_turmas).")");
-foreach($disciplinas as $disciplina){
-    $ids_disciplinas[] = $disciplina[0];
-}
-unset($disciplinas);
-$prof_disciplinas = getDados("SELECT * FROM prof_disciplinas WHERE `Id-Disciplinas` IN (".implode(",",$ids_disciplinas).")");
+if($id_curso != null){
+    $dados = true;
+    $turmas = getDados("SELECT id FROM turmas WHERE id_cursos='$id_curso'");
+    foreach($turmas as $turma){
+        $ids_turmas[] = $turma[0];
+    }
+    unset($turmas);
+    $disciplinas = getDados("SELECT * FROM disciplinas WHERE id_turmas IN (".implode(",",$ids_turmas).")");
+    foreach($disciplinas as $disciplina){
+        $ids_disciplinas[] = $disciplina[0];
+    }
+    unset($disciplinas);
+    $prof_disciplinas = getDados("SELECT * FROM prof_disciplinas WHERE `Id-Disciplinas` IN (".implode(",",$ids_disciplinas).")");
 }
 ?>
     <div id="cabecalho">
         <p><a href="../">Menu de Relatórios</a> > <a href="index.html">Relação de Professores</a></p>
         <h1 class="principal">Relação de Professores</h1>
     </div>
+    <?php
+    if ($dados === true){
+        dadoscorretos();
+    }
+    else{
+        dadosincorretos();
+        print_r($prof_disciplinas);
+    }
+    ?>
+    <script src="../impressao_relatorios.js"></script>
+    </body>
+    </html>
+<?php
+function getDados(String $sql): ?array
+{
+    global $mysqli;
+    $result = $mysqli->query($sql);
+    if($result == false){return null;}
+    return mysqli_fetch_all($result, MYSQLI_BOTH);
+}
+function dadoscorretos(){
+    global $prof_disciplinas;
+    echo '
     <div class="divTabela">
     <h2>Relação de Professores - Curso: <?= $nome_curso ?></h2>
     <p id="nenhumResultado"></p>
@@ -80,29 +105,25 @@ $prof_disciplinas = getDados("SELECT * FROM prof_disciplinas WHERE `Id-Disciplin
                 <th>Nome</th>
                 <th>Disciplina</th>
                 <th>Horas de Trabalho</th>
-            </thead>
-        <?php
-        foreach ($prof_disciplinas as $prof_disciplina){
-            echo "<tr>";
-            $nome = getDados("SELECT nome FROM professores WHERE id=$prof_disciplina[0]")[0][0];
-            echo "<td>$nome</td>";
-            $disciplina = getDados("SELECT nome FROM disciplinas WHERE id=$prof_disciplina[1]")[0][0];
-            echo "<td>$disciplina</td>";
-            $carga_h = getDados("SELECT carga_horaria_min FROM disciplinas WHERE id=$prof_disciplina[1]")[0][0];
-            echo "<td>$carga_h</td>";
-            echo "</tr>";
-        }
-        ?>
-        </table>
+            </thead>';
+    foreach ($prof_disciplinas as $prof_disciplina){
+        echo "<tr>";
+        $nome = getDados("SELECT nome FROM professores WHERE id=$prof_disciplina[0]")[0][0];
+        echo "<td>$nome</td>";
+        $disciplina = getDados("SELECT nome FROM disciplinas WHERE id=$prof_disciplina[1]")[0][0];
+        echo "<td>$disciplina</td>";
+        $carga_h = getDados("SELECT carga_horaria_min FROM disciplinas WHERE id=$prof_disciplina[1]")[0][0];
+        echo "<td>$carga_h</td>";
+        echo "</tr>";
+    }
+    echo'
+    </table>
         <div id="imprimir" class="imprimir">Imprimir</div>
-    </div>
-    <script src="../impressao_relatorios.js"></script>
-    </body>
-    </html>
-<?php
-function getDados(String $sql): array
-{
-    global $mysqli;
-    $result = $mysqli->query($sql);
-    return mysqli_fetch_all($result, MYSQLI_BOTH);
+    </div>';
+}
+function dadosincorretos(){
+    echo '
+    <div>
+    dados incorretos<!--Alguma mensagem aqui-->
+    </div>';
 }
