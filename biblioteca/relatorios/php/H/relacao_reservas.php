@@ -7,8 +7,16 @@ $data = $_GET["dta_espe"];
 $sql = 'select * from reservas';
 $tem = 0;
 $result = mysqli_query($conn, $sql);
-$table = mysqli_fetch_all($result);
 
+if(!$result) {
+  echo 'Erro ao recuperar os registros: ' . mysqli_error($conn);
+}
+else if(mysqli_num_rows($result) == 0) {
+  echo 'Nenhum registro encontrado!';
+}
+else {
+
+$table = mysqli_fetch_all($result);
 if($escolha == "geral"){
   echo "<table>
       <tr>
@@ -61,6 +69,8 @@ if($escolha == "geral"){
     }
 } else {
     echo "DATA INVÁLIDA";
+}
+
 }
 
 mysqli_close($conn);

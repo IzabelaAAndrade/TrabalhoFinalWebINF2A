@@ -33,6 +33,8 @@ let FiltroGenerico = function(nome, apelido, padrao=0, tipo='text') {
     }
 
     this.getUrl = function() {
+        if(!input.value)
+            return '';
         return apelido + '=' + input.value;
     }
 
@@ -86,6 +88,8 @@ let FiltroSelect = function(nome, apelido, ops='A:a|B:b|C:c') {
     }
 
     this.getUrl = function() {
+        if(!input.value)
+            return '';
         return apelido + '=' + input.value;
     }
 
@@ -142,7 +146,12 @@ let FiltroRange = function(nome, apelido1, apelido2, padrao1=0, padrao2=0, tipo=
     }
 
     this.getUrl = function() {
-        return apelido1 + '=' + input1.value + '&' + apelido2 + '=' + input2.value;
+        let args = [];
+        if(input1.value)
+            args.push(apelido1 + '=' + input1.value);
+        if(input2.value)
+            args.push(apelido2 + '=' + input2.value);
+        return args.join('&');
     }
 
     this.reset = function() {

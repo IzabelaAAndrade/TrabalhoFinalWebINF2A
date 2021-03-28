@@ -1,6 +1,3 @@
-<table>
-<thead><tr><th>Data de devolução</th><th>Dias atrasados</th><th>Multa</th></tr></thead>
-<tbody>
 <?php
 /*
 ini_set('display_errors', 1);
@@ -31,9 +28,20 @@ if (isset($_GET["data_inicio"]) && isset($_GET["data_fim"])) {
 }
 
 $result = mysqli_query($conn, "SELECT `Data_prev_devol`, `Data_devolucao`, `Multa` FROM `emprestimos`");
-if(!$result)
-    echo "Erro ao criar Tabela! ".mysqli_error($conn);
-                                         
+
+if(!$result) {
+    echo 'Erro ao recuperar os registros: ' . mysqli_error($conn);
+}
+else if(mysqli_num_rows($result) == 0) {
+    echo 'Nenhum registro encontrado!';
+}
+else {
+    
+echo "
+<table>
+<thead><tr><th>Data de devolução</th><th>Dias atrasados</th><th>Multa</th></tr></thead>
+<tbody>";
+
 while ($registro = mysqli_fetch_array($result)) {
     if ($registro['Data_devolucao'] != NULL && $registro['Multa'] != NULL && $registro['Multa']!=0) { 
         $dataDevolucao = new \DateTime($registro['Data_devolucao']);
@@ -51,10 +59,14 @@ while ($registro = mysqli_fetch_array($result)) {
         }
     }
 }
+
+echo "
+</tbody>
+</table>";
+}
+
 //Exemplo de teste:relacao_multas.php?data_inicio=2021-03-02&data_fim=2021-03-07
 ?>
-</tbody>
-</table>
 
 <!--
 

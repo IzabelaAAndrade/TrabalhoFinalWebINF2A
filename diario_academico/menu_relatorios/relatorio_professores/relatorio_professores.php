@@ -122,8 +122,5 @@ function dadoscorretos(){
     </div>';
 }
 function dadosincorretos(){
-    echo '
-    <div>
-    dados incorretos<!--Alguma mensagem aqui-->
-    </div>';
+    echo '<p id"nenhumResultado">Nenhum resultado para os dados inseridos.</p>';
 }

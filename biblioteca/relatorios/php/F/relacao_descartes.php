@@ -24,30 +24,37 @@ $sql = "SELECT `descartes`.*, `livros`.*, `livros`.`id_acervo` AS `id_livro` FRO
 
 $query = mysqli_query($conn, $sql);
 
-$tabela = '<table>
-				<thead>
-					<th>id do acervo</th>
-					<th>id da obra</th>
-					<th>edicao</th>
-					<th>isbn</th>
-					<th>data_descarte</th>
-					<th>motivos</th>
-					<th>operador</th>
-				</thead>';
-
-while ($livro = mysqli_fetch_assoc($query)) {
-	$tabela .= '<tr>
-					<td>' . $livro['id_acervo'] . '</td>
-					<td>' . $livro['id_obra'] . '</td>
-					<td>' . $livro['edicao'] . '</td>
-					<td>' . $livro['isbn'] . '</td>
-					<td>' . $livro['data_descarte'] . '</td>
-					<td>' . $livro['motivos'] . '</td>
-					<td>' . $livro['operador'] . '</td>
-				</tr>';
+if(!$query) {
+	echo 'Erro ao recuperar os registros: ' . mysqli_error($conn);
 }
+else if(mysqli_num_rows($query) == 0) {
+	echo 'Nenhum registro encontrado!';
+}
+else {
+	$tabela = '<table>
+					<thead>
+						<th>id do acervo</th>
+						<th>id da obra</th>
+						<th>edicao</th>
+						<th>isbn</th>
+						<th>data_descarte</th>
+						<th>motivos</th>
+						<th>operador</th>
+					</thead>';
 
-$tabela .= '</table>';
-echo $tabela;
-echo '<br><hr>';
+	while ($livro = mysqli_fetch_assoc($query)) {
+		$tabela .= '<tr>
+						<td>' . $livro['id_acervo'] . '</td>
+						<td>' . $livro['id_obra'] . '</td>
+						<td>' . $livro['edicao'] . '</td>
+						<td>' . $livro['isbn'] . '</td>
+						<td>' . $livro['data_descarte'] . '</td>
+						<td>' . $livro['motivos'] . '</td>
+						<td>' . $livro['operador'] . '</td>
+					</tr>';
+	}
+
+	$tabela .= '</table>';
+	echo $tabela;
+}
 ?>

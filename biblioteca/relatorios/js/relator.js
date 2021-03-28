@@ -25,11 +25,14 @@ let Relator = function(nome, url, padrao=null) {
         if(padrao)
             comp = '?' + padrao;
         for(filtro of filtros) {
+            let url = filtro.getUrl();
+            if(!url)
+                continue;
             if(comp == '')
                 comp += '?';
             else
                 comp += '&';
-            comp += filtro.getUrl();
+            comp += url;
         }
 
         let url = this.url + comp; 
