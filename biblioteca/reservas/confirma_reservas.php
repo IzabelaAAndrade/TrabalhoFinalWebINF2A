@@ -20,15 +20,15 @@ $alunos = isset($_POST['id_alunos']) ? $_POST['id_alunos'] : "Erro";
 $data = isset($_POST['estimativa_reserva']) ? $_POST['estimativa_reserva'] : "Erro";
 
 
-$query_alunos = "SELECT * FROM reservas WHERE id_alunos ='".$alunos[0]."'" or die(mysqli_error());
+$query_alunos = "SELECT * FROM reservas WHERE id_alunos ='".$alunos."'" or die(mysqli_error());
 $resultado_alunos = mysqli_query($conexao, $query_alunos);
-$query_itens = "SELECT * FROM reservas WHERE id_acervo = '".$itens[0]."'";
+$query_itens = "SELECT * FROM reservas WHERE id_acervo = '".$itens."'";
 $resultado_itens = mysqli_query($conexao, $query_itens);
 
 $row_alunos = mysqli_num_rows($resultado_alunos);
 $row_itens = mysqli_num_rows($resultado_itens);
 
-
+//var_dump($alunos);
 
 function insere_na_tabela($data_antiga){
     global $data, $alunos, $itens, $conexao, $row_itens; // Data digitada em segundos
@@ -36,7 +36,7 @@ function insere_na_tabela($data_antiga){
     $tempo_espera_dias = ($row_itens+1)*7 ; // Conversão -> tempo de espera em dias;
     $data_reserva = date('Y-m-d', $data_antiga);
     $inserir_reserva = "INSERT INTO `reservas` (`id_alunos`, `id_acervo`, `data_reserva`, `tempo_espera`, `emprestou`) VALUES
-    ('".$alunos[0]."', '".$itens[0]."', '".$data_reserva."', '".$tempo_espera_dias."' , 'N');";
+    ('".$alunos."', '".$itens."', '".$data_reserva."', '".$tempo_espera_dias."' , 'N');";
     mysqli_query($conexao, $inserir_reserva);
 }
 
@@ -45,7 +45,7 @@ function insere_na_tabela($data_antiga){
 if($row_alunos > 0){
     $_SESSION['confirma'] = 1;
 }else if($row_itens > 0){
-    $verifica_reserva = "SELECT * FROM reservas WHERE id_acervo = \"".$itens[0]."\"";
+    $verifica_reserva = "SELECT * FROM reservas WHERE id_acervo = \"".$itens."\"";
     $tem_reserva =  mysqli_fetch_all($resultado_itens, 1); // Caso tenham reservas, $tem_reserva >0
     if(sizeof($tem_reserva) > 0){
         //última reserva em segundos
