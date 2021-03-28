@@ -55,7 +55,7 @@ session_start();
     <p class="descricao"> Deseja Reservar algum item de nossa biblioteca? Você está no lugar certo!
         <br>Basta clicar no botão abaixo e preencher o formulário com os dados solicitados!
     </p>
-    <div class="modal fade" id="adddisc" role="dialog">
+    <div class="modal fade" id="add_reservas" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header" id="cabecalho_modal">
@@ -141,20 +141,20 @@ session_start();
     </div>
 
     </div>
-    <button id='btnadd' class='btnAdicionar btn btn-info btn-lg' data-toggle='modal' data-target='#adddisc'> Criar
+    <button id='btnadd' class='btnAdicionar btn btn-info btn-lg' data-toggle='modal' data-target='#add_reservas'> Criar
         Reserva
     </button>
 
     <div class="modal fade" id="modal_editar" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="cabvb">
                     <button type="button" class="close" data-dismiss="modal" onclick="location.reload(true);">&times;
                     </button>
                     <h2>Editar Reservas</h2>
                 </div>
                 <div class="modal-body" id="altera_modal">
-                //form alterar aqui
+                    //form alterar aqui
 
                 </div>
                 <div class="modal-footer">
@@ -168,7 +168,7 @@ session_start();
     <div class="modal fade" id="modal_deletar" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="cabecalho_modal">
                     <button type="button" class="close" data-dismiss="modal" onclick="location.reload(true);">&times;
                     </button>
                     <h2>Deletar Reservas</h2>
@@ -176,9 +176,9 @@ session_start();
                 <div class="modal-body" id="deleta_modal">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">
-                        Close
-                    </button>
+                    <div id="container_msg">
+                        <div class='msg-data'><p><strong>Tem certeza que quer deletar reserva?.</strong></p></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,8 +195,11 @@ session_start();
                 } else if ($_SESSION['confirma'] == 3) {
                     echo "<div class='msg_succes'><p>Reserva Concluída com Sucesso!!.</p></div>";
                 }
-                if ($_SESSION['confirma'] == 4) {
+                else if ($_SESSION['confirma'] == 4) {
                     echo "<div class='msg-erro'><p>Por favor, preencha todos os campos!</p></div>";
+                }
+                else if ($_SESSION['confirma'] == 5) {
+                    echo "<div class='msg_succes'><p>Deleção de Reserva concluida com Sucesso!!.</p></div>";
                 }
                 unset($_SESSION['confirma']);
             }
