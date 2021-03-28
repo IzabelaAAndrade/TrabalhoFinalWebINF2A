@@ -6,14 +6,14 @@ for(let cont = 0; cont<btns_editar.length; cont++){
 function clicar(e){
     let clicado = e.currentTarget;
     if(clicado.className == 'btnAlterar'){
-        $.get("alterar_reservas.php", "selecionado = " + clicado.value, function(resposta){
+        $.get("alterar_reservas.php", "selecionado=" + clicado.value, function(resposta){
             document.getElementById('altera_modal').innerHTML = resposta;
         });
         $('#modal_editar').modal({
             show: true
         });
     }else if(clicado.className == 'btnDeletar'){
-        $.get("deleta_reservas.php", "selecionado = " + clicado.value, function(resposta){
+        $.get("deleta_reservas.php", "selecionado=" + clicado.value, function(resposta){
             document.getElementById('deleta_modal').innerHTML = resposta;
         });
         $('#modal_deletar').modal({
