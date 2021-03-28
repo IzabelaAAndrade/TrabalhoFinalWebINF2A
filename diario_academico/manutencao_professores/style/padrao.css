@@ -1,0 +1,111 @@
+:root {
+    --main-color: #E63946;
+    --fill-color: #a8dadcb0;
+    --main-font-color: #264553;
+    --border-color: none;
+}
+
+body {
+    margin: 0;
+    background-color: #FFFFFF;
+    color: var(--main-font-color);
+    font-family: 'Nunito', sans-serif;
+}
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3% 23%;
+}
+
+#centro {
+    width: 70%;
+}
+
+.solid {
+    box-sizing: border-box;
+    margin: 15px;
+    padding: 20px;
+    background-color: var(--fill-color);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    box-shadow: #0003 4px 4px 10px; 
+}
+
+.btn {
+    background-color: white;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.professor {
+    display: inline-grid;
+    grid-template-columns: 5fr 5fr 1fr 1fr;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 5%;
+    padding-right: 20px;
+}
+
+.professor .btn {
+    flex-grow: 0;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin: 0;
+    margin-left: 20px;
+}
+
+#novo {
+    height: 63px;
+}
+
+/* Filtro ****************************************************************/
+
+#filtros {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.filtro {
+    margin-bottom: 20px;
+}
+
+#filtros.hidden {
+    display: none;
+}
+
+#actions {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.range input {
+    width: 100px;
+}
+
+#aplicar {
+    background-color: var(--main-color);
+    color: white;
+}
+
+input, select {
+    width: 100%;
+    background-color: #457b9d49;
+    color: var(--main-font-color);
+    border: none;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}

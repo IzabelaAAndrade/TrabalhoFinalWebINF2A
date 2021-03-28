@@ -117,7 +117,7 @@ const operation = {
     },
 
     descarte() {
-        const formContainerEl = document.getElementById('descarte-div');
+        const formContainerEl = document.getElementById('descarte');
         const submitBtn = document.getElementById('submit');
 
         formContainerEl.classList.remove('escondido');
@@ -160,7 +160,7 @@ const operation = {
 
         function errorMessage(msg) {
             const errorMsg = document.createElement('div');
-            const formContainerEl = document.querySelector('.form-container');
+            const formContainerEl = document.getElementById('descarte');
             errorMsg.classList.add('error-msg');
             errorMsg.innerHTML = msg;
             formContainerEl.appendChild(errorMsg);

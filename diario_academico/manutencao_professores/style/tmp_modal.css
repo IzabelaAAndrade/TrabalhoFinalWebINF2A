@@ -1,0 +1,47 @@
+body {
+    position: relative;
+    min-height: 100%;
+    height: fit-content;
+    margin: 0;
+    background-color: #FFFFFF;
+    color: #264553;
+    font-family: 'Nunito', sans-serif;
+}
+
+form, input[type="submit"], #main, button {
+    box-sizing: border-box;
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+input[type="submit"], button {
+    margin: 20px 0 0 0; /* trash */
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+form, #main {
+    min-width: 30%;
+    padding-top: 10px; /* trash */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input, select, button {
+    width: 97%;
+    background-color: #fff1;
+    color: white;
+    border: none;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
