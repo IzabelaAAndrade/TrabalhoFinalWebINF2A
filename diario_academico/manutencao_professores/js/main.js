@@ -35,13 +35,13 @@ Professor.prototype.getDiv = function() {
 
     let editar = document.createElement('div');
     editar.innerHTML = 'editar';
-    editar.addEventListener('click', () => showModal('modal/editar.php?id=' + this.id));
+    editar.addEventListener('click', () => showModal('modal/editar_professor_form.php?id=' + this.id));
     editar.classList.add('btn', 'solid');
     div.appendChild(editar);
 
     let deletar = document.createElement('div');
     deletar.innerHTML = 'deletar';
-    deletar.addEventListener('click', () => showModal('modal/deletar.php?id=' + this.id));
+    deletar.addEventListener('click', () => showModal('modal/deletar_professor_confirmar.php?id=' + this.id));
     deletar.classList.add('btn', 'solid');
     div.appendChild(deletar);
 
@@ -66,22 +66,13 @@ async function listProfs(parametros = '') {
     }
 }
 
-// cria o botão de criar alunos
-// function initAdd() {
-//     btn = document.createElement('div');
-//     btn.classList.add('btn');
-//     btn.innerHTML = 'criar professor';
-//     btn.addEventListener('click', () => showModal('modal/novo.php'));
-//     listaEl.appendChild(btn);
-// }
-
 function initFiltros() {
     let filtrosEl = document.getElementById('filtro_container');
 
     let filtros = [
-        new FiltroGenerico('nome', 'nome', ''),
-        new FiltroGenerico('depto', 'depto', ''),
-        new FiltroSelect('titulacao', 'titulacao', 'Graduação:G|Especialização:E|Mestrado:M|Doutorado:D')
+        new FiltroGenerico('Nome', 'nome', ''),
+        new FiltroGenerico('Departamento', 'depto', ''),
+        new FiltroSelect('Titulação', 'titulacao', 'Geral:|Graduação:G|Especialização:E|Mestrado:M|Doutorado:D')
     ];
 
     for(filtro of filtros)
@@ -106,6 +97,6 @@ function initFiltros() {
     });
 }
 
-novoBtn.addEventListener('click', () => showModal('modal/adicionar.html'));
+novoBtn.addEventListener('click', () => showModal('modal/adicionar_professor_form.php'));
 initFiltros();
 listProfs();

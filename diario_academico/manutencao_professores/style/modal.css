@@ -1,0 +1,95 @@
+:root {
+    --main-font-color: #304553;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: var(--main-font-color);
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+#header {
+    width: 100%;
+    height: 8%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+}
+
+form, .pannel, .btn {
+    box-sizing: border-box;
+    margin: 15px;
+    padding: 20px;
+    background-color: #c3e5e7;
+    border: none;
+    border-radius: 2px;
+    box-shadow: #0003 4px 4px 10px; 
+}
+
+.btn {
+    display: block;
+    align-self: center;
+    /* margin: 20px 0 0 0;*/ /* trash */
+    width: 100%;
+    height: 40px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn.destaque {
+    background-color:#e63946;
+    color: white;
+}
+
+form, .pannel {
+    min-width: 30%;
+    padding-top: 10px; /* trash */
+}
+
+input:not(.btn), select {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #457b9d49;
+    color: var(--main-font-color);
+    border: none;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+input.btn {
+    color: var(--main-font-color);
+}
+
+.actions {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.actions .btn {
+    max-width: 150px;
+    margin: 0 5px;
+}
+
+
+main {
+    display: grid;
+    width: 100vw;
+    height: fit-content;
+    padding: 5vh 0;
+    align-content: center;
+    justify-content: center;
+}
