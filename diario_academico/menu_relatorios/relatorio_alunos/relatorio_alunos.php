@@ -1,7 +1,7 @@
 <?php
 $cpf = $_GET["cpf"];
 $etapa = $_GET["etapa"];
-$mysqli = new mysqli("localhost", "root","123456", "trabalho_diario_academico");
+$mysqli = new mysqli("localhost", "root","123456", "academico");
 $aluno = getDados("SELECT * FROM alunos WHERE id=$cpf")[0];
 if($aluno == null){dadosincorretos();}
 $matriculas = getDados("SELECT * FROM matriculas WHERE id_alunos=".$aluno['id']);
