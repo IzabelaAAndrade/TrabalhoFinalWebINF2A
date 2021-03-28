@@ -20,7 +20,7 @@ $alunos = isset($_POST['id_alunos']) ? $_POST['id_alunos'] : "Erro";
 $data = isset($_POST['estimativa_reserva']) ? $_POST['estimativa_reserva'] : "Erro";
 
 
-$query_alunos = "SELECT * FROM reservas WHERE id_alunos ='".$alunos."'" or die(mysqli_error());
+$query_alunos = "SELECT * FROM reservas WHERE id_alunos ='".$alunos."'" or die(mysqli_error($conexao));
 $resultado_alunos = mysqli_query($conexao, $query_alunos);
 $query_itens = "SELECT * FROM reservas WHERE id_acervo = '".$itens."'";
 $resultado_itens = mysqli_query($conexao, $query_itens);
