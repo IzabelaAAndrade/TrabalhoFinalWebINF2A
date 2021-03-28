@@ -102,7 +102,7 @@ function getDados(String $sql): ?array
     return mysqli_fetch_all($result, MYSQLI_BOTH);
 }
 function dadosincorretos(){
-    echo"
+    echo'
 <!DOCTYPE html>
 <html lang=\"pt\">
 	<head>
@@ -171,10 +171,10 @@ function dadosincorretos(){
             		<h1 class="principal">Relação de Alunos</h1>
         	</div>
 		<div>
-			<!--Alguma mensagem aqui falando que o dado não está no sistema-->
+			Dados incorretos<!--Alguma mensagem aqui falando que o dado não está no sistema-->
 		</div>
 	</main>
 	</body>
-</html>";
+</html>';
     exit();
 }
