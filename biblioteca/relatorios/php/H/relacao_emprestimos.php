@@ -3,35 +3,44 @@
 include_once('../lib/libConnection.php');
 
 $sql = "SELECT * FROM emprestimos";
-$result = mysqli_query($conn, $sql) or die("Erro de sql");
+$result = mysqli_query($conn, $sql);
+
+if(!$result) {
+    echo 'Erro ao recuperar os registros: ' . mysqli_error($conn);
+}
+else if(mysqli_num_rows($result) == 0) {
+    echo 'Nenhum registro encontrado!';
+}
+else {
 $table = mysqli_fetch_all($result, MYSQLI_ASSOC);
+echo "
+<table>
+<tr>
+<th>ID</th>
+<th>Id do Aluno</th>
+<th>Id do acervo</th>
+<th>Data de empréstimo</th>
+<th>Devolução prevista</th>
+<th>Devloução</th>
+<th>Multa</th>
+</tr>";
+for ($i = 0; $i < sizeof($table); $i++){
+    echo "
+    <tr>
+    <td>".$table[$i]["Id"]."</td>
+    <td>".$table[$i]["Id_alunos"]."</td>
+    <td>".$table[$i]["Id_acervo"]."</td>
+    <td>".$table[$i]["Data_emprestimo"]."</td>
+    <td>".$table[$i]["Data_prev_devol"]."</td>
+    <td>".$table[$i]["Data_devolucao"]."</td>
+    <td>".$table[$i]["multa"]."</td>
+    </tr>";
+}
+echo "</table>";
+}
 
 mysqli_close($conn);
 ?>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Id do Aluno</th>
-        <th>Id do acervo</th>
-        <th>Data de empréstimo</th>
-        <th>Devolução prevista</th>
-        <th>Devloução</th>
-        <th>Multa</th>
-    </tr>
-    <?php
-    for ($i = 0; $i < sizeof($table); $i++){
-        echo "
-        <tr>
-        <td>".$table[$i]["Id"]."</td>
-        <td>".$table[$i]["Id_alunos"]."</td>
-        <td>".$table[$i]["Id_acervo"]."</td>
-        <td>".$table[$i]["Data_emprestimo"]."</td>
-        <td>".$table[$i]["Data_prev_devol"]."</td>
-        <td>".$table[$i]["Data_devolucao"]."</td>
-        <td>".$table[$i]["multa"]."</td>
-        </tr>";
-    }?>
-</table>
 
 <!-- 
 

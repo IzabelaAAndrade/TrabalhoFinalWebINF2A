@@ -1,5 +1,7 @@
 <?php
-
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 Error_reporting(0);
 
 include_once('../lib/libConnection.php');
@@ -23,39 +25,45 @@ echo
 	border-collapse: collapse
 </style>';
 // */
-
-echo 
-"<table>
-	<thead>
-		<th>id do aluno </th>
-		<th>id do acervo </th>
-		<th>data de emprestimo </th>
-		<th>prazo</th>
-		<th>data da devolucao </th>
-		<th>atraso</th>
-	</thead>";
-    
-while ($atraso = mysqli_fetch_assoc($atrasos)) {
-
-	// diferença entre as datas
-
-	$dataPrevDevol = new \DateTime($atraso['Data_prev_devol']);
-	$dataDevolucao = new \DateTime($atraso['Data_devolucao']);
-	$diasAtraso = ($dataPrevDevol->diff($dataDevolucao))->days;
-
-	echo    "<tr>
-	<td>" . $atraso['Id_alunos'] . "</td>
-	<td>" . $atraso['Id_acervo'] . "</td>
-	<td>" . $atraso['Data_emprestimo'] . "</td>
-	<td>" . $atraso['Data_prev_devol'] . "</td>
-	<td>" . $atraso['Data_devolucao'] . "</td>";
-		             
-	if($diasAtraso > 0)
-		echo "<td>" . $diasAtraso . " dias</td> </tr>";
-	else
-		echo "<td> Sem atraso </td> </tr>";
+if(!$atrasos) {
+	echo 'Erro ao recuperar os registros: ' . mysqli_error($conn);
 }
+else if(mysqli_num_rows($atrasos) == 0) {
+	echo 'Nenhum registro encontrado!';
+}
+else {
+	echo 
+	"<table>
+		<thead>
+			<th>id do aluno </th>
+			<th>id do acervo </th>
+			<th>data de emprestimo </th>
+			<th>prazo</th>
+			<th>data da devolucao </th>
+			<th>atraso</th>
+		</thead>";
+		
+	while ($atraso = mysqli_fetch_assoc($atrasos)) {
 
+		// diferença entre as datas
+
+		$dataPrevDevol = new \DateTime($atraso['Data_prev_devol']);
+		$dataDevolucao = new \DateTime($atraso['Data_devolucao']);
+		$diasAtraso = ($dataPrevDevol->diff($dataDevolucao))->days;
+
+		echo    "<tr>
+		<td>" . $atraso['Id_alunos'] . "</td>
+		<td>" . $atraso['Id_acervo'] . "</td>
+		<td>" . $atraso['Data_emprestimo'] . "</td>
+		<td>" . $atraso['Data_prev_devol'] . "</td>
+		<td>" . $atraso['Data_devolucao'] . "</td>";
+						
+		if($diasAtraso > 0)
+			echo "<td>" . $diasAtraso . " dias</td> </tr>";
+		else
+			echo "<td> Sem atraso </td> </tr>";
+	}
+}
 ?>
 
 <!-- 

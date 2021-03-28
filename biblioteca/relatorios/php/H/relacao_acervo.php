@@ -1,15 +1,24 @@
 <?php
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 include_once('../lib/libConnection.php');
 
 $tipo_acervo = $_GET['acervo'];
 
 $sql = "SELECT * FROM acervo where tipo='$tipo_acervo'";
-$result = mysqli_query($conn, $sql) or die("Erro de sql" . mysqli_connect_error());
-$table = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$result = mysqli_query($conn, $sql);
 
-mysqli_close($conn);
-?>
+if(!$result) {
+    echo 'Erro ao recuperar os registros: ' . mysqli_error($conn);
+}
+else if(mysqli_num_rows($result) == 0) {
+    echo 'Nenhum registro encontrado!';
+}
+else {
+$table = mysqli_fetch_all($result, MYSQLI_ASSOC);
+echo "
 <table>
     <tr>
         <th>ID</th>
@@ -18,8 +27,7 @@ mysqli_close($conn);
         <th>Ano</th>
         <th>Editora</th>
         <th>Paginas</th>
-    </tr>
-<?php
+    </tr>";
 for ($i = 0; $i < sizeof($table); $i++){
         echo "
     <tr>
@@ -30,8 +38,12 @@ for ($i = 0; $i < sizeof($table); $i++){
         <td>".$table[$i]["editora"]."</td>
         <td>".$table[$i]["paginas"]."</td>
     </tr>";
-}?>
-</table>
+}
+echo '</table>';
+
+mysqli_close($conn);
+}
+?>
 
 <!-- 
 
