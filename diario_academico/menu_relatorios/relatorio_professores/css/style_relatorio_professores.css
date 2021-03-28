@@ -26,3 +26,22 @@ main{
     color: white;
     background-color: #e63946;
 }
+
+#imprimir{
+    color: #1D3556;
+    background-color: white;
+    padding: .5em;
+    width: 27em;
+    margin: 1em auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.print_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}

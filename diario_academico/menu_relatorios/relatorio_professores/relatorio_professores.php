@@ -94,7 +94,9 @@ $prof_disciplinas = getDados("SELECT * FROM prof_disciplinas WHERE `Id-Disciplin
         }
         ?>
         </table>
+        <div id="imprimir" class="imprimir">Imprimir</div>
     </div>
+    <script src="../impressao_relatorios.js"></script>
     </body>
     </html>
 <?php
