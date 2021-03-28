@@ -27,7 +27,7 @@ session_start();
 
     <nav>
         <ul class="menu">
-            <li><a href="#">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Manutenção</a>
                 <ul class="sub_menu">

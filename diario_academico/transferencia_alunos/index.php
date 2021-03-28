@@ -3,6 +3,7 @@ session_start();
 ?>
 
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@ session_start();
   <link rel="stylesheet" href="style/style.css">
   <title>Transferência de Alunos - Diário Acadêmico</title>
 </head>
+
 <body>
   <header>
     <img src="img/LogoExemploCortado.png" alt="logo" id="logo">
@@ -26,7 +28,7 @@ session_start();
           <li><a href="#">Departamentos</a></li>
           <li><a href="#">Cursos</a></li>
           <li><a href="#">Turmas</a></li>
-          <li><a href="#">Alunos</a></li>
+          <li><a href="../manutencao_alunos/">Alunos</a></li>
           <li><a href="#">Professores</a></li>
           <li><a href="#">Disciplinas</a></li>
           <li><a href="#">Etapas</a></li>
@@ -52,10 +54,10 @@ session_start();
           <input class="texto" type="text" id="cpf" name="cpf" placeholder="CPF" data-mask="000.000.000-00">
 
           <?php
-            if (isset($_SESSION['situacao'])) {
-              echo '<p id="erro">' . $_SESSION['situacao'] . '</p>';
-              unset($_SESSION['situacao']);
-            }
+          if (isset($_SESSION['situacao'])) {
+            echo '<p id="erro">' . $_SESSION['situacao'] . '</p>';
+            unset($_SESSION['situacao']);
+          }
           ?>
 
           <div id="divBotoes">
@@ -65,7 +67,7 @@ session_start();
         </div>
 
       <?php
-        } else {
+    } else {
       ?>
 
         <p class="descricao">Transferência realizada com sucesso.</p>
@@ -73,16 +75,16 @@ session_start();
         <div id="ajuste">
 
         <?php
-              echo '
+        echo '
               <div id="resultado" class="solid">' .
-                $_SESSION['historico'] .
-                '</div>' .
-                '<button class="botoes" id="voltar" onclick="location.reload()">Voltar</button>
+          $_SESSION['historico'] .
+          '</div>' .
+          '<button class="botoes" id="voltar" onclick="location.reload()">Voltar</button>
                 <button class="botoes" id="pag-inicial">Ir para página inicial</button>';
-              unset($_SESSION['cpf']);
-              unset($_SESSION['historico']);
-              unset($_SESSION['tableIsReady']);
-          }
+        unset($_SESSION['cpf']);
+        unset($_SESSION['historico']);
+        unset($_SESSION['tableIsReady']);
+      }
         ?>
         </div>
   </main>
