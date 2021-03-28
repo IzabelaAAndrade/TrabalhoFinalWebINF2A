@@ -36,9 +36,10 @@
             <li><a href="../menu_relatorios/index.html">Relatórios</a>
                 <ul class="sub_menu">
                     <li><a href="../menu_relatorios/relatorio_certificado/certificados.html">Certificados</a></li>
-                    <li><a href="">Histórico por Aluno e Turma</a></li>
-                    <li><a href="../menu_relatorios/relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
+                    <li><a href="../menu_relatorios/relatorio_historico/index.html">Histórico por Aluno e Turma</a></li>
                     <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                    <li><a href="../menu_relatorios/relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
+                    <li><a href="../menu_relatorios/relatorio_professores/index.html">Relação de Professores</a></li>
                 </ul>
             </li>
             </li>

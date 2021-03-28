@@ -170,9 +170,7 @@ function dadosincorretos(){
             		<p id="endereco"><a href="../">Menu de Relatórios</a> > <a href="index_relatorio_aluno.html">Relação de Alunos</a></p>
             		<h1 class="principal">Relação de Alunos</h1>
         	</div>
-		<div>
-			Dados incorretos<!--Alguma mensagem aqui falando que o dado não está no sistema-->
-		</div>
+		<p id"nenhumResultado">Nenhum resultado para os dados inseridos.</p>
 	</main>
 	</body>
 </html>';

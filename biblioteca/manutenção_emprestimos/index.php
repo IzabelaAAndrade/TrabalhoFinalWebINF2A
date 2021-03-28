@@ -63,15 +63,15 @@
 
         <nav>
             <ul class="menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Manutenção</a>
                     <ul class="sub_menu">
                         <li><a href="manutencao_acervo/index_acervo.html">Acervo</a></li>
-                        <li><a href="manutenção_emprestimos/index.php">Empréstimos</a></li>
+                        <li><a href="index.php">Empréstimos</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Relatórios</a></li>
+                <li><a href="">Relatórios</a></li>
                 <li><a href="menu_relatorios/relacao_descartes.php">Descarte</a></li>
                 <li><a href="#">Ajuda</a></li>
             </ul>
