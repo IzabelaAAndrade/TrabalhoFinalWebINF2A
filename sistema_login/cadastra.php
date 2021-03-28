@@ -47,7 +47,6 @@ use PHPMailer\PHPMailer\Exception;
         //Enviar email
         $configuracoes_email = new PHPMailer(true);
 
-        $email_cadastro = "email.html";
 
         //String com o conteúdo do Emai
         $conteudo_email =  file_get_contents($email);
@@ -62,7 +61,7 @@ use PHPMailer\PHPMailer\Exception;
             $configuracoes_email->Password = 'IsaacIzabelaMarcela';
             $configuracoes_email->Port = 587;
 
-            $configuracoes_email->setFrom('gerenciawebinf2a@gmail.com', "SORA, Seu sistema de Acervo");
+            $configuracoes_email->setFrom('gerenciawebinf2a@gmail.com', "SIDA & SORA");
             $configuracoes_email->addAddress($email);
 
             $configuracoes_email->isHTML(true);
@@ -82,7 +81,14 @@ use PHPMailer\PHPMailer\Exception;
                 <link href=\"https://fonts.googleapis.com/css2?family=Nunito&display=swap\" rel=\"stylesheet\">
 
                 <style>
+
+                @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+                
                     /* CSS para estilizar páginas do tipo Formulário - Biblioteca */
+                        *{
+                            font-family: 'Nunito', sans-serif;
+                        }
+                    
                         html, body{
                             margin: 0%;
                         }
@@ -95,13 +101,13 @@ use PHPMailer\PHPMailer\Exception;
                         h1, h3, p, input{
                             font-family: 'Nunito', sans-serif;
                             color: white;
-                            margin: 0%;
+                            margin:0%;
                         }
         
                         h1{
-                            font-size: 1em;
+                            font-size: 3em;
                             text-align: center;
-                            margin-top: 2%;
+                            margin-top: 5% 0%;
                         }
         
                         h3{
@@ -198,12 +204,16 @@ use PHPMailer\PHPMailer\Exception;
                         .msg{
                             margin: 1% 0% 5% 0%;
                         }
-                        #logo{
+                        .logo{
                             display: block;
                             width: 20vh;
                             margin-left: auto;
                             margin-right: auto;
                         }
+                        #logo-sida, #logo-sora{
+                            display: inline-block;
+                        }
+                        
         
                     </style>
 
@@ -211,17 +221,16 @@ use PHPMailer\PHPMailer\Exception;
         
             <body>
                 <header>
-                    <img src=\"img/LogoExemploCortada.png\" alt=\"logo\" id=\"logo\">
-                    <h1>Sistema Digital de Acervo</h1>
+                    <h1>SIDA & SORA</h1>
                 </header>
                 <main>
                     <h3 class=\"sub\">Parabéns!!</h3>
                     <h1 class=\"principal\">Sua Cadastro Foi Efetuado com sucesso!</h1>
-                    <p class=\"descricao\">Olá {$nome}! Este email foi enviado para informá-lo(a) que seu cadastro no SORA foi confirmado!
-                        Ficamos muito felizes com a sua entrada na família deste incrível sistema de acervo! A/O Convidamos para a outra obra existente em nossa biblioteca. 
+                    <p class=\"descricao\">Olá {$nome}! Este email foi enviado para informá-lo(a) que seu cadastro nos sistema SIDA e SORA foi confirmado!
+                        Ficamos muito felizes com a sua entrada na família deste incrível sistema de acervo! A/O Convidamos para a outra obra existente em nossa biblioteca ou regular suas turmas usando nossso diário acadêmico!. 
                         
                         Atenciosamente, 
-                        Equipe SORA. 
+                        Equipes SIDA & SORA. 
                         
                     </p>
                     <h3 class=\"msg\">Este email foi enviado automáticamente, favor não responder. </h3>
@@ -236,7 +245,7 @@ use PHPMailer\PHPMailer\Exception;
             </body>
         </html>
             ";
-            $configuracoes_email->AltBody = '[Email Teste] Sistema SORA de acervo!';
+            $configuracoes_email->AltBody = 'Cadastro Efetuado com Sucesso! Agradecemos pela participação!';
 
             if($configuracoes_email->send()) {
                 echo 'Email enviado com sucesso';
@@ -249,7 +258,7 @@ use PHPMailer\PHPMailer\Exception;
             echo "Erro ao enviar mensagem: {$configuracoes_email->ErrorInfo}";
         }
         
-        header('Location: tela_cadastro.php');
+       // header('Location: tela_cadastro.php');
         exit();
     }else{ //Caso ja exista o cadastro
         $_SESSION['cadastrado'] = 2;
