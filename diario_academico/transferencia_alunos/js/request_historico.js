@@ -23,7 +23,9 @@ function request_historico() {
     xhrSituacao.send('cpf=' + cpfInput.value);
 }
 
-submitBtn.addEventListener('click', request_historico);
-cpfInput.addEventListener('keyup', function(e) {
-    if(e.key == 'Enter') request_historico();
-});
+if(submitBtn != null && cpfInput != null) {
+    submitBtn.addEventListener('click', request_historico);
+    cpfInput.addEventListener('keyup', function(e) {
+        if(e.key == 'Enter') request_historico();
+    });
+}
