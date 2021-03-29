@@ -42,9 +42,11 @@ include '../../sistema_login/verifica_login.php';
             }
         }
 
+        mysqli_close($conexao);
+
     }
 
-    mysqli_close($conexao);
+    
 ?>
 <!DOCTYPE html>
 <!-- HTML geral para páginas que sejam do tipo formulários -->
