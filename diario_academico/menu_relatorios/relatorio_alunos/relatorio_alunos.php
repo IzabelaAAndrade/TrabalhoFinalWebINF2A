@@ -4,7 +4,6 @@ $etapa = $_GET["etapa"];
 
 // $mysqli = new mysqli("localhost", "root","123456", "academico");
 include_once '../../lib/conexao.php';
-$mysqli = $conexao;
 
 $aluno = getDados("SELECT * FROM alunos WHERE id=$cpf")[0];
 if($aluno == null){dadosincorretos();}
@@ -100,8 +99,8 @@ foreach($conteudos as $conteudo){
 <?php
 function getDados(String $sql): ?array
 {
-    global $mysqli;
-    $result = $mysqli->query($sql);
+    global $conxexao;
+    $result = mysqli_query($conxexao,$sql);
     if($result == false){return null;}
     return mysqli_fetch_all($result, MYSQLI_BOTH);
 }
