@@ -4,7 +4,7 @@ header {
     justify-content: space-between;
     width: 100vw;
     height: 20vh;
-    padding: 3%;
+    padding: 2vh;
     background-color: #264653;
 }
 
@@ -49,3 +49,32 @@ h3 {
     color: white;
     margin: 0%;
 }
+/* Dados do Usuário *********************************************************************/
+#dados_user a, #dados_user{
+    color:white;
+    font-size: .8em;
+    text-align: right;
+    text-decoration: none;
+    text-decoration: b;
+}
+
+#dados_user{
+    margin-right: 20em;
+}
+
+#aux{
+    position: absolute;
+    left: 90vw;
+    text-align: right;
+    top: 5vh;
+}
+
+#sair a{
+    color: #ffffff;
+    top: 9vh;
+}
+
+#sair a:hover{
+    color:#e7d2d4;
+}
+
