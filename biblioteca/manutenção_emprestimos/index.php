@@ -42,8 +42,6 @@ include '../../sistema_login/verifica_login.php';
             }
         }
 
-        mysqli_close($conexao);
-
     }
 
     
@@ -144,7 +142,7 @@ include '../../sistema_login/verifica_login.php';
                             <select id="id_acervo">
                         		<option value='' selected>Selecione o item de acervo</option>";
 	                        	<?php
-                                    include '../lib/conexao.php';
+                                    include_once '../lib/conexao.php';
 	                        		$query = "SELECT * FROM acervo";
 	                        		$resultado_acervo = mysqli_query($conexao, $query);
 	                        		while($row_acervo = mysqli_fetch_array($resultado_acervo)){
@@ -152,7 +150,6 @@ include '../../sistema_login/verifica_login.php';
 	                        			$nome_acervo = $row_acervo["nome"];
 	                        			echo "<option value='$id_acervo'>$nome_acervo</option>";
 	                        		}
-                                    mysqli_close($conexao);
 	                        	?>
                         	</select>
                         </div>
