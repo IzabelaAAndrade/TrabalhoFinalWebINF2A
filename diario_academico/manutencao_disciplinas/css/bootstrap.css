@@ -1,0 +1,61 @@
+#cabecalho_modal{
+    background-color: #1D3557;
+    color: white;
+}
+.modal_input{
+    width: 120%;
+    border: 0;
+    outline: none;
+    border-bottom: 1.5px solid #1D3557;
+    display: block;
+    margin: 0% 0% 5% 0%;
+}
+
+
+.modal-content{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vh;
+}
+
+select{
+    background-color: #1D3557;
+    color: white;
+    border-radius: 2%;
+    height: 5vh;
+    cursor: pointer;
+    width: 40vh;
+    margin-left: 10vh;
+}
+
+select > option:hover{
+    background-color: #264653;
+}
+label{
+    margin: 2vh 0vh 2vh 2vh;
+    width: 40vh;
+}
+
+
+.modal_input{
+    display: inline-block;
+    width: 40vh;
+    height: 5vh;
+    margin-left: 10vh;
+}
+#btn_1{
+    background-color: #1D3557;
+    color: white;
+}
+
+#btn_2{
+    background-color: #E63946;
+    color: white;
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
