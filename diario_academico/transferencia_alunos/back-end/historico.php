@@ -6,7 +6,7 @@ unset($_SESSION['historico']);
 $_SESSION['historico'] = '';
 
 //cpf do aluno
-$id = $_SESSION['cpf'];
+$id = $_POST['cpf'];
 
 //array que receberá os dados básicos do aluno - nome, cpf, média global e faltas
 $student_data =  [
@@ -51,7 +51,6 @@ if($result = mysqli_query($conn, $sql)) {
         build_table($table_data);
         unset($table_data);
         $_SESSION['tableIsReady'] = true;
-        $_SESSION['no-activities'] = true;
         die();
     }
     $i = 0;
@@ -130,7 +129,7 @@ $_SESSION['tableIsReady'] = true;
 
 //Cria uma tabela a partir de um array na estrutura de $table_data, que pode ser vista acima
 function build_table($table_data) {
-    $tabela = '<table>
+    $tabela = '<table border="1">
         <thead>
         <tr>';
     foreach($table_data[0] as $col => $row) {
