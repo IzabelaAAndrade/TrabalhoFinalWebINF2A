@@ -40,35 +40,37 @@
    </div>
    </header>
         
-   <nav>
-   <ul class="menu">
-         <li><a href="../index.html">Home</a></li>
-         <li><a href="../sobre.html">Sobre</a></li>
-         <li><a href="#">Manutenção</a>
-            <ul class="sub_menu">
-               <li><a href="../campi/campi.php">Campi</a></li>
-               <li><a href="../manutencao_departamentos/">Departamentos</a></li>
-               <li><a href="../manutencao_cursos/index.php">Cursos</a></li>
-               <li><a href="index.php">Turmas</a></li>
-               <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
-               <li><a href="../manutencao_professores/index.html">Professores</a></li>
-               <li><a href="../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
-               <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
-               <li><a href="../manutencao_diarios/index.html">Diários</a></li>
+       <nav>
+            <ul class="menu">
+                <li><a href="../../sistema_login/index.php">Início</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../sobre.php">Sobre</a></li>
+                <li><a href="#">Manutenção</a>
+                    <ul class="sub_menu">
+                        <li><a href="../campi/campi.php">Campi</a></li>
+                        <li><a href="../manutencao_departamentos/index.php">Departamentos</a></li>
+                        <li><a href="../manutencao_cursos/index.php">Cursos</a></li>
+                        <li><a href="../manutencao_turmas/index.php">Turmas</a></li>
+                        <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
+                        <li><a href="../manutencao_professores/">Professores</a></li>
+                        <li><a href="../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
+                        <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
+                        <li><a href="../manutencao_diarios/index.php">Diários</a></li>
+                    </ul>
+                </li>
+                <li><a href="../menu_relatorios/index.php">Relatórios</a>
+                <ul class="sub_menu">
+                    <li><a href="../menu_relatorios/relatorio_certificado/index.php">Certificados</a></li>
+                    <li><a href="../menu_relatorios/relatorio_historico/index.php">Histórico por Aluno e Turma</a></li>
+                    <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
+                    <li><a href="../menu_relatorios/relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
+                    <li><a href="../menu_relatorios/relatorio_professores/index.php">Relação de Professores</a></li>
+                </ul>
+                </li>
+                </li>
+                <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
             </ul>
-         </li>
-         <li><a href="../menu_relatorios/index.php">Relatórios</a>
-            <ul class="sub_menu">
-               <li><a href="../menu_relatorios/relatorio_certificado/index.php">Certificados</a></li>
-               <li><a href="../menu_relatorios/relatorio_certificado/index.php">Histórico por Aluno e Turma</a></li>
-               <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
-               <li><a href="../menu_relatorios/relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
-               <li><a href="../menu_relatorios/manutencao_professores/index.php">Relação de Professores</a></li> 
-            </ul>
-         </li>
-         <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
-      </ul>
-   </nav>
+        </nav>
 <main>
    <div>
       <h3 class="sub">Bem-vindo(a) à</h3>
