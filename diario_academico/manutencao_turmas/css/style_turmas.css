@@ -195,3 +195,7 @@
 .modal-footer .botoes{
     width: 15em;
 }
+
+.modal{
+    width: auto;
+}
