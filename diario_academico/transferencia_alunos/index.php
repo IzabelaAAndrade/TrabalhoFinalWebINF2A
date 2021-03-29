@@ -82,6 +82,9 @@ session_start();
         <div id="ajuste">
 
         <?php
+        if(isset($_SESSION['no-activities'])) {
+          echo '<div id="erro">Não foram encontradas atividades para este aluno :(</div>';
+        }
         echo '
               <div id="resultado" class="solid">' .
           $_SESSION['historico'] .

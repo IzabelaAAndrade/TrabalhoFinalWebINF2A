@@ -50,7 +50,9 @@ if($result = mysqli_query($conn, $sql)) {
         ];
         build_table($table_data);
         unset($table_data);
-        die('<div class="error-msg">Não foram encontradas atividades para este aluno :(</div>');
+        $_SESSION['tableIsReady'] = true;
+        $_SESSION['no-activities'] = true;
+        die();
     }
     $i = 0;
     while($row = mysqli_fetch_row($result)) {
@@ -123,7 +125,6 @@ foreach($atvs as $index => $row) {
 }
 build_table($table_data);
 $_SESSION['tableIsReady'] = true;
-print_r($_SESSION['historico']);
 
 //Functions
 
