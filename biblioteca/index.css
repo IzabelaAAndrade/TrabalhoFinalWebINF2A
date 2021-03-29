@@ -1,15 +1,13 @@
-/* CSS para estilizar páginas do tipo Formulário - Biblioteca */
+/* Html e body ****************************************************************/
 html, body{
     margin: 0%;
     font-family: 'Nunito', sans-serif;
 }
-
+/* Textos da Página e mais ****************************************************************/
 h1, h3, p, input{
-    
     color: white;
     margin: 0%;
 }
-
 h1{
     font-size: 1em;
 }
@@ -34,9 +32,11 @@ h3{
 .descricao{
     color: #264553;
     font-size: 1.2em;
+    margin: 0% 0% 5vh 0%;
+}
+#desc-esp{
     margin: 0% 0% 20vh 0%;
 }
-
 .descricao, .principal, .subRosa{
     text-align: center;
 }
@@ -114,6 +114,7 @@ header{
     border-left: none;
     border-right: none;
     margin: 0;    
+    padding: 2vh;
 }
 
 footer{
@@ -122,10 +123,11 @@ footer{
     padding: 3%;
     display: block;
 }
-
+/* Titulo ****************************************************************/
 #titulo{
-    padding-top: 50px;
+    padding-top: 2.3%;
     margin-left: 20px;
+    font-size: 2em;
 }
 
 .rodape{
@@ -159,6 +161,7 @@ nav{
 
 li a{
     display: block;
+    
 }
 
 .menu a{
@@ -179,7 +182,8 @@ li a{
     background-color: #457B9D;
     box-shadow: #0003 5px 5px 10px;
     cursor: pointer;
-    -webkit-transition: all 1s ease
+    -webkit-transition: all 1s ease;
+    z-index: 20;
 }
 
 .sub_menu li{

@@ -30,11 +30,14 @@ h3{
     font-size: 3em;
     margin: 0% 0% .5% 0%;
 }
+#desc-esp{
+    margin: 0% 0% 20vh 0%;
+}
 
 .descricao{
     color: #023047;
     font-size: 1.2em;
-    margin: 0% 0% 20vh 0%;
+    margin: 0% 0% 5vh 0%;
 }
 
 .descricao, .principal, .subRosa{

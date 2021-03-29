@@ -8,7 +8,7 @@ session_start();
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Reservas | SORA</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,12 +17,13 @@ session_start();
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/tabela.css">
+    
 </head>
 <body>
 <header>
     <div id="logo-titulo">
-        <img src="imagens/LogoExemploCortada.png" alt="logo" id="logo">
-        <h1 id="titulo"><strong>Sistema de Biblioteca</strong></h1>
+        <img src="../../imgs/soraLogo.jpg" alt="logo" id="logo">
+        <h1 id="titulo">Sistema de Organização de Acervo</h1>
     </div>
 
     <form id="form_buscar" action="" method="get" enctype="application/x-www-form-urlencoded">
@@ -35,17 +36,17 @@ session_start();
 </header>
 <nav>
     <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Manutenção</a>
+        <li><a href="../../biblioteca/index.html">Home</a></li>
+        <li><a href="../../biblioteca/#">Sobre</a></li>
+        <li><a href="3">Manutenção</a>
             <ul class="sub_menu">
-                <li><a href="#">Acervo</a></li>
-                <li><a href="#">Empréstimos</a></li>
+                <li><a href="../../biblioteca/manutencao_acervo/index_acervo.html">Acervo</a></li>
+                <li><a href="../../biblioteca/manutenção_emprestimos/index.php">Empréstimos</a></li>
             </ul>
         </li>
-        <li><a href="#">Relatórios</a></li>
-        <li><a href="#">Descarte</a></li>
-        <li><a href="#">Ajuda</a></li>
+        <li><a href="cria_reserva.php">Reservas</a></li>
+        <li><a href="../../biblioteca/menu_relatorios/">Relatórios</a></li>
+        
     </ul>
 </nav>
 
@@ -416,7 +417,7 @@ session_start();
 
 
 <footer>
-    <h3><strong>© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</strong>
+    <h3><strong>© SORA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</strong>
     </h3>
     <h3><strong>Trabalho orientado pelo professor William Geraldo Sallum</strong></h3>
 </footer>

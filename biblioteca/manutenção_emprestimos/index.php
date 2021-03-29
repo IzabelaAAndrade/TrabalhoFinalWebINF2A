@@ -51,14 +51,15 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" >
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="css/geral_biblioteca.css">
+        <link rel="stylesheet" href="../index.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-        <title>Empréstimos</title>
+        <title>Empréstimos | SORA</title>
     </head>
     <body>
         <header>
-            <img src="img/LogoExemploCortada.png" alt="logo" id="logo">
-            <h1 id="titulo">Sistema Biblioteca</h1>
+            <img src="../../imgs/soraLogo.jpg" alt="logo" id="logo">
+            <h1 id="titulo">Sistema de Organização de Acervo</h1>
         </header>
 
         <nav>
@@ -71,9 +72,9 @@
                         <li><a href="index.php">Empréstimos</a></li>
                     </ul>
                 </li>
-                <li><a href="">Relatórios</a></li>
-                <li><a href="menu_relatorios/relacao_descartes.php">Descarte</a></li>
-                <li><a href="#">Ajuda</a></li>
+                <li><a href="../reservas/cria_reserva.php">Reservas</a></li>
+                <li><a href="../menu_relatorios/">Relatórios</a></li>
+
             </ul>
         </nav>
 <body>
@@ -173,7 +174,7 @@
 
     </main>
     <footer>
-            <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+            <h3 class="rodape">© SORA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
             <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
     </footer>
     <script src="js/bootstrap.min.js"></script>
