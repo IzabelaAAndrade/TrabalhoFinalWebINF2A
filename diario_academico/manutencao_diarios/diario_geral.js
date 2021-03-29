@@ -4,7 +4,7 @@ const submitBotao = document.querySelector("input.botao");
 const paginas = {
   conteudos: "conteudos/conteudo.php",
   atividades: "atividades/atividade.php",
-  presencas: "presencas/index.html",
+  presencas: "presencas/index.php",
 };
 
 function definePagina() {
