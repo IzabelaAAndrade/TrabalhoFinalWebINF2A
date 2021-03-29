@@ -1,1 +1,0 @@
-Pasta destinada à postagem de arquivos respectivos ao projeto "Biblioteca", do trabalho final da disciplina de Aplicações Web. 
