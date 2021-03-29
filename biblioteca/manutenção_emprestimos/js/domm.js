@@ -18,10 +18,10 @@ document.getElementById("id_aluno").addEventListener('keyup', function(e){
 	document.getElementById("status").innerHTML = "";
 });
 
-document.getElementById("id_acervo").addEventListener('keyup', function(e){
+document.getElementById("id_acervo").onchange = function(){
 	desabilita_botoes();
 	document.getElementById("status").innerHTML = "";
-});
+}
 
 function desabilita_botoes(){
 	if(document.getElementById("id_aluno").value=="" && document.getElementById("id_acervo").value==""){

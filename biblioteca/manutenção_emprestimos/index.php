@@ -27,7 +27,7 @@ include '../../sistema_login/verifica_login.php';
                 if($result != false){
                     $returnEmprestimos = "";
                     while($row = mysqli_fetch_assoc($result)){
-                        $returnEmprestimos .= $row['id'].",".$row['id_alunos'].",".$row['id_acervo'].",".$row['data_emprestimo'].",".$row['data_prev_devol'].",".$row['data_devolucao'].",".$row['multa'].",";
+                        $returnEmprestimos .= $row['Id'].",".$row['Id_alunos'].",".$row['Id_acervo'].",".$row['Data_emprestimo'].",".$row['Data_prev_devol'].",".$row['Data_devolucao'].",".$row['Multa'].",";
                     }
                 }else{
                     $returnEmprestimos = "Nenhum empréstimo.";
@@ -41,7 +41,6 @@ include '../../sistema_login/verifica_login.php';
                 $returnRows = 0;
             }
         }
-        mysqli_close($conexao);
 
     }
 ?>
@@ -67,7 +66,7 @@ include '../../sistema_login/verifica_login.php';
             <div id="dados_user">
         <div id="aux">
             <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
-            <h2 id="sair"><a href="../../sistema_login/logout.php">Sair</a></h2>
+            <h2 id="sair"><a href="../sistema_login/logout.php">Sair</a></h2>
         </div>
      </div>  
         </header>
@@ -138,7 +137,18 @@ include '../../sistema_login/verifica_login.php';
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" class="inputs"id="id_acervo" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do acervo">
+                            <select id="id_acervo">
+                        		<option value='' selected>Selecione o item de acervo</option>";
+	                        	<?php
+	                        		$query = "SELECT * FROM acervo";
+	                        		$resultado_acervo = mysqli_query($conexao, $query);
+	                        		while($row_acervo = mysqli_fetch_array($resultado_acervo)){
+	                        			$id_acervo = $row_acervo["id"];
+	                        			$nome_acervo = $row_acervo["nome"];
+	                        			echo "<option value='$id_acervo'>$nome_acervo</option>";
+	                        		}
+	                        	?>
+                        	</select>
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -191,7 +201,7 @@ include '../../sistema_login/verifica_login.php';
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/ajax.js"></script>
-    <script src="js/dom.js"></script>
+    <script src="js/domm.js"></script>
     <script>
         localStorage.setItem("dadosAluno", "<?php echo $return; ?>");
         localStorage.setItem("dadosEmprestimos", "<?php echo $returnEmprestimos; ?>");

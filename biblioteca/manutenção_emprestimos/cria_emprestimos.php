@@ -74,7 +74,11 @@ formata_data($data_emprestimo);
 $query = "INSERT INTO emprestimos (id_alunos, id_acervo, data_emprestimo, data_prev_devol) VALUES ('$id_aluno', '$id_acervo', '$data_emprestimo', '$data_prev_devol')";
 $resultado = mysqli_query($conexao,$query) or die("<div class='alert alert-danger' role='alert'>Erro de conexão!</div>");
 if($resultado!=null){
-	echo "<div class='alert alert-success' role='alert'>Sucesso! Livro $id_acervo emprestado para $nome_usuario.</div>";
+	$query = "SELECT * FROM acervo WHERE id = $id_acervo";
+	$resultado = mysqli_query($conexao,$query) or die("<div class='alert alert-danger' role='alert'>Erro de conexão!</div>");
+	$registro = mysqli_fetch_array($resultado);
+	$nome_acervo = $registro["nome"];
+	echo "<div class='alert alert-success' role='alert'>Sucesso! Livro $nome_acervo emprestado para $nome_usuario.</div>";
 }
 
 
