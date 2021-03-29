@@ -24,7 +24,7 @@ include '../../sistema_login/verifica_login.php';
                     <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
                     <h2 id="sair"><a href="../sistema_login/logout.php">Sair</a></h2>
                 </div>
-            </div>  
+            </div>
         </header>
         <nav>
             <ul class="menu">
@@ -39,7 +39,7 @@ include '../../sistema_login/verifica_login.php';
                 </li>
                 <li><a href="../reservas/cria_reserva.php">Reservas</a></li>
                 <li><a href="../relatorios/index.php">Relatórios</a></li>
-                
+
             </ul>
         </nav>
 
@@ -190,15 +190,6 @@ include '../../sistema_login/verifica_login.php';
 
                     <div class="escondido mudar" id="alterar">
                       <form action="php/alterarAcervo.php" method="post">
-                        <label>Deseja alterar o quê?</label>
-                        <select name="tipo" id="tipos">
-                            <option value=" ">Apenas informações gerais</option>
-                            <option id="livros" value="livros">Livros</option>
-                            <option id="periodicos" value="periodicos">Periódicos</option>
-                            <option id="academicos" value="academicos">Acadêmicos</option>
-                            <option id="midias" value="midias">Mídias</option>
-                            <option id="autores" value="autores">Autores</option>
-                        </select><br>
                         <h2>Informações Gerais (Obrigatórias)</h2>
                         <label>ID do Campus: <input class="texto" type="number" name="id_campi" maxlength="30"></label>
                         <label>ID da Obra: <br><input class="texto" type="text" name="id_obra" maxlength="30"></label>
@@ -208,7 +199,15 @@ include '../../sistema_login/verifica_login.php';
                         <label>Ano de Publicação: <input class="texto" type="number" name="ano" maxlength="30"></label>
                         <label>Editora: <input class="texto" type="text" name="editora" maxlength="30"></label>
                         <label>Quantidade de Páginas: <input class="texto" type="number" name="paginas" maxlength="30"></label>
-
+                        <label>Deseja alterar o quê?</label>
+                        <select name="tipo" id="tipos">
+                            <option id="gerais" value="gerais">Apenas informações gerais</option>
+                            <option id="livros" value="livros">Livros</option>
+                            <option id="periodicos" value="periodicos">Periódicos</option>
+                            <option id="academicos" value="academicos">Acadêmicos</option>
+                            <option id="midias" value="midias">Mídias</option>
+                            <option id="autores" value="autores">Autores</option>
+                        </select><br>
 
                         <div id="autores" class="escondido selecao">
                           <h2>Informações do Autor</h2>
@@ -229,10 +228,53 @@ include '../../sistema_login/verifica_login.php';
                         </div>
                         <div id="periodicos" class="escondido selecao">
                           <h2>Informações do Periódico</h2>
-                          <label> <input type="text" name="" value=""> </label>
+                          <label>Periodicidade:
+                          <select id="combobox_period" name="periodicidade">
+                              <option value="diario">Diário</option>
+                              <option value="mensal">Mensal</option>
+                              <option value="anual">Anual</option>
+                              <option value="indefinido">Indefinido</option>
+                          </select> </label>
+                          <label>Mês:
+                          <select id="combobox_mes" name="mes">
+                              <option value="jan">Janeiro</option>
+                              <option value="fev">Fevereiro</option>
+                              <option value="mar">Março</option>
+                              <option value="abr">Abril</option>
+                              <option value="mai">Maio</option>
+                              <option value="jun">Junho</option>
+                              <option value="jul">Julho</option>
+                              <option value="ago">Agosto</option>
+                              <option value="set">Setembro</option>
+                              <option value="out">Outubro</option>
+                              <option value="nov">Novembro</option>
+                              <option value="dez">Dezembro</option>
+                          </select></label> <br>
+                          <label>Volume: <input type="number" name="volume" class="texto" maxlength="30"> </label>
+                          <label>Subtipo:
+                            <select id="combobox_subtipoP" name="subtipoP">
+                                <option value="revista">Revista</option>
+                                <option value="jornal">Jornal</option>
+                                <option value="boletim">Boletim</option>
+                            </select>
+                          </label>  <br>
+                          <label>ISSN: <input type="number" name="issn" class="texto"> </label>
+                          <h2>Partes</h2>
+                          <label>Digite o ID da parte que deseja alterar: <input type="number" class="texto" maxlength="30" name="parte" min="0" placeholder="Digite 0 para não alterar nenhuma parte"> </label>
+                          <label>Título: <input type="text" name="titulo" class="texto" maxlength="30" placeholder="Não precisa preencher se digitou 0"> </label>
+                          <label>Página Inicial: <input type="number" name="pag_inicio" class="texto" maxlength="30" placeholder="Não precisa preencher se digitou 0"> </label>
+                          <label>Página Final: <input type="number" name="pag_final" class="texto" maxlength="30" placeholder="Não precisa preencher se digitou 0"> </label>
+                          <label>Palavras-Chave: <input type="text" name="palavras_chave" class="texto" maxlength="30" placeholder="Não precisa preencher se digitou 0"> </label>
                         </div>
                         <div id="midias" class="escondido selecao">
-
+                          <label>Tempo: <input type="number" name="tempo" class="texto" maxlength="30"> </label>
+                          <label> Subtipo:
+                            <select class="combobox" id="combobox_subtipoM" name="subtipoM">
+                              <option value="cd">CD</option>
+                              <option value="dvd">DVD</option>
+                              <option value="fita">Fita</option>
+                              <option value="pendrive">PenDrive</option>
+                          </select> </label>
                         </div>
                         <div id="botoes">
                             <input class="botoes" id="enviar" type="submit">
