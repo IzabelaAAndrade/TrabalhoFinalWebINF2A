@@ -93,6 +93,13 @@ session_start();
 
             <label>Foto: <input class="texto" type="file" class="entrada" name="foto" id="foto" /></label><br>
 
+            <?php
+            if($dados['foto']!=""){
+              $url = "../../imagens/" . $dados['foto'];
+              echo "<div id='foto'><img id='perfil' src='$url'></img></div>";
+            }
+            ?>
+
             <div id="divBotoes">
               <input required class="botoes" type="submit" value='Enviar'>
               <input required class="botoes" type="reset" value='Cancelar'><br>
