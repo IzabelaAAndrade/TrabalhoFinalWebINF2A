@@ -31,6 +31,7 @@ else if($i != 1) {
 else if($esta_ativo) {
     if (mysqli_query($link, "UPDATE `matriculas` SET `ativo` = 'N' WHERE `id_alunos` = '$id_aluno'")) {
         $_SESSION['cpf'] = $cpf;
+        include_once('historico.php');
     }
     else {
         $_SESSION['situacao'] = "Erro ao atualizar situação.";
