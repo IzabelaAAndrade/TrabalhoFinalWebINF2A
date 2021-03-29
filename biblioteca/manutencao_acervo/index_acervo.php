@@ -18,7 +18,7 @@
         </header>
         <nav>
             <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../../biblioteca/index.html">Home</a></li>
                 <li><a href="../sobre.html">Sobre</a></li>
                 <li><a href="#">Manutenção</a>
                     <ul class="sub_menu">
@@ -44,8 +44,8 @@
                         <option value="inserir">Inserir</option>
                         <option value="alterar">Alterar</option>
                         <option value="descarte">Excluir</option>
-                    </select> 
-                    
+                    </select>
+
                     <div class="escondido mudar" id="inserir">
                         <form method="POST" action="php/Inserir_Acervo_Biblioteca.php">
                             <label for="id_tipo">Tipo</label>
@@ -55,9 +55,9 @@
                                 <option id="periodicos" value="periodicos">Periodicos</option>
                                 <option id="academicos" value="academicos">Academicos</option>
                                 <option id="midias" value="midias">Midias</option>
-                                
+
                             </select><br>
-        
+
                             <div id="geral" class="escondido selecao">
                                 <h2>Informações Gerais</h2>
                                 <label for="id_id_campus">Id do Campus: </label>
@@ -89,7 +89,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div id="livros" class="escondido selecao">
                                 <h2>Informações Livros</h2>
                                 <label for="id_edicao">Edição: </label>
@@ -97,7 +97,7 @@
                                 <label for="id_isbn">ISBN: </label>
                                 <input class="texto" type="text" name="isbn" id="id_isbn" maxlength="13">
                             </div>
-                            
+
                             <div id="periodicos" class="escondido selecao">
                                 <h2>Informações Periodicos</h2>
                                 <label for="id_periodicidade">Periodicidade: </label>
@@ -132,7 +132,7 @@
                                 </select>
                                 <label for="id_issn">ISSN: </label>
                                 <input class="texto" type="number" name="issn" id="id_issn" maxlength="8">
-                                
+
                                 <h2>Partes</h2>
                                 <label for="id_partes">Nº Partes: </label>
                                 <input class="texto" type="number" name="partes" id="id_partes" min="1">
@@ -169,15 +169,66 @@
                                     <option value="pendrive">PenDrive</option>
                                 </select>
                             </div>
-                            
+
                             <div id="botoes" class="escondido selecao">
                                 <input class="botoes" id="envia" type="submit">
                                 <button class="botoes" id="limpar" type="reset">Limpar</button>
-                            </div>    
+                            </div>
                         </form>
                     </div>
 
                     <div class="escondido mudar" id="alterar">
+                      <form action="php/alterarAcervo.php" method="post">
+                        <label>Deseja alterar o quê?</label>
+                        <select name="tipo" id="tipos">
+                            <option value=" ">Apenas informações gerais</option>
+                            <option id="livros" value="livros">Livros</option>
+                            <option id="periodicos" value="periodicos">Periódicos</option>
+                            <option id="academicos" value="academicos">Acadêmicos</option>
+                            <option id="midias" value="midias">Mídias</option>
+                            <option id="autores" value="autores">Autores</option>
+                        </select><br>
+                        <h2>Informações Gerais (Obrigatórias)</h2>
+                        <label>ID do Campus: <input class="texto" type="number" name="id_campi" maxlength="30"></label>
+                        <label>ID da Obra: <br><input class="texto" type="text" name="id_obra" maxlength="30"></label>
+                        <label>Nome da Obra: <input class="texto" type="text" name="nome" maxlength="30"></label>
+                        <label>ID do Acervo: <br><input class="texto" type="text" name="id_acervo" maxlength="30"></label>
+                        <label>Local da Obra: <input class="texto" type="text" name="local" maxlength="30"></label>
+                        <label>Ano de Publicação: <input class="texto" type="number" name="ano" maxlength="30"></label>
+                        <label>Editora: <input class="texto" type="text" name="editora" maxlength="30"></label>
+                        <label>Quantidade de Páginas: <input class="texto" type="number" name="paginas" maxlength="30"></label>
+
+
+                        <div id="autores" class="escondido selecao">
+                          <h2>Informações do Autor</h2>
+                          <label>ID do Autor: <input class="texto" type="number" name="id_autor" maxlength="30"></label>
+                          <label>Nome: <input class="texto" type="text" name="nome_autor" maxlength="30"></label>
+                          <label>Sobrenome: <input class="texto" type="text" name="sobrenome_autor" maxlength="30"></label>
+                          <label>Ordem: <input class="texto" type="number" name="ordem" maxlength="30"></label>
+                          <label>Qualificação: <input class="texto" type="text" name="qualificacao" maxlength="30"></label>
+                        </div>
+                        <div id="livros" class="escondido selecao">
+                          <h2>Informações do Livro</h2>
+                          <label>Edição: <input type="number" name="edicao" class="texto" maxlength="30"> </label>
+                          <label>ISBN: <input type="text" name="isbn" class="texto" maxlength="30"> </label>
+                        </div>
+                        <div id="academicos" class="escondido selecao">
+                          <h2>Informações do Acadêmico</h2>
+                          <label>Programa: <br><input class="texto" type="text" name="programa" maxlength="30"></label>
+                        </div>
+                        <div id="periodicos" class="escondido selecao">
+                          <h2>Informações do Periódico</h2>
+                          <label> <input type="text" name="" value=""> </label>
+                        </div>
+                        <div id="midias" class="escondido selecao">
+
+                        </div>
+                        <div id="botoes">
+                            <input class="botoes" id="enviar" type="submit">
+                            <button class="botoes" id="limpa" type="reset">Limpar</button>
+                        </div>
+                      </form>
+
                     </div>
 
                     <div class="escondido mudar" id="descarte">
@@ -198,11 +249,11 @@
                         </div>
                     </div>
                 </fieldset>
-                
-                
+
+
         </main>
         <script src="js/inserir_acervo.js"></script>
-       
+
         <footer>
             <h3 class="rodape">© SORA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
             <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
