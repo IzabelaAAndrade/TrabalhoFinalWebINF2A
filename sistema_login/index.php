@@ -53,7 +53,7 @@ include 'verifica_login.php';
                     <div class="apresentacao">
                     <h2>SIDA</h2>
                     <p> Conhecido como Sistema de Diário Acadêmico, o SIDA estrutura um diário acadêmico virtual o qual pode auxiliar professores e instrutores no manejo de suas turmas.</p>
-                    <h3><a href="../diario_academico/index.html">Acesse</a></h3>
+                    <h3><a href="../diario_academico/index.php">Acesse</a></h3>
                     </div>
                 </div>
             
