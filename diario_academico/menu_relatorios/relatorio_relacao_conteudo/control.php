@@ -45,7 +45,7 @@ while($row_conteudos = mysqli_fetch_array($resultado_conteudos)){
             <td>$data</td>
         </tr>";
 }
-echo "</table><div id='imprimir' class='solid btn imprimir'>Imprimir</div></div>";
+echo "</table><div id='imprimir'>Imprimir</div></div>";
 
 
 ?>
