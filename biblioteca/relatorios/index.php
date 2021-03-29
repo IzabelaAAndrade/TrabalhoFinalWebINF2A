@@ -17,7 +17,7 @@ include '../../sistema_login/verifica_login.php';
 
     <header>
         <img src="img/soraLogo.jpg" alt="logo" id="logo">
-        <h1 id="titulo">Sistema Biblioteca</h1>
+        <h1 id="titulo">Sistema de Organização de Acervo</h1>
         <div id="dados_user">
             <div id="aux">
                 <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
@@ -76,7 +76,7 @@ include '../../sistema_login/verifica_login.php';
     </div>
 
     <footer>
-        <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+        <h3 class="rodape">© SORA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
         <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
     </footer>
 
@@ -85,3 +85,4 @@ include '../../sistema_login/verifica_login.php';
     <script src="js/main.js"></script>
 </body>
 </html>
+
