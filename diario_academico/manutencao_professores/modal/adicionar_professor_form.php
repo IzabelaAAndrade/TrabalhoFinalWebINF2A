@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style/modal.css">
 </head>
 <body>
-    <?php include '_top.html'; ?>
+    <?php include '_top.php'; ?>
 
     <main>
         <form action="adicionar_professor.php" method="POST">
@@ -36,7 +36,7 @@
                 </select>
             </p>
             <div class="actions">
-                <div class="btn" onclick="window.open('../index.html','_self');">Voltar</div>
+                <div class="btn" onclick="window.open('../','_self');">Voltar</div>
                 <input type="submit" name="add" value="Adicionar" class="btn destaque">
             </div>
         </form>

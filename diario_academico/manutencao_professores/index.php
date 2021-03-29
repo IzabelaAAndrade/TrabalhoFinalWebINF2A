@@ -1,3 +1,8 @@
+<?php
+@session_start();
+include '../../sistema_login/verifica_login.php';
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,36 +17,42 @@
     <header>
         <img src="img/sidaLogo.jpg" alt="logo" id="logo">
         <h1 id="titulo">Sistema Diário Acadêmico</h1>
+        <div id="dados_user">
+            <div id="aux">
+                <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
+                <h2 id="sair"><a href="../../sistema_login/logout.php">Sair</a></h2>
+            </div>
+        </div> 
     </header>
 
     <nav>
         <ul class="menu" >
-           <li><a href="../index.html">Home</a></li>
-           <li><a href="../sobre.html">Sobre</a></li>
+           <li><a href="../">Home</a></li>
+           <li><a href="../sobre.php">Sobre</a></li>
            <li><a href="#">Manutenção</a>
                <ul class="sub_menu">
                    <li><a href="../campi/campi.php">Campi</a></li>
                    <li><a href="../manutencao_departamentos/departamentos.html">Departamentos</a></li>
-                   <li><a href="../manutenção_cursos/index.html">Cursos</a></li>
-                   <li><a href="../manutancao_turmas/index.php">Turmas</a></li>
+                   <li><a href="../manutenção_cursos/">Cursos</a></li>
+                   <li><a href="../manutancao_turmas/">Turmas</a></li>
                    <li><a href="../manutencao_alunos/">Alunos</a></li>
-                   <li><a href="../manutencao_professores/index.html">Professores</a></li>
-                   <li><a href="../manutencao_disciplinas/index.html">Disciplinas</a></li>
-                   <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
+                   <li><a href="../manutencao_professores/">Professores</a></li>
+                   <li><a href="../manutencao_disciplinas/">Disciplinas</a></li>
+                   <li><a href="../manutencao_etapas/">Etapas</a></li>
                    <li><a href="../manutencao_diarios/">Diários</a></li>
                </ul>
            </li>
            <li><a href="../menu_relatorios/index.html">Relatórios</a>
                <ul class="sub_menu">
-                   <li><a href="../menu_relatorios/relatorio_certificado/certificados.html">Certificados</a></li>
-                   <li><a href="../menu_relatorios/relatorio_historico/index.html">Histórico por Aluno e Turma</a></li>
-                   <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
-                   <li><a href="../menu_relatorios/relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
-                   <li><a href="../menu_relatorios/relatorio_professores/index.html">Relação de Professores</a></li>
+                   <li><a href="../menu_relatorios/relatorio_certificado/">Certificados</a></li>
+                   <li><a href="../menu_relatorios/relatorio_historico/">Histórico por Aluno e Turma</a></li>
+                   <li><a href="../menu_relatorios/relatorio_alunos/">Relação de Alunos</a></li>
+                   <li><a href="../menu_relatorios/relatorio_relacao_conteudo/">Relação de Conteúdos</a></li>
+                   <li><a href="../menu_relatorios/relatorio_professores/">Relação de Professores</a></li>
                </ul>
            </li>
            </li>
-           <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
+           <li><a href="../transferencia_alunos/">Transferências</a></li>
            <li><a href="#">Ajuda</a></li>
        </ul>
     </nav>
@@ -71,7 +82,7 @@
     </main>
 
     <footer>
-        <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+        <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
         <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
     </footer>
 

@@ -15,7 +15,7 @@ $titulacao = $_GET['titulacao'];
 $filtros = array();
 
 if(isset($nome) && $nome != '')
-    array_push($filtros, "nome='$nome'");
+    array_push($filtros, "nome LIKE '%$nome%'");
 if(isset($depto) && $depto != '')
     array_push($filtros, "id_depto='$depto'");
 if(isset($titulacao) && $titulacao != '')

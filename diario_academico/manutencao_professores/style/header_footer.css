@@ -107,4 +107,55 @@ h1, h3, p {
     margin: 0;
 }
 
+/* Dados do Usuário *********************************************************************/
+#dados_user a, #dados_user, #nome_user{
+    color:white;
+    font-size: 1.1em;
+    text-align: right;
+    text-decoration: none;
+    
+}
 
+/* padrão * /
+
+#aux{
+    position: absolute;
+    left: 90vw;
+    text-align: right;
+    top: 5vh;
+}
+
+#sair a{
+    color:white;
+    font-size: 0.6em;
+    text-align: right;
+    text-decoration: none;
+    top: 9vh;
+}
+
+/* alt */
+
+#aux{
+    position: absolute;
+    left: 90vw;
+    text-align: right;
+    top: 2.5em;
+}
+
+#nome_user, #sair {
+    margin: 0;
+}
+
+#sair a{
+    color:white;
+    font-size: 0.6em;
+    text-align: right;
+    text-decoration: none;
+}
+
+/**/
+
+
+#sair a:hover{
+    color:#e7d2d4;
+}

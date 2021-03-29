@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style/modal.css">
 </head>
 <body>
-<?php include '_top.html'; ?>
+<?php include '_top.php'; ?>
 
 <main>
 
@@ -71,7 +71,7 @@ else if ($result = mysqli_query($link, $sql)) {
         </select>
     </p>
     <div class="actions">
-        <div class="btn" onclick="window.open('../index.html','_self');">Voltar</div>
+        <div class="btn" onclick="window.open('../','_self');">Voltar</div>
         <input type="reset" name="reset" value="Resetar" class="btn">
         <input type="submit" name="add" value="Salvar" class="btn destaque">
     </div>

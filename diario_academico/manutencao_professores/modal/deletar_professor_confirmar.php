@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style/modal.css">
 </head>
 <body>
-<?php include '_top.html'; ?>
+<?php include '_top.php'; ?>
 
 <main>
 
@@ -42,7 +42,7 @@ else if ($result = mysqli_query($link, $sql)) {
         <?php echo $id; ?> 
     </p>     
     <div class="actions">
-        <div class="btn" onclick="window.open('../index.html','_self');">Não</div>
+        <div class="btn" onclick="window.open('../','_self');">Não</div>
         <input type="submit" name="add" value="Sim" class="btn destaque">
     </div>
 </form>
