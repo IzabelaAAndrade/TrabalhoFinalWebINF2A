@@ -10,7 +10,7 @@ include '../sistema_login/verifica_login.php';
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SORA | Sobre</title>
-        <link rel="stylesheet" href="sobre_geral.css">
+        <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="sobre.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
@@ -18,10 +18,8 @@ include '../sistema_login/verifica_login.php';
     </head>
     <body>
         <header>
-              <div id="header-div">
-                <img src="../imgs/soraLogo.jpg" alt="logo" id="logo">
-                <h1 id="titulo">Sistema de Diário Acadêmico</h1>
-            </div>
+            <img src="../imgs/soraLogo.jpg" alt="logo" id="logo">
+            <h1 id="titulo">Sistema de Organização de Acervo</h1>
             <div id="dados_user">
                 <div id="aux">
                     <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
