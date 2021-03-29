@@ -154,8 +154,8 @@ else if (strcmp($tipo,'midias')==0) {
 </head>
 <body>
 <header>
-    <img src="../img/LogoExemploCortada.png" alt="logo" id="logo">
-    <h1 id="titulo">Sistema Biblioteca</h1>
+    <img src="../imgs/soraLogo.jpg" alt="logo" id="logo">
+    <h1 id="titulo">Sistema de Organização de Acervo</h1>
 </header>
 
 <p>Inserido com Sucesso!</p>
