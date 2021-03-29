@@ -79,6 +79,7 @@ if($row_alunos > 0){
 
 
 }
+}
 
 
 mysqli_close($conexao);
