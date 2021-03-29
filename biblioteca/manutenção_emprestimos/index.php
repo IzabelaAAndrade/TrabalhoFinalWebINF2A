@@ -1,7 +1,7 @@
 <?php
     if (isset($_GET["id_aluno"])) {
         /*CONEXÃO COM BANCO DE DADOS*/
-        include 'conexao.php';
+        include '../lib/conexao.php';
 
         $id_aluno = $_GET["id_aluno"];
 

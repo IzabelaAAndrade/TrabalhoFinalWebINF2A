@@ -1,9 +1,9 @@
 <?php
 
-   include "conexao.php";
+   include '../lib/conexao.php';
 
    $sql = "SELECT id, nome FROM cursos";      
-   $resultado = mysqli_query($connection, $sql);
+   $resultado = mysqli_query($conexao, $sql);
    $num_rows = mysqli_num_rows($resultado);
    $cursos = [];
 
@@ -16,7 +16,7 @@
    }else{
       $cursoContent = "Não há nenhum curso cadastrado.";
    }
-   mysqli_close($connection);
+   mysqli_close($conexao);
 ?>
 
 <!DOCTYPE html>
