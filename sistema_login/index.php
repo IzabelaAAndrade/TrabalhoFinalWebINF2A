@@ -10,6 +10,7 @@ include 'verifica_login.php';
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Home</title>
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/header_footer.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     </head>
@@ -27,7 +28,7 @@ include 'verifica_login.php';
         </header>
         <nav>
         <ul class="menu">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Início</a></li>
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Quem Faz</a></li>
             <li><a href="#">Contato</a></li>
@@ -45,7 +46,7 @@ include 'verifica_login.php';
                         <h2>SORA</h2>
                         <p> Chamado de Sistema de Organização de Acervo, o SORA é uma aplicação web que implementa uma organização de biblioteca virtual. </p>
                     </div>
-                    <a href="../biblioteca/index.html"><h3>Acesse</h3></a>
+                    <a href="../biblioteca/index.php"><h3>Acesse</h3></a>
                 </div>
                 <div class="container_ap">
                     <img class="imgs_ap" src="imgs/diario.jpg"/>
@@ -60,7 +61,7 @@ include 'verifica_login.php';
 
         </main>
         <footer>
-            <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+            <h3 class="rodape">© SORA & SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
             <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
         </footer>
        

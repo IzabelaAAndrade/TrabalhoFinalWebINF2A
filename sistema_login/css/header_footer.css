@@ -2,12 +2,12 @@ header{
     margin: 0;
     height: 8%;
     width: 100%;
-    background-color: #1d3556;
+    background-color: #000000;
     padding: 3%;
 }
 footer{
     height: 5%;
-    background-color: #1D3556;
+    background-color: #000000;
     padding: 3%;
     bottom: 0;
     left: 0;

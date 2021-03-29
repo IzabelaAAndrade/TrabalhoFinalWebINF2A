@@ -23,12 +23,12 @@
 }
 
 #sair a{
-    color: #457B9D;
+    color: #ffffff;
     top: 9vh;
 }
 
 #sair a:hover{
-    color:#e63946;
+    color:#e7d2d4;
 }
 
 
@@ -212,9 +212,9 @@ textarea::placeholder{
 }
 
 /* Header/Footer ****************************************************************/
-
+/*
 header{
-    background-color: #264653;
+    background-color: #000000;
     width: 100%;
     height: 7em;
     border-top: none;
@@ -225,7 +225,7 @@ header{
 
 footer{
     height: 5%;
-    background-color: #264653;
+    background-color: #000000;
     padding: 3%;
     display: block;
 }
@@ -237,6 +237,7 @@ footer{
 .rodape{
     text-align: center;
 }
+*/
 
 /* Imagens ****************************************************************/
 #logo{
