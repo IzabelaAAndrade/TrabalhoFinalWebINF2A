@@ -1,10 +1,12 @@
 <?php
 
-$dominio = "localhost";
-$usuario = "root";
-$senha = "";
-$banco_de_dados = "academico";
+// $dominio = "localhost";
+// $usuario = "root";
+// $senha = "";
+// $banco_de_dados = "academico";
 
-$conexao = mysqli_connect($dominio, $usuario, $senha, $banco_de_dados);
+// $conexao = mysqli_connect($dominio, $usuario, $senha, $banco_de_dados);
+
+include_once '../../lib/conexao.php';
 
 ?>
