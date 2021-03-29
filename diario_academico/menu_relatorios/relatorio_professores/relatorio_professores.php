@@ -56,7 +56,6 @@ $dados = false;
         
 // $mysqli = new mysqli("localhost", "root", "123456", "academico");
 include_once '../../lib/conexao.php';
-$mysqli = $conexao;
         
 $id_curso = getDados("SELECT id FROM cursos WHERE nome='$nome_curso'")[0][0];
 if($id_curso != null){
@@ -93,8 +92,8 @@ if($id_curso != null){
 <?php
 function getDados(String $sql): ?array
 {
-    global $mysqli;
-    $result = $mysqli->query($sql);
+    global $conxexao;
+    $result = mysqli_query($conxexao,$sql);
     if($result == false){return null;}
     return mysqli_fetch_all($result, MYSQLI_BOTH);
 }
