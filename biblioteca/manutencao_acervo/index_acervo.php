@@ -1,3 +1,7 @@
+<?php
+@session_start();
+include '../../sistema_login/verifica_login.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,20 +19,27 @@
         <header>
             <img src="../../imgs/soraLogo.jpg" alt="logo" id="logo">
             <h1 id="titulo">Sistema de Organização de Acervo</h1>
+            <div id="dados_user">
+                <div id="aux">
+                    <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
+                    <h2 id="sair"><a href="../sistema_login/logout.php">Sair</a></h2>
+                </div>
+            </div>  
         </header>
         <nav>
             <ul class="menu">
-                <li><a href="../../biblioteca/index.html">Home</a></li>
-                <li><a href="../sobre.html">Sobre</a></li>
+                <li><a href="../../sistema_login/index.php">Início</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../sobre.php">Sobre</a></li>
                 <li><a href="#">Manutenção</a>
                     <ul class="sub_menu">
-                        <li><a href="index_acervo.html">Acervo</a></li>
+                        <li><a href="../manutencao_acervo/index_acervo.php">Acervo</a></li>
                         <li><a href="../manutenção_emprestimos/index.php">Empréstimos</a></li>
                     </ul>
                 </li>
                 <li><a href="../reservas/cria_reserva.php">Reservas</a></li>
-                <li><a href="../menu_relatorios/">Relatórios</a></li>
-                <!--<li><a href="../menu_relatorios/relacao_descartes.php">Descarte</a></li>-->
+                <li><a href="../relatorios/index.php">Relatórios</a></li>
+                
             </ul>
         </nav>
 

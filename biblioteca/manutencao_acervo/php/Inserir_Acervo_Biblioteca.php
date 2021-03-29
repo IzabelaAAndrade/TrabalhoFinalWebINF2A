@@ -102,11 +102,11 @@ else if (strcmp($tipo, 'periodicos')==0) {
     $subtipoP = $_POST['subtipoP'];
     $issn = $_POST['issn'];
 
-    mysqli_query($cnx, "INSERT INTO `periodicos`(`id_acervo`, `periodicidade`, `mes`, `volume`, `subtipo`, `issn`) VALUES($id_acervo, '$periodicidade', '$mes', $volume, '$subtipoP', '$issn')");
+    mysqli_query($cnx, "INSERT INTO `periodicos`(`periodicidade`, `mes`, `volume`, `subtipo`, `issn`) VALUES('$periodicidade', '$mes', $volume, '$subtipoP', '$issn')");
 
     //      PARTES
 
-    $id_periodicos = mysqli_query($cnx, "SELECT MAX(`id`) FROM `periodicos` WHERE (`id_acervo`,`periodicidade`, `mes`, `volume`, `subtipo`, `issn`) = ($id_acervo, '$periodicidade', '$mes', $volume, '$subtipoP', '$issn')");
+    $id_periodicos = mysqli_query($cnx, "SELECT MAX(`id`) FROM `periodicos` WHERE (`periodicidade`, `mes`, `volume`, `subtipo`, `issn`) = ('$periodicidade', '$mes', $volume, '$subtipoP', '$issn')");
     $id_periodicos2 = mysqli_fetch_row($id_periodicos)[0];
 
     $partes = $_POST['partes'];
@@ -114,6 +114,7 @@ else if (strcmp($tipo, 'periodicos')==0) {
     $inicio = $_POST['inicio'];
     $fim = $_POST['fim'];
     $chave = $_POST['chave'];
+    var_dump($_POST);
 
     for ($cont2 = 0; $cont2 < $partes; $cont2++) {
 
@@ -153,7 +154,7 @@ else if (strcmp($tipo,'midias')==0) {
 </head>
 <body>
 <header>
-    <img src="../../../imgs/soraLogo.jpg" alt="logo" id="logo">
+    <img src="../imgs/soraLogo.jpg" alt="logo" id="logo">
     <h1 id="titulo">Sistema de Organização de Acervo</h1>
 </header>
 
@@ -167,7 +168,7 @@ else if (strcmp($tipo,'midias')==0) {
 <script>
     window.addEventListener('load', () => {
         setTimeout(() => {
-            location.href = "../index_acervo.php";
+            location.href = "../index_acervo.html";
         },2000);
     })
 </script>
