@@ -8,11 +8,6 @@ error_reporting(E_ALL);
 
 Header("Content-type: text/html; charset=utf-8");
 
-define("DB_HOST","localhost");
-define("DB_USER","userlegal");
-define("DB_PASSWORD","senhalegal");
-define("DB_DATABASE","academico");
-
 $nome = $_GET['nome'];
 $depto = $_GET['depto'];
 $titulacao = $_GET['titulacao'];
@@ -33,11 +28,7 @@ if(count($filtros) != 0)
 // echo "filtro: $filtro<br>";
 
 // Conexão com o localhost
-$link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD);
-if (!$link)
-    die("Conexão falhou: " . mysqli_connect_error());
-
-mysqli_query($link,"USE " . DB_DATABASE);
+include_once '../modal/conexao.php';
 
 $profs = mysqli_query($link,"SELECT * from professores $filtro ORDER BY nome ASC");
 
@@ -56,3 +47,4 @@ echo '{"lista":[' . $profsJson . ']}';
 // {"profs":[{"id":"0000042","nome":"Fabricio"},{"id":"0000003","nome":"Sallum"},{"id":"0000001","nome":"Silvia"}]}
 
 ?>
+

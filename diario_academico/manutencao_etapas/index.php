@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manutenção de Etapas - Diário Acadêmico</title>
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/header-footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/menu.css">
 </head>
 <body>
     <header>
         <img src="assets/img/LogoExemploCortado.png" alt="logo" id="logo">
-        <h1>Diário Acadêmico</h1>
+        <h1>Sistema Diário Acadêmico</h1>
     </header>
     <nav>
         <ul class="menu">
             <li><a href="../">Home</a></li>
-            <li><a href="#">Sobre</a></li>
+            <li><a href="../sobre.html">Sobre</a></li>
             <li><a href="#">Manutenção</a>
             <ul class="sub_menu">
                 <li><a href="../campi/campi.php">Campi</a></li>

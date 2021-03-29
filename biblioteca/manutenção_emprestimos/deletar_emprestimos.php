@@ -1,6 +1,6 @@
 <?php
     //Conectando ao Banco de Dados
-    include 'conexao.php';
+    include '../lib/conexao.php';
 
     $idEmprestimos = htmlspecialchars($_GET["idEmprestimo"]);
     $multa = doubleval(htmlspecialchars($_GET["multa"]));

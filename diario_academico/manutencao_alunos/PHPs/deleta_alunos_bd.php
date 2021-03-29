@@ -26,8 +26,9 @@ else {
 
     else {
       $aluno = "DELETE FROM alunos WHERE id = '$cpf';";
+      $matricula = "DELETE FROM matriculas WHERE id_alunos = '$cpf';";
 
-      if (mysqli_query($conexao, $aluno))
+      if (mysqli_query($conexao, $aluno) && mysqli_query($conexao, $matricula))
         $_SESSION['deleta_true'] = "Registros excluídos com sucesso.";
       else
         die("Erro ao tentar excluir registro");

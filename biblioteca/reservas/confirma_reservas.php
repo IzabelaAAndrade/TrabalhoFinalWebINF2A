@@ -8,7 +8,7 @@ $nome_db = "biblioteca";
 $povoa_tabelas = "povoa_tabelas.sql";
 
 if(empty($_POST['estimativa_reserva'])){
-    $_SESSION['confirma'] = 5;
+    $_SESSION['confirma'] = 4;
     header("Location: cria_reserva.php");
     exit();
 }
@@ -18,7 +18,7 @@ $conexao = mysqli_connect($servidor, $usuario, $senha, $nome_db) or die("Houve u
 $itens = isset($_POST['id_itens']) ? $_POST['id_itens'] : "Erro";
 $alunos = isset($_POST['id_alunos']) ? $_POST['id_alunos'] : "Erro";
 $data = isset($_POST['estimativa_reserva']) ? $_POST['estimativa_reserva'] : "Erro";
-
+//$verifica_emprestimo = "SELECT * FROM emprestimos WHERE id_acervo='".$."'" ;
 
 $query_alunos = "SELECT * FROM reservas WHERE id_alunos ='".$alunos."'" or die(mysqli_error($conexao));
 $resultado_alunos = mysqli_query($conexao, $query_alunos);
@@ -52,20 +52,33 @@ if($row_alunos > 0){
         $ultima_reserva_segundos = strtotime($tem_reserva[sizeof($tem_reserva)-1]['data_reserva']);
         $data_disponivel_segundos = $ultima_reserva_segundos+604800;
         $data_desejada_segundos = strtotime($data);
-        if($data_desejada_segundos<$data_disponivel_segundos){
+        if($data_desejada_segundos==$data_disponivel_segundos){
             $data_disponivel = date('d/m/Y', $data_disponivel_segundos);
             $_SESSION['confirma'] = 2;
         }else{
-            insere_na_tabela($ultima_reserva_segundos);
-            $_SESSION['confirma'] = 3;
+            if(($data_disponivel_segundos) == strtotime($data)){
+                insere_na_tabela($ultima_reserva_segundos);
+                $_SESSION['confirma'] = 3;
+            }else{
+                $_SESSION['confirma'] = 6;
+        
 
         }
     }
 
 }else{
-    insere_na_tabela(strtotime($data));
-    $_SESSION['confirma'] = 3;
 
+    if(strtotime($data) == strtotime('today')){
+        insere_na_tabela(strtotime($data));
+        $_SESSION['confirma'] = 3;
+    }else{
+        $_SESSION['confirma'] = 6;
+
+    }
+    
+
+
+}
 }
 
 

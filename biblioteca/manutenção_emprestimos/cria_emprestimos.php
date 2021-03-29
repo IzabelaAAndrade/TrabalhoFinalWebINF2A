@@ -1,6 +1,6 @@
 <?php
 
-require("conexao.php");
+require("../lib/conexao.php");
 
 $limite_emprestimos = 3;
 $prazo_devolucao = 7; //em dias

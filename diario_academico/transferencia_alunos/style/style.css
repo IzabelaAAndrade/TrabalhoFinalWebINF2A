@@ -133,6 +133,7 @@ header{
     border-left: none;
     border-right: none;
     margin: 0%;
+    padding-bottom: 3%;
 }
 
 footer{
@@ -145,6 +146,8 @@ footer{
 #titulo{
     padding-top: 50px;
     margin-left: 20px;
+    font-size: 2em;
+    
 }
 
 .rodape{

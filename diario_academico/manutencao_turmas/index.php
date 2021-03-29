@@ -1,9 +1,9 @@
 <?php
 
-   include "conexao.php";
+   include '../lib/conexao.php';
 
    $sql = "SELECT id, nome FROM cursos";      
-   $resultado = mysqli_query($connection, $sql);
+   $resultado = mysqli_query($conexao, $sql);
    $num_rows = mysqli_num_rows($resultado);
    $cursos = [];
 
@@ -16,7 +16,7 @@
    }else{
       $cursoContent = "Não há nenhum curso cadastrado.";
    }
-   mysqli_close($connection);
+   mysqli_close($conexao);
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
    <link rel="stylesheet" href="css/style_turmas.css">
    <link rel = "stylesheet" href = "css/index.css">
    <link rel = "stylesheet" href = "css/style_tabelas.css">
-   <title>Manutenção de Turmas</title>
+   <title>Turmas | SIDA</title>
 </head>
 <body>
    <header>
@@ -42,21 +42,21 @@
         
    <nav>
          <ul class="menu" >
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Manutenção</a>
-                <ul class="sub_menu">
-                    <li><a href="../campi/campi.php">Campi</a></li>
-                    <li><a href="../manutencao_departamentos/departamentos.html">Departamentos</a></li>
-                    <li><a href="../manutenção_cursos/index.html">Cursos</a></li>
-                    <li><a href="index.php">Turmas</a></li>
-                    <li><a href="../manutencao_alunos/">Alunos</a></li>
-                    <li><a href="../manutencao_professores/index.html">Professores</a></li>
-                    <li><a href="../manutencao_disciplinas/index.html">Disciplinas</a></li>
-                    <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
-                    <li><a href="../manutencao_diarios/">Diários</a></li>
-                </ul>
-            </li>
+         <li><a href="../index.html">Home</a></li>
+         <li><a href="../sobre.html">Sobre</a></li>
+                <li><a href="#">Manutenção</a>
+                    <ul class="sub_menu">
+                        <li><a href="../campi/campi.php">Campi</a></li>
+                        <li><a href="../manutencao_departamentos/index.html">Departamentos</a></li>
+                        <li><a href="../manutencao_cursos/index.php">Cursos</a></li>
+                        <li><a href="../manutencao_turmas/index.php">Turmas</a></li>
+                        <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
+                        <li><a href="../manutencao_professores/index.html">Professores</a></li>
+                        <li><a href="../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
+                        <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
+                        <li><a href="../manutencao_diarios/index.html">Diários</a></li>
+                    </ul>
+                </li>
             <li><a href="../menu_relatorios/index.html">Relatórios</a>
                 <ul class="sub_menu">
                     <li><a href="../menu_relatorios/relatorio_certificado/certificados.html">Certificados</a></li>
@@ -68,7 +68,6 @@
             </li>
             </li>
             <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
-            <li><a href="#">Ajuda</a></li>
         </ul>
    </nav>
 <main>

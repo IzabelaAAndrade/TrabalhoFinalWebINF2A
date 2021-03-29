@@ -1,58 +1,51 @@
 /* Principal *****************************************************************/
-:root {
-    --main-color: #E63946;
-    --fill-color: #FFFFFF;
-    --border-color: none;
-}
-
-html, body{
-    height: 100%;
-    margin-bottom: 0%;
-}
-
-body {
-    margin: 0;
-    background-color: #FFFFFF;
-    color: #264553;
+*{
     font-family: 'Nunito', sans-serif;
 }
+html, body{
+    margin: 0%;
+}
+header, footer{
+    padding-bottom: 3%;
+}
 
-h1, h3{
+h1, h3, p, input{
     font-family: 'Nunito', sans-serif;
     color: white;
     margin: 0%;
 }
 
-h1{
-    font-size: 1em;
-}
-
 h3{
     text-align: center;
-    font-size: 0.7em;
 }
 
 .sub{
-    color: #457B9D;
-    margin: 5% 0% .5% 0%;
-    font-size: 1em;
+    color: #457a9d;
+    margin: 25vh 0% .5% 0%;
+    font-size: 1.5em;
 }
 
 .principal{
     color: #e74946;
-    font-size: 1.5em;
+    font-size: 3em;
     margin: 0% 0% .5% 0%;
 }
 
 .descricao{
-    font-family: 'Nunito', sans-serif;
-    color: #1D3557;
-    font-size: 1em;
-    margin: 0% 0% 1% 0%;
+    color: #023047;
+    font-size: 1.2em;
+    margin: 0% 0% 20vh 0%;
 }
 
-.descricao, .principal, .sub{
+.descricao, .principal, .subRosa{
     text-align: center;
+}
+
+#ajuste{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 0% 5% 0%;
 }
 
 #fieldset{
@@ -101,7 +94,6 @@ form{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
 }
 
 .botoes{
@@ -134,20 +126,50 @@ input{
 }
 
 table {
+    margin: 10px  auto;
+    width: 50%;
     border-collapse: collapse;
-    width: 30vw;
+    font-size: 1em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    min-width: 100px;
 }
 
-th, td {
-    padding: 8px 0px 8px 0px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 5px;
+table thead tr {
+    background-color: #e63946;
+    color: #ffffff;
+    text-align: left;
+    
 }
 
-thead th{
-    text-align: center;
+table th, td {
+    padding: 12px 15px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddddd;
+}
+
+table tbody tr:nth-of-type(2n) {
+    background-color: #f3f3f3;
+}
+table tbody tr:nth-of-type(2n) td {
     font-weight: bold;
+    color: #e63946;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #e63946;
+}
+
+.btnAlterar{
+    color: black;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    background-color: #a8dadc;
+    cursor: pointer;
+    font-weight: normal;
 }
 
 .centro{
@@ -176,7 +198,7 @@ tbody td button{
 header{
     background-color:#1D3556;
     width: 100%;
-    height: 7.5em;
+    height: 15%;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -184,6 +206,7 @@ header{
 }
 
 footer{
+    height: 5%;
     background-color: #1D3556;
     padding: 3%;
     display: block;
@@ -200,6 +223,8 @@ footer{
 
 /* Imagens ****************************************************************/
 #logo{
+    margin-top: 10px;
+    height: 7em;/*94.5px;*/
     width: 17em;/*250px;*/
     float: left;
 }
@@ -269,5 +294,3 @@ li a{
     display:block;
     width:200px;
 }
-
-

@@ -1,54 +1,45 @@
 /* Principal *****************************************************************/
-:root {
-    --main-color: #2A9D8F;
-    --fill-color: #FFFFFF;
-    --border-color: none;
-}
-
-html, body{
-    height: 100%;
-    margin-bottom: 0%;
-}
-
-body {
-    margin: 0;
-    background-color: #FFFFFF;
-    color: #264553;
+*{
     font-family: 'Nunito', sans-serif;
 }
+html, body{
+    margin: 0%;
+}
+header, footer{
+    padding-bottom: 3%;
+}
 
-h1, h3{
+h1, h3, p, input{
     font-family: 'Nunito', sans-serif;
     color: white;
     margin: 0%;
 }
 
-h1{
-    font-size: 1em;
+h2{
+    padding-top: 15px;
+    border-bottom: 1.5px solid gray;
 }
 
 h3{
     text-align: center;
-    font-size: 0.7em;
 }
 
 .sub{
     color: #449d8f;
-    margin: 5% 0% .5% 0%;
-    font-size: 1em;
+    margin: 25vh 0% .5% 0%;
+    font-size: 1.5em;
 }
 
 .principal{
     color: #e76f51;
-    font-size: 1.5em;
+    font-size: 3em;
     margin: 0% 0% .5% 0%;
 }
 
 .descricao{
-    font-family: 'Nunito', sans-serif;
     color: #264553;
-    font-size: 1em;
-    margin: 0% 0% 1% 0%;
+    font-size: 1.2em;
+    margin: 0% 0% 20vh 0%;
 }
 
 .descricao, .principal, .sub{
@@ -124,8 +115,7 @@ form{
 }
 .botoes:hover{
     background-color: #449d8f;
-    cursor:pointer
-    
+    cursor:pointer 
 }
 
 input{
@@ -142,7 +132,7 @@ input{
 }
 
 textarea {
-    width: 100%;
+    width: 31vw;
     height: 10vh;
     padding: 3%;
     background-color: #449d8f;
@@ -160,11 +150,6 @@ textarea::placeholder {
     margin-top: 10px;
 }
 
-h2{
-    padding-top: 15px;
-    border-bottom: 1.5px solid gray;
-}
-
 .partes, .autores{
     padding-bottom: 20px;
 }
@@ -173,18 +158,18 @@ h2{
 }
 
 /* Header/Footer ****************************************************************/
-
 header{
-    background-color: #264653;
+    background-color:#264653;
     width: 100%;
-    height: 7em;
+    height: 15%;
     border-top: none;
     border-left: none;
     border-right: none;
-    margin: 0;    
+    margin: 0%;    
 }
 
 footer{
+    height: 5%;
     background-color: #264653;
     padding: 3%;
     display: block;
@@ -201,6 +186,8 @@ footer{
 
 /* Imagens ****************************************************************/
 #logo{
+    margin-top: 10px;
+    height: 7em;/*94.5px;*/
     width: 17em;/*250px;*/
     float: left;
 }
@@ -247,7 +234,7 @@ li a{
 }
 
 .sub_menu li{
-    background-color: #457B9D;
+    background-color: #457b9dde;
 }
 
 .menu li:hover{

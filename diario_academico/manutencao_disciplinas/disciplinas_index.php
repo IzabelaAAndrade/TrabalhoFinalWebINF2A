@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include_once "povoa_base.php";
 ?>
 <!doctype html>
@@ -8,14 +8,14 @@ include_once "povoa_base.php";
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Manutenção Disciplinas</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="css/disciplinas_index_css.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/modal.css">
+     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/tabela.css">
 </head>
 <body>
@@ -35,23 +35,32 @@ include_once "povoa_base.php";
 </header>
 <nav>
     <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../sobre.html">Sobre</a></li>
         <li><a href="#">Manutenção</a>
             <ul class="sub_menu">
-                <li><a href="#">Campi</a></li>
-                <li><a href="#">Departamentos</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Turmas</a></li>
-                <li><a href="#">Alunos</a></li>
-                <li><a href="#">Professores</a></li>
-                <li><a href="#">Disciplinas</a></li>
-                <li><a href="#">Etapas</a></li>
-                <li><a href="#">Diários</a></li>
+                <li><a href="../campi/campi.php">Campi</a></li>
+                <li><a href="../manutencao_departamentos/index.html">Departamentos</a></li>
+                <li><a href="../manutencao_cursos/index.php">Cursos</a></li>
+                <li><a href="../manutencao_turmas/index.php">Turmas</a></li>
+                <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
+                <li><a href="../manutencao_professores/index.html">Professores</a></li>
+                <li><a href="../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
+                <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
+                <li><a href="../manutencao_diarios/index.html">Diários</a></li>
             </ul>
         </li>
-        <li><a href="#">Relatórios</a></li>
-        <li><a href="#">Transferências</a></li>
+        <li><a href="../menu_relatorios/index.html">Relatórios</a>
+		<ul class="sub_menu">
+                        <li><a href="../menu_relatorios/relatorio_certificado/index.html">Certificados</a></li>
+                        <li><a href="../menu_relatorios/relatorio_historico/index.html">Histórico por Aluno e Turma</a></li>
+                        <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                        <li><a href="../menu_relatorios/relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
+                        <li><a href="../menu_relatorios/relatorio_professores/index.html">Relação de Professores</a></li>
+                    </ul>
+		
+	</li>
+        <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
         <li><a href="#">Ajuda</a></li>
     </ul>
 </nav>
@@ -59,19 +68,20 @@ include_once "povoa_base.php";
 <main id="main">
     <h3 class="sub"><strong>Bem-Vindo(a) à</strong></h3>
     <h1 class="principal"><strong>Manutenção Disciplinas</strong></h1>
-    <p class="descricao">Para a realização das tarefas, criar, alterar e excluir disciplinas basta clicar nos seus respectivos botões -
+    <p class="descricao">Para a realização das tarefas, criar alterar e excluir disciplinas basta clicar nos seus respectivos botões -
         <br> Deseja realizar alguma manuntenção nas disciplinas do  Diário Acadêmico? Você está no lugar certo!
     </p>
     <div class="modal fade" id="adddisc" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="cabecalho_modal">
                     <button type="button" class="close" data-dismiss="modal" onclick="location.reload(true);">&times;
                     </button>
                     <h2>Adicionar Disciplina</h2>
                 </div>
                 <div class="modal-body">
                     <form action="cria_disciplinas.php" method="get">
+                      <label for="id_turmas">Id da turma referente:</label>
                         <select name="id_turmas" class="caixa-seleção">
                             <?php
                             $cnx = mysqli_connect("localhost", "root", "", "academico") or die("Erro de conexão!");
@@ -85,17 +95,18 @@ include_once "povoa_base.php";
                             mysqli_close($cnx);
                             ?>
                         </select>
-                        </fieldset>
+                        <label for="modal_input">Nome da Disciplina:</label>
                         <input class="modal_input" type="text" name="nome" placeholder="Disciplina" value="">
+                        <label for="modal_input">Horário total em Minutos:</label>
                         <input class="modal_input" type="number" name="min" placeholder="Carga Horária em Minutos"
                                value="">
-                        <input class="botoes" type="submit" value="Cadastar">
+                        <div class="botoes">
+                        <input id="btn_1" class="btn btn-default" type="submit" value="Cadastar">
+                        <button id ="btn_2" type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">Cancelar</button>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">
-                        Close
-                    </button>
                 </div>
             </div>
         </div>
@@ -103,7 +114,7 @@ include_once "povoa_base.php";
     <div class="modal fade" id="editardisc" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" id="cabecalho_modal">
                     <button type="button" class="close" data-dismiss="modal" onclick="location.reload(true);">&times;
                     </button>
                     <h2>Editar Disciplina</h2>
@@ -111,9 +122,6 @@ include_once "povoa_base.php";
                 <div class="modal-body" id="edita_modal">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">
-                        Close
-                    </button>
                 </div>
             </div>
         </div>

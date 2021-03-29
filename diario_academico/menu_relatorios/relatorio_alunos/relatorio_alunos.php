@@ -1,7 +1,10 @@
 <?php
 $cpf = $_GET["cpf"];
 $etapa = $_GET["etapa"];
-$mysqli = new mysqli("localhost", "root","123456", "academico");
+
+// $mysqli = new mysqli("localhost", "root","123456", "academico");
+include_once '../../lib/conexao.php';
+
 $aluno = getDados("SELECT * FROM alunos WHERE id=$cpf")[0];
 if($aluno == null){dadosincorretos();}
 $matriculas = getDados("SELECT * FROM matriculas WHERE id_alunos=".$aluno['id']);
@@ -96,8 +99,8 @@ foreach($conteudos as $conteudo){
 <?php
 function getDados(String $sql): ?array
 {
-    global $mysqli;
-    $result = $mysqli->query($sql);
+    global $conxexao;
+    $result = mysqli_query($conxexao,$sql);
     if($result == false){return null;}
     return mysqli_fetch_all($result, MYSQLI_BOTH);
 }
@@ -172,6 +175,10 @@ function dadosincorretos(){
         	</div>
 		<p id"nenhumResultado">Nenhum resultado para os dados inseridos.</p>
 	</main>
+    <footer>
+            <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+            <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
+        </footer>
 	</body>
 </html>';
     exit();

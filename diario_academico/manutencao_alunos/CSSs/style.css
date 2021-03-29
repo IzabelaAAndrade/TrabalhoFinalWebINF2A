@@ -271,7 +271,7 @@ form{
 }
 
 .botoes{
-    width: 49.5%;
+    width: 49%;
     height: 4vh;
     border-radius: .3em;
     border: 0;
@@ -337,4 +337,14 @@ textarea::placeholder{
 
 #UF, #radio{
     margin-bottom: 5%;
+}
+
+#perfil{
+    width: 150px;
+    margin-bottom: 40px;
+    border: solid 2px #457a9d;
+}
+
+#foto{
+    text-align: center;
 }
