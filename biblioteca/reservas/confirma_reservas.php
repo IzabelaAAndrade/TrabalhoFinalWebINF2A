@@ -72,7 +72,7 @@ session_start();
 
 
  mysqli_close($conexao); 
- //header("Location: reservas.php?data='". $data_disponivel ."'");
+ header("Location: reservas.php?data='". $data_disponivel ."'");
 
 
 ?> 
