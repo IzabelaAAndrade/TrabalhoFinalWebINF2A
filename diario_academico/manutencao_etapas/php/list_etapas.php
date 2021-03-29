@@ -24,9 +24,9 @@ if($result = mysqli_query($conn, $sql)) {
                     <td>'. $row[0] . '</td>
                     <td>' . $row[1] . '</td>
                     <td title="Excluir" class="icon-container">
-                        <div class="delete-btn" data-id="'.$row[0].'" data-valor="'.$row[1].'">
-                            <img class="table-icon" src="assets/img/excluir.svg">
-                        </div>
+                        <button class="btn delete-btn" data-id="'.$row[0].'" data-valor="'.$row[1].'">
+                            Excluir
+                        </button>
                     </td>
                 </tr>';
         }

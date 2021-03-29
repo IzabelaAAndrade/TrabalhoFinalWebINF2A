@@ -133,7 +133,7 @@ function requestDelete(id) {
 // Delete icons
 for(let btn of deleteBtns) {
     btn.addEventListener('click', function(e) {
-        requestDelete((e.target).parentElement.dataset.id);
+        requestDelete((e.target).dataset.id);
     });
 }
 
