@@ -48,13 +48,13 @@ const operation = {
                         `<div class="autor">
                             <h4>Autor ${i}:</h4>
                             <label for="id_autor${i}">Nome Autor: </label>
-                            <input class="texto" type="text" name="autor" id="id_autor${i}" maxlength="40">
+                            <input class="texto" type="text" name="autor[]" id="id_autor${i}" maxlength="40">
                             <label for="id_sobrenome${i}">Sobrenome: </label>
-                            <input class="texto" type="text" name="sobrenome" id="id_sobrenome${i}" maxlength="40">
+                            <input class="texto" type="text" name="sobrenome[]" id="id_sobrenome${i}" maxlength="40">
                             <label for="id_ordem${i}">Ordem: </label>
-                            <input class="texto" type="text" name="ordem" id="id_ordem${i}"  maxlength="20">
+                            <input class="texto" type="text" name="ordem[]" id="id_ordem${i}"  maxlength="20">
                             <label for="id_qualificacao${i}">Qualificação: </label>
-                            <input class="texto" type="text" name="qualificacao" id="id_qualificacao${i}" maxlength="20">
+                            <input class="texto" type="text" name="qualificacao[]" id="id_qualificacao${i}" maxlength="20">
                         </div>
                         `
                     );
@@ -88,13 +88,13 @@ const operation = {
                         `<div class="parte">
                             <h4>Parte ${i}:</h4>
                             <label for="id_titulo${i}">Titulo: </label>
-                            <input class="texto" type="text" name="titulo" id="id_titulo${i}" maxlength="40">
+                            <input class="texto" type="text" name="titulo[]" id="id_titulo${i}" maxlength="40">
                             <label for="id_inicio${i}">Pagina de Inicio: </label>
-                            <input class="texto" type="text" name="inicio" id="id_inicio${i}">
+                            <input class="texto" type="text" name="inicio[]" id="id_inicio${i}">
                             <label for="id_fim${i}">Pagina Final: </label>
-                            <input class="texto" type="text" name="fim" id="id_fim${i}">
+                            <input class="texto" type="text" name="fim[]" id="id_fim${i}">
                             <label for="id_chave${i}">Palavras-Chave: </label>
-                            <input class="texto" type="text" name="chave" id="id_chave${i}" maxlength="20">
+                            <input class="texto" type="text" name="chave[]" id="id_chave${i}" maxlength="20">
                         </div>`
 
                     );
