@@ -7,7 +7,7 @@ $resultado_alunos = mysqli_query($conexao,$query) or die("<div>Erro de conexão!
 
 echo "<div class='divTabela'><table>
         <thead>
-            <th>ID</th>
+            <th>CPF</th>
             <th>Nome</th>
             <th>Quantidade de matrículas</th>
             <th>Quantidade de reprovações</th>
