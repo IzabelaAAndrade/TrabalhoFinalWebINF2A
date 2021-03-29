@@ -9,12 +9,12 @@ const operation = {
             let geral = document.querySelector('#geral');
             let botoes = document.querySelector('#botoes');
             let fieldset = document.querySelector("#fieldset");
-            
+
             geral.classList.add('escondido');
             botoes.classList.add('escondido');
 
             for(let div of removeClass){
-                div.classList.add('escondido'); 
+                div.classList.add('escondido');
                 fieldset.classList.add('tamanho');
             }
 
@@ -23,14 +23,14 @@ const operation = {
                 geral.classList.remove('escondido');
                 for(let div of removeClass){
                     if(div.id === this.value.toLowerCase()){
-                        div.classList.remove('escondido');  
-                        fieldset.classList.remove('tamanho'); 
+                        div.classList.remove('escondido');
+                        fieldset.classList.remove('tamanho');
                     }
                 }
             }
-        }); 
+        });
 
-        //numero de autores ou partes 
+        //numero de autores ou partes
         let nAutores = document.querySelector('#id_autores');
         nAutores.addEventListener('change', function(){
             let secoes = document.querySelectorAll('.autor');
@@ -114,6 +114,28 @@ const operation = {
     },
 
     alterar() {
+      document.getElementById('tipos').addEventListener('change', function () {
+        let removeClass = document.querySelectorAll('.selecao');
+        let geral = document.querySelector('#geral');
+        let fieldset = document.querySelector("#fieldset");
+
+        geral.classList.add('escondido');
+
+        for(let div of removeClass){
+            div.classList.add('escondido');
+            fieldset.classList.add('tamanho');
+        }
+
+        if(this.value !== " "){
+            geral.classList.remove('escondido');
+            for(let div of removeClass){
+                if(div.id === this.value.toLowerCase()){
+                    div.classList.remove('escondido');
+                    fieldset.classList.remove('tamanho');
+                }
+            }
+        }
+      });
     },
 
     descarte() {
@@ -148,8 +170,8 @@ const operation = {
                 else if(this.status == 201 && this.readyState == 4) {
                     const response = JSON.parse(this.responseText);
                     const data = new Date(response.data_devolucao);
-                    errorMessage('O acervo ' + response.id + ' está emprestado no momento.' 
-                                + ' A data de devolução prevista é ' + formatDate(data.getDate()) + '/' + formatDate((data.getMonth()+1)) 
+                    errorMessage('O acervo ' + response.id + ' está emprestado no momento.'
+                                + ' A data de devolução prevista é ' + formatDate(data.getDate()) + '/' + formatDate((data.getMonth()+1))
                                 + '/' + data.getFullYear());
                 }
             }
@@ -179,7 +201,7 @@ function setupOperation() {
     //Seleciona as divs que contém o HTML de cada grupo, para alterar a classe ".escondido"
     let removeClass = document.querySelectorAll('.mudar');
     let fieldset = document.querySelector("#fieldset");
-    
+
     for(let div of removeClass){
         div.classList.add('escondido');
         fieldset.classList.add('tamanho');
