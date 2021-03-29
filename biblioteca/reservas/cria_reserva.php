@@ -164,8 +164,6 @@ include '../../sistema_login/verifica_login.php';
                     <h2>Editar Reservas</h2>
                 </div>
                 <div class="modal-body" id="altera_modal">
-                    //form alterar aqui
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">
