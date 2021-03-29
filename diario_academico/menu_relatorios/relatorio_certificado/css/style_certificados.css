@@ -133,13 +133,6 @@ nav{
     height: 1%;
 }
 
-#caixa {
-    text-align: center;
-    padding: 5px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 12pt;
-    margin-top: -5%;
-}
 #certificado {
     padding: 20px;
     padding-top: 40px;
@@ -164,10 +157,7 @@ a {
 
 table#tabela_disciplinas_cursadas{
     width: 45em;
-}
-
-#caixa{
-    margin: 1em;
+    margin: auto;
 }
 
 p.texto-certificado{
@@ -177,4 +167,12 @@ p.texto-certificado{
 
 nav{
     margin: 0px;
+}
+
+.divTabela{
+    width: 50em;
+}
+
+#imprimir{
+    width: 45em;
 }
