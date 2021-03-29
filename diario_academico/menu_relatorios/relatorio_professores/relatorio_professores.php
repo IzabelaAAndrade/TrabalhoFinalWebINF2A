@@ -53,7 +53,11 @@
 //Relação de professores por seleção de cursos, listando suas respectivas disciplinas e horas de trabalho
 $nome_curso = $_GET["curso"];
 $dados = false;
-$mysqli = new mysqli("localhost", "root", "123456", "academico");
+        
+// $mysqli = new mysqli("localhost", "root", "123456", "academico");
+include_once '../../lib/conexao.php';
+$mysqli = $conexao;
+        
 $id_curso = getDados("SELECT id FROM cursos WHERE nome='$nome_curso'")[0][0];
 if($id_curso != null){
     $dados = true;
