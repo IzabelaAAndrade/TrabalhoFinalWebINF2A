@@ -1,0 +1,82 @@
+#tabela {
+    margin: 10px  auto;
+    width: 50%;
+    border-collapse: collapse;
+    font-size: 1em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    min-width: 100px;
+}
+
+#tabela thead tr {
+    background-color: #e63946;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+#tabela th, td {
+    padding: 12px 15px;
+}
+
+#tabela tbody tr {
+    border-bottom: 1px solid #dddddddd;
+}
+
+#tabela tbody tr:nth-of-type(2n) {
+    background-color: #f3f3f3;
+}
+#tabela tbody tr:nth-of-type(2n) td {
+    font-weight: bold;
+    color: #e63946;
+}
+
+#tabela tbody tr:last-of-type {
+    border-bottom: 2px solid #e63946;
+}
+.btnAlterar{
+    color: black;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    background-color: #a8dadc;
+    cursor: pointer;
+    font-weight: normal;
+    border: solid #a8dadc 1px;
+    transition: .3s ease;
+}
+.btnDeletar{
+    color: black;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    background-color: #e63946;
+    cursor: pointer;
+    font-weight: normal;
+    border: solid #e63946 1px;
+    transition: .3s ease;
+}
+
+.btnAlterar:hover{
+    background-color: #78a2a3;
+    cursor:pointer;
+    border: solid #78a2a3 1px;
+}
+
+.btnDeletar:hover{
+    background-color: #ac2b29;
+    cursor:pointer;
+    border: solid #ac2b29 1px;
+} 
+
+#btnadd{
+  width: calc(50% + 52px);
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5px auto;
+  font-size: 1em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  min-width: 100px;
+  border-radius: 0.5em;
+}

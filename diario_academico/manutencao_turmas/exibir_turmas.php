@@ -7,13 +7,13 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/style_turmas.css">
-   <link rel = "stylesheet" href = "css/style_tabelas.css">
+   <link rel = "stylesheet" href = "css/tabela.css">
    <link rel = "stylesheet" href = "css/index.css">
     <title>Turmas</title>
 </head>
 <body>
   <header>
-    <img src="../img/LogoExemploCortado.png" alt="logo" id="logo">
+    <img src="img/sidaLogo.jpg" alt="logo" id="logo">
     <h1 id="titulo">Sistema Academico</h1>
   </header>
   <nav>
@@ -67,9 +67,9 @@
       $resultado1 = mysqli_query($conexao, $sql1);
       
       if (mysqli_num_rows($resultado1) > 0) {
-        $return = "<table><thead><th>ID Turma</th><th>Nome Turma</th><th>ID Curso</th><th></th><th></th></thead><tbody>";
+        $return = "<table id='tabela'><thead><th>ID Turma</th><th>Nome Turma</th><th>ID Curso</th><th></th><th></th></thead><tbody>";
         while($row = mysqli_fetch_array($resultado1)) {
-          $return .= "<tr><td id='campoId".$row['id']."'>".$row['id']."</td><td id='campoNome".$row['id']."'>".$row['nome']."</td><td>".$row['id_cursos']."</td><td><button id='btnEditar".$row['id']."' onclick='getIdTurma(".$row['id'].");' class='btnEditar btn btn-info btn-lg' data-toggle='modal' data-target='#alterarTurmaModal'>Editar</button></td><td><button id='btnDeletar".$row['id']."' class='btnDeletar btn btn-info btn-lg' data-toggle='modal' data-target='#deletarTurmaModal'>Deletar</button></td></tr>";        }
+          $return .= "<tr><td id='campoId".$row['id']."'>".$row['id']."</td><td id='campoNome".$row['id']."'>".$row['nome']."</td><td>".$row['id_cursos']."</td><td><button id='btnEditar".$row['id']."' onclick='getIdTurma(".$row['id'].");' class='btnAlterar btn btn-info btn-lg' data-toggle='modal' data-target='#alterarTurmaModal'>Editar</button></td><td><button id='btnDeletar".$row['id']."' class='btnDeletar btn btn-info btn-lg' data-toggle='modal' data-target='#deletarTurmaModal'>Deletar</button></td></tr>";        }
         $return .= "</tbody></table></div>";
       } else {
         $return = "Existem 0 turmas para esse curso";

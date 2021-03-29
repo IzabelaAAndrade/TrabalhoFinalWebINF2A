@@ -62,13 +62,13 @@ form{
     height: 4vh;
     border-radius: .3em;
     border: 0;
-    background-color: #e74946;
+    background-color: #457a9d;
     color: white;
     transition: .3s ease;
     
 }
 .botoes:hover{
-    background-color: #457a9d;
+    background-color: #e74946;
     cursor:pointer   
 }
 

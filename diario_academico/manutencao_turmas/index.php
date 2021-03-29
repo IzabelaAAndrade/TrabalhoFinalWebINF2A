@@ -29,12 +29,12 @@
    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/style_turmas.css">
    <link rel = "stylesheet" href = "css/index.css">
-   <link rel = "stylesheet" href = "css/style_tabelas.css">
+   <link rel = "stylesheet" href = "css/tabela.css">
    <title>Turmas | SIDA</title>
 </head>
 <body>
    <header>
-      <img src="../img/LogoExemploCortado.png" alt="logo" id="logo">
+      <img src="img/sidaLogo.jpg" alt="logo" id="logo">
       <h1 id="titulo">Sistema Academico</h1>
       <div id="divBuscaTurma">
    </div>
