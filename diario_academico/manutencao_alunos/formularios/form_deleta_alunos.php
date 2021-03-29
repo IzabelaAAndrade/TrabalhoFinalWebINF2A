@@ -23,7 +23,7 @@ session_start();
 
 <body>
   <header>
-    <img src="../CSSs/img/LogoExemploCortado.png" alt="logo" id="logo">
+    <img src="../CSSs/img/logo.jpg" alt="logo" id="logo">
     <h1 id="titulo">Sistema Diário Acadêmico</h1>
   </header>
   <nav>
