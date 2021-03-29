@@ -1,5 +1,6 @@
 <?php
-session_start();
+  @session_start();
+  include '../../sistema_login/verifica_login.php';
 ?>
 
 <html lang="pt-br">
@@ -18,6 +19,12 @@ session_start();
   <header>
     <img src="../../imgs/sidaLogo.jpg" alt="logo" id="logo">
     <h1 id="titulo">Sistema Diário Acadêmico</h1>
+    <div id="dados_user">
+      <div id="aux">
+        <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
+        <h2 id="sair"><a href="../../sistema_login/logout.php">Sair</a></h2>
+      </div>
+    </div>
   </header>
   <nav>
   <ul class="menu">
