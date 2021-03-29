@@ -93,7 +93,7 @@ session_start();
             <label>Foto: <input class="texto" type="file" class="entrada" name="foto" id="foto" /></label><br>
 
             <?php
-            if($dados['foto']!=""){
+            if ($dados['foto'] != "") {
               $url = "../../imagens/" . $dados['foto'];
               echo "<div id='foto'><img id='perfil' src='$url'></img></div>";
             }
@@ -113,7 +113,7 @@ session_start();
   </main>
 
   <footer>
-    <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+    <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
     <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
   </footer>
 
