@@ -36,7 +36,7 @@ session_start();
           <li><a href="../../manutencao_departamentos/">Departamentos</a></li>
           <li><a href="../../manutencao_cursos/">Cursos</a></li>
           <li><a href="../../manutencao_turmas/">Turmas</a></li>
-          <li><a href="#">Alunos</a></li>
+          <li><a href="../">Alunos</a></li>
           <li><a href="../../manutencao_professores/">Professores</a></li>
           <li><a href="../../manutencao_disciplinas/">Disciplinas</a></li>
           <li><a href="../../manutencao_etapas/">Etapas</a></li>
