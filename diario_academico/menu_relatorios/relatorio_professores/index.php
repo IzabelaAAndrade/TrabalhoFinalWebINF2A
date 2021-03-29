@@ -5,13 +5,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu de Relatórios - Relatório de Alunos</title>
+        <title>Menu de Relatórios - Relação de Professores | SIDA</title>
         <link rel="stylesheet" href="../css_relatorios/index.css">
         <link rel="stylesheet" href="../css_relatorios/style_inputs_botoes.css">
-        <link rel="stylesheet" href="css/style_relatorio_alunos.css">
         <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style_relatorio_professores.css">
     </head>
     <body>
         <header>
@@ -35,13 +35,13 @@
                         <li><a href="../../manutencao_diarios/index.html">Diários</a></li>
                     </ul>
                 </li>
-                <li><a href="../index.html">Relatórios</a>
+                <li><a href="../index.php">Relatórios</a>
                     <ul class="sub_menu">
-                        <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
-                        <li><a href="../relatorio_historico/index.html">Histórico por Aluno e Turma</a></li>
-                        <li><a href="index_relatorio_aluno.html">Relação de Alunos</a></li>
+                        <li><a href="../relatorio_certificado/index.php">Certificados</a></li>
+                        <li><a href="../relatorio_certificado/index.php">Histórico por Aluno e Turma</a></li>
+                        <li><a href="../relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
                         <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
-                        <li><a href="../relatorio_professores/index.html">Relação de Professores</a></li> 
+                        <li><a href="index.php">Relação de Professores</a></li> 
                     </ul>
                 </li>
                 <li><a href="../../transferencia_alunos/index.php">Transferências</a></li>
@@ -49,13 +49,12 @@
         </nav>
         <main>
             <div id="cabecalho">
-                <p><a href="../">Menu de Relatórios</a> > <a  href="index_relatorio_aluno.html">Relação de Alunos</a></p>
-                <h1 class="principal">Relação de Alunos</h1>
+                <p><a href="../">Menu de Relatórios</a> > <a href="index.php">Relação de Professores</a></p>
+                <h1 class="principal">Relação de Professores</h1>
             </div>
-
-            <form method="GET" action="relatorio_alunos.php">
-                <p><input id="cpf" name="cpf" type="text" placeholder="ID do aluno"></p>
-                <p><input id="etapa"  name="etapa" type="number" placeholder="Etapa"></p>
+            <p id="instrucao">Busque pelo nome do curso para obter o relatório de professores</p>
+            <form method="GET" action="relatorio_professores.php">
+                <p><input name="curso" type="text" placeholder="Nome do curso"></p>
                 <input id="botao-enviar" type="submit">
             </form>
         </main>

@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu de Relatórios - Relação de Professores</title>
+        <title>Menu de Relatórios - Relação de Professores | SIDA</title>
         <link rel="stylesheet" href="../css_relatorios/index.css">
         <link rel="stylesheet" href="../css_relatorios/style_inputs_botoes.css">
         <link rel="stylesheet" href="css/style_relatorio_professores.css">
@@ -36,13 +36,13 @@
                         <li><a href="../../manutencao_diarios/index.html">Diários</a></li>
                     </ul>
                 </li>
-                <li><a href="../index.html">Relatórios</a>
+                <li><a href="../index.php">Relatórios</a>
                     <ul class="sub_menu">
-                        <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
-                        <li><a href="../relatorio_certificado/index.html">Histórico por Aluno e Turma</a></li>
-                        <li><a href="../relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                        <li><a href="../relatorio_certificado/index.php">Certificados</a></li>
+                        <li><a href="../relatorio_certificado/index.php">Histórico por Aluno e Turma</a></li>
+                        <li><a href="../relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
                         <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
-                        <li><a href="index.html">Relação de Professores</a></li> 
+                        <li><a href="index.php">Relação de Professores</a></li> 
                     </ul>
                 </li>
                 <li><a href="../../transferencia_alunos/index.php">Transferências</a></li>
@@ -73,7 +73,7 @@ if($id_curso != null){
 }
 ?>
     <div id="cabecalho">
-        <p><a href="../">Menu de Relatórios</a> > <a href="index.html">Relação de Professores</a></p>
+        <p><a href="../">Menu de Relatórios</a> > <a href="index.php">Relação de Professores</a></p>
         <h1 class="principal">Relação de Professores</h1>
     </div>
     <?php

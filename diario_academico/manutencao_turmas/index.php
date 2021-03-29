@@ -30,7 +30,7 @@
    <link rel="stylesheet" href="css/style_turmas.css">
    <link rel = "stylesheet" href = "css/index.css">
    <link rel = "stylesheet" href = "css/tabela.css">
-   <title>Turmas | SIDA</title>
+   <title>Manutenção de Turmas | SIDA</title>
 </head>
 <body>
    <header>
@@ -57,13 +57,13 @@
                <li><a href="../manutencao_diarios/index.html">Diários</a></li>
             </ul>
          </li>
-         <li><a href="../menu_relatorios/index.html">Relatórios</a>
+         <li><a href="../menu_relatorios/index.php">Relatórios</a>
             <ul class="sub_menu">
-               <li><a href="../menu_relatorios/relatorio_certificado/index.html">Certificados</a></li>
-               <li><a href="../menu_relatorios/relatorio_certificado/index.html">Histórico por Aluno e Turma</a></li>
-               <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+               <li><a href="../menu_relatorios/relatorio_certificado/index.php">Certificados</a></li>
+               <li><a href="../menu_relatorios/relatorio_certificado/index.php">Histórico por Aluno e Turma</a></li>
+               <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
                <li><a href="../menu_relatorios/relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
-               <li><a href="../menu_relatorios/manutencao_professores/index.html">Relação de Professores</a></li> 
+               <li><a href="../menu_relatorios/manutencao_professores/index.php">Relação de Professores</a></li> 
             </ul>
          </li>
          <li><a href="../transferencia_alunos/index.php">Transferências</a></li>

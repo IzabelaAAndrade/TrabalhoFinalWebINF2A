@@ -22,7 +22,7 @@ foreach($conteudos as $conteudo){
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu de Relatórios - Relação de Alunos</title>
+        <title>Menu de Relatórios - Relação de Alunos | SIDA</title>
         <link rel="stylesheet" href="../css_relatorios/index.css">
         <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
         <link rel="stylesheet" href="../css_relatorios/style_tabelas.css">
@@ -52,13 +52,13 @@ foreach($conteudos as $conteudo){
                     <li><a href="../../manutencao_diarios/index.html">Diários</a></li>
                 </ul>
             </li>
-            <li><a href="../index.html">Relatórios</a>
+            <li><a href="../index.php">Relatórios</a>
                 <ul class="sub_menu">
-                    <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
-                    <li><a href="../relatorio_historico/index.html">Histórico por Aluno e Turma</a></li>
-                    <li><a href="index_relatorio_aluno.html">Relação de Alunos</a></li>
+                    <li><a href="../relatorio_certificado/index.php">Certificados</a></li>
+                    <li><a href="../relatorio_historico/index.php">Histórico por Aluno e Turma</a></li>
+                    <li><a href="index_relatorio_aluno.php">Relação de Alunos</a></li>
                     <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
-                    <li><a href="../relatorio_professores/index.html">Relação de Professores</a></li> 
+                    <li><a href="../relatorio_professores/index.php">Relação de Professores</a></li> 
                 </ul>
             </li>
             <li><a href="../../transferencia_alunos/index.php">Transferências</a></li>
@@ -66,7 +66,7 @@ foreach($conteudos as $conteudo){
         </nav>
     <main>
         <div id="cabecalho">
-            <p id="endereco"><a href="../">Menu de Relatórios</a> > <a href="index_relatorio_aluno.html">Relação de Alunos</a></p>
+            <p id="endereco"><a href="../">Menu de Relatórios</a> > <a href="index_relatorio_aluno.php">Relação de Alunos</a></p>
             <h1 class="principal">Relação de Alunos</h1>
         </div>
         <div class="divTabela">

@@ -7,13 +7,11 @@
         <title>Manutenção Acervo</title>
         <link rel="stylesheet" href="../css_relatorios/index.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="css/style_historico.css">
+        <link rel="stylesheet" href="css/style_certificados.css">
         <link rel="stylesheet" href="../css_relatorios/style_tabelas.css">
         <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
-        <link rel="stylesheet" href="../css_relatorios/style_inputs_botoes.css">
-
-    	<title>Menu de Relatórios - Histórico por Aluno e Turma</title>
-	</head>
+    <title>Menu de Relatórios - Certificados | SIDA</title>
+</head>
 <body>
     <header>
         <img src="../sidaLogo.jpg" alt="logo" id="logo">
@@ -36,13 +34,13 @@
                     <li><a href="../../manutencao_diarios/index.html">Diários</a></li>
                 </ul>
             </li>
-            <li><a href="../index.html">Relatórios</a>
+            <li><a href="../index.php">Relatórios</a>
                 <ul class="sub_menu">
-                    <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
-                    <li><a href="index.html">Histórico por Aluno e Turma</a></li>
-                    <li><a href="../relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                    <li><a href="index.php">Certificados</a></li>
+                    <li><a href="../relatorio_historico/index.php">Histórico por Aluno e Turma</a></li>
+                    <li><a href="../relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
                     <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
-                    <li><a href="../relatorio_professores/index.html">Relação de Professores</a></li> 
+                    <li><a href="../relatorio_professores/index.php">Relação de Professores</a></li> 
                 </ul>
             </li>
             <li><a href="../../transferencia_alunos/index.php">Transferências</a></li>
@@ -50,22 +48,44 @@
     </nav>
     <main>
         <div id="cabecalho">
-            <p><a href="../">Menu de Relatórios</a> > <a href="index.html">Histórico por Aluno e Turma</a></p>
-            <h1 class="principal">Histórico por Aluno e Turma</h1>
-		</div>
-		<p id="instrucao">Insira os dados para gerar o relatório</p>
+            <p><a href="../">Menu de Relatórios</a> > <a href="index.php">Certificados</a></p>
+            <h1 class="principal">Certificados</h1>
+        </div>
 
-		<form action="historico.php">
-			<input name="nome" type="text" placeholder="Nome do aluno">
-			<input name="turma" type="text" placeholder="Nome da turma">
-			<input name="disciplina" type="text" placeholder="Nome da disciplina">
-			<input id="botao-enviar" type="submit" value="Enviar">
-		</form>
-		
+        <div id="main">
+            <div id="opcoes">
+            </div>
+            
+            <div id="middle">
+                <div id="filtro" class="solid hidden">
+                    <div id="filtro_container">
+                    </div>
+                    <div id="actions">
+                        <div id="reset" class="solid btn">
+                            Reset
+                        </div>
+                        <div id="aplicar" class="solid btn">
+                            Aplicar
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="resultado" class="solid">
+                    <div id="resultado_container">
+                    </div>
+                    <div id="resultado_actions">
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
     <footer>
         <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
         <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
     </footer>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="ajax.js"></script>
 </body>
 </html>
