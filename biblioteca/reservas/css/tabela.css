@@ -10,7 +10,7 @@
 }
 
 #tabela thead tr {
-    background-color: #e63946;
+    background-color: #264653;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -29,11 +29,11 @@
 }
 #tabela tbody tr:nth-of-type(2n) td {
     font-weight: bold;
-    color: #e63946;
+    color: #264653;
 }
 
 #tabela tbody tr:last-of-type {
-    border-bottom: 2px solid #e63946;
+    border-bottom: 2px solid #264653;
 }
 .btnAlterar{
     color: black;

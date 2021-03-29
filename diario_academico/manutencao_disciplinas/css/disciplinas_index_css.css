@@ -40,12 +40,28 @@ body {
     margin: 0%;
 }
 
-.msg_succes {
+.msg-data{
     border-radius: 0.5em;
     height: 8vh;
     width: 30vw;
     margin: 10px;
     padding: 10px;
+    background-color: #f8da93;
+    border: 1px solid #eebc45;
+}
+
+.msg-data > p{
+    text-align: center;
+    color: orange;
+    margin: 0%;
+}
+
+.msg_succes {
+    border-radius: 0.5em;
+    height: 15vh;
+    width: 30vw;
+    margin: 10px;
+    padding: 12px;
     background-color: rgba(50, 205, 50, .3);
     border: 1px solid rgb(34, 139, 34);
 }

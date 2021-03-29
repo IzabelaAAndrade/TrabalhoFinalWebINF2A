@@ -8,7 +8,7 @@ $nome_db = "biblioteca";
 $povoa_tabelas = "povoa_tabelas.sql";
 
 if(empty($_POST['estimativa_reserva'])){
-    $_SESSION['confirma'] = 5;
+    $_SESSION['confirma'] = 4;
     header("Location: cria_reserva.php");
     exit();
 }
