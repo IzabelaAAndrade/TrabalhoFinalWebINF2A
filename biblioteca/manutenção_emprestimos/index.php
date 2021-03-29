@@ -23,7 +23,7 @@
                 if($result != false){
                     $returnEmprestimos = "";
                     while($row = mysqli_fetch_assoc($result)){
-                        $returnEmprestimos .= $row['id'].",".$row['id_alunos'].",".$row['id_acervo'].",".$row['data_emprestimo'].",".$row['data_prev_devol'].",".$row['data_devolucao'].",".$row['multa'].",";
+                        $returnEmprestimos .= $row['Id'].",".$row['Id_alunos'].",".$row['Id_acervo'].",".$row['Data_emprestimo'].",".$row['Data_prev_devol'].",".$row['Data_devolucao'].",".$row['Multa'].",";
                     }
                 }else{
                     $returnEmprestimos = "Nenhum empréstimo.";
@@ -102,7 +102,7 @@
             <div class="modal-content">
               <div class="modal-header" id="cabecalho_modal">
                 <h5 class="modal-title" id="exampleModalLabel">Cadastro de Empréstimos</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close" onclick="location.reload(true);"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close" onclick="location.reload();"></button>
               </div>
               <div class="modal-body">
                 <div class="campos">
@@ -153,7 +153,7 @@
             <div class="modal-content">
               <div class="modal-header" id="cabecalho_modal">
                 <h5 class="modal-title" id="exampleModalLabel">Devolução</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="location.reload(true);"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="location.reload();"></button>
               </div>
               <div class="modal-body">
                 

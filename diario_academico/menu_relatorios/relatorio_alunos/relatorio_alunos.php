@@ -22,7 +22,7 @@ foreach($conteudos as $conteudo){
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manutenção Acervo</title>
+        <title>Menu de Relatórios - Relação de Alunos</title>
         <link rel="stylesheet" href="../css_relatorios/index.css">
         <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
         <link rel="stylesheet" href="../css_relatorios/style_tabelas.css">
@@ -32,7 +32,7 @@ foreach($conteudos as $conteudo){
     </head>
     <body>
         <header>
-            <img src="img/LogoExemploCortado.png" alt="logo" id="logo">
+            <img src="../sidaLogo.jpg" alt="logo" id="logo">
             <h1 id="titulo">Sistema Diário Acadêmico</h1>
         </header> 
         <nav>
@@ -115,7 +115,7 @@ function dadosincorretos(){
 		<meta charset="UTF-8">
         	<meta http-equiv="X-UA-Compatible" content="IE=edge">
         	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        	<title>Manutenção Acervo</title>
+        	<title>Menu de Relatórios - Relação de Alunos</title>
         	<link rel="stylesheet" href="../css_relatorios/index.css">
         	<link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
         	<link rel="stylesheet" href="../css_relatorios/style_tabelas.css">

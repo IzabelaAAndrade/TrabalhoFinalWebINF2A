@@ -127,12 +127,6 @@ h1, h3{
     background-color: black;
 }
 
-nav{
-    margin-bottom: 3%;
-    margin: 3%;
-    height: 1%;
-}
-
 #certificado {
     padding: 20px;
     padding-top: 40px;
@@ -163,10 +157,6 @@ table#tabela_disciplinas_cursadas{
 p.texto-certificado{
     margin: 1em;
     color: #1D3556;
-}
-
-nav{
-    margin: 0px;
 }
 
 .divTabela{
