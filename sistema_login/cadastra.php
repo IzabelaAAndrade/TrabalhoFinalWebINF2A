@@ -57,11 +57,11 @@ use PHPMailer\PHPMailer\Exception;
             $configuracoes_email->isSMTP();
             $configuracoes_email->Host = 'smtp.gmail.com';
             $configuracoes_email->SMTPAuth = true;
-            $configuracoes_email->Username = 'gerenciawebinf2a@gmail.com';
-            $configuracoes_email->Password = 'IsaacIzabelaMarcela';
+            $configuracoes_email->Username = 'contatosidaesora@gmail.com';
+            $configuracoes_email->Password = 'Tp@final12';
             $configuracoes_email->Port = 587;
 
-            $configuracoes_email->setFrom('gerenciawebinf2a@gmail.com', "SIDA & SORA");
+            $configuracoes_email->setFrom('contatosidaesora@gmail.com', "SIDA & SORA");
             $configuracoes_email->addAddress($email);
 
             $configuracoes_email->isHTML(true);
