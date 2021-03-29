@@ -1,4 +1,4 @@
-:root {
+/*:root {
     --header-height: 15vh;
 }
 
@@ -14,31 +14,19 @@ body {
 /* Header/Footer ****************************************************************/
 
 header, footer {
-    position: absolute;
-    left: 0;
     box-sizing: border-box;
     width: 100%;
     background-color: #264653;
-    height: var(--header-height);
-}
-
-header{
-    top: 0;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin: 0;    
+    height: 9em;
 }
 
 footer{
-    bottom: 0;
     padding: 3%;
-    display: block;
 }
 
 #titulo{
-    display: inline;
-    padding-top: 50px;
+    padding-top: 55px;
+    padding-bottom: 45px;
     margin-left: 20px;
 }
 
@@ -46,10 +34,15 @@ footer{
     text-align: center;
 }
 
+h3{
+    text-align: center;
+}
+
 /* Imagens ****************************************************************/
 #logo{
-    margin: 0;
-    height: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 7em;
     float: left;
 }
 /* Menu ****************************************************************/
@@ -117,4 +110,8 @@ li a{
 .menu li ul li{
     display:block;
     width:200px;
+}
+
+h1, h3, p {
+    margin: 0;
 }
