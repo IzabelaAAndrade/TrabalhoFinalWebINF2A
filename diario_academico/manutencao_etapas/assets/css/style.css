@@ -147,7 +147,7 @@ legend {
     width: 100%;
 }
 
-table {
+/* table {
     width: 100%;
     border-collapse: collapse;
 }
@@ -176,6 +176,46 @@ th, td {
 .table-icon {
     width: 18px;
     height: 18px;
+} */
+
+table {
+    margin: 10px  auto;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    min-width: 100px;
+}
+
+table thead tr {
+    background-color: var(--blue);
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddddd;
+}
+
+table tbody tr:nth-of-type(2n) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:nth-of-type(2n) td {
+    font-weight: bold;
+    color: var(--red);
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--blue);
 }
 
 .btns {
@@ -202,6 +242,30 @@ th, td {
     color: var(--blue);
     background-color: #fff;
     border: 1px solid var(--blue);
+}
+
+.edit-btn {
+    color: black;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    background-color: #a8dadc;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.delete-btn {
+    padding: 0.2em;
+    border-radius: 0.5em;
+    border: 1px solid var(--red);
+    background-color: var(--red);
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.delete-btn:hover {
+    color: var(--red);
+    background: #fff;
+    border: 1px solid var(--red);
 }
 
 /* FORMULÁRIOS */
