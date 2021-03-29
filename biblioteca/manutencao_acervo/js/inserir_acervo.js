@@ -166,6 +166,7 @@ const operation = {
                     successMsg.innerHTML = 'Acervo descartado com sucesso :)';
                     successMsg.classList.add('success-msg')
                     formContainerEl.appendChild(successMsg);
+                    setTimeout(() => { location.reload() }, 2000);
                 }
                 else if(this.status == 201 && this.readyState == 4) {
                     const response = JSON.parse(this.responseText);
