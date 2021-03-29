@@ -37,11 +37,18 @@
 
         $query = "SELECT * FROM diario WHERE id_matriculas=$id_matricula";
         $resultado_diario = mysqli_query($conexao,$query) or die("<div class='alert alert-danger' role='alert'>Erro de conexão!</div>");
-        $row_diario = mysqli_fetch_array($resultado_diario);
-        $nota = $row_diario['nota'];
-        $faltas = $row_diario['faltas'];
-        echo "<td>$nota</td>";
-        echo "<td>$faltas</td></tr>";
+        $num_diario = mysqli_num_rows($resultado_diario);
+        if($num_diario==1){
+            $row_diario = mysqli_fetch_array($resultado_diario);
+            $nota = $row_diario['nota'];
+            $faltas = $row_diario['faltas'];
+            echo "<td>$nota</td>";
+            echo "<td>$faltas</td></tr>";
+        } else {
+            echo "<td>Nota Indisponível.</td>";
+            echo "<td>Frequência Indisponível.</td></tr>";
+        }
+        
 
     }
 
