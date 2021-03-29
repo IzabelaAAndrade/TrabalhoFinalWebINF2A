@@ -19,7 +19,7 @@ include '../sistema_login/verifica_login.php';
     <body>
         <header>
             <img src="../imgs/soraLogo.jpg" alt="logo" id="logo">
-            <h1 id="titulo">Sistema de Diário Acadêmico</h1>
+            <h1 id="titulo">Sistema de Organização de Acervo</h1>
             <div id="dados_user">
                 <div id="aux">
                     <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
@@ -492,3 +492,4 @@ include '../sistema_login/verifica_login.php';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
+
