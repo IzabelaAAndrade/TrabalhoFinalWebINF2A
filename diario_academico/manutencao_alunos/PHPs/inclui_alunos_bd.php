@@ -65,7 +65,10 @@ else {
               VALUES (\"$cpf\", \"$nome\", \"$sexo\", \"$data_nasc\", \"$logradouro\", $numero,
                   \"$complemento\", \"$bairro\", \"$cidade\", \"$cep\", \"$uf\", \"$email\", \"$caminho_foto\")";
 
-  if (mysqli_query($conexao, $aluno))
+  $matricula = "INSERT INTO matriculas (id_alunos, id_disciplinas, ano, ativo)
+                VALUES ('$cpf', '0000', '2021', 'S')";
+
+  if (mysqli_query($conexao, $aluno) && mysqli_query($conexao, $matricula))
     $_SESSION['insere_true'] = "Aluno inserido com sucesso!";
   else
     die("Erro: " . mysqli_error($conexao));
