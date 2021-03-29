@@ -130,7 +130,7 @@ $_SESSION['tableIsReady'] = true;
 
 //Cria uma tabela a partir de um array na estrutura de $table_data, que pode ser vista acima
 function build_table($table_data) {
-    $tabela = '<table border="1">
+    $tabela = '<table>
         <thead>
         <tr>';
     foreach($table_data[0] as $col => $row) {
