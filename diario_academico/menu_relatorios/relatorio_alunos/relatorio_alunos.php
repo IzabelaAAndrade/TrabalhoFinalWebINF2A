@@ -47,7 +47,7 @@ foreach($conteudos as $conteudo){
                     <li><a href="../../manutencao_turmas/index.php">Turmas</a></li>
                     <li><a href="../../manutencao_alunos/index.php">Alunos</a></li>
                     <li><a href="../../manutencao_professores/index.html">Professores</a></li>
-                    <li><a href="../../manutencao_disciplinas/">Disciplinas</a></li>
+                    <li><a href="../../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
                     <li><a href="../../manutencao_etapas/index.php">Etapas</a></li>
                     <li><a href="../../manutencao_diarios/index.html">Diários</a></li>
                 </ul>
