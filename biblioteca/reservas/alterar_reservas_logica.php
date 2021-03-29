@@ -20,13 +20,13 @@ $row_itens = mysqli_num_rows($resultado_itens);
 if($row_alunos > 0){
     $_SESSION['confirma'] = 1;
 }else if($row_itens > 0){
-    $verifica_reserva = "SELECT * FROM reservas WHERE id_acervo = \"".$itens[0]."\"";
+    $verifica_reserva = "SELECT * FROM reservas WHERE id_acervo = '$id_acervo'";
     $tem_reserva =  mysqli_fetch_all($resultado_itens, 1); // Caso tenham reservas, $tem_reserva >0
     if(sizeof($tem_reserva) > 0){
         //última reserva em segundos
         $ultima_reserva_segundos = strtotime($tem_reserva[sizeof($tem_reserva)-1]['data_reserva']);
         $data_disponivel_segundos = $ultima_reserva_segundos+604800;
-        $data_desejada_segundos = strtotime($data);
+        $data_desejada_segundos = strtotime($data_reserva);
         if($data_desejada_segundos<$data_disponivel_segundos){
             $data_disponivel = date('d/m/Y', $data_disponivel_segundos);
             $_SESSION['confirma'] = 2;
