@@ -1,8 +1,8 @@
 <?php
-    include 'conexao.php';
+      include '../lib/conexao.php';
     
     if(!empty($_POST['nomeTurma']) && !empty($_POST['idCurso'])){
-        $sqlResult = mysqli_query($connection,"SELECT MAX(id) FROM turmas");
+        $sqlResult = mysqli_query($conexao,"SELECT MAX(id) FROM turmas");
         $row = mysqli_fetch_row($sqlResult);
         $id_turma = intval($row[0]);
         $id_turma++;
@@ -11,7 +11,7 @@
         $id_curso = filter_input(INPUT_POST, 'idCurso', FILTER_SANITIZE_SPECIAL_CHARS);
 
         /*Confere se o nome já está sendo utilizado*/ 
-        if(mysqli_num_rows(mysqli_query($connection, "SELECT nome FROM turmas WHERE nome='$nome_turma'"))==0){
+        if(mysqli_num_rows(mysqli_query($conexao, "SELECT nome FROM turmas WHERE nome='$nome_turma'"))==0){
             $bool = true;
             
         }else{
@@ -19,7 +19,7 @@
         }
 
         /*Confere se o curso existe*/ 
-        if(mysqli_num_rows(mysqli_query($connection, "SELECT id FROM cursos WHERE id=$id_curso"))>0){
+        if(mysqli_num_rows(mysqli_query($conexao, "SELECT id FROM cursos WHERE id=$id_curso"))>0){
             $bool1 = true;
 
         }else{
@@ -28,7 +28,7 @@
 
         if($bool && $bool1){
             $sql = "INSERT INTO turmas (id, id_cursos, nome) VALUES ($id_turma, $id_curso, '$nome_turma')";    
-            $result = mysqli_query($connection, $sql);
+            $result = mysqli_query($conexao, $sql);
 
             if($result!=false){                
                 $return = "Turma criada com sucesso.";
@@ -50,5 +50,5 @@
         echo "Preencha todos os dados.";
     }
         
-    mysqli_close($connection);
+    mysqli_close($conexao);
 ?>

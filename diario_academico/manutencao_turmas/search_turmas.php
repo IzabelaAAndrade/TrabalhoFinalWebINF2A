@@ -1,10 +1,10 @@
 <?php
-  include 'conexao.php';
+  include '../lib/conexao.php';
 
   if(isset($_POST['busca'])){
     $search = $_POST['busca'];
     $sql = "SELECT * FROM turmas WHERE id LIKE '%$search%' OR nome LIKE '%$search%'";
-    $resultado = mysqli_query($connection, $sql);
+    $resultado = mysqli_query($conexao, $sql);
     $queryResultado = mysqli_num_rows($resultado);
 
     $return = "<p id='numResultadosBusca'>Existe(m) ".$queryResultado." resultado(s) para sua pesquisa.</p>";
@@ -22,5 +22,5 @@
 
     echo $return;
   }
-  mysqli_close($connection);
+  mysqli_close($conexao);
 ?>

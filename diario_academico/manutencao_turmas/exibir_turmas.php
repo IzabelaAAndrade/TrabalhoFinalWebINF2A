@@ -50,11 +50,11 @@
 <main>
   <div>
     <?php
-      include 'conexao.php';
-      global $connection;
+      include '../lib/conexao.php';
+      global $conexao;
 
       $sql = "SELECT id, nome FROM cursos WHERE id = '".$_GET['id']."'";
-      $resultado = mysqli_query($connection, $sql);
+      $resultado = mysqli_query($conexao, $sql);
       $row = mysqli_fetch_array($resultado);
       echo "<p class='pSimples'><a href='index.php'>Manutenção de Turmas</a> > Turmas de ".$row['nome']."</p>";
       echo "<h1 class='principal'>Manutenção de Turmas</h1>";
@@ -66,7 +66,7 @@
       $get = $_GET['id'];
 
       $sql1 = "SELECT id, id_cursos, nome FROM turmas WHERE id_cursos = '".$_GET['id']."'";
-      $resultado1 = mysqli_query($connection, $sql1);
+      $resultado1 = mysqli_query($conexao, $sql1);
       
       if (mysqli_num_rows($resultado1) > 0) {
         $return = "<table><thead><th>ID Turma</th><th>Nome Turma</th><th>ID Curso</th><th></th><th></th></thead><tbody>";
@@ -78,7 +78,7 @@
       }
 
       echo $return;
-      mysqli_close($connection);
+      mysqli_close($conexao);
     ?>
   </div>
 
