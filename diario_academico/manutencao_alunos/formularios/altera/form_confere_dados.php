@@ -44,7 +44,6 @@ session_start();
             </li>
             <li><a href="../../../menu_relatorios/">Relatórios</a></li>
             <li><a href="../../../transferencia_alunos/">Transferências</a></li>
-            <li><a href="#">Ajuda</a></li>
         </ul>
     </nav>
 
