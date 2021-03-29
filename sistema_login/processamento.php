@@ -13,7 +13,7 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
     exit();
 }
 
-$conexao = mysqli_connect(HOST, USUARIO, SENHA) or die("Não foi possivel conectar");
+$conexao = mysqli_connect(HOST, USUARIO, SENHA, DB) or die("Não foi possivel conectar");
 $email = mysqli_real_escape_string($conexao, $_POST['email']); #evitar hacker
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 $query = "SELECT id_usuario, nome, email FROM usuarios WHERE email = '$email' AND senha = md5('$senha')";
@@ -33,3 +33,4 @@ if ($row == 1) {
 }
 
 ?>
+
