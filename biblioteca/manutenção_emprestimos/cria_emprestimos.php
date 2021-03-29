@@ -53,8 +53,8 @@ function verifica_disponibilidade_acervo(){
 	$linhas=mysqli_num_rows($resultado);
 	if($linhas>0){
 		$registro = mysqli_fetch_array($resultado);
-		$usuario_em_posse = $registro["id_alunos"];
-		$data_prev_devol = $registro["data_prev_devol"];
+		$usuario_em_posse = $registro["Id_alunos"];
+		$data_prev_devol = $registro["Data_prev_devol"];
 		$data_prev_devol = formata_data($data_prev_devol);
 		exit("<div class='alert alert-danger' role='alert'>Erro! O item $id_acervo já se encontra emprestado para o usuário $usuario_em_posse, com data prevista de devolução para $data_prev_devol. <a href=''>Fazer Reserva</a>.</div>");
 	}
@@ -74,7 +74,11 @@ formata_data($data_emprestimo);
 $query = "INSERT INTO emprestimos (id_alunos, id_acervo, data_emprestimo, data_prev_devol) VALUES ('$id_aluno', '$id_acervo', '$data_emprestimo', '$data_prev_devol')";
 $resultado = mysqli_query($conexao,$query) or die("<div class='alert alert-danger' role='alert'>Erro de conexão!</div>");
 if($resultado!=null){
-	echo "<div class='alert alert-success' role='alert'>Sucesso! Livro $id_acervo emprestado para $nome_usuario.</div>";
+	$query = "SELECT * FROM acervo WHERE id = $id_acervo";
+	$resultado = mysqli_query($conexao,$query) or die("<div class='alert alert-danger' role='alert'>Erro de conexão!</div>");
+	$registro = mysqli_fetch_array($resultado);
+	$nome_acervo = $registro["nome"];
+	echo "<div class='alert alert-success' role='alert'>Sucesso! Livro $nome_acervo emprestado para $nome_usuario.</div>";
 }
 
 

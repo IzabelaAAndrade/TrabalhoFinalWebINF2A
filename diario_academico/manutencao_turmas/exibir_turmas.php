@@ -7,45 +7,43 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/style_turmas.css">
-   <link rel = "stylesheet" href = "css/style_tabelas.css">
+   <link rel = "stylesheet" href = "css/tabela.css">
    <link rel = "stylesheet" href = "css/index.css">
-    <title>Turmas</title>
+   <title>Manutenção de Turmas | SIDA</title>
 </head>
 <body>
   <header>
-    <img src="../img/LogoExemploCortado.png" alt="logo" id="logo">
+    <img src="img/sidaLogo.jpg" alt="logo" id="logo">
     <h1 id="titulo">Sistema Academico</h1>
   </header>
   <nav>
-         <ul class="menu" >
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Manutenção</a>
-                <ul class="sub_menu">
-                    <li><a href="../campi/campi.php">Campi</a></li>
-                    <li><a href="../manutencao_departamentos/departamentos.html">Departamentos</a></li>
-                    <li><a href="../manutenção_cursos/index.html">Cursos</a></li>
-                    <li><a href="index.php">Turmas</a></li>
-                    <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
-                    <li><a href="../manutencao_professores/index.html">Professores</a></li>
-                    <li><a href="../manutencao_disciplinas/index.html">Disciplinas</a></li>
-                    <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
-                    <li><a href="../manutencao_diarios/">Diários</a></li>
-                </ul>
-            </li>
-            <li><a href="../menu_relatorios/index.html">Relatórios</a>
-                <ul class="sub_menu">
-                    <li><a href="../menu_relatorios/relatorio_certificado/certificados.html">Certificados</a></li>
-                    <li><a href="../menu_relatorios/relatorio_historico/index.html">Histórico por Aluno e Turma</a></li>
-                    <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
-                    <li><a href="../menu_relatorios/relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
-                    <li><a href="../menu_relatorios/relatorio_professores/index.html">Relação de Professores</a></li>
-                </ul>
-            </li>
-            </li>
-            <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
-            <li><a href="#">Ajuda</a></li>
-        </ul>
+  <ul class="menu">
+         <li><a href="../index.html">Home</a></li>
+         <li><a href="../sobre.html">Sobre</a></li>
+         <li><a href="#">Manutenção</a>
+            <ul class="sub_menu">
+               <li><a href="../campi/campi.php">Campi</a></li>
+               <li><a href="../manutencao_departamentos/">Departamentos</a></li>
+               <li><a href="../manutencao_cursos/index.php">Cursos</a></li>
+               <li><a href="index.php">Turmas</a></li>
+               <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
+               <li><a href="../manutencao_professores/index.html">Professores</a></li>
+               <li><a href="../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
+               <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
+               <li><a href="../manutencao_diarios/index.html">Diários</a></li>
+            </ul>
+         </li>
+         <li><a href="../menu_relatorios/index.php">Relatórios</a>
+            <ul class="sub_menu">
+               <li><a href="../menu_relatorios/relatorio_certificado/index.php">Certificados</a></li>
+               <li><a href="../menu_relatorios/relatorio_certificado/index.php">Histórico por Aluno e Turma</a></li>
+               <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
+               <li><a href="../menu_relatorios/relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
+               <li><a href="../menu_relatorios/manutencao_professores/index.php">Relação de Professores</a></li> 
+            </ul>
+         </li>
+         <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
+      </ul>
   </nav>
 <main>
   <div>
@@ -69,9 +67,9 @@
       $resultado1 = mysqli_query($conexao, $sql1);
       
       if (mysqli_num_rows($resultado1) > 0) {
-        $return = "<table><thead><th>ID Turma</th><th>Nome Turma</th><th>ID Curso</th><th></th><th></th></thead><tbody>";
+        $return = "<table id='tabela'><thead><th>ID Turma</th><th>Nome Turma</th><th>ID Curso</th><th></th><th></th></thead><tbody>";
         while($row = mysqli_fetch_array($resultado1)) {
-          $return .= "<tr><td id='campoId".$row['id']."'>".$row['id']."</td><td id='campoNome".$row['id']."'>".$row['nome']."</td><td>".$row['id_cursos']."</td><td><button id='btnEditar".$row['id']."' onclick='getIdTurma(".$row['id'].");' class='btnEditar btn btn-info btn-lg' data-toggle='modal' data-target='#alterarTurmaModal'>Editar</button></td><td><button id='btnDeletar".$row['id']."' class='btnDeletar btn btn-info btn-lg' data-toggle='modal' data-target='#deletarTurmaModal'>Deletar</button></td></tr>";        }
+          $return .= "<tr><td id='campoId".$row['id']."'>".$row['id']."</td><td id='campoNome".$row['id']."'>".$row['nome']."</td><td>".$row['id_cursos']."</td><td><button id='btnEditar".$row['id']."' onclick='getIdTurma(".$row['id'].");' class='btnAlterar btn btn-info btn-lg' data-toggle='modal' data-target='#alterarTurmaModal'>Editar</button></td><td><button id='btnDeletar".$row['id']."' class='btnDeletar btn btn-info btn-lg' data-toggle='modal' data-target='#deletarTurmaModal'>Deletar</button></td></tr>";        }
         $return .= "</tbody></table></div>";
       } else {
         $return = "Existem 0 turmas para esse curso";
@@ -146,7 +144,7 @@
    <div id="divBtnCriar"><button  class="botoes" id='btnCriar'  class='btnCriar btn btn-info btn-lg' data-toggle='modal' data-target='#criarTurmaModal'>Criar Nova Turma</button></div>
   <br><br>
   <footer>
-            <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+            <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
             <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
         </footer>  
   <script src="js/ajax_alterar_turma.js"></script>

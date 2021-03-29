@@ -1,4 +1,8 @@
 <?php
+@session_start();
+include '../../sistema_login/verifica_login.php';
+?>
+<?php
     if (isset($_GET["id_aluno"])) {
         /*CONEXÃO COM BANCO DE DADOS*/
         include '../lib/conexao.php';
@@ -37,9 +41,10 @@
                 $returnRows = 0;
             }
         }
-        mysqli_close($conexao);
 
     }
+
+    
 ?>
 <!DOCTYPE html>
 <!-- HTML geral para páginas que sejam do tipo formulários -->
@@ -60,23 +65,30 @@
         <header>
             <img src="../../imgs/soraLogo.jpg" alt="logo" id="logo">
             <h1 id="titulo">Sistema de Organização de Acervo</h1>
+            <div id="dados_user">
+        <div id="aux">
+            <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
+            <h2 id="sair"><a href="../sistema_login/logout.php">Sair</a></h2>
+        </div>
+     </div>  
         </header>
 
-        <nav>
-            <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../sobre.html">Sobre</a></li>
-                <li><a href="#">Manutenção</a>
-                    <ul class="sub_menu">
-                        <li><a href="manutencao_acervo/index_acervo.html">Acervo</a></li>
-                        <li><a href="index.php">Empréstimos</a></li>
-                    </ul>
-                </li>
-                <li><a href="../reservas/cria_reserva.php">Reservas</a></li>
-                <li><a href="../menu_relatorios/">Relatórios</a></li>
-
-            </ul>
-        </nav>
+    <nav>
+        <ul class="menu">
+            <li><a href="../../sistema_login/index.php">Início</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="../sobre.php">Sobre</a></li>
+            <li><a href="#">Manutenção</a>
+                <ul class="sub_menu">
+                    <li><a href="../manutencao_acervo/index_acervo.php">Acervo</a></li>
+                    <li><a href="../manutenção_emprestimos/index.php">Empréstimos</a></li>
+                </ul>
+            </li>
+            <li><a href="../reservas/cria_reserva.php">Reservas</a></li>
+            <li><a href="../relatorios/index.php">Relatórios</a></li>
+            
+        </ul>
+    </nav>
 <body>
     <main>
         
@@ -127,7 +139,19 @@
                             <label class="col-form-label"></label>
                         </div>
                         <div class="col-auto">
-                            <input type="text" class="inputs"id="id_acervo" class="form-control" aria-describedby="passwordHelpInline" placeholder="ID do acervo">
+                            <select id="id_acervo">
+                        		<option value='' selected>Selecione o item de acervo</option>";
+	                        	<?php
+                                    include_once '../lib/conexao.php';
+	                        		$query = "SELECT * FROM acervo";
+	                        		$resultado_acervo = mysqli_query($conexao, $query);
+	                        		while($row_acervo = mysqli_fetch_array($resultado_acervo)){
+	                        			$id_acervo = $row_acervo["id"];
+	                        			$nome_acervo = $row_acervo["nome"];
+	                        			echo "<option value='$id_acervo'>$nome_acervo</option>";
+	                        		}
+	                        	?>
+                        	</select>
                         </div>
                         <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -180,7 +204,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/ajax.js"></script>
-    <script src="js/dom.js"></script>
+    <script src="js/domm.js"></script>
     <script>
         localStorage.setItem("dadosAluno", "<?php echo $return; ?>");
         localStorage.setItem("dadosEmprestimos", "<?php echo $returnEmprestimos; ?>");

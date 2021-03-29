@@ -29,46 +29,45 @@
    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/style_turmas.css">
    <link rel = "stylesheet" href = "css/index.css">
-   <link rel = "stylesheet" href = "css/style_tabelas.css">
-   <title>Turmas | SIDA</title>
+   <link rel = "stylesheet" href = "css/tabela.css">
+   <title>Manutenção de Turmas | SIDA</title>
 </head>
 <body>
    <header>
-      <img src="../img/LogoExemploCortado.png" alt="logo" id="logo">
+      <img src="img/sidaLogo.jpg" alt="logo" id="logo">
       <h1 id="titulo">Sistema Academico</h1>
       <div id="divBuscaTurma">
    </div>
    </header>
         
    <nav>
-         <ul class="menu" >
+   <ul class="menu">
          <li><a href="../index.html">Home</a></li>
          <li><a href="../sobre.html">Sobre</a></li>
-                <li><a href="#">Manutenção</a>
-                    <ul class="sub_menu">
-                        <li><a href="../campi/campi.php">Campi</a></li>
-                        <li><a href="../manutencao_departamentos/index.html">Departamentos</a></li>
-                        <li><a href="../manutencao_cursos/index.php">Cursos</a></li>
-                        <li><a href="../manutencao_turmas/index.php">Turmas</a></li>
-                        <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
-                        <li><a href="../manutencao_professores/index.html">Professores</a></li>
-                        <li><a href="../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
-                        <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
-                        <li><a href="../manutencao_diarios/index.html">Diários</a></li>
-                    </ul>
-                </li>
-            <li><a href="../menu_relatorios/index.html">Relatórios</a>
-                <ul class="sub_menu">
-                    <li><a href="../menu_relatorios/relatorio_certificado/certificados.html">Certificados</a></li>
-                    <li><a href="../menu_relatorios/relatorio_historico/index.html">Histórico por Aluno e Turma</a></li>
-                    <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
-                    <li><a href="../menu_relatorios/relatorio_relacao_conteudos/index.php">Relação de Conteúdos</a></li>
-                    <li><a href="../menu_relatorios/relatorio_professores/index.html">Relação de Professores</a></li>
-                </ul>
-            </li>
-            </li>
-            <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
-        </ul>
+         <li><a href="#">Manutenção</a>
+            <ul class="sub_menu">
+               <li><a href="../campi/campi.php">Campi</a></li>
+               <li><a href="../manutencao_departamentos/">Departamentos</a></li>
+               <li><a href="../manutencao_cursos/index.php">Cursos</a></li>
+               <li><a href="index.php">Turmas</a></li>
+               <li><a href="../manutencao_alunos/index.php">Alunos</a></li>
+               <li><a href="../manutencao_professores/index.html">Professores</a></li>
+               <li><a href="../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
+               <li><a href="../manutencao_etapas/index.php">Etapas</a></li>
+               <li><a href="../manutencao_diarios/index.html">Diários</a></li>
+            </ul>
+         </li>
+         <li><a href="../menu_relatorios/index.php">Relatórios</a>
+            <ul class="sub_menu">
+               <li><a href="../menu_relatorios/relatorio_certificado/index.php">Certificados</a></li>
+               <li><a href="../menu_relatorios/relatorio_certificado/index.php">Histórico por Aluno e Turma</a></li>
+               <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
+               <li><a href="../menu_relatorios/relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
+               <li><a href="../menu_relatorios/manutencao_professores/index.php">Relação de Professores</a></li> 
+            </ul>
+         </li>
+         <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
+      </ul>
    </nav>
 <main>
    <div>
@@ -150,7 +149,7 @@
   <br>
 </main>
 <footer>
-   <h3 class="rodape">© NOME - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+   <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
    <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
 </footer>  
 

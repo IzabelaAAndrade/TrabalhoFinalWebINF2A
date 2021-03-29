@@ -151,6 +151,7 @@ header form #txtBusca {
 form #txtBusca, #btnBusca {
     height: 100%;
     font-size: 1.2em;
+   /* margin-right: 100em;*/
 }
 
 form #btnBusca {
@@ -170,3 +171,4 @@ form #btnBusca:hover {
     background-color: white;
     color: #1D3556;
 }
+

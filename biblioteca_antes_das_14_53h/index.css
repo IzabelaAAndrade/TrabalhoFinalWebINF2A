@@ -1,0 +1,213 @@
+/* Html e body ****************************************************************/
+html, body{
+    margin: 0%;
+    font-family: 'Nunito', sans-serif;
+}
+/* Textos da Página e mais ****************************************************************/
+h1, h3, p, input{
+    color: white;
+    margin: 0%;
+}
+h1{
+    font-size: 1em;
+}
+
+h3{
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.sub{
+    color: #449d8f;
+    margin: 25vh 0% .5% 0%;
+    font-size: 1.5em;
+}
+
+.principal{
+    color: #e76f51;
+    font-size: 3em;
+    margin: 0% 0% .5% 0%;
+}
+
+.descricao{
+    color: #264553;
+    font-size: 1.2em;
+    margin: 0% 0% 5vh 0%;
+}
+#desc-esp{
+    margin: 0% 0% 20vh 0%;
+}
+.descricao, .principal, .subRosa{
+    text-align: center;
+}
+
+#ajuste{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 0% 5% 0%;
+}
+form{
+    display: block;
+
+}
+
+#botoes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botoes{
+    width: 49.5%;
+    height: 4vh;
+    border-radius: .3em;
+    border: 0;
+    background-color: #e76f51;
+    color: white;
+    transition: .3s ease;
+    
+}
+.botoes:hover{
+    background-color: #449d8f;
+    cursor:pointer
+    
+}
+
+input{
+    color:#449d8f;
+    display: inline-block;
+}
+
+
+
+.texto{
+    width: 30vw;
+    border: 0;
+    outline: none;
+    border-bottom: 1.5px solid #449d8f ;
+    display: block;
+    margin: 0% 0% 5% 0%;
+}
+
+textarea{
+    width: 100%;
+    height: 10vh;
+    padding: 3%;
+    background-color: #449d8f;
+    color: white;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+textarea::placeholder{
+    color: white;
+}
+
+/* Header/Footer ****************************************************************/
+
+header{
+    background-color: #264653;
+    width: 100%;
+    height: 7em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0;    
+    padding: 2vh;
+}
+
+footer{
+    height: 5%;
+    background-color: #264653;
+    padding: 3%;
+    display: block;
+}
+/* Titulo ****************************************************************/
+#titulo{
+    padding-top: 2.3%;
+    margin-left: 20px;
+    font-size: 2em;
+}
+
+.rodape{
+    text-align: center;
+}
+
+/* Imagens ****************************************************************/
+#logo{
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 7em;/*94.5px;*/
+    width: 17em;/*250px;*/
+    float: left;
+}
+/* Menu ****************************************************************/
+nav{
+    background-color: #457B9D;
+    margin: 0%;
+}
+
+.menu, .sub_menu{
+    list-style: none;
+}
+
+.menu{
+    float: left;
+    margin: 0%;
+    font-size: 20px;
+    padding: 0%;
+}
+
+li a{
+    display: block;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding:5px 10px;
+    display:block;
+    text-shadow:0px 0px 5px rgb(56, 56, 56);
+}
+
+.menu li{
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border: thin inset #1d355631;
+    position: relative;
+    float: left;
+    background-color: #457B9D;
+    box-shadow: #0003 5px 5px 10px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+    z-index: 20;
+}
+
+.sub_menu li{
+    background-color: #457B9D;
+}
+
+.menu li:hover{
+    background-color: #2e5064;
+}
+
+.menu li ul{
+    position: absolute;
+    top:57px;
+    right:0px;
+    display: none;
+}
+
+.menu li:hover ul, .menu li.over ul{
+    display:block;
+    -webkit-transition: all 1s ease
+}
+
+.menu li ul li{
+    display:block;
+    width:200px;
+}
+

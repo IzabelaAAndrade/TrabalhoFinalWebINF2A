@@ -1,6 +1,6 @@
 <?php
 if(!$_SESSION['usuario']){
-    header('Location: tela_login.php');
+    header('Location:/TrabalhoFinalWebINF2A/sistema_login/tela_login.php');
     exit();
 }
 ?>

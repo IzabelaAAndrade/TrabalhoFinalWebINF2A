@@ -10,11 +10,11 @@
         <link rel="stylesheet" href="css/style_tabela_historico.css">
         <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
         <link rel="stylesheet" href="../css_relatorios/style_inputs_botoes.css">
-    	<title>Menu de Relatórios - Histórico por Aluno e Turma</title>
+    	<title>Menu de Relatórios - Histórico por Aluno e Turma | SIDA</title>
 	</head>
 <body>
     <header>
-        <img src="../LogoExemploCortado.png" alt="logo" id="logo">
+        <img src="../sidaLogo.jpg" alt="logo" id="logo">
         <h1 id="titulo">Sistema Diário Acadêmico</h1>
     </header>
     <nav>
@@ -29,18 +29,18 @@
                     <li><a href="../../manutencao_turmas/index.php">Turmas</a></li>
                     <li><a href="../../diario_academico/manutencao_alunos/index.php">Alunos</a></li>
                     <li><a href="../../diario_academico/manutencao_professores/index.html">Professores</a></li>
-                    <li><a href="../../diario_academico/manutencao_disciplinas/">Disciplinas</a></li>
+                    <li><a href="../../diario_academico/manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
                     <li><a href="../../diario_academico/manutencao_etapas/index.php">Etapas</a></li>
                     <li><a href="../../diario_academico/manutencao_diarios/php/inserir.php">Diários</a></li>
                 </ul>
             </li>
-            <li><a href="../index.html">Relatórios</a>
+            <li><a href="../index.php">Relatórios</a>
                 <ul class="sub_menu">
-                    <li><a href="../relatorio_certificado/index.html">Certificados</a></li>
-                    <li><a href="index.html">Histórico por Aluno e Turma</a></li>
-                    <li><a href="../relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+                    <li><a href="../relatorio_certificado/index.php">Certificados</a></li>
+                    <li><a href="index.php">Histórico por Aluno e Turma</a></li>
+                    <li><a href="../relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
                     <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li> 
-                    <li><a href="../relatorio_professores/index.html">Relação de Professores</a></li> 
+                    <li><a href="../relatorio_professores/index.php">Relação de Professores</a></li> 
                 </ul>
             </li>
             <li><a href="../../diario_academico/transferencia_alunos/desliga_interface.php">Transferências</a></li>
@@ -49,7 +49,7 @@
     </nav>
     <main>
         <div id="cabecalho">
-            <p><a href="../">Menu de Relatórios</a> > <a href="index.html">Histórico por Aluno e Turma</a></p>
+            <p><a href="../">Menu de Relatórios</a> > <a href="index.php">Histórico por Aluno e Turma</a></p>
             <h1 class="principal">Histórico por Aluno e Turma</h1>
 		</div>
 

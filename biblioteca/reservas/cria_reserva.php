@@ -1,5 +1,6 @@
 <?php
-session_start();
+@session_start();
+include '../../sistema_login/verifica_login.php';
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -33,19 +34,27 @@ session_start();
         </div>
     </form>
 
+    <div id="dados_user">
+        <div id="aux">
+            <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
+            <h2 id="sair"><a href="../../sistema_login/logout.php">Sair</a></h2>
+        </div>
+     </div>  
+
 </header>
 <nav>
     <ul class="menu">
-        <li><a href="../../biblioteca/index.html">Home</a></li>
-        <li><a href="../sobre.html">Sobre</a></li>
-        <li><a href="3">Manutenção</a>
+        <li><a href="../../sistema_login/index.php">Início</a></li>
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="../sobre.php">Sobre</a></li>
+        <li><a href="#">Manutenção</a>
             <ul class="sub_menu">
-                <li><a href="../../biblioteca/manutencao_acervo/index_acervo.html">Acervo</a></li>
-                <li><a href="../../biblioteca/manutenção_emprestimos/index.php">Empréstimos</a></li>
+                <li><a href="../manutencao_acervo/index_acervo.php">Acervo</a></li>
+                <li><a href="../manutenção_emprestimos/index.php">Empréstimos</a></li>
             </ul>
         </li>
         <li><a href="cria_reserva.php">Reservas</a></li>
-        <li><a href="../../biblioteca/menu_relatorios/">Relatórios</a></li>
+        <li><a href="../relatorios/index.php">Relatórios</a></li>
         
     </ul>
 </nav>
@@ -155,8 +164,6 @@ session_start();
                     <h2>Editar Reservas</h2>
                 </div>
                 <div class="modal-body" id="altera_modal">
-                    //form alterar aqui
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.reload(true);">
