@@ -32,7 +32,6 @@ h2{
 
 caption{
     font-size: 18px;
-    /* font-weight: bold; */
     background-color: #1D3556;
     width: auto;
     height: auto;
@@ -64,7 +63,11 @@ caption{
 }
 
 #nenhumResultado{
-    width: 27em;
-    color: white;
     background-color: #e63946;
+    color: white;
+    padding: 1em;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 10em;
 }
