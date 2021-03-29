@@ -37,7 +37,7 @@ session_start();
 <nav>
     <ul class="menu">
         <li><a href="../../biblioteca/index.html">Home</a></li>
-        <li><a href="../../biblioteca/#">Sobre</a></li>
+        <li><a href="../sobre.html">Sobre</a></li>
         <li><a href="3">Manutenção</a>
             <ul class="sub_menu">
                 <li><a href="../../biblioteca/manutencao_acervo/index_acervo.html">Acervo</a></li>

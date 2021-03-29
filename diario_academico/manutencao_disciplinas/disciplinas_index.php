@@ -36,7 +36,7 @@ include_once "povoa_base.php";
 <nav>
     <ul class="menu">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="#">Sobre</a></li>
+        <li><a href="../sobre.html">Sobre</a></li>
         <li><a href="#">Manutenção</a>
             <ul class="sub_menu">
                 <li><a href="../campi/campi.php">Campi</a></li>

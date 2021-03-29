@@ -1,0 +1,95 @@
+body, .pessoas{
+    font-family: 'Nunito', sans-serif;
+}
+/*Cores dos slides de cada grupo */
+.slidesA, .slidesB, .slidesC, .slidesD, .slidesE, .slidesF, .slidesG, .slidesH, .slidesI{
+    width: 60%;
+    margin: 5vh 0;
+}
+.slidesA{
+    background-color: #ff9899;
+}
+.slidesB{
+    background-color: #ffc198;
+}
+.slidesC{
+    background-color: #ffe590;
+}
+
+.slidesD{
+    background-color: #a2f08b;
+}
+.slidesE{
+    background-color: #83e5ec;
+}
+.slidesF{
+    background-color: #9cd0ff;
+}
+.slidesG{
+    background-color: #9cb7fe;
+}
+.slidesH{
+    background-color: #be9eff;
+}
+.slidesI{
+    background-color: #9e81db;
+}
+
+
+
+
+
+
+/*Cores dos slides de cada grupo */
+#esp{
+    margin-bottom: 1vh;
+}
+.sobreNome {
+  color: white;
+  text-align: left;
+  margin: 8% 0% 1% 3%;
+  padding: 0% 10% 0% 10%;
+
+}
+
+.sobreParagrafos {
+  color: white;
+  width: 70%;
+  margin: 0% 5% 0% 15%;
+  font-size: 1.5em;
+}
+.sobreCorpo {
+  padding-bottom: 8%;
+}
+.pessoas {
+    height: 60%;
+    
+}
+.carousel {
+  width: 80%;
+  height: 40%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+.imgcarousel {
+  width: 100%;
+  height: 70vh;
+}
+.imgSobre{
+
+    width: 40vh;
+    height: 40vh;
+    float: left;
+    margin: 7% 5% 5% 15%;
+    border-radius: 5%;
+    
+  }
+
+  .sobreParagrafos {
+
+    color: white;
+    width: 70%;
+    margin: 0% 5% 0% 15%;
+    font-size: .9em;
+  }

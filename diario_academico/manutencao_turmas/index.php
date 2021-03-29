@@ -30,7 +30,7 @@
    <link rel="stylesheet" href="css/style_turmas.css">
    <link rel = "stylesheet" href = "css/index.css">
    <link rel = "stylesheet" href = "css/style_tabelas.css">
-   <title>Manutenção de Turmas</title>
+   <title>Turmas | SIDA</title>
 </head>
 <body>
    <header>
@@ -43,7 +43,7 @@
    <nav>
          <ul class="menu" >
          <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Sobre</a></li>
+         <li><a href="../sobre.html">Sobre</a></li>
                 <li><a href="#">Manutenção</a>
                     <ul class="sub_menu">
                         <li><a href="../campi/campi.php">Campi</a></li>
