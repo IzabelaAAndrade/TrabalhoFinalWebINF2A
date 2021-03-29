@@ -1,0 +1,235 @@
+/*BOTÕES*/
+#botaoBuscaId {
+    border-radius: 0px 3px 3px 0px;
+    height: 4vh;
+    border: 0;
+    background-color: #e76f51;
+    color: white;
+    transition: .3s ease;
+    width: 10em;
+    border: 1px solid #e76f51;
+}
+
+#botaoBuscaId:hover{
+    background-color: #449d8f;
+    cursor:pointer;
+    border: 1px solid #449d8f;
+
+}
+
+.btn{
+    background-color: #2A9D8F;
+    color: white;
+    margin-right: 1em;  
+    width: 6em; 
+}
+.btn:hover{
+    background-color: #264653;
+    color: #2A9D8F;
+}
+.btnDevolver{  /* Mudança: Centralização do botão */
+    height: 1.5em;
+    border: 0;
+    background-color: #e76f51;
+    color: white;
+    transition: .3s ease;
+    width: 7em;
+    border: 0px solid #e76f51;
+    display: block;
+    margin: auto;
+    position: absolute;
+    bottom: 1em;
+}
+.btnDevolver:hover{
+    background-color: #449d8f;
+    cursor:pointer;
+    color: white;
+}
+
+.button {
+    padding-top: 4px;
+}
+
+.row {
+    padding-top: 2%;
+}
+#status {
+    padding-top: 2%;
+}
+h1{
+    color:white ;
+}
+#confirmar{
+    background-color: white;
+    color: #2A9D8F;
+}
+#cancelar{
+    background-color: white;
+    color: #2A9D8F;
+}
+#cabecalho_modal{
+    background-color: #264653;
+    color: #2A9D8F;
+}
+.inputs{
+    width: 120%;
+    border: 0;
+    outline: none;
+    border-bottom: 1.5px solid #2A9D8F;
+    display: block;
+    margin: 0% 0% 5% 0%;
+}
+
+#emprestimos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+#cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+#busca {
+    height: 40px;
+    position: relative;
+    margin-top: 3%;
+    color:#449d8f;
+}
+#busca_id {
+    width:500px;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #449d8f;
+    border-right: 0;
+    color:#449d8f;
+    display: inline-block;
+    
+}
+#novo_emprestimo{  /* Mudança: Centralização do botão */
+    background-color:#e76f51#2A9D8F;
+    color: white;
+    display:block;
+    margin: 3% auto 0% auto;
+    padding: 1em;
+    position: fixed;
+    bottom: 5vh;
+    right: 3vw;
+    z-index: 1;
+    width: 10em;
+}
+#novo_emprestimo:hover{
+    background-color: #e76f51;
+    color: white;
+}
+#dadosAluno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2.5%;
+    background-color: #264653;
+}
+#dadosAluno p{
+    margin: 2px;
+    padding: 20px;
+    font-size: 12pt;
+    
+    border-radius: 20px;
+    /*box-shadow: 3px 2px 2px gray;*/
+    color: white;
+    
+}
+
+#listagem {
+    max-width: 40% !important;
+    font-size: 12pt;
+    border: 1px solid #dfe1e5;
+    box-shadow: #0003 4px 4px 10px
+}
+
+.emprestimo{
+    height:10em; 
+    margin: 10px;
+    padding: 30px;
+    position: relative;
+    font-size: 12pt;
+    background-color:#E9C46A;
+    border-radius: 3px;
+    color: white;
+    text-align: left;
+    box-shadow: #0003 4px 4px 10px; 
+}
+.titulo-pagina {
+    text-align: center;
+    margin-left: 10%;
+    color: #E9C46A;
+}
+
+main {
+    margin-top: 5%;
+}
+
+th, td {
+    text-align: center;
+}
+
+footer {
+    margin-top: 8%;
+}
+
+form {
+    height: 100%;
+}
+
+form p{
+    margin: auto;
+    display: block;
+    width: 32.5em;
+}
+
+#inputId{
+    width: 25vw;
+    border: 0;
+    outline: none;
+    border-bottom: 1.5px solid #2A9D8F;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0% 0% 5% 0%;
+}
+
+* {
+    box-sizing: unset !important;
+}
+h1, h2, h3, h4 {
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+}
+
+#devolucaoModal div.modal-body p{
+    color: #264653;
+}
+
+.modal-title{
+    color: white;
+}
+
+#confirmar, #cancelar{
+    background-color: #2A9D8F;
+    color: white;
+    margin-right: 1em;  
+    width: 6em; 
+}
+
+#confirmar:hover, #cancelar:hover{
+    background-color: #449d8f;
+    cursor:pointer;
+    color: white;
+}

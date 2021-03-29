@@ -1,0 +1,141 @@
+/*:root {
+    --header-height: 15vh;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10vh 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Header/Footer ****************************************************************/
+
+header, footer {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #264653;
+    height: 9em;
+}
+
+footer{
+    padding: 3%;
+}
+
+#titulo{
+    padding-top: 55px;
+    padding-bottom: 45px;
+    margin-left: 20px;
+}
+
+.rodape{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+/* Imagens ****************************************************************/
+#logo{
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 7em;
+    float: left;
+}
+/* Menu ****************************************************************/
+nav{
+    background-color: #457B9D;
+    margin: 0%;
+}
+
+.menu, .sub_menu{
+    list-style: none;
+}
+
+.menu{
+    float: left;
+    margin: 0%;
+    font-size: 20px;
+    padding: 0%;
+}
+
+li a{
+    display: block;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding:5px 10px;
+    display:block;
+    text-shadow:0px 0px 5px rgb(56, 56, 56);
+}
+
+.menu li{
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border: thin inset #1d355631;
+    position: relative;
+    float: left;
+    background-color: #457B9D;
+    box-shadow: #0003 5px 5px 10px;
+    cursor: pointer;
+    -webkit-transition: all 1s ease
+}
+
+.sub_menu li{
+    background-color: #457B9D;
+}
+
+.menu li:hover{
+    background-color: #2e5064;
+}
+
+.menu li ul{
+    position: absolute;
+    top:57px;
+    right:0px;
+    display: none;
+}
+
+.menu li:hover ul, .menu li.over ul{
+    display:block;
+    -webkit-transition: all 1s ease
+}
+
+.menu li ul li{
+    display:block;
+    width:200px;
+}
+
+h1, h3, p {
+    margin: 0;
+}
+/* Dados do Usuário *********************************************************************/
+#dados_user a, #dados_user{
+    color:white;
+    font-size: .8em;
+    text-align: right;
+    text-decoration: none;
+    
+}
+
+#aux{
+    position: absolute;
+    left: 90vw;
+    text-align: right;
+    top: 5vh;
+}
+
+#sair a{
+    color: #ffffff;
+    top: 9vh;
+}
+
+#sair a:hover{
+    color:#e7d2d4;
+}

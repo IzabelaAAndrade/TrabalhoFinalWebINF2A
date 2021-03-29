@@ -1,0 +1,146 @@
+:root {
+    --main-color: #2A9D8F;
+    /* --main-color: #264553; */
+    --fill-color: #e9c56a20;;
+    --border-color: none;
+}
+
+/* html, body{
+    height: 100%;
+    margin-bottom: 0%;
+} */
+
+body {
+    margin: 0;
+    /* background-color: #FFFFFF; */
+    color: #264553;
+    font-family: 'Nunito', sans-serif;
+}
+
+#main {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 300px);
+    flex-direction: column;
+    padding: 1% 23%;
+}
+
+#middle {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-items: stretch;
+    align-items: flex-start;
+}
+
+#opcoes {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+}
+
+#opcoes .relator {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-grow: 1;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.relator.selected {
+    background-color: var(--main-color);
+    color: white;
+}
+
+#resultado {
+    flex-grow: 9;
+    /* background-color: #e9c56a3a; */
+    margin-bottom: 20px;
+    /* min-height: 50%; */
+}
+
+.solid {
+    box-sizing: border-box;
+    margin: 15px;
+    padding: 20px;
+    background-color: var(--fill-color);
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    box-shadow: #0003 4px 4px 10px; 
+}
+
+/* Filtro ****************************************************************/
+
+#filtro {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* background-color: #e9c56a3a; */
+    /* min-height: 50%; */
+}
+
+.filtro {
+    margin-bottom: 20px;
+}
+
+#filtro.hidden {
+    display: none;
+}
+
+#actions {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.range input {
+    width: 100px;
+}
+
+#aplicar {
+    background-color: var(--main-color);
+    color: white;
+}
+
+input, select {
+    /* background-color: #e9c56a7c; */
+    border: none;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td, th {
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+    
+}
+
+h1, h3{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    margin: 0%;
+}
