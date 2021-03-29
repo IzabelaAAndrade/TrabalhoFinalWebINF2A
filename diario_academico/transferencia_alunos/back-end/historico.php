@@ -6,7 +6,7 @@ unset($_SESSION['historico']);
 $_SESSION['historico'] = '';
 
 //cpf do aluno
-$id = $_POST['cpf'];
+$id = $_SESSION['cpf'];
 
 //array que receberá os dados básicos do aluno - nome, cpf, média global e faltas
 $student_data =  [
