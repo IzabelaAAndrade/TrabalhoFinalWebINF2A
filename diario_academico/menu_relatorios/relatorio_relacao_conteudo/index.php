@@ -87,6 +87,6 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="control.js"></script>
-    <script src="../impressao_relatorios.js"></script>
+    <!-- <script src="../impressao_relatorios.js"></script> -->
 </body>
 </html>

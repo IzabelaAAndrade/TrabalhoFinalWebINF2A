@@ -41,7 +41,7 @@
    </header>
         
    <nav>
-      <ul class="menu">
+   <ul class="menu">
          <li><a href="../index.html">Home</a></li>
          <li><a href="../sobre.html">Sobre</a></li>
          <li><a href="#">Manutenção</a>
@@ -57,13 +57,13 @@
                <li><a href="../manutencao_diarios/index.html">Diários</a></li>
             </ul>
          </li>
-         <li><a href="index.html">Relatórios</a>
+         <li><a href="../menu_relatorios/index.html">Relatórios</a>
             <ul class="sub_menu">
-               <li><a href="relatorio_certificado/index.html">Certificados</a></li>
-               <li><a href="relatorio_certificado/index.html">Histórico por Aluno e Turma</a></li>
-               <li><a href="relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
-               <li><a href="relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
-               <li><a href="manutencao_professores/index.html">Relação de Professores</a></li> 
+               <li><a href="../menu_relatorios/relatorio_certificado/index.html">Certificados</a></li>
+               <li><a href="../menu_relatorios/relatorio_certificado/index.html">Histórico por Aluno e Turma</a></li>
+               <li><a href="../menu_relatorios/relatorio_alunos/index_relatorio_aluno.html">Relação de Alunos</a></li>
+               <li><a href="../menu_relatorios/relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
+               <li><a href="../menu_relatorios/manutencao_professores/index.html">Relação de Professores</a></li> 
             </ul>
          </li>
          <li><a href="../transferencia_alunos/index.php">Transferências</a></li>
