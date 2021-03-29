@@ -338,3 +338,13 @@ textarea::placeholder{
 #UF, #radio{
     margin-bottom: 5%;
 }
+
+#perfil{
+    width: 150px;
+    margin-bottom: 40px;
+    border: solid 2px #457a9d;
+}
+
+#foto{
+    text-align: center;
+}
