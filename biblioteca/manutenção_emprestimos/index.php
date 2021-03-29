@@ -191,7 +191,7 @@ include '../../sistema_login/verifica_login.php';
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/ajax.js"></script>
-    <script src="js/dom.js"></script>
+    <script src="js/domm.js"></script>
     <script>
         localStorage.setItem("dadosAluno", "<?php echo $return; ?>");
         localStorage.setItem("dadosEmprestimos", "<?php echo $returnEmprestimos; ?>");
