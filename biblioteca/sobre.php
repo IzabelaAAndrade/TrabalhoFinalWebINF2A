@@ -18,8 +18,10 @@ include '../sistema_login/verifica_login.php';
     </head>
     <body>
         <header>
-            <img src="../imgs/soraLogo.jpg" alt="logo" id="logo">
-            <h1 id="titulo">Sistema de Organização de Acervo</h1>
+              <div id="header-div">
+                <img src="../imgs/soraLogo.jpg" alt="logo" id="logo">
+                <h1 id="titulo">Sistema de Diário Acadêmico</h1>
+            </div>
             <div id="dados_user">
                 <div id="aux">
                     <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
