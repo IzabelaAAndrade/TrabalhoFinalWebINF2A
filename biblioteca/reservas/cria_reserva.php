@@ -191,7 +191,7 @@ session_start();
                 if ($_SESSION['confirma'] == 1) {
                     echo "<div class='msg-erro'><p>Este aluno já possui reservas! Não é possível reservar este Livro.</p></div>";
                 } else if ($_SESSION['confirma'] == 2) {
-                    echo "<div class='msg-data'><p>Este livro já está reservado. Reservas Disponíveis a partir do dia " . $_GET['data'] . "</p></div>";
+                    echo "<div class='msg-data'><p>Este livro já está reservado. Reservas Disponíveis apenas para o dia " . $_GET['data'] . "</p></div>";
                 } else if ($_SESSION['confirma'] == 3) {
                     echo "<div class='msg_succes'><p>Reserva Concluída com Sucesso!!.</p></div>";
                 }
@@ -200,6 +200,9 @@ session_start();
                 }
                 else if ($_SESSION['confirma'] == 5) {
                     echo "<div class='msg_succes'><p>Deleção de Reserva concluida com Sucesso!!.</p></div>";
+                }
+                else if ($_SESSION['confirma'] == 6) {
+                    echo "<div class='msg-erro'><p>Você só pode realizar reservas no dia atual ou 7 dias após a última reserva!!</p></div>";
                 }
                 unset($_SESSION['confirma']);
             }
