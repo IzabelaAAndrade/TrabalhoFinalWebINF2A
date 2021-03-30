@@ -46,24 +46,24 @@ else {
 		</thead>";
 		
 	while ($atraso = mysqli_fetch_assoc($atrasos)) {
+		if ($atraso['Data_devolucao'] != NULL) {
 
-		// diferença entre as datas
+			$dataPrevDevol = new \DateTime($atraso['Data_prev_devol']);
+			$dataDevolucao = new \DateTime($atraso['Data_devolucao']);
+			$diasAtraso = ($dataPrevDevol->diff($dataDevolucao))->days;
 
-		$dataPrevDevol = new \DateTime($atraso['Data_prev_devol']);
-		$dataDevolucao = new \DateTime($atraso['Data_devolucao']);
-		$diasAtraso = ($dataPrevDevol->diff($dataDevolucao))->days;
-
-		echo    "<tr>
-		<td>" . $atraso['Id_alunos'] . "</td>
-		<td>" . $atraso['Id_acervo'] . "</td>
-		<td>" . $atraso['Data_emprestimo'] . "</td>
-		<td>" . $atraso['Data_prev_devol'] . "</td>
-		<td>" . $atraso['Data_devolucao'] . "</td>";
-						
-		if($diasAtraso > 0)
-			echo "<td>" . $diasAtraso . " dias</td> </tr>";
-		else
-			echo "<td> Sem atraso </td> </tr>";
+			echo    "<tr>
+			<td>" . $atraso['Id_alunos'] . "</td>
+			<td>" . $atraso['Id_acervo'] . "</td>
+			<td>" . $atraso['Data_emprestimo'] . "</td>
+			<td>" . $atraso['Data_prev_devol'] . "</td>
+			<td>" . $atraso['Data_devolucao'] . "</td>";
+							
+			if($diasAtraso > 0)
+				echo "<td>" . $diasAtraso . " dias</td> </tr>";
+			else
+				echo "<td> Sem atraso </td> </tr>";
+		}
 	}
 }
 ?>
