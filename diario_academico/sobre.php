@@ -73,11 +73,11 @@ include '../sistema_login/verifica_login.php';
                         </div>
                     </div>
                     <div class="carousel-item slidesA">
-                        <img src="../grupos_imgs/A/sua_img.png" class="imgSobre">
-                        <h3 class="sobreNome"> Marcela P. Silvério  </h3>
+                        <img src="../grupos_imgs/A/marcela.jpg" class="imgSobre">
+                        <h3 class="sobreNome"> Marcela Prata Silvério  </h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
-
+                            <p class="sobreParagrafos"> Olá! Sou uma pessoa apaixonada por animais, livros, séries e que edita vídeos nas horas vagas! =) </p>
+                          
                         </div>
                     </div>
                     <div class="carousel-item slidesA">
