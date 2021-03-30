@@ -76,7 +76,7 @@ include '../../../../sistema_login/verifica_login.php';
 
                 <div id="divBotoes">
                     <input class="botoes" type="submit" value='Enviar'>
-                    <input class="botoes" type="reset" value='Cancelar'><br>
+                    <input class="botoes" type="reset" value='Cancelar' onclick="window.location.href='../../'"><br>
                 </div>
             </form>
 
