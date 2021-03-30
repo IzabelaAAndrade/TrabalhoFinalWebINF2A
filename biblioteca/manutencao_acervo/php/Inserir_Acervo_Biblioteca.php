@@ -1,13 +1,8 @@
 <?php
 
 //      CONEXÃO COM O BANCO DE DADOS
-
-$cnx = mysqli_connect(
-    'localhost',
-    'root',
-    '',
-    'biblioteca'
-) or die("Falha na conexão com o banco de dados");
+require_once "../../lib/conexao.php";
+$cnx = $conexao;
 
 //      ESPECIFICANDO (LIVROS, PERIÓDICO, ACADÊMICOS OU MÍDIAS)
 

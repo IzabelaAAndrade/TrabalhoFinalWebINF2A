@@ -33,6 +33,7 @@ include '../../../sistema_login/verifica_login.php';
     </header>
     <nav>
         <ul class="menu">
+      <li><a href="../../../sistema_login/index.php">Início</a></li>
             <li><a href="../../">Home</a></li>
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Manutenção</a>

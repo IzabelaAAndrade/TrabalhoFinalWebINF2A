@@ -6,9 +6,8 @@
 
 <?php
 @session_start();
-include '../../../sistema_login/verifica_login.php';
+include '../../../../sistema_login/verifica_login.php';
 ?>
-
 
 <html lang="pt">
 
@@ -18,9 +17,7 @@ include '../../../sistema_login/verifica_login.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../CSSs/style.css">
-  <link rel="stylesheet" type="text/css" href="../../CSSs/incluir.css" />
-  <link rel="stylesheet" type="text/css" href="../../CSSs/menu.css" />
-  <link rel="stylesheet" type="text/css" href="../../CSSs/header.css" />
+
   <title>Manutenção</title>
 </head>
 
@@ -38,6 +35,7 @@ include '../../../sistema_login/verifica_login.php';
   </header>
   <nav>
     <ul class="menu">
+      <li><a href="../../../../sistema_login/index.php">Início</a></li>
       <li><a href="../../../">Home</a></li>
       <li><a href="#">Sobre</a></li>
       <li><a href="#">Manutenção</a>
@@ -109,7 +107,7 @@ include '../../../sistema_login/verifica_login.php';
 
             <div id="divBotoes">
               <input required class="botoes" type="submit" value='Enviar'>
-              <input required class="botoes" type="reset" value='Cancelar'><br>
+              <input required class="botoes" type="reset" value='Cancelar' onclick="window.location.href='form_confere_dados.php'"><br>
             </div>
           </form>
 

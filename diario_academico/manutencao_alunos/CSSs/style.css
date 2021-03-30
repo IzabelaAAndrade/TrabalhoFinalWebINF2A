@@ -344,7 +344,7 @@ textarea::placeholder{
     text-align: center;
 }
 
-#dados_user {
+#dados_user{
     color: white;
     font-size: .8em;
     text-align: right;
@@ -355,4 +355,6 @@ textarea::placeholder{
 
 #sair{
     color: white;
+    text-decoration: none;
+
 }

@@ -34,6 +34,7 @@ include '../../../../sistema_login/verifica_login.php';
     </header>
     <nav>
         <ul class="menu">
+            <li><a href="../../../../sistema_login/index.php">Início</a></li>
             <li><a href="../../../">Home</a></li>
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Manutenção</a>
@@ -76,7 +77,7 @@ include '../../../../sistema_login/verifica_login.php';
 
                 <div id="divBotoes">
                     <input class="botoes" type="submit" value='Enviar'>
-                    <input class="botoes" type="reset" value='Cancelar'><br>
+                    <input class="botoes" type="reset" value='Cancelar' onclick="window.location.href='../../'"><br>
                 </div>
             </form>
 
