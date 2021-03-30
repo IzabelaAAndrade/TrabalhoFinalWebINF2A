@@ -202,3 +202,17 @@ li a{
     display:block;
     width:200px;
 }
+
+#dados_user{
+    color: white;
+    font-size: .8em;
+    text-align: right;
+    text-decoration: none;
+    margin-top: -70px;
+    margin-right: 100px;
+}
+
+#sair a{
+    color: white;
+    text-decoration: none;
+}
