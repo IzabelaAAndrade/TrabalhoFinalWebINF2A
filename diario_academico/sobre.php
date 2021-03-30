@@ -128,12 +128,13 @@ include '../sistema_login/verifica_login.php';
           <li data-target="#carouselExampleIndicatorsB" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner slidesB">
-          <div class="carousel-item active">
-            <img src="../grupos_imgs/B/sua_img.png" class="imgSobre">
+          <img src="../grupos_imgs/B/arthur.jpg" class="imgSobre">
             <h3 class="sobreNome"> 👑 Arthur Coelho de Souza</h3>
             <div class="sobreCorpo">
-              <p class="sobreParagrafos"> Seu texto
-              </p>
+                <p class="sobreParagrafos">
+                  Gamer, Naruteiro e no mais, apenas um viciado em tecnologia que estuda isso para poder justificar seu vício :D <br>
+                  Sucumbam Jojofags!
+                </p>
 
             </div>
           </div>
