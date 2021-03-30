@@ -25,20 +25,26 @@ session_start();
  $query_itens = "SELECT * FROM reservas WHERE id_acervo = '".$itens."'";
  $resultado_itens = mysqli_query($conexao, $query_itens);
 
+ $query_emprestimo = "SELECT * FROM emprestimos WHERE id_acervo  = '".$itens."' AND id_alunos = '".$alunos."'";
+ $result_emprestimo = mysqli_query($conexao, $query_emprestimo);
+ $rows_emprestimos = mysqli_num_rows($result_emprestimo);
  $row_alunos = mysqli_num_rows($resultado_alunos);
  $row_itens = mysqli_num_rows($resultado_itens);
+
+ $emprestou = "N";
+
 
 
     
  function insere_na_tabela($data_reserva){
 
-    global $data, $alunos, $itens, $conexao, $row_itens, $contador; // Data digitada em segundos
+    global $data, $alunos, $itens, $conexao, $row_itens, $contador, $emprestou; // Data digitada em segundos
     $nova_data = $data_reserva+(7 *24 * 60 * 60); // Data em segundos + 7 dias em segundos
     $tempo_espera_dias = ($contador+1)*7; // Conversão -> tempo de espera em dias;
     //$data_emprestimo_futuro = $nova_data/86400;
     $data_reserva = date('Y-m-d', $data_reserva);
     $inserir_reserva = "INSERT INTO `reservas` (`id_alunos`, `id_acervo`, `data_reserva`, `tempo_espera`, `emprestou`) VALUES
-    ('".$alunos."', '".$itens."', '".$data_reserva."', '".$tempo_espera_dias."' , 'N');";
+    ('".$alunos."', '".$itens."', '".$data_reserva."', '".$tempo_espera_dias."' , '".$emprestou."');";
     mysqli_query($conexao, $inserir_reserva);
  }
 
@@ -46,7 +52,10 @@ session_start();
     $contador = 0;
     if($row_alunos > 0){
         $_SESSION['confirma'] = 1;
-    }if($row_itens > 0){
+    }if($rows_emprestimos>0){
+        $emprestou = "S";
+        $_SESSION['confirma'] = 7; 
+    }else if($row_itens > 0){
        while($tem_reserva =  mysqli_fetch_assoc($resultado_itens)){
           $ultima_reserva = $tem_reserva['data_reserva'];
           $contador++;

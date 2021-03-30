@@ -42,7 +42,7 @@ body {
 
 .msg-data{
     border-radius: 0.5em;
-    height: 8vh;
+    height: 10vh;
     width: 30vw;
     margin: 10px;
     padding: 10px;
@@ -58,7 +58,7 @@ body {
 
 .msg_succes {
     border-radius: 0.5em;
-    height: 5vh;
+    height: 8vh;
     width: 30vw;
     margin: 10px;
     padding: 12px;
