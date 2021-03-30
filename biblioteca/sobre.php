@@ -261,10 +261,10 @@ include '../sistema_login/verifica_login.php';
             </ol>
             <div class="carousel-inner slidesE">
                 <div class="carousel-item active">
-                    <img src="../grupos_imgs/E/sua_img.png" class="imgSobre">
+                    <img src="../grupos_imgs/E/img_duda.jpg" class="imgSobre">
                     <h3 class="sobreNome"> 👑 Maria Eduarda Carmona Banhos</h3>
                     <div class="sobreCorpo">
-                        <p class="sobreParagrafos"> Seu texto
+                        <p class="sobreParagrafos"> Atriz que se perde no papel de programadora.<br>"Anyway, the wind blows, doesn’t really matter to me" - Bohemian Rhapsody, Queen
                         </p>
 
                     </div>
