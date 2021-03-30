@@ -67,9 +67,9 @@ include '../sistema_login/verifica_login.php';
             <img src="../grupos_imgs/A/iza3.jpg" class="imgSobre">
             <h3 class="sobreNome"> 👑 Izabela A. Andrade </h3>
             <div class="sobreCorpo">
-              <p class="sobreParagrafos"> Uma doidinha completamente apaixonada por livros (e personagens fictícios), que não vive sem música.
-                <br>“I may not be able to cure cancer or end world hunger, but small kindnesses go a long way.”
-                <br> They Both Die At The End - Adam Silvera
+              <p class="sobreParagrafos"> Uma doidinha completamente apaixonada por livros (e personagens fictícios), que não vive sem música. 🤍
+                <br><br>“I may not be able to cure cancer or end world hunger, but small kindnesses go a long way.”
+                <br> They Both Die At The End, Adam Silvera
               </p>
 
             </div>
@@ -225,7 +225,7 @@ include '../sistema_login/verifica_login.php';
             </div>
           </div>
           <div class="carousel-item slidesD">
-            <img src="../grupos_imgs/D/sua_img.png" class="imgSobre">
+            <img src="../grupos_imgs/D/bruna.png" class="imgSobre">
             <h3 class="sobreNome"> Bruna Carvalho Peixoto Sanches </h3>
             <div class="sobreCorpo">
               <p class="sobreParagrafos"> Seu Texto </p>
@@ -233,7 +233,7 @@ include '../sistema_login/verifica_login.php';
             </div>
           </div>
           <div class="carousel-item slidesD">
-            <img src="../grupos_imgs/D/sua_img.png" class="imgSobre">
+            <img src="../grupos_imgs/D/raquel.jpg" class="imgSobre">
             <h3 class="sobreNome"> Raquel Alexsandra do Couto</h3>
             <div class="sobreCorpo">
               <p class="sobreParagrafos"> Seu Texto </p>

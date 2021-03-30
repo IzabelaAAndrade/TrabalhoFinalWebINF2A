@@ -71,10 +71,10 @@ include '../sistema_login/verifica_login.php';
                         <h3 class="sobreNome"> 👑 Izabela A. Andrade </h3>
                         <div class="sobreCorpo">
                             <p class="sobreParagrafos"> Uma doidinha completamente apaixonada por livros (e personagens
-                                fictícios), que não vive sem música.
-                                <br>“I may not be able to cure cancer or end world hunger, but small kindnesses go a long
+                                fictícios), que não vive sem música. 🤍
+                                <br><br>“I may not be able to cure cancer or end world hunger, but small kindnesses go a long
                                 way.”
-                                <br> They Both Die At The End - Adam Silvera
+                                <br> They Both Die At The End, Adam Silvera
                             </p>
 
                         </div>
