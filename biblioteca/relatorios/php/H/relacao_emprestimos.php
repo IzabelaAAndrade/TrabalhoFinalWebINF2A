@@ -27,7 +27,7 @@ echo "
 <th>Id do acervo</th>
 <th>Data de empréstimo</th>
 <th>Devolução prevista</th>
-<th>Devloução</th>
+<th>Devoloução</th>
 <th>Multa</th>
 </tr>";
 for ($i = 0; $i < sizeof($table); $i++){

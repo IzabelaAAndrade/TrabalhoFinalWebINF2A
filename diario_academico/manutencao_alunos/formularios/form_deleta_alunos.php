@@ -4,7 +4,8 @@
   Grupo F - desenvolvido por Mayara Mendes
 -->
 <?php
-session_start();
+@session_start();
+include '../../../sistema_login/verifica_login.php';
 ?>
 
 <html>
@@ -13,8 +14,8 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Remoção de alunos</title>
-  <link rel="stylesheet" href="../CSSs/geral.css">
   <link rel="stylesheet" href="../CSSs/style.css">
+  <link rel="stylesheet" href="../CSSs/geral.css">
   <link rel="stylesheet" href="../CSSs/geral_academico.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
@@ -25,6 +26,12 @@ session_start();
   <header>
     <img src="../CSSs/img/logo.jpg" alt="logo" id="logo">
     <h1 id="titulo">Sistema Diário Acadêmico</h1>
+    <div id="dados_user">
+      <div id="aux">
+        <h2 id="nome_user">Olá <?php echo $_SESSION['nome_user']; ?></h2>
+        <h2 id="sair"><a id="sair" href="../../sistema_login/logout.php">Sair</a></h2>
+      </div>
+    </div>
   </header>
   <nav>
     <ul class="menu">

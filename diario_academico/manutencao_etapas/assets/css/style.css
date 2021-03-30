@@ -147,37 +147,6 @@ legend {
     width: 100%;
 }
 
-/* table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-tr:nth-child(even) {
-    background-color: rgba(var(--blue-rgb), 0.075);
-}
-
-th, td {
-    margin: 0;
-    padding: 5px;
-    border-bottom: 1px solid rgba(var(--blue-rgb), 0.3);
-    text-align: center;
-}
-
-.icon-container {
-    cursor: pointer;
-    transition: all ease-in-out 100ms;
-    padding: 0;
-}
-
-.icon-container:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.table-icon {
-    width: 18px;
-    height: 18px;
-} */
-
 table {
     margin: 10px  auto;
     width: 100%;
@@ -286,7 +255,6 @@ input {
     background: transparent;
     border: none;
     border-bottom: 2px solid rgba(69, 123, 157, 0.8);
-    z-index: 2;
 }
 
 label {
@@ -295,7 +263,6 @@ label {
     color: rgba(69, 123, 157, 0.8);
     font-size: 1rem;
     transition: 200ms;
-    z-index: 1;
 }
 
 input:focus {

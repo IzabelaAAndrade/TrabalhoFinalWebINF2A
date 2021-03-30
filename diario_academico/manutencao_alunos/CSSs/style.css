@@ -343,3 +343,16 @@ textarea::placeholder{
 #foto{
     text-align: center;
 }
+
+#dados_user {
+    color: white;
+    font-size: .8em;
+    text-align: right;
+    text-decoration: none;
+    margin-top: -70px;
+    margin-right: 100;
+}
+
+#sair{
+    color: white;
+}
