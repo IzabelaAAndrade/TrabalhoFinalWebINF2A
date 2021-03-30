@@ -290,10 +290,12 @@ include '../sistema_login/verifica_login.php';
                         </div>
                     </div>
                     <div class="carousel-item slidesE">
-                        <img src="../grupos_imgs/E/sua_img.png" class="imgSobre">
+                        <img src="../grupos_imgs/E/victor_wilson.jpg" class="imgSobre">
                         <h3 class="sobreNome"> Victor Wilson Medeiros da Silva</h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
+                            <p class="sobreParagrafos"> Sou uma pessoa apaixonada por livros de suspense e por música coreana. 
+                            <br>“No matter what happens in life, be good to people. Being good to people is a wonderful legacy to leave behind.” 
+                            <br> –Taylor Swift- </p>
 
                         </div>
                     </div>
