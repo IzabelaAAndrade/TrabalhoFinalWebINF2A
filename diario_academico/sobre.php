@@ -269,10 +269,13 @@ include '../sistema_login/verifica_login.php';
                         </div>
                     </div>
                     <div class="carousel-item slidesE">
-                        <img src="../grupos_imgs/E/sua_img.png" class="imgSobre">
+                        <img src="../grupos_imgs/E/janine.png" class="imgSobre">
                         <h3 class="sobreNome"> Janine de Amorim Teodoro  </h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
+                            <p class="sobreParagrafos"> Apaixonada por viajar, sair com os amigos e passar um tempo com a família.
+                            <br>Tentando fortemente pensar fora da caixinha.
+                            <br>"The best way to not feel hopeless is to get up and do something."
+                            <br> -Barack Obama- </p>
 
                         </div>
                     </div>
