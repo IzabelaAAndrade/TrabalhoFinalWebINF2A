@@ -428,12 +428,11 @@ include '../sistema_login/verifica_login.php';
                     </div>
                 </div>
                 <div class="carousel-item slidesH">
-                    <img src="../grupos_imgs/H/sua_img.png" class="imgSobre">
-                    <h3 class="sobreNome"> Mateus Leal Sobreira</h3>
+                   <img src="../grupos_imgs/H/mateusleal.png" class="imgSobre">
+                   <h3 class="sobreNome"> Mateus Leal Sobreira</h3>
                     <div class="sobreCorpo">
-                        <p class="sobreParagrafos"> Seu Texto </p>
-
-                    </div>
+                        <p class="sobreParagrafos">Estudante de Informática no CEFET-MG e aspirante a desenvolvedor de Jogos</p>
+                     </div>
                 </div>
 
             </div>
