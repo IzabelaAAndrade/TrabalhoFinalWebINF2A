@@ -425,10 +425,10 @@ include '../sistema_login/verifica_login.php';
                 </ol>
                 <div class="carousel-inner slidesH">
                     <div class="carousel-item active">
-                        <img src="../grupos_imgs/H/sua_img.png" class="imgSobre">
+                        <img src="../grupos_imgs/H/joaofrancisco.jpeg" class="imgSobre">
                         <h3 class="sobreNome"> 👑 João Francisco Carvalho Soares de Oliveira Queiroga</h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu texto
+                            <p class="sobreParagrafos"> Nerd viciado em jogos, animes e algumas séries. Especialista em desculpas para procrastinar.
                             </p>
 
                         </div>
