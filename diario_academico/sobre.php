@@ -479,7 +479,7 @@ include '../sistema_login/verifica_login.php';
         </ol>
         <div class="carousel-inner slidesI">
           <div class="carousel-item active">
-            <img src="../grupos_imgs/I/sua_img.png" class="imgSobre">
+            <img src="../grupos_imgs/I/vinicius.jpeg" class="imgSobre">
             <h3 class="sobreNome"> 👑 Vinícius Assis Lima</h3>
             <div class="sobreCorpo">
               <p class="sobreParagrafos">
