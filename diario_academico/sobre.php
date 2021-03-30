@@ -10,7 +10,7 @@ include '../sistema_login/verifica_login.php';
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SORA | Sobre</title>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index_diario.css">
         <link rel="stylesheet" href="sobre.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@ include '../sistema_login/verifica_login.php';
                     <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
                     <h2 id="sair"><a href="../sistema_login/logout.php">Sair</a></h2>
                 </div>
-            </div>  
+            </div>
         </header>
         <nav>
             <ul class="menu">
@@ -40,7 +40,7 @@ include '../sistema_login/verifica_login.php';
                 </li>
                 <li><a href="reservas/cria_reserva.php">Reservas</a></li>
                 <li><a href="relatorios/index.php">Relatórios</a></li>
-            
+
             </ul>
         </nav>
         <main>
@@ -50,8 +50,8 @@ include '../sistema_login/verifica_login.php';
 
             <h1> QUEM FAZ </H1>
                 <p> Aqui temos algumas informações sobre as garotas que trouxeram esta página para a realidade. Um pouco sobre estas estudantes, pesquisadoras e desenvolvedoras.
-              
-              
+
+
               <!--Grupo A-->
              <div class="pessoas">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -65,11 +65,11 @@ include '../sistema_login/verifica_login.php';
                       <img src="../grupos_imgs/A/iza3.jpg" class="imgSobre">
                        <h3 class="sobreNome"> 👑 Izabela A. Andrade </h3>
                        <div class="sobreCorpo">
-                          <p class="sobreParagrafos"> Uma doidinha completamente apaixonada por livros (e personagens fictícios), que não vive sem música. 
+                          <p class="sobreParagrafos"> Uma doidinha completamente apaixonada por livros (e personagens fictícios), que não vive sem música.
                               <br>“I may not be able to cure cancer or end world hunger, but small kindnesses go a long way.”
                               <br> They Both Die At The End - Adam Silvera
                           </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesA">
@@ -77,7 +77,7 @@ include '../sistema_login/verifica_login.php';
                         <h3 class="sobreNome"> Marcela P. Silvério  </h3>
                         <div class="sobreCorpo">
                             <p class="sobreParagrafos"> Seu Texto </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesA">
@@ -86,10 +86,10 @@ include '../sistema_login/verifica_login.php';
                        <div class="sobreCorpo">
                         <p class="sobreParagrafos"> Поклонник онлайн-игр.
                             <br>“Не создавайте себе ограничений. Вы должны зайти так далеко, насколько позволяет ваш разум. То, чего вы хотите больше всего, может быть достигнуто." – Mary Kay Ash</p>
-                         
+
                       </div>
                     </div>
-                    
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -100,7 +100,7 @@ include '../sistema_login/verifica_login.php';
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                </div>  
+                </div>
 
              <!--Grupo B-->
              <div class="pessoas">
@@ -117,7 +117,7 @@ include '../sistema_login/verifica_login.php';
                        <div class="sobreCorpo">
                           <p class="sobreParagrafos"> Seu texto
                           </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesB">
@@ -125,7 +125,7 @@ include '../sistema_login/verifica_login.php';
                         <h3 class="sobreNome"> Pedro Henrique Yagi  </h3>
                         <div class="sobreCorpo">
                             <p class="sobreParagrafos"> Seu Texto </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesB">
@@ -133,10 +133,10 @@ include '../sistema_login/verifica_login.php';
                        <h3 class="sobreNome"> Rubem Muzzi Mortimer</h3>
                        <div class="sobreCorpo">
                         <p class="sobreParagrafos"> Seu Texto </p>
-                         
+
                       </div>
                     </div>
-                    
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicatorsB" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -147,7 +147,7 @@ include '../sistema_login/verifica_login.php';
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-                </div>    
+                </div>
 
                 <!--Grupo C-->
              <div class="pessoas">
@@ -164,7 +164,7 @@ include '../sistema_login/verifica_login.php';
                        <div class="sobreCorpo">
                           <p class="sobreParagrafos"> Seu texto
                           </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesC">
@@ -172,7 +172,7 @@ include '../sistema_login/verifica_login.php';
                         <h3 class="sobreNome"> Giovana Caroba Bragio dos Santos  </h3>
                         <div class="sobreCorpo">
                             <p class="sobreParagrafos"> Seu Texto </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesC">
@@ -180,10 +180,10 @@ include '../sistema_login/verifica_login.php';
                        <h3 class="sobreNome"> João Vitor Lima Gomes</h3>
                        <div class="sobreCorpo">
                          <p class="sobreParagrafos"> Seu Texto </p>
-                         
+
                       </div>
                     </div>
-                    
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicatorsC" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -195,7 +195,7 @@ include '../sistema_login/verifica_login.php';
                   </a>
                 </div>
                 </div>
-                
+
 
                  <!--Grupo D-->
              <div class="pessoas">
@@ -212,7 +212,7 @@ include '../sistema_login/verifica_login.php';
                        <div class="sobreCorpo">
                           <p class="sobreParagrafos"> Seu texto
                           </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesD">
@@ -220,7 +220,7 @@ include '../sistema_login/verifica_login.php';
                         <h3 class="sobreNome"> Bruna Carvalho Peixoto Sanches </h3>
                         <div class="sobreCorpo">
                             <p class="sobreParagrafos"> Seu Texto </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesD">
@@ -228,10 +228,10 @@ include '../sistema_login/verifica_login.php';
                        <h3 class="sobreNome"> Raquel Alexsandra do Couto</h3>
                        <div class="sobreCorpo">
                          <p class="sobreParagrafos"> Seu Texto </p>
-                         
+
                       </div>
                     </div>
-                    
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicatorsD" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -259,7 +259,7 @@ include '../sistema_login/verifica_login.php';
                        <div class="sobreCorpo">
                           <p class="sobreParagrafos"> Seu texto
                           </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesE">
@@ -267,7 +267,7 @@ include '../sistema_login/verifica_login.php';
                         <h3 class="sobreNome"> Janine de Amorim Teodoro  </h3>
                         <div class="sobreCorpo">
                             <p class="sobreParagrafos"> Seu Texto </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesE">
@@ -275,10 +275,10 @@ include '../sistema_login/verifica_login.php';
                        <h3 class="sobreNome"> Victor Wilson Medeiros da Silva</h3>
                        <div class="sobreCorpo">
                          <p class="sobreParagrafos"> Seu Texto </p>
-                         
+
                       </div>
                     </div>
-                    
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicatorsE" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -291,53 +291,60 @@ include '../sistema_login/verifica_login.php';
                 </div>
                 </div>
 
-                  <!--Grupo F-->
-             <div class="pessoas">
-                <div id="carouselExampleIndicatorsF" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicatorsF" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicatorsF" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicatorsF" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner slidesF">
-                    <div class="carousel-item active">
-                      <img src="../grupos_imgs/F/sua_img.png" class="imgSobre">
-                       <h3 class="sobreNome"> 👑 Mayara do Carmo Mendes</h3>
-                       <div class="sobreCorpo">
-                          <p class="sobreParagrafos"> Seu texto
-                          </p>
-                          
-                        </div>
-                    </div>
-                    <div class="carousel-item slidesF">
-                        <img src="../grupos_imgs/F/sua_img.png" class="imgSobre">
-                        <h3 class="sobreNome"> Lucas Gabriel Pimenta Moreira  </h3>
-                        <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
-                          
-                        </div>
-                    </div>
-                    <div class="carousel-item slidesF">
-                       <img src="../grupos_imgs/F/sua_img.png" class="imgSobre">
-                       <h3 class="sobreNome"> Tássyla Lissa Lima</h3>
-                       <div class="sobreCorpo">
-                         <p class="sobreParagrafos"> Seu Texto </p>
-                         
+                <!--Grupo F-->
+           <div class="pessoas">
+              <div id="carouselExampleIndicatorsF" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicatorsF" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicatorsF" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicatorsF" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner slidesF">
+                  <div class="carousel-item active">
+                    <img src="../grupos_imgs/F/mayara.jpg" class="imgSobre">
+                     <h3 class="sobreNome"> 👑 Mayara do Carmo Mendes</h3>
+                     <div class="sobreCorpo">
+                        <p class="sobreParagrafos">
+                          “Não há nessa vida algo que não se possa alcançar, você só precisa ir buscar!”
+                          <br>Mire as estrelas - Rosa de Saron
+                        </p>
+
                       </div>
-                    </div>
-                    
                   </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicatorsF" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicatorsF" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
+                  <div class="carousel-item slidesF">
+                      <img src="../grupos_imgs/F/lucas.jpeg" class="imgSobre">
+                      <h3 class="sobreNome"> Lucas Gabriel Pimenta Moreira  </h3>
+                      <div class="sobreCorpo">
+                          <p class="sobreParagrafos">
+                            Na busca dos meus sonhos, “Determinarás tu algum negócio, e ser-te-á firme, e a luz brilhará em teus caminhos”
+                            <br>Jó 22:28
+                          </p>
+                      </div>
+                  </div>
+                  <div class="carousel-item slidesF">
+                     <img src="../grupos_imgs/F/tassyla.jpg" class="imgSobre">
+                     <h3 class="sobreNome"> Tássyla Lissa Lima</h3>
+                     <div class="sobreCorpo">
+                       <p class="sobreParagrafos">
+                         “It’s not what the world holds for you, it’s what you bring to it”
+                         <br>Anne With An E
+                       </p>
+
+                    </div>
+                  </div>
+
                 </div>
-                </div>
-                
+                <a class="carousel-control-prev" href="#carouselExampleIndicatorsF" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicatorsF" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              </div>
+
                   <!--Grupo G-->
              <div class="pessoas">
                 <div id="carouselExampleIndicatorsG" class="carousel slide" data-ride="carousel">
@@ -353,7 +360,7 @@ include '../sistema_login/verifica_login.php';
                        <div class="sobreCorpo">
                           <p class="sobreParagrafos"> Seu texto
                           </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesG">
@@ -361,7 +368,7 @@ include '../sistema_login/verifica_login.php';
                         <h3 class="sobreNome"> João Marcos de Sousa Rezende  </h3>
                         <div class="sobreCorpo">
                             <p class="sobreParagrafos"> Seu Texto </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesG">
@@ -369,10 +376,10 @@ include '../sistema_login/verifica_login.php';
                        <h3 class="sobreNome"> David Nunes Ribeiro</h3>
                        <div class="sobreCorpo">
                          <p class="sobreParagrafos"> Seu Texto </p>
-                         
+
                       </div>
                     </div>
-                    
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicatorsG" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -400,7 +407,7 @@ include '../sistema_login/verifica_login.php';
                        <div class="sobreCorpo">
                           <p class="sobreParagrafos"> Seu texto
                           </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesH">
@@ -408,7 +415,7 @@ include '../sistema_login/verifica_login.php';
                         <h3 class="sobreNome"> Pedro Henrique Alves de Abreu Campos </h3>
                         <div class="sobreCorpo">
                             <p class="sobreParagrafos"> Seu Texto </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesH">
@@ -416,10 +423,10 @@ include '../sistema_login/verifica_login.php';
                        <h3 class="sobreNome"> Mateus Leal Sobreira</h3>
                        <div class="sobreCorpo">
                          <p class="sobreParagrafos"> Seu Texto </p>
-                         
+
                       </div>
                     </div>
-                    
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicatorsH" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -447,7 +454,7 @@ include '../sistema_login/verifica_login.php';
                        <div class="sobreCorpo">
                           <p class="sobreParagrafos"> Seu texto
                           </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesI">
@@ -455,7 +462,7 @@ include '../sistema_login/verifica_login.php';
                         <h3 class="sobreNome"> Davi Santos </h3>
                         <div class="sobreCorpo">
                             <p class="sobreParagrafos"> Seu Texto </p>
-                          
+
                         </div>
                     </div>
                     <div class="carousel-item slidesI">
@@ -463,10 +470,10 @@ include '../sistema_login/verifica_login.php';
                        <h3 class="sobreNome"> Henrique Matos</h3>
                        <div class="sobreCorpo">
                          <p class="sobreParagrafos"> Seu Texto </p>
-                         
+
                       </div>
                     </div>
-                    
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicatorsI" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -478,9 +485,9 @@ include '../sistema_login/verifica_login.php';
                   </a>
                 </div>
                 </div>
-        
-        
-        
+
+
+
         </main>
         <footer>
             <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
@@ -492,4 +499,3 @@ include '../sistema_login/verifica_login.php';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
-

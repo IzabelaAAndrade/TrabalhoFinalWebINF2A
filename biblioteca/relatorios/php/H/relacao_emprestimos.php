@@ -1,4 +1,10 @@
 <?php
+/*
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+//*/
+Error_reporting(0);
 
 include_once('../lib/libConnection.php');
 
@@ -21,7 +27,7 @@ echo "
 <th>Id do acervo</th>
 <th>Data de empréstimo</th>
 <th>Devolução prevista</th>
-<th>Devloução</th>
+<th>Devoloução</th>
 <th>Multa</th>
 </tr>";
 for ($i = 0; $i < sizeof($table); $i++){
