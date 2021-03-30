@@ -258,7 +258,7 @@ li a{
     width:200px;
 }
 /* Dados do Usuário *********************************************************************/
-#dados_user a, #dados_user{
+#nome_user a, #nome_user{
     color:white;
     font-size: .8em;
     text-align: right;

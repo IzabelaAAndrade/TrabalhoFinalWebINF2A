@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <img src="assets/img/LogoExemploCortado.png" alt="logo" id="logo">
+        <img src="assets/img/sidaLogo.jpg" alt="logo" id="logo">
         <h1>Sistema Diário Acadêmico</h1>
         <div id="dados_user">
             <div id="aux">

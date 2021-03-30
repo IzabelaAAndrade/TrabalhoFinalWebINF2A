@@ -294,3 +294,28 @@ li a{
     display:block;
     width:200px;
 }
+
+/* Dados do Usuário *********************************************************************/
+#nome_user a, #nome_user{
+    color:white;
+    font-size: .8em;
+    text-align: right;
+    text-decoration: none;
+    
+}
+
+#aux{
+    position: absolute;
+    left: 90vw;
+    text-align: right;
+    top: 5vh;
+}
+
+#sair a{
+    color: #ffffff;
+    top: 9vh;
+}
+
+#sair a:hover{
+    color:#e7d2d4;
+}
