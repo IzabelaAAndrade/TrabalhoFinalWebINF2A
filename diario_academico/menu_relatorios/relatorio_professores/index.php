@@ -1,6 +1,6 @@
 <?php
     @session_start();
-    include '../../sistema_login/verifica_login.php';
+    include '../../../sistema_login/verifica_login.php';
 ?>
 <!DOCTYPE html>
 <!-- HTML geral para páginas que sejam do tipo formulários -->

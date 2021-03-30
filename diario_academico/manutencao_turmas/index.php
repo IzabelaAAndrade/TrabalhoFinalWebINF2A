@@ -38,14 +38,12 @@
    <header>
       <img src="img/sidaLogo.jpg" alt="logo" id="logo">
       <h1 id="titulo">Sistema Academico</h1>
-      <div id="divBuscaTurma">
-      </div>
       <div id="dados_user">
       <div id="aux">
         <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
         <h2 id="sair"><a href="../../sistema_login/logout.php">Sair</a></h2>
       </div>
-    </div>
+      </div>
    </header>
         
        <nav>
