@@ -434,10 +434,10 @@ include '../sistema_login/verifica_login.php';
                         </div>
                     </div>
                     <div class="carousel-item slidesH">
-                        <img src="../grupos_imgs/H/sua_img.png" class="imgSobre">
+                        <img src="../grupos_imgs/H/olson.jpeg" class="imgSobre">
                         <h3 class="sobreNome"> Pedro Henrique Alves de Abreu Campos </h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
+                            <p class="sobreParagrafos"> JoJofag, lolzeiro, entusiasta do rap e futuro cadidato a ex-presidente do Brasil </p>
 
                         </div>
                     </div>
