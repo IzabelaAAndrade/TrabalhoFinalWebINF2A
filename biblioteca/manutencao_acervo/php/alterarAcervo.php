@@ -116,6 +116,9 @@ elseif (strcmp($tipo, "midias")==0) {
     echo "<script>location.href='../index_acervo.php'</script>";
   }
 }
-
+else{
+    echo "<script>alert('Informações Gerais alteradas com sucesso!');</script>";
+}
 mysqli_query($con,"UPDATE acervo SET id_campi='$id_campi', nome='$nome', local='$local', ano='$ano', editora='$editora', paginas='$paginas' WHERE id='$id_acervo'");
+echo "<script>location.href='../index_acervo.php'</script>";
  ?>
