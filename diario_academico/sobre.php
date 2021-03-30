@@ -216,10 +216,10 @@ include '../sistema_login/verifica_login.php';
         </ol>
         <div class="carousel-inner slidesD">
           <div class="carousel-item active">
-            <img src="../grupos_imgs/D/sua_img.png" class="imgSobre">
+            <img src="../grupos_imgs/D/gabriel.jpeg" class="imgSobre">
             <h3 class="sobreNome"> 👑 Gabriel Gonçalves de Souza Ribeiro</h3>
             <div class="sobreCorpo">
-              <p class="sobreParagrafos"> Seu texto
+              <p class="sobreParagrafos"> Apenas um gay que, procurando o que fazer da vida, veio parar em Informática. Was I supposed to be here???<br><br>#ForaBolsonaro
               </p>
 
             </div>
