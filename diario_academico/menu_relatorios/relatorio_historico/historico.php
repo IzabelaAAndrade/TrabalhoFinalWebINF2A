@@ -30,8 +30,8 @@
     <nav>
             <ul class="menu">
                 <li><a href="../../../sistema_login/index.php">Início</a></li>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="../../sobre.html">Sobre</a></li>
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="../../sobre.php">Sobre</a></li>
                 <li><a href="#">Manutenção</a>
                     <ul class="sub_menu">
                         <li><a href="../../campi/campi.php">Campi</a></li>

@@ -213,7 +213,7 @@ li a{
     top: 2em;
     text-align: right;
     width: auto;
-    font-size: .4em;
+    font-size: .8em;
 }
 
 #sair a{
@@ -223,4 +223,12 @@ li a{
 
 #sair a:hover{
     color:#e7d2d4;
+}
+
+#nenhumResultado{
+    color: white;
+    background-color: #e74946;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
 }

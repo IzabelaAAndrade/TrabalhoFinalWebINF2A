@@ -29,6 +29,7 @@
   </header>
   <nav>
   <ul class="menu">
+         <li><a href="../../sistema_login/index.php">Início</a></li>
          <li><a href="../index.php">Home</a></li>
          <li><a href="../sobre.php">Sobre</a></li>
          <li><a href="#">Manutenção</a>
@@ -83,7 +84,7 @@
           $return .= "<tr><td id='campoId".$row['id']."'>".$row['id']."</td><td id='campoNome".$row['id']."'>".$row['nome']."</td><td>".$row['id_cursos']."</td><td><button id='btnEditar".$row['id']."' onclick='getIdTurma(".$row['id'].");' class='btnAlterar btn btn-info btn-lg' data-toggle='modal' data-target='#alterarTurmaModal'>Editar</button></td><td><button id='btnDeletar".$row['id']."' class='btnDeletar btn btn-info btn-lg' data-toggle='modal' data-target='#deletarTurmaModal'>Deletar</button></td></tr>";        }
         $return .= "</tbody></table></div>";
       } else {
-        $return = "Existem 0 turmas para esse curso";
+        $return = "<p id='nenhumResultado'>Existem 0 turmas para esse curso</p>";
       }
 
       echo $return;

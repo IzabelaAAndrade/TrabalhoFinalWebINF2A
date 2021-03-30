@@ -30,8 +30,8 @@
     </header>
     <nav>
         <ul class="menu">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../sobre.html">Sobre</a></li>
+            <li><a href="../../index.php">Home</a></li>
+            <li><a href="../../sobre.php">Sobre</a></li>
             <li><a href="#">Manutenção</a>
                 <ul class="sub_menu">
                     <li><a href="../../campi/campi.php">Campi</a></li>
@@ -39,10 +39,10 @@
                     <li><a href="../../manutencao_cursos/index.php">Cursos</a></li>
                     <li><a href="../../manutencao_turmas/index.php">Turmas</a></li>
                     <li><a href="../../manutencao_alunos/index.php">Alunos</a></li>
-                    <li><a href="../../manutencao_professores/index.html">Professores</a></li>
+                    <li><a href="../../manutencao_professores/index.php">Professores</a></li>
                     <li><a href="../../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
                     <li><a href="../../manutencao_etapas/index.php">Etapas</a></li>
-                    <li><a href="../../manutencao_diarios/index.html">Diários</a></li>
+                    <li><a href="../../manutencao_diarios/index.php">Diários</a></li>
                 </ul>
             </li>
             <li><a href="../index.php">Relatórios</a>
