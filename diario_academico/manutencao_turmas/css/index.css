@@ -199,3 +199,10 @@ li a{
     display:block;
     width:200px;
 }
+
+#dados_user{
+    width: auto;
+    position: absolute;
+    right: 2em;
+    top: 2em;
+}

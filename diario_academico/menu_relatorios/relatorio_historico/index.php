@@ -1,3 +1,7 @@
+<?php
+    @session_start();
+    include '../../sistema_login/verifica_login.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,13 +15,18 @@
         <link rel="stylesheet" href="../css_relatorios/style_tabelas.css">
         <link rel="stylesheet" href="../css_relatorios/style_cabecalhos.css">
         <link rel="stylesheet" href="../css_relatorios/style_inputs_botoes.css">
-
     	<title>Menu de Relatórios - Histórico por Aluno e Turma | SIDA</title>
 	</head>
 <body>
     <header>
         <img src="../sidaLogo.jpg" alt="logo" id="logo">
         <h1 id="titulo">Sistema Diário Acadêmico</h1>
+        <div id="dados_user">
+        <div id="aux">
+            <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
+            <h2 id="sair"><a href="../../sistema_login/logout.php">Sair</a></h2>
+        </div>
+        </div>
     </header>
     <nav>
         <ul class="menu">

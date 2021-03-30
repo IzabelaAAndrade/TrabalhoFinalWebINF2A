@@ -1,3 +1,7 @@
+<?php
+    @session_start();
+    include '../../sistema_login/verifica_login.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,36 +20,41 @@
     <header>
         <img src="../sidaLogo.jpg" alt="logo" id="logo">
         <h1 id="titulo">Sistema Diário Acadêmico</h1>
+        <div id="dados_user">
+        <div id="aux">
+            <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
+            <h2 id="sair"><a href="../../sistema_login/logout.php">Sair</a></h2>
+        </div>
+        </div>
     </header>
     <nav>
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Manutenção</a>
-                <ul class="sub_menu">
-                    <li><a href="../../diario_academico/campi/inseriCampi.html">Campi</a></li>
-                    <li><a href="../../diario_academico/manutencao_departamentos/departamentos.html">Departamentos</a></li>
-                    <li><a href="../../diario_academico/manutenção_cursos/index.html">Cursos</a></li>
-                    <li><a href="../../manutencao_turmas/index.php">Turmas</a></li>
-                    <li><a href="../../diario_academico/manutencao_alunos/index.php">Alunos</a></li>
-                    <li><a href="../../diario_academico/manutencao_professores/index.html">Professores</a></li>
-                    <li><a href="../../diario_academico/manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
-                    <li><a href="../../diario_academico/manutencao_etapas/index.php">Etapas</a></li>
-                    <li><a href="../../diario_academico/manutencao_diarios/php/inserir.php">Diários</a></li>
-                </ul>
-            </li>
-            <li><a href="../index.php">Relatórios</a>
-                <ul class="sub_menu">
-                    <li><a href="../relatorio_certificado/index.php">Certificados</a></li>
-                    <li><a href="index.php">Histórico por Aluno e Turma</a></li>
-                    <li><a href="../relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
-                    <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li> 
-                    <li><a href="../relatorio_professores/index.php">Relação de Professores</a></li> 
-                </ul>
-            </li>
-            <li><a href="../../diario_academico/transferencia_alunos/desliga_interface.php">Transferências</a></li>
-            <li><a href="#">Ajuda</a></li>
-        </ul>
+            <ul class="menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../sobre.html">Sobre</a></li>
+                <li><a href="#">Manutenção</a>
+                    <ul class="sub_menu">
+                        <li><a href="../../campi/campi.php">Campi</a></li>
+                        <li><a href="../../manutencao_departamentos/">Departamentos</a></li>
+                        <li><a href="../../manutencao_cursos/index.php">Cursos</a></li>
+                        <li><a href="../../manutencao_turmas/index.php">Turmas</a></li>
+                        <li><a href="../../manutencao_alunos/index.php">Alunos</a></li>
+                        <li><a href="../../manutencao_professores/index.php">Professores</a></li>
+                        <li><a href="../../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
+                        <li><a href="../../manutencao_etapas/index.php">Etapas</a></li>
+                        <li><a href="../../manutencao_diarios/index.php">Diários</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.php">Relatórios</a>
+                    <ul class="sub_menu">
+                        <li><a href="../relatorio_certificado/index.php">Certificados</a></li>
+                        <li><a href="index.php">Histórico por Aluno e Turma</a></li>
+                        <li><a href="../relatorio_alunos/index_relatorio_aluno.php">Relação de Alunos</a></li>
+                        <li><a href="../relatorio_relacao_conteudo/index.php">Relação de Conteúdos</a></li>
+                        <li><a href="../relatorio_professores/index.php">Relação de Professores</a></li> 
+                    </ul>
+                </li>
+                <li><a href="../../transferencia_alunos/index.php">Transferências</a></li>
+            </ul>
     </nav>
     <main>
         <div id="cabecalho">

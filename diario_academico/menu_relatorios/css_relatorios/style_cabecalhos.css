@@ -19,3 +19,10 @@
 #cabecalho p a:hover{
     color: #E63946;
 }
+
+#dados_user{
+    width: auto;
+    position: absolute;
+    right: 2em;
+    top: 2em;
+}

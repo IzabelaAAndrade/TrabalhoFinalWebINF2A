@@ -1,4 +1,6 @@
 <?php
+@session_start();
+include '../../sistema_login/verifica_login.php';
 $cpf = $_GET["cpf"];
 $etapa = $_GET["etapa"];
 
@@ -33,22 +35,28 @@ foreach($conteudos as $conteudo){
         <header>
             <img src="../sidaLogo.jpg" alt="logo" id="logo">
             <h1 id="titulo">Sistema Diário Acadêmico</h1>
+            <div id="dados_user">
+            <div id="aux">
+                <h2 id="nome_user">Olá <?php echo($_SESSION['nome_user']); ?></h2>
+                <h2 id="sair"><a href="../../sistema_login/logout.php">Sair</a></h2>
+            </div>
+            </div>
         </header> 
         <nav>
         <ul class="menu">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../sobre.html">Sobre</a></li>
+            <li><a href="../../index.php">Home</a></li>
+            <li><a href="../../sobre.php">Sobre</a></li>
             <li><a href="#">Manutenção</a>
                 <ul class="sub_menu">
                     <li><a href="../../campi/campi.php">Campi</a></li>
-                    <li><a href="../../manutencao_departamentos/">Departamentos</a></li>
+                    <li><a href="../../manutencao_departamentos/index.php">Departamentos</a></li>
                     <li><a href="../../manutencao_cursos/index.php">Cursos</a></li>
                     <li><a href="../../manutencao_turmas/index.php">Turmas</a></li>
                     <li><a href="../../manutencao_alunos/index.php">Alunos</a></li>
-                    <li><a href="../../manutencao_professores/index.html">Professores</a></li>
+                    <li><a href="../../manutencao_professores/index.php">Professores</a></li>
                     <li><a href="../../manutencao_disciplinas/disciplinas_index.php">Disciplinas</a></li>
                     <li><a href="../../manutencao_etapas/index.php">Etapas</a></li>
-                    <li><a href="../../manutencao_diarios/index.html">Diários</a></li>
+                    <li><a href="../../manutencao_diarios/index.php">Diários</a></li>
                 </ul>
             </li>
             <li><a href="../index.php">Relatórios</a>
