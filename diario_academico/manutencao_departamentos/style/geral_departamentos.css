@@ -319,3 +319,13 @@ li a{
 #sair a:hover{
     color:#e7d2d4;
 }
+/*mudança iza: Corrigir problema no header*/
+#header-esp{
+    padding-bottom: 8%;
+}
+
+#nome_user, #sair{
+    font-weight: bold;
+    font-size: 1.7em;
+    margin: 1vh 0vw;
+}

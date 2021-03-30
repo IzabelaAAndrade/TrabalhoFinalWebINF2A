@@ -78,3 +78,8 @@ h3 {
     color:#e7d2d4;
 }
 
+#nome_user, #sair{
+    font-weight: bold;
+    font-size: 1.7em;
+    margin: 2vh 0vw;
+}

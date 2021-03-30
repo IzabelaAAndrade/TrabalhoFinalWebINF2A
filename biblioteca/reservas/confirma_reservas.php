@@ -29,12 +29,12 @@ session_start();
  $row_itens = mysqli_num_rows($resultado_itens);
 
 
-
+    
  function insere_na_tabela($data_reserva){
 
-    global $data, $alunos, $itens, $conexao, $row_itens; // Data digitada em segundos
+    global $data, $alunos, $itens, $conexao, $row_itens, $contador; // Data digitada em segundos
     $nova_data = $data_reserva+(7 *24 * 60 * 60); // Data em segundos + 7 dias em segundos
-    $tempo_espera_dias = ($nova_data - $data_reserva)/(60*60*24); // Conversão -> tempo de espera em dias;
+    $tempo_espera_dias = ($contador+1)*7; // Conversão -> tempo de espera em dias;
     //$data_emprestimo_futuro = $nova_data/86400;
     $data_reserva = date('Y-m-d', $data_reserva);
     $inserir_reserva = "INSERT INTO `reservas` (`id_alunos`, `id_acervo`, `data_reserva`, `tempo_espera`, `emprestou`) VALUES
@@ -43,12 +43,13 @@ session_start();
  }
 
 
-
+    $contador = 0;
     if($row_alunos > 0){
         $_SESSION['confirma'] = 1;
     }if($row_itens > 0){
        while($tem_reserva =  mysqli_fetch_assoc($resultado_itens)){
           $ultima_reserva = $tem_reserva['data_reserva'];
+          $contador++;
        }
        $ultima_reserva_segundos = strtotime($ultima_reserva);
        $data_disponivel_segundos = $ultima_reserva_segundos + (7 * 24 * 60 * 60);
@@ -72,7 +73,7 @@ session_start();
 
 
  mysqli_close($conexao); 
- header("Location: reservas.php?data='". $data_disponivel ."'");
+ header("Location: cria_reserva.php?data='". $data_disponivel ."'");
 
 
 ?> 

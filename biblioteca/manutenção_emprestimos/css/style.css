@@ -233,3 +233,8 @@ h1, h2, h3, h4 {
     cursor:pointer;
     color: white;
 }
+#nome_user, #sair{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 2vh 0vw;
+}

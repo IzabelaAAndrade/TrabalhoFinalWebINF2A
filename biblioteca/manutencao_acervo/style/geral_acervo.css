@@ -286,3 +286,9 @@ li a{
     padding-top: 0px;
     border-bottom: none;
 }
+
+#nome_user, #sair{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 2vh 0vw;
+}

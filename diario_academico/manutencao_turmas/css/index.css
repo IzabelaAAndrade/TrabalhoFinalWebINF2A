@@ -232,3 +232,9 @@ li a{
     width: 100%;
     text-align: center;
 }
+
+#nome_user, #sair{
+    font-weight: bold;
+    font-size: 1.7em;
+    margin: 2vh 0vw;
+}

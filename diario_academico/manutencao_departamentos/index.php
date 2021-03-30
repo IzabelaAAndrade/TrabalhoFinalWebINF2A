@@ -18,7 +18,7 @@ include '../../sistema_login/verifica_login.php';
     />
   </head>
   <body>
-    <header>
+    <header id="header-esp">
       <img src="../../imgs/sidaLogo.jpg" alt="logo" id="logo" />
       <h1 id="titulo">Sistema de Diário Acadêmico</h1>
       <div id="dados_user">

@@ -26,15 +26,7 @@ include 'verifica_login.php';
                 </div>
             </div>  
         </header>
-        <nav>
-        <ul class="menu">
-            <li><a href="index.php">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Quem Faz</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Area Privada</a></li>
-        </ul>
-        </nav>
+        
         <main>
             <br>
             <h1 class="titulos">Início</h1>
