@@ -229,13 +229,8 @@ h1, h3, p, input{
     margin: 0%;
 }
 
-h1{
-    font-size: 1em;
-}
-
 h3{
     text-align: center;
-    font-size: 0.7em;
 }
 
 .sub{

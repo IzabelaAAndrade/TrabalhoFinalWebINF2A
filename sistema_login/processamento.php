@@ -12,6 +12,7 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
     header('Location: tela_login.php');
     exit();
 }
+
 $conexao = mysqli_connect(HOST, USUARIO, SENHA, DB) or die("Não foi possivel conectar");
 $email = mysqli_real_escape_string($conexao, $_POST['email']); #evitar hacker
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
@@ -32,3 +33,4 @@ if ($row == 1) {
 }
 
 ?>
+

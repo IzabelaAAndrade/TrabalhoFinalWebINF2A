@@ -23,7 +23,7 @@ use PHPMailer\PHPMailer\Exception;
         exit();
     }
 
-    $conexao = mysqli_connect(HOST, USUARIO, SENHA, /*DB*/) or die("Não foi possivel conectar");
+    $conexao = mysqli_connect(HOST, USUARIO, SENHA) or die("Não foi possivel conectar");
 
     include 'cria_BD.php';
 

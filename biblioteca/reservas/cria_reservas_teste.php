@@ -30,13 +30,13 @@ session_start();
 
 
 
- function insere_na_tabela($data_antiga){
+ function insere_na_tabela($data_reserva){
 
     global $data, $alunos, $itens, $conexao, $row_itens; // Data digitada em segundos
-    $nova_data = $data_antiga+(24 * 60 * 60); // Data em segundos + 7 dias em segundos
-    $tempo_espera_dias = $nova_data - $data_antiga; // Conversão -> tempo de espera em dias;
+    $nova_data = $data_reserva+(7 *24 * 60 * 60); // Data em segundos + 7 dias em segundos
+    $tempo_espera_dias = ($nova_data - $data_reserva)/(60*60*24); // Conversão -> tempo de espera em dias;
     //$data_emprestimo_futuro = $nova_data/86400;
-    $data_reserva = date('Y-m-d', $data_antiga);
+    $data_reserva = date('Y-m-d', $data_reserva);
     $inserir_reserva = "INSERT INTO `reservas` (`id_alunos`, `id_acervo`, `data_reserva`, `tempo_espera`, `emprestou`) VALUES
     ('".$alunos."', '".$itens."', '".$data_reserva."', '".$tempo_espera_dias."' , 'N');";
     mysqli_query($conexao, $inserir_reserva);
@@ -47,30 +47,32 @@ session_start();
     if($row_alunos > 0){
         $_SESSION['confirma'] = 1;
     }if($row_itens > 0){
-       $tem_reserva =  mysqli_fetch_assoc($resultado_itens); // Caso tenham reservas, $tem_reserva >0 
-       if(sizeof($tem_reserva) > 0){
-           $ultima_reserva = $tem_reserva[sizeof($tem_reserva)-1]['data_reserva'];
-           $data_disponivel_segundos = time($ultima_reserva) + (7 * 24 * 60 * 60);
-           $data_desejada_segundos = time($data);
-           if($data_desejada_segundos<$data_disponivel_segundos){
-                $data_disponivel = date('d/m/Y', $data_disponivel_segundos);
-                $_SESSION['confirma'] = 2;
-           }else{
-                insere_na_tabela($ultima_reserva_segundos);
-                $_SESSION['confirma'] = 3;
+       while($tem_reserva =  mysqli_fetch_assoc($resultado_itens)){
+          $ultima_reserva = $tem_reserva['data_reserva'];
+       }
+       $ultima_reserva_segundos = strtotime($ultima_reserva);
+       $data_disponivel_segundos = $ultima_reserva_segundos + (7 * 24 * 60 * 60);
+       $data_desejada_segundos = strtotime($data);
+       if($data_desejada_segundos<$data_disponivel_segundos){
+            $data_disponivel = date('d/m/Y', $data_disponivel_segundos);
+            $_SESSION['confirma'] = 2;
+       }else{
+            insere_na_tabela($data_disponivel_segundos);
+            $_SESSION['confirma'] = 3;
 
            }
-       }
+
+
 
     }else{
-        insere_na_tabela(time($data));
+        insere_na_tabela(strtotime($data));
         $_SESSION['confirma'] = 3;
 
     }
 
 
  mysqli_close($conexao); 
- header("Location: reservas.php?data='". $data_disponivel ."'");
+ //header("Location: reservas.php?data='". $data_disponivel ."'");
 
 
 ?> 
