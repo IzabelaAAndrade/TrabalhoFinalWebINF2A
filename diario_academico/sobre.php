@@ -240,7 +240,7 @@ include '../sistema_login/verifica_login.php';
             </div>
           </div>
           <div class="carousel-item slidesD">
-            <img src="../grupos_imgs/D/bruna.png" class="imgSobre">
+            <img src="../grupos_imgs/D/bruna.jpeg" class="imgSobre">
             <h3 class="sobreNome"> Bruna Carvalho Peixoto Sanches </h3>
             <div class="sobreCorpo">
               <p class="sobreParagrafos"> Seu Texto </p>
@@ -248,11 +248,13 @@ include '../sistema_login/verifica_login.php';
             </div>
           </div>
           <div class="carousel-item slidesD">
-            <img src="../grupos_imgs/D/raquel.jpg" class="imgSobre">
+            <img src="../grupos_imgs/D/raquel.jpeg" class="imgSobre">
             <h3 class="sobreNome"> Raquel Alexsandra do Couto</h3>
             <div class="sobreCorpo">
-              <p class="sobreParagrafos"> Seu Texto </p>
-
+              <p class="sobreParagrafos"> Meninas das artes nas horas vagas<br>
+              	Tudo tem seu tempo determinado e há tempo para todo propósito debaixo do céu (Eclesiastes 3:1)<br>
+              	Desejo- lhe uma história com final feliz... E sabedoria para procurá-la (ironias do amor)
+              </p>
             </div>
           </div>
 

@@ -216,50 +216,52 @@ include '../sistema_login/verifica_login.php';
 
         <!--Grupo D-->
         <div class="pessoas">
-            <div id="carouselExampleIndicatorsD" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicatorsD" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicatorsD" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicatorsD" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner slidesD">
-                    <div class="carousel-item active">
-                        <img src="../grupos_imgs/D/gabriel.jpeg" class="imgSobre">
-                        <h3 class="sobreNome"> 👑 Gabriel Gonçalves de Souza Ribeiro</h3>
-                        <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Apenas um gay que, procurando o que fazer da vida, veio parar em Informática. Was I supposed to be here???<br><br>#ForaBolsonaro
-                            </p>
+      <div id="carouselExampleIndicatorsD" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicatorsD" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicatorsD" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicatorsD" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner slidesD">
+          <div class="carousel-item active">
+            <img src="../grupos_imgs/D/gabriel.jpeg" class="imgSobre">
+            <h3 class="sobreNome"> 👑 Gabriel Gonçalves de Souza Ribeiro</h3>
+            <div class="sobreCorpo">
+              <p class="sobreParagrafos"> Apenas um gay que, procurando o que fazer da vida, veio parar em Informática. Was I supposed to be here???<br><br>#ForaBolsonaro
+              </p>
 
-                        </div>
-                    </div>
-                    <div class="carousel-item slidesD">
-                        <img src="../grupos_imgs/D/bruna.png" class="imgSobre">
-                        <h3 class="sobreNome"> Bruna Carvalho Peixoto Sanches </h3>
-                        <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Em construção. </p>
-
-                        </div>
-                    </div>
-                    <div class="carousel-item slidesD">
-                        <img src="../grupos_imgs/D/raquel.jpg" class="imgSobre">
-                        <h3 class="sobreNome"> Raquel Alexsandra do Couto</h3>
-                        <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Em construção. </p>
-
-                        </div>
-                    </div>
-
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicatorsD" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicatorsD" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
+          </div>
+          <div class="carousel-item slidesD">
+            <img src="../grupos_imgs/D/bruna.jpeg" class="imgSobre">
+            <h3 class="sobreNome"> Bruna Carvalho Peixoto Sanches </h3>
+            <div class="sobreCorpo">
+              <p class="sobreParagrafos"> Seu Texto </p>
+
+            </div>
+          </div>
+          <div class="carousel-item slidesD">
+            <img src="../grupos_imgs/D/raquel.jpeg" class="imgSobre">
+            <h3 class="sobreNome"> Raquel Alexsandra do Couto</h3>
+            <div class="sobreCorpo">
+              <p class="sobreParagrafos"> Meninas das artes nas horas vagas<br>
+                Tudo tem seu tempo determinado e há tempo para todo propósito debaixo do céu (Eclesiastes 3:1)<br>
+                Desejo- lhe uma história com final feliz... E sabedoria para procurá-la (ironias do amor)
+              </p>
+            </div>
+          </div>
+
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicatorsD" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicatorsD" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
 
         <!--Grupo E-->
         <div class="pessoas">
