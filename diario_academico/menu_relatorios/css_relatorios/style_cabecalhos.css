@@ -20,16 +20,26 @@
     color: #E63946;
 }
 
-#dados_user{
-    width: auto;
-    position: absolute;
-    right: 2em;
-    top: 2em;
-    font-size: 16px;
-    color: white;
+#dados_user, a{
+    color:white;
+    font-size: .8em;
+    text-align: right;
+    text-decoration: none;
+    
 }
 
-#dados_user a{
-    text-decoration: none;
-    color: white;
+#aux{
+    position: absolute;
+    left: 90vw;
+    text-align: right;
+    top: 5vh;
+}
+
+#sair a{
+    color: #ffffff;
+    top: 9vh;
+}
+
+#sair a:hover{
+    color:#e7d2d4;
 }
