@@ -15,18 +15,30 @@ include '../../../sistema_login/verifica_login.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<<<<<<< HEAD
   <link rel="stylesheet" href="../CSSs/style.css">
+=======
+  <link rel="stylesheet" href="../../CSSs/style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSSs/incluir.css" />
+  <link rel="stylesheet" type="text/css" href="../../CSSs/menu.css" />
+  <link rel="stylesheet" type="text/css" href="../../CSSs/header.css" />
+>>>>>>> 8efd8552d649a1c86de8536631cc858595d61c97
   <title>Manutenção</title>
 </head>
 
 <body>
 
   <header>
+<<<<<<< HEAD
     <img src="../CSSs/img/logo.jpg" alt="logo" id="logo">
+=======
+    <img src="../../CSSs/img/logo.jpg" alt="logo" id="logo">
+>>>>>>> 8efd8552d649a1c86de8536631cc858595d61c97
     <h1 id="titulo">Sistema Diário Acadêmico</h1>
     <div id="dados_user">
       <div id="aux">
         <h2 id="nome_user">Olá <?php echo $_SESSION['nome_user']; ?></h2>
+<<<<<<< HEAD
         <h2 id="sair"><a id="sair" href="../sistema_login/logout.php">Sair</a></h2>
       </div>
     </div>
@@ -47,6 +59,31 @@ include '../../../sistema_login/verifica_login.php';
           <li><a href="../../manutencao_disciplinas/">Disciplinas</a></li>
           <li><a href="../../manutencao_etapas/">Etapas</a></li>
           <li><a href="../../manutencao_diarios/">Diários</a></li>
+=======
+        <h2 id="sair"><a id="sair" href="../../sistema_login/logout.php">Sair</a></h2>
+      </div>
+    </div>
+  </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="../../">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Manutenção</a>
+                <ul class="sub_menu">
+                    <li><a href="../../campi/campi.php">Campi</a></li>
+                    <li><a href="../../manutencao_departamentos/">Departamentos</a></li>
+                    <li><a href="../../manutencao_cursos/">Cursos</a></li>
+                    <li><a href="../../manutencao_turmas/">Turmas</a></li>
+                    <li><a href="../">Alunos</a></li>
+                    <li><a href="../../manutencao_professores/">Professores</a></li>
+                    <li><a href="../../manutencao_disciplinas/">Disciplinas</a></li>
+                    <li><a href="../../manutencao_etapas/">Etapas</a></li>
+                    <li><a href="../../manutencao_diarios/">Diários</a></li>
+                </ul>
+            </li>
+            <li><a href="../../menu_relatorios/">Relatórios</a></li>
+            <li><a href="../../transferencia_alunos/">Transferências</a></li>
+>>>>>>> 8efd8552d649a1c86de8536631cc858595d61c97
         </ul>
       </li>
       <li><a href="../../menu_relatorios/">Relatórios</a></li>
@@ -83,10 +120,17 @@ include '../../../sistema_login/verifica_login.php';
     </div>
   </main>
 
+<<<<<<< HEAD
   <footer>
     <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
     <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
   </footer>
+=======
+    <footer>
+      <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+      <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
+    </footer>
+>>>>>>> 8efd8552d649a1c86de8536631cc858595d61c97
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
