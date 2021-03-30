@@ -71,7 +71,7 @@
           <input class="texto" type="text" id="cpf" name="cpf" placeholder="CPF" data-mask="000.000.000-00">
 
           <?php
-          if (isset($_SESSION['situacao'])) {
+          if (!isset($_SESSION['tableIsReady'])) {
             echo '<p id="erro">' . $_SESSION['situacao'] . '</p>';
             unset($_SESSION['situacao']);
           }
