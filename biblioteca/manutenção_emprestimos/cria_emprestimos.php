@@ -56,7 +56,7 @@ function verifica_disponibilidade_acervo(){
 		$usuario_em_posse = $registro["Id_alunos"];
 		$data_prev_devol = $registro["Data_prev_devol"];
 		$data_prev_devol = formata_data($data_prev_devol);
-		exit("<div class='alert alert-danger' role='alert'>Erro! O item $id_acervo já se encontra emprestado para o usuário $usuario_em_posse, com data prevista de devolução para $data_prev_devol. <a href=''>Fazer Reserva</a>.</div>");
+		exit("<div class='alert alert-danger' role='alert'>Erro! O item $id_acervo já se encontra emprestado para o usuário $usuario_em_posse, com data prevista de devolução para $data_prev_devol. <a href='../reservas/cria_reserva.php'>Fazer Reserva</a>.</div>");
 	}
 }
 

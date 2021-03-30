@@ -210,54 +210,71 @@ include '../sistema_login/verifica_login.php';
                 </a>
             </div>
         </div>
+    </div>
 
 
-        <!--Grupo D-->
-        <div class="pessoas">
-            <div id="carouselExampleIndicatorsD" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+    <!--Grupo D-->
+             <div class="pessoas">
+                <div id="carouselExampleIndicatorsD" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicatorsD" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicatorsD" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicatorsD" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner slidesD">
+                  </ol>
+                  <div class="carousel-inner slidesD">
                     <div class="carousel-item active">
-                        <img src="../grupos_imgs/D/sua_img.png" class="imgSobre">
-                        <h3 class="sobreNome"> 👑 Gabriel Gonçalves de Souza Ribeiro</h3>
-                        <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu texto
-                            </p>
+                      <img src="../grupos_imgs/D/gabriel.jpeg" class="imgSobre">
+                       <h3 class="sobreNome"> 👑 Gabriel Gonçalves de Souza Ribeiro</h3>
+                       <div class="sobreCorpo">
+                          <p class="sobreParagrafos"> Apenas um gay que, procurando o que fazer da vida, veio parar em Informática. Was I supposed to be here???<br><br>#ForaBolsonaro
+                          </p>
 
                         </div>
                     </div>
                     <div class="carousel-item slidesD">
-                        <img src="../grupos_imgs/D/sua_img.png" class="imgSobre">
+                        <img src="../grupos_imgs/D/bruna.png" class="imgSobre">
                         <h3 class="sobreNome"> Bruna Carvalho Peixoto Sanches </h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
+                            <p class="sobreParagrafos"> Em construção. </p>
 
                         </div>
                     </div>
                     <div class="carousel-item slidesD">
-                        <img src="../grupos_imgs/D/sua_img.png" class="imgSobre">
-                        <h3 class="sobreNome"> Raquel Alexsandra do Couto</h3>
-                        <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
+                       <img src="../grupos_imgs/D/raquel.jpg" class="imgSobre">
+                       <h3 class="sobreNome"> Raquel Alexsandra do Couto</h3>
+                       <div class="sobreCorpo">
+                         <p class="sobreParagrafos"> Em construção. </p>
 
-                        </div>
+                      </div>
                     </div>
 
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicatorsD" role="button" data-slide="prev">
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicatorsD" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicatorsD" role="button" data-slide="next">
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicatorsD" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
+                  </a>
+                </div>
+                </div>
+
+    <!--Grupo E-->
+    <div class="pessoas">
+        <div id="carouselExampleIndicatorsE" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicatorsE" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicatorsE" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicatorsE" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner slidesE">
+                <div class="carousel-item active">
+                    <img src="../grupos_imgs/E/img_duda.jpg" class="imgSobre">
+                    <h3 class="sobreNome"> 👑 Maria Eduarda Carmona Banhos</h3>
+                    <div class="sobreCorpo">
+                        <p class="sobreParagrafos"> Atriz que se perde no papel de programadora.<br>"Anyway, the wind blows, doesn’t really matter to me" - Bohemian Rhapsody, Queen
+                        </p>
 
         <!--Grupo E-->
         <div class="pessoas">
