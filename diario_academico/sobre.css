@@ -35,9 +35,16 @@ body, .pessoas{
     background-color: #9e81db;
 }
 
-
-
-
+.menu li{
+    z-index: 10;
+}
+.menu a{
+    color: white;
+}
+.menu a:hover{
+    color: white;
+    text-decoration: none;
+}
 
 
 /*Cores dos slides de cada grupo */
@@ -92,4 +99,8 @@ body, .pessoas{
     width: 70%;
     margin: 0% 5% 0% 15%;
     font-size: .9em;
+  }
+
+  #menu{
+      z-index: 100;
   }

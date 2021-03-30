@@ -37,6 +37,17 @@ body, .pessoas{
 
 
 
+.menu li{
+    z-index: 10;
+}
+.menu a{
+    color: white;
+}
+.menu a:hover{
+    color: white;
+    text-decoration: none;
+}
+
 
 
 
