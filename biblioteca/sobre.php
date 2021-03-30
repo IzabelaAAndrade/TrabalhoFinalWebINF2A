@@ -378,10 +378,10 @@ include '../sistema_login/verifica_login.php';
                 </ol>
                 <div class="carousel-inner slidesG">
                     <div class="carousel-item active">
-                        <img src="../grupos_imgs/G/sua_img.png" class="imgSobre">
+                        <img src="../grupos_imgs/G/fer.jpeg" class="imgSobre">
                         <h3 class="sobreNome"> 👑 Pedro Matheus Simões Ferreira</h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu texto
+                            <p class="sobreParagrafos"> "Any blade takes a few spins to get right. I'm sure this won't be any different"<br>~Tyson Granger
                             </p>
 
                         </div>
