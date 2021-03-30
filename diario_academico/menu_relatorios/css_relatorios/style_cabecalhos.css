@@ -19,28 +19,3 @@
 #cabecalho p a:hover{
     color: #E63946;
 }
-
-#dados_user a{
-    font-size: .8em;
-    text-align: right;
-    text-decoration: none;
-}
-
-#aux{
-    color:white;
-    position: absolute;
-    right: 2em;
-    top: 2em;
-    text-align: right;
-    width: auto;
-    font-size: .8em;
-}
-
-#sair a{
-    color: #ffffff;
-    top: 2em;
-}
-
-#sair a:hover{
-    color:#e7d2d4;
-}
