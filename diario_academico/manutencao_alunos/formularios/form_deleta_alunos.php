@@ -8,9 +8,10 @@
 include '../../../sistema_login/verifica_login.php';
 ?>
 
-<html>
+<html lang="pt">
 
 <head>
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Remoção de alunos</title>
@@ -19,7 +20,16 @@ include '../../../sistema_login/verifica_login.php';
   <link rel="stylesheet" href="../CSSs/geral_academico.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSSs/style.css">
   <link rel="stylesheet" type="text/css" href="../CSSs/incluir.css" />
+  <link rel="stylesheet" type="text/css" href="../CSSs/menu.css" />
+  <link rel="stylesheet" type="text/css" href="../CSSs/header.css" />
+
+  <!-- <link rel="stylesheet" href="../CSSs/geral.css">
+  <link rel="stylesheet" href="../CSSs/geral_academico.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+
+  <title>Manutenção</title>
 </head>
 
 <body>
@@ -60,21 +70,25 @@ include '../../../sistema_login/verifica_login.php';
     <p class="descricao">Para a exclusão, basta inserir os dados nos campos a seguir:</p>
 
     <div id="ajuste">
-      <form action="../PHPs/deleta_alunos_bd.php" method="post" enctype="multipart/form-data">
-        <label><input required placeholder="CPF" required type="text" class="entrada" id="cpf" name="cpf" placeholder="Ex.: 000.000.000-00"></label>
-        <label><input required placeholder="Data de nascimento:" required type="date" class="entrada" name="data_nasc" min="1900-01-01" max="2010-12-31"></label>
+      <form novalidate action="../../PHPs/altera/confere_dados.php" method="post">
+          <input required class="texto" type="text" id="cpf" name="cpf" placeholder="CPF" data-mask="000.000.000-00">
+          <input required class="texto" type="date" name="data_nasc" placeholder="Data de nascimento" min="1900-01-01" max="2010-12-31"></label>
 
-        <?php
-        if (isset($_SESSION['deleta_false'])) {
-          echo '<p id="erro">' . $_SESSION['deleta_false'] . '</p>';
-          unset($_SESSION['deleta_false']);
-        }
-        ?>
+          <?php
+          if (isset($_SESSION['erro'])) {
+              echo '<p id="erro">' . $_SESSION['erro'] . '</p>';
+              unset($_SESSION['erro']);
+          }
+          if (isset($_SESSION['altera_false'])) {
+              echo '<p id="erro">' . $_SESSION['altera_false'] . '</p>';
+              unset($_SESSION['altera_false']);
+          }
+          ?>
 
-        <div id="divBotoes">
-          <button class="botoes" type="submit" id="enviar">Enviar</button>
-          <button class="botoes" id="limpar">Limpar</button>
-        </div>
+          <div id="divBotoes">
+              <input class="botoes" type="submit" value='Enviar'>
+              <input class="botoes" type="reset" value='Cancelar'><br>
+          </div>
       </form>
 
     </div>
