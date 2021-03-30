@@ -11,26 +11,29 @@ include '../../../sistema_login/verifica_login.php';
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSSs/style.css">
-    <title>Manutenção</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../CSSs/style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSSs/incluir.css" />
+  <link rel="stylesheet" type="text/css" href="../../CSSs/menu.css" />
+  <link rel="stylesheet" type="text/css" href="../../CSSs/header.css" />
+  <title>Manutenção</title>
 </head>
 
 <body>
 
-    <header>
-        <img src="../CSSs/img/logo.jpg" alt="logo" id="logo">
-        <h1 id="titulo">Sistema Diário Acadêmico</h1>
-        <div id="dados_user">
-            <div id="aux">
-                <h2 id="nome_user">Olá <?php echo $_SESSION['nome_user']; ?></h2>
-                <h2 id="sair"><a id="sair" href="../sistema_login/logout.php">Sair</a></h2>
-            </div>
-        </div>
-    </header>
+  <header>
+    <img src="../../CSSs/img/logo.jpg" alt="logo" id="logo">
+    <h1 id="titulo">Sistema Diário Acadêmico</h1>
+    <div id="dados_user">
+      <div id="aux">
+        <h2 id="nome_user">Olá <?php echo $_SESSION['nome_user']; ?></h2>
+        <h2 id="sair"><a id="sair" href="../../sistema_login/logout.php">Sair</a></h2>
+      </div>
+    </div>
+  </header>
     <nav>
         <ul class="menu">
             <li><a href="../../">Home</a></li>
@@ -83,8 +86,8 @@ include '../../../sistema_login/verifica_login.php';
     </main>
 
     <footer>
-        <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
-        <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
+      <h3 class="rodape">© SIDA - Orgulhosamente criado pela turma de Informática 2A de ingresso em 2019 do CEFET-MG</h3>
+      <h3 class="rodape">Trabalho orientado pelo professor William Geraldo Sallum</h3>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
