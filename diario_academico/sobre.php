@@ -73,11 +73,11 @@ include '../sistema_login/verifica_login.php';
                         </div>
                     </div>
                     <div class="carousel-item slidesA">
-                        <img src="../grupos_imgs/A/sua_img.png" class="imgSobre">
-                        <h3 class="sobreNome"> Marcela P. Silvério  </h3>
+                        <img src="../grupos_imgs/A/marcela.jpg" class="imgSobre">
+                        <h3 class="sobreNome"> Marcela Prata Silvério  </h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
-
+                            <p class="sobreParagrafos"> Olá! Sou uma pessoa apaixonada por animais, livros, séries e que edita vídeos nas horas vagas! =) </p>
+                          
                         </div>
                     </div>
                     <div class="carousel-item slidesA">
@@ -159,27 +159,33 @@ include '../sistema_login/verifica_login.php';
                   </ol>
                   <div class="carousel-inner slidesC">
                     <div class="carousel-item active">
-                      <img src="../grupos_imgs/C/sua_img.png" class="imgSobre">
+                      <img src="../grupos_imgs/C/gabriel.jpg" class="imgSobre">
                        <h3 class="sobreNome"> 👑 Gabriel Coelho dos Santos</h3>
                        <div class="sobreCorpo">
-                          <p class="sobreParagrafos"> Seu texto
+                          <p class="sobreParagrafos">Um programador viciado em música coreana e livros de fantasia, e que procrastina assistindo vídeos sobre linguística.
+                            <br>"A vida não é um quebra-cabeças que pode ser resolvido apenas uma vez e pronto. Você acorda todos os dias e o resolve novamente."
+                            <br>- Chidi Anagonye, 'The Good Place' 4x09
                           </p>
 
                         </div>
                     </div>
                     <div class="carousel-item slidesC">
-                        <img src="../grupos_imgs/C/sua_img.png" class="imgSobre">
+                        <img src="../grupos_imgs/C/giovana.jpg" class="imgSobre">
                         <h3 class="sobreNome"> Giovana Caroba Bragio dos Santos  </h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
+                            <p class="sobreParagrafos">"Happiness can be found, even in the darkest of times, if one only remembers to turn on the light."
+                              <br>- Albus Dumbledore
+                            </p>
 
                         </div>
                     </div>
                     <div class="carousel-item slidesC">
-                       <img src="../grupos_imgs/C/sua_img.png" class="imgSobre">
+                       <img src="../grupos_imgs/C/joao.jpg" class="imgSobre">
                        <h3 class="sobreNome"> João Vitor Lima Gomes</h3>
                        <div class="sobreCorpo">
-                         <p class="sobreParagrafos"> Seu Texto </p>
+                        <p class="sobreParagrafos">"We made these memories for ourselves."
+                          <br>- Ed Sheeran
+                        </p>
 
                       </div>
                     </div>
@@ -263,10 +269,13 @@ include '../sistema_login/verifica_login.php';
                         </div>
                     </div>
                     <div class="carousel-item slidesE">
-                        <img src="../grupos_imgs/E/sua_img.png" class="imgSobre">
+                        <img src="../grupos_imgs/E/janine.png" class="imgSobre">
                         <h3 class="sobreNome"> Janine de Amorim Teodoro  </h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu Texto </p>
+                            <p class="sobreParagrafos"> Apaixonada por viajar, sair com os amigos e passar um tempo com a família.
+                            <br>Tentando fortemente pensar fora da caixinha.
+                            <br>"The best way to not feel hopeless is to get up and do something."
+                            <br> -Barack Obama- </p>
 
                         </div>
                     </div>
