@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include_once "povoa_base.php";
 include '../../sistema_login/verifica_login.php';
 ?>
@@ -15,9 +15,9 @@ include '../../sistema_login/verifica_login.php';
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="css/disciplinas_index_css.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="../../biblioteca/reservas/css/menu.css">
-     <link rel="stylesheet" href="../../biblioteca/reservas/css/bootstrap.css">
-    <link rel="stylesheet" href="../../biblioteca/reservas/css/tabela.css">
+    <link rel="stylesheet" href="css/menu.css">
+     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tabela.css">
 </head>
 <body>
 <header>
