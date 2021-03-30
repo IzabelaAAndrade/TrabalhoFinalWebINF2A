@@ -474,7 +474,9 @@ include '../sistema_login/verifica_login.php';
                         <img src="../grupos_imgs/I/sua_img.png" class="imgSobre">
                         <h3 class="sobreNome"> 👑 Vinícius Assis Lima</h3>
                         <div class="sobreCorpo">
-                            <p class="sobreParagrafos"> Seu texto
+                            <p class="sobreParagrafos">
+                                “And I knew exactly what to do. But in a much more real sense, I had no idea what to do.”
+                                <br>Michael Scott
                             </p>
 
                         </div>
