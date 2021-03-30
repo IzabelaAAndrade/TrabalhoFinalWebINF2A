@@ -1,4 +1,12 @@
 <?php
+/*
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+// */
+
+Error_reporting(0);
+
 @session_start();
 include '../../sistema_login/verifica_login.php';
 ?>
